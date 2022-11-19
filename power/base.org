@@ -1,0 +1,1476 @@
+#+title: 知识
+
+* TODO 散 [1/1]
+** DONE [#C] reactor 加 buffer 是否等于适配成 proactor
+CLOSED: [2022-11-07 Mon 19:11] DEADLINE: <2022-11-07 Mon 18:59>
+:LOGBOOK:
+CLOCK: [2022-11-07 Mon 18:40]--[2022-11-07 Mon 19:11] =>  0:31
+:END:
+
+* TODO android [6/8]
+** DONE 环境搭建
+- 除了本地有的 java SDK, 直接通过 android Studio 安装 android SDk 和模拟器等环境
+  - Adroid stdio
+  - adroid stdio SDK
+  - 模拟器
+  - UI
+- 开启 Studio 后设置开发环境
+  : 然后怎么设置开发环境
+  1. 设置 android-sdk APi 版本
+  2. 设置布局
+  2. 创建安卓虚拟设备 (ADV)
+     有点卡，就有点卡吧，我没有空去像这么多。
+** DONE HOLD 搞懂 android 的大纲 [2/4]
+DEADLINE: <2022-09-12 Mon 12:42> SCHEDULED: <2022-09-12 Mon 10:42>
+https://www.runoob.com/android/android-hello-world-example.html
+- [X] 可能是以 4 大组件为树形架构
+  - Activities 处理 UI 与屏幕进行交互
+  - Services  处理后台逻辑
+  - Broadcast-receivers 负责与底层安卓操作系统进行交互
+  - Centent-providers 处理数据与数据库
+- [-] 项目文件树架构
+  - [ ] 编译后生成信息
+    - bin ：二进制文件
+    - gen : 编译器生成
+  - [X] .gitignore, .idea 等工程管理，IDE 文件
+  - [ ] gradle
+  - [-] App
+    - [X] Lib
+    - [ ] Build
+    - [X] Src
+      - [X] Main
+        - [X] 三剑客
+          - Java 源代码
+          - res : 资源
+            - Value 目录: 包含 xml 文件，含有各式各样的值，例如字符串的颜色等
+            - Layout 目录: 自定义用户界面，布局
+          - AndroidManifest.xml 应用程序的清单文件，定义了各种组件
+      - [X] test
+      - [X] androidTest
+- [-] 几个重要的文件解析
+  - [X] Src 的 MainActivity.java 解析
+    - 与各种 android 的组件进行交互
+      #+begin_src java
+  import android.view.Menu
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.activity_main, menu)
+  }
+      #+end_src
+    - 函数中可以直接引用 resourse/layout 目录下的 xml 文件
+      活动类从项目的res/layout中的XML文件加载所有的UI组件。下面的语句从res/layout/activity_main.xml文件中加载UI组件： setContentView(R.layout.activity_main);
+      #+begin_src java
+@Override
+public void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_main);
+}
+      #+end_src
+      + 难道是通过 R 进行调用的吗？
+        是的！！！
+  - [ ] AndroidManifest.java 文件解析
+  - [X] 布局文件
+    - [X] Resourse/value/strings.xml 文件
+      应用程序用的到的所有文本，例如，按钮，标签的名称，默认文本。
+    - [X] Resourse/layout/active_main.xml
+      当应用程序构建界面时被引用，程序员需要非常频繁的改变应用程序的布局
+  - [ ] R 文件
+    Gen/com.example.helloworld/R.java 自动生成，不能手动修改
+    + 原话理解：例如是，MainActivity.java 和 resourse/value/string.xml 的胶水文件
+- [X] App Activities 状态机
+  [[~/Downloads/activity.jpg]]
+** DONE 安卓学校作业：实验1 和 2 : 大纲，跑起来
+DEADLINE: <2022-09-12 Mon 16:43> SCHEDULED: <2022-09-12 Mon 14:13>
+- State "Done"       from "TODO"       [2022-09-12 Mon 16:40] \\
+  - 规定时间还未完成，需要加钟
+  - 收获
+    1. 掌握了安卓的基本的目录和大纲
+    2. 如何使用 android 虚拟安卓应用
+    3. 了解到可以通过修改资源文件改变布局
+  - 不足
+    1. 无法完成的原因，就是缺少对 android-studio 布局的了解以及不会修改资源文件。
+** DONE 安卓学校作业：实验1 和 2 ：学习组织布局
+DEADLINE: <2022-09-12 Mon 17:43> SCHEDULED: <2022-09-12 Mon 19:43>
+- 收获
+  - 初步了解了控件的工作方式（如何拖控件）
+    - 创建 activity 文件
+    - 控件在哪里
+    - 拖到哪里
+- 不足
+  - 遇到把图片复制到具体 ImageView 控件上这个问题时, 过于执着看书，没有利用搜索引擎去解决。导致重复去实验
+  - 没有鼠标，用触摸板效率感觉很低。
+- 目标
+  - 通过实验 2，用某个控件去了解怎么样与用户交互：
+** DONE HOLD 安卓：Acticity 和 layout 的关系，程序如何加载主 activity, Activities 如何引用 layout, 弹出信息框
+DEADLINE: <2022-09-12 Mon 22:41> SCHEDULED: <2022-09-12 Mon 21:14>
+https://weread.qq.com/web/reader/73532150723f022f73516a6
+- 收获
+  1. 学习方式的转变
+     随着学习的深入，我意识到不能在像今天早上的安卓入门一样，以好奇心的导向，提高认知，索引式的学习方法，因为我对于安卓已经有了一个基本认知，以及能够构建运行。
+     我接下来应该把注意力放在书籍上，仔细读书。
+  2. 安卓会启动主 Activity 作为主窗口，如果手动创建，需要进行标记。
+  3. 可以手动创建多个 layout/first_layout.xml 文件，使用某个控件作为框架，例如 LinearLayout.
+  4. Activity 通过 R.layout 对 layout 目录下的 xml 布局文件进行引用。
+     #+begin_src java
+       setContentView(R.layout.first_layout)  // 在主 Activity 上把该 first_layout 显示为主布局。
+     #+end_src
+  5. [X] Activity 可以直接通过 id 对 res 目录下的具体控件进行引用
+  6. 主 activity 为布局上的控件绑定对象，要通过 findViewId() + ID, 但是在 android Stdio 默认帮你绑定，使得直接使用名字与控件名一致的对象。
+  7. Toast 对话框通过静态方法给 button 注册回调，当 button 触发时就可以弹出对话框。在例子中，把主布局 linearLayout 作为 this 指针传递进去后，可以获取 LinearLayout 上的文本进行输出。
+- 目标：按照书本内容敲一遍
+** DONE 安卓：完成实验，从 empty Activity 中手动创建 activity 与绑定布局，最终结果：弹出对话框。
+** TODO [#B] （控件）与底层网络事件交互
+DEADLINE: <2022-12-07 Wed>
+- State "STOP"       from "STARTED"    [2022-10-27 Thu 08:52]
+- State "STARTED"    from "STARTED"    [2022-10-27 Thu 08:52]
+- State "STARTED"    from "STOP"       [2022-10-26 Wed 16:33]
+- State "STOP"       from "STARTED"    [2022-10-26 Wed 16:23]
+- State "STARTED"    from "STOP"       [2022-10-26 Wed 14:44] \\
+  - 理由
+    本来昨天早上 8 点软件工程的课程就要做的，结果事情多了，又要多补一节《职业规划》，又有签表，又要科技英语学习通。
+  - 回顾之前的复习
+    - 在此 TODO 的 TODO 是 *控件与控件的 io 交互*
+      通过点击同一个 activity 的 button, 能够把 EditView 的字符串读取出来，并且显示在 Toast 上面
+      这个没有啥难度
+      - 通过 main_activity.xml 设置控件布局
+      - 通过 main.java 绑定 R.Id 控件
+      - 通过变量设置回调函数
+      - 字符串的处理，EditView 的读取的内容，怎么以字符串的形式显示出来
+        - Text()
+        -
+    - 这个 TODO 的内容复习
+      - UI Loop
+        - 做法
+          - Service 层把修改 ui 的任务（Handler）封装成 message, 然后传递给 UI 层的 messagequeue
+          - UI 层是 LOOP, 从队列中取出 handler, 执行回调
+        - 好处
+          1. UI 层和 service 层两个线程，可以把耗时任务丢给 service
+          2. 修改 ui 的操作统一 dispatch 给 ui 线程，避免竞争条件
+- State "STOP"       from "STARTED"    [2022-10-24 Mon 22:34] \\
+  困到不行了
+:LOGBOOK:
+CLOCK: [2022-10-27 Thu 08:44]--[2022-10-27 Thu 08:52] =>  0:08
+CLOCK: [2022-10-26 Wed 21:18]--[2022-10-26 Wed 21:50] =>  0:32
+CLOCK: [2022-10-26 Wed 19:37]--[2022-10-26 Wed 20:40] =>  1:03
+CLOCK: [2022-10-26 Wed 17:14]--[2022-10-26 Wed 18:02] =>  0:48
+CLOCK: [2022-10-26 Wed 16:30]--[2022-10-26 Wed 17:11] =>  0:41
+CLOCK: [2022-10-26 Wed 14:48]--[2022-10-26 Wed 16:22] =>  1:34
+CLOCK: [2022-10-24 Mon 22:11]--[2022-10-24 Mon 22:34] =>  0:23
+CLOCK: [2022-10-24 Mon 20:07]--[2022-10-24 Mon 20:48] =>  0:41
+:END:
+- State "STARTED"    from "STOP"       [2022-10-24 Mon 22:11]
+- State "STOP"       from "STARTED"    [2022-10-24 Mon 20:44] \\
+  任务抢占
+- State "STARTED"    from "STOP"       [2022-10-24 Mon 19:47]
+- State "STOP"       from "STARTED"    [2022-10-24 Mon 11:26] \\
+  下课了，零碎时间快点把一些零碎事务搞好
+- State "STARTED"    from "STOP"       [2022-10-24 Mon 11:25]
+- State "STOP"       from "STARTED"    [2022-10-24 Mon 11:15] \\
+  零碎时间，先往前推任务
+- [-] 书本内容总结
+    - [-] 多线程的通信
+        - [X] UI 和 service 的异步通信
+            - [X] Looper
+            - [X] MessageQueue
+            - [X] Message
+            - [X] Handler
+        - [ ] AsyncTask
+    - [X] 启动 service
+      纠正一个错误的误区，那就是 service 并不是开一个多线程，而是在主线程。只有在耗时任务的时候，需要用户手动开启多线程
+        - 主要是两部
+            1. 生命周期
+            2. 连接
+        - [X] 步骤
+            1. 通过 Intent 绑定 service 和 activity
+            2. 给全局的函数传递 intent
+            3. 然后调用 service 的回调函数
+        其中 *连接* 的比较复杂，需要把传入一个匿名对象去接收 service 回调返回的结果，然后调用该匿名对象的回调函数
+        这样就可以在 activity 传入的匿名对象操作 service 回调返回的对象。这样实现了通信
+        - [X] 详细过程
+            - [X] 创建，启动，删除
+              #+begin_src kotlin
+                class MyService : Service {
+                    fun onCreate() { }
+                    fun onDestory() { }
+                    fun onStart() { }
+                }
+                class MainActivity  {
+                    fun onCreate() {
+                        val intent : Intent(this, MyService::class.java)
+                        startService(intent)	//开启服务
+                    }
+                }
+              #+end_src
+            - [X] 绑定 activity 和 Service
+              #+begin_src kotlin
+                class MyService {
+                    private val mbind = DownloadBinder()
+
+                    class DownloadBinder : Binder() {
+                        fun startDownload() {}
+                        fun getProgress() {}
+                    }
+
+                    override fun onBind(intent : Intent) : IBind {
+                        return mbind
+                    }
+                }
+
+                class MainActivity {
+                    // 重写 onServiceConnected 和 onServiceDisconnected
+                    // 应该是写要求 service 做的事情
+                    private val obj = object: ServiceConnection {
+                        override fun onServiceConnected (name: ComponentName, service: IBinder) {
+                            val mbind = service as MyService.MyDownload
+                            mbind.startDownload()
+                            mbind.getProgress()
+                        }
+                    }
+
+                    override fun onCreate() {
+                        val intent = Intent(this, MyService::java.class)
+                        // 第二个参数：传入一个 handler 匿名对象，要求重写
+                        // OnServiceConnected 和 OnServiceDisconnected 方法
+                        //
+                        // 第三个参数则是一个标志位，这里传入BIND_AUTO_CREATE表示在Activity和Service进行绑定后自动创建Service
+                        bingService(intent, obj, BIND_AUTO_CREATE)	//调用 MyService 的绑定回调
+                    }
+                }
+              #+end_src
+    - [X] 主要是要处理字符串，任何控件的 text() 方法之类的要关注
+    - [ ] 网络库
+- [ ] 任务
+    - [ ] 监听网络事件，发送到 textView
+    - [ ] 把 textView 内容主动发送网络上
+** TODO [#B] 完成一个最小 demo ：简单的 echo-client, 和 Gevent 对接
+DEADLINE: <2022-12-07 Wed 22:59>
+- State "STOP"       from "STARTED"    [2022-10-24 Mon 19:46] \\
+  前置条件，Service 层还没有搞定
+- State "STARTED"    from "STOP"       [2022-10-24 Mon 19:01]
+- State "STOP"       from "STARTED"    [2022-10-24 Mon 16:16] \\
+  已经学习控件之间的交互
+:LOGBOOK:
+CLOCK: [2022-10-24 Mon 19:01]--[2022-10-24 Mon 19:46] =>  0:45
+CLOCK: [2022-10-24 Mon 15:05]--[2022-10-24 Mon 16:16] =>  1:11
+CLOCK: [2022-10-24 Mon 14:15]--[2022-10-24 Mon 15:04] =>  0:44
+:END:
+- [X] 要是不知道怎么去快速浏览 Android SDK 的设计大纲，根本不知道调用什么接口
+  Android SDK API 官方网站：https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/
+- [ ] 创建主 acitives
+    - [ ] textView1 和 button: 接收用户信息并发送到 service 网络层
+        - [ ] 创建 service
+        - [ ] TCP 到 echo-server
+        - [ ] 主 Activies 和 service 通信
+    - [ ] textView2 监听 service 网络，并且显示出来
+- [ ] 创建 service
+    - [ ] 响应用户 button
+    - [ ] 监听 gevent 服务器
+
+
+
+* TODO 计算机网络 [0/0]
+停止等待协议，ARQ 协议，停止等待协议
+停止等待协议，缺点是信道利用率太低了。
+
+连续 ARQ 协议
+每次发送多个分组：回退 N 协议与滑动窗口协议
+
+- 流量控制与拥塞控制的区别
+  流量控制是点对点的通信量的抑制问题，是端到端的过程。
+  通过接收端来抑制发送端的发送速率，以便接收端来的及接收数据。
+
+  - 什么叫接收端来不及接收数据呢？
+    1. 结点的缓存太小。
+    2. 接收端的 CPU 处理速度慢
+       即时接收端结点的缓存增大，但是假如其 CPU 处理速度慢，导致排队时间增大，依旧会触发超时重传。
+
+  - 慢开始，拥塞控制，快重传，快恢复
+    : 假设：发送速率由 *拥塞窗口* 与 *流量窗口* 的最小值决定。假设流量窗口比拥塞窗口大。
+
+    - 原理
+      通过控制 *拥塞窗口* 来控制发送端的发送速率，所以拥塞控制就是控制 *拥塞窗口*
+    - 怎么控制拥塞窗口？
+      先给拥塞窗口设定一个小的值，然后逐渐增大，当发生拥塞时，就减少拥塞窗口的值。
+    - 如何判断发生拥塞？
+      发送端迟迟无法接收到接收方的确认，确认超时，就可以判断网络发生拥塞。
+
+    - 慢开始
+      先将拥塞窗口设置成最大报文段 MSS 的值，每次接收到报文段的确认，把拥塞窗口增加至多一个 MSS 的值，这样逐渐的增加拥塞窗口的值。
+      - 为什每个传输伦次拥塞窗口成倍数增大？
+	因为这里的 +1 MSS，不是指每次传输轮次（RTT），拥塞窗口增加一个报文段长度。而是拥塞窗口能够发送的并且得到确认的报文段，增加一个 MSS 报文段，相当于加倍。
+
+    - ssthresh
+      慢开始的加倍速度太快了，很容易出现拥塞。所以 ssthresh 是一个开关。
+      拥塞窗口值 > ssthresh : 拥塞避免
+      拥塞窗口值 < ssthresh : 慢开始
+
+    - 拥塞避免
+      线性增长。
+
+
+* TODO 计算机体系结构 [5/5]
+** DONE 指令系统简介，（诞生，与其他模块的关系等）
+DEADLINE: <2022-10-05 Wed 09:55> SCHEDULED: <2022-10-05 Wed 08:50>
+- 处理器架构，指令集，具体CPU型号 的 关系
+  https://www.zhihu.com/question/23474438
+  https://www.cnblogs.com/leinuo2016/p/16214796.html
+  https://www.zhihu.com/question/349437202
+** DONE 指令系统组成
+** DONE 二进制与数字逻辑电路
+DEADLINE: <2022-10-04 Tue 08:30> SCHEDULED: <2022-10-04 Tue 08:00>
+- 二进制表示
+  - 原码与补码与定点数
+  - 浮点数
+    - 符号
+    - 阶码
+    - 尾数
+- 数字逻辑电路
+  - 组合逻辑
+    没有存储单元，输入什么，就输出什么。
+    - 应用
+      - 门：与，或，非，与非，或与，异或
+      - 加法器，选择器
+  - 时序逻辑
+    具有存储单元，不再是组合逻辑一样的输入输出，而是利用存储功能，达到开关的目的。
+
+    - 时钟信号与高低电位与 C 控制器
+      电信号控制
+    - RS 锁
+      上下两个 *与非门* 组成的蝴蝶结，基础组件
+    - D 锁存器
+      在 RS 锁存器的基础上，添加 （1） 两个与非门  （2） C 控制器 控制 D 输入
+      - C = 0 ： 保持（保持的意思是不论 D 输入怎么变化，输出都保持原来的状态）
+      - C = 1  ： 直通
+
+      通过 C 控制器（时钟信号）控制 D 输入，使得 RS 能够像蓄水池一样，达到一个 *存储* 的假象，从而能够作为 *开关*
+    - D 触发器
+      两个 D 锁存器组成
+      - C=0
+	第一个锁存器直通，第二个保持
+      - C=1
+	第一个保持，第二个直通
+      - C 从 0 变成 1
+	D 的值被锁起来了
+  - CMOS 电路
+    讲点具体的，不管是组合逻辑电路还是信号逻辑电路，都是 CMOS 电路（电工知识吧？可能比较安全省电）。
+
+** DONE 简单运算器设计
+DEADLINE: <2022-10-04 Tue 10:00> SCHEDULED: <2022-10-04 Tue 08:40>
+- 基础背诵
+  CPU 内负责的组件叫做算术逻辑单元（ALU）
+  - 算术运算
+  - 逻辑运算
+  - 比较运算
+  - 移位运算
+  - 乘，除，开方
+- 定点补码加法器
+  - 基础之：一位全加器
+
+  ...
+  加法进位是加法器的核心，根据进位的处理方式不同，进行分类
+  - 类别1 ：行波进位加法器
+  - 类别2 ：先行进位加法器
+** DONE 总线设计
+DEADLINE: <2022-10-04 Tue 12:00> SCHEDULED: <2022-10-04 Tue 10:43>
+- 总线定义
+  不仅用于传输信号，还是软件同硬件架构的桥梁
+- 总线架构层级
+  - 机械层：接口外形，尺寸
+  - 电气层：信号描述，电源电压，电平标准
+  - 协议层：信号时序，握手协议，命令格式，出错处理
+  - 架构层：软件架构和硬件模块
+- 划分：根据那个信号
+  - 串行
+  - 并行
+- 划分：根据物理位置进行划分
+  - 片上总线：芯片内模块（例如处理器芯片上：处理器核，内存控制器等多个模块）之间的总线
+  - 内存总线：处理器与主存储器之间的主线
+  - 系统总线：处理器与桥卡之间，或多个处理器相连成并行处理器
+  - 设备总线：处理器与 IO 设备之间
+
+*** DONE 片上总线
+DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
+片上总线是 芯片内部模块， （处理器上芯片：处理器核，内存控制器，缓存）等之间的总线
+- AXI 协议
+  1. 主从单向流通
+  2. 控制（版本）信息与数据分离
+- AXI 架构
+  - 单架构
+    读写
+  - 互连架构
+    每个主设备都可以访问从设备
+- 事务
+- 其他总线
+  ASB，ASP 等，是典型的共用单通道
+  但是片上总线要求的是并行性，所以具有分离通道的 AXI 脱颖而出。
+- 通过AXI总线互连架构连接 高性能CPU的组件
+  主设备：  CPU 核   CPU 核   CPU 核
+          (9)       (9)     (9)
+                AXI 总线
+		   （9）
+	        最后缓存
+	  （9）	   （9）    （9）
+                AXI 总线
+	  （9）     （9）    （9）
+       内存控制器   内存控制器   内存控制器
+
+
+* TODO 实战项目
+** Android 客户端与聊天软件
+*** DONE 安卓 im 软件的问题定义与需求分析
+DEADLINE: <2022-09-19 Mon 11:31> SCHEDULED: <2022-09-19 Mon 09:31>
+- 背景
+  网络工程《软件工程》课程实训项目。
+- 功能描述
+  - Android UI 界面与逻辑
+    Android 客户端除了编写用户界面与逻辑，对接服务器端
+  - 登录服务器与图片服务器
+    1. 提供用户注册，登录，注销功能。
+    2. 除了用户编写信息外，图片服务器还允许用户上传头像等 PNG 图片。
+    3. 心跳功能，维持用户在线状态与检查用户是否在线，是否踢掉用户。
+  - 文件 FTP 服务器
+    为用户提供传输文件服务
+  - 聊天服务器
+    1. 1 V 1 添加好友，显示好友是否在线，聊天功能。
+    2. 群聊功能
+- 硬件环境，软件环境
+  - 服务端生产环境
+    操作系统：Linux x64 Debian10
+    数据库： Sqlite
+    编程语言：使用 C 编写底层的网络服务，上层使用 Python 编写业务逻辑。目前考虑单机，以后可能扩展为分布式。
+  - 客户端环境
+    目前只支持 Android 端，服务器允许使用命令行 telnet 进行网络调试。
+*** DONE 使用 Python 写服务器端的网络框架了解:Gevent
+DEADLINE: <2022-09-19 Mon 21:30> SCHEDULED: <2022-09-19 Mon 22:30>
+- 如何使用
+  - 虽然 Gevent 依赖与 Greenlet。但是对于用户来说，并没有直接使用 GreenLet，而是直接使用 Gevent 的封装。
+  - 只用设置一个启动的回调，然后就直接在这个启动函数写逻辑代码，连接开关和读写。不用像 Muduo 一样设置读，写，连接回调分割业务逻辑。
+- 依赖与相关模块
+  : use greenlet to provide a high-level synchronous API on top of libev event loop.
+  : greenlet 负责提供协程调度，而 Libev 提供异步回调接口。
+  - greenlet
+    - QUESTION
+      + 是否是内置模块？
+	不是，Greenlet 依旧是一个第三方模块，通过 C 扩展实现协程。
+      + Python 的协程通过第三方库实现，难道没有一套内置的线程 / 协程实现吗？
+	？？
+    -
+  - Libev
+- 源码阅读
+*** DONE Python 网络编程入门之 GIL 锁与协程的发展
+DEADLINE: <2022-09-20 Tue 10:40> SCHEDULED: <2022-09-20 Tue 07:40>
+- Python 多线程
+  - GIL 锁
+
+    - 为什么引入？
+      为了实现线程安全的引用计数，Python 的 GC 实现是类似 C++ shared_ptr 一样的引用计数，所以为了保证全局更新所有变量的引用计数，所以必须引入一个全局锁。
+      : 也就是说 GIL 锁的本质是 Python 的 GC 引起的。
+
+    - 缺点
+      - 全局引起的 *无法利用多核*
+	即时有多个 CPU 依旧无法利用多核优势
+
+      - 粗粒度锁，依旧无法做到 *线程安全*
+	虽然，GIL 锁限制了只有一个 CPU / (执行单元) 访问变量。
+	但是这个锁的粒度并非像以前的 C++ mutex 一样，由程序员进行控制。
+	换句话说，很多 Python 的操作并不是原子的，依旧不是线程安全的。
+
+- 协程
+  - 生态的发展
+    因为多线程的羸弱，Python 把注意力集中在协程上。事实上，在 Golang 协程问世前，Gevent 就早已经声名鹤起。
+
+    - 带来的优势
+      1. 已经积累了大量的协程框架和协程服务。
+      2. 文件与数据库
+	 异步框架都只是涉及到网络部分，而 Python 经过多年的发展很多地方均已协程化。
+
+  - 底层协程化
+    ？？
+
+  - 模块
+    - 标准库
+    - 老牌的协程 Gevent
+*** DONE Python 如何利用多核？
+DEADLINE: <2022-09-20 Tue 11:50> SCHEDULED: <2022-09-20 Tue 10:50>
+- 多线程 （ERROR）
+  python 多线程因为 GIL 锁的原因无法利用多核。
+
+- 协程   （ERROR）
+  协程只是把 selector 等异步事件同步化。但是依旧没有解决多核的问题。
+
+- 多进程 + 协程/(异步reactor)（RIGHT）
+  其实算是曲线救国，因为
+  - 那些书本中拿协程取代多线程的例子是错的。
+    因为在服务器中，使用多线程的目的在于利用多核。
+    把多线程改成协程，并不能利用多核优势。
+    如果这样做只是为了不阻塞应用，那说明这个例子本身就是错误的示范，正确的例子是单线程异步模型 + 多线程 Loop。
+
+    所以，这个例子顶多说明了 *协程* 可以简化 *单线程的异步模型* ，让 Python 可以不阻塞应用。（虽然本来也可以异步模型，只是麻烦）
+
+    : 说明 Python 可以不用线程而用协程做到不阻塞（虽然这样用线程是错误的）。但是忽视了线程的重要作用：利用多核。
+  - 比较好的书籍笔记节选
+    不过也不需要那么悲观，Python提供了其他方式可以绕过GIL的局限，比如使用多进程multiprocessing模块或者采用C语言扩展的方式，以及通过ctypes和C动态库来充分利用物理内核的计算能力。
+*** DONE Python 深入 From《流畅 Python》：理解 Python 的数据模型
+DEADLINE: <2022-09-20 Tue 16:30> SCHEDULED: <2022-09-20 Tue 14:30>
+- Python 数据模型非常牛
+*** DONE Python 协程入门
+DEADLINE: <2022-09-20 Tue 20:30> SCHEDULED: <2022-09-20 Tue 17:30>
+*** DONE Python 多线程与多进程
+DEADLINE: <2022-09-21 Wed 10:00> SCHEDULED: <2022-09-21 Wed 08:00>
+*** DONE POSTGRESQL
+: from 七周七數據庫
+  - 命令行
+    1. 創建數據庫：createdb xxoo
+    2. 進入數據庫: psql xxoo (使用 psql)
+  - SQL 語句
+    - 屬性類型
+      - 字符串
+	- varchar(9) ： 長度可以達到 9 個字節
+	- char(2)    ： 正好要存儲 2 個字節
+	- text    ： 任意長度
+    - 修飾符
+      - Primary Key：主鍵，具有唯一性約束，可以設置 *定義的兩個屬性* 爲主鍵
+	+ 如果不指定主鍵會怎麼樣？
+      - UNIQUE ：讓除了 Primary Key 外的其他列（屬性） 具有唯一性
+      - NOT NULL ： 不能爲空
+      - CHECK （指定約束）   ： 指定約束
+      - REFERENCE 表： 外鍵約束，該屬性能夠引用另一張表
+    - CRUD
+      - CREATE TABLE xxoo (name 類型 屬性，);
+      - SELECT * from xxoo;
+      - INSERT INTO xxoo VALUE （'','',''# 直接輸入值就行了）
+      - UPDATE xxoo SET xx=yy WHERE xx=yy
+** Pygame 贪吃蛇
+*** DONE Pygame贪吃蛇：基本逻辑与代码运行
+DEADLINE: <2022-10-04 Tue 21:00> SCHEDULED: <2022-10-04 Tue 19:18>
+[[~/code/write/贪吃蛇/main.py]]
+- 第一次写完整的业务逻辑
+  - 写业务逻辑和写底层是两回事，我终于意识到过去用 C++ 写逻辑为啥老是失败和那是多么可笑的事情，因为根本不适合。
+  - 写逻辑的时候，就要专注业务逻辑，不要在意为啥是这样生成随机数，那不是应该关心的
+- 第一次写业务逻辑的大致流程（框架），别管琐碎的东西
+  1. 开启框架
+  2. 设置一堆乱七八糟的东西，字体，颜色等等（靠，查资料）
+  3. 数据结构也许没有那么重要（贪吃蛇用列表，坐标用元祖）
+  4. 开启 While （） 循环，循环内是监听用户按键，并且变更外部的状态（在这里是方向键）
+  5. While （） 后，判断 While（） 里面被改变的状态
+  6. 更新里面数据结构（蛇的长度和位置，草莓的位置）
+  7. 把更新的数据结构显示在屏幕，并且设置 FPS 刷新率
+
+  : 6 和 7 解决我一个疑问，我以前是在 While （） 里面刷新屏幕。
+  : 其实更好的做法是只在 While（1） 监听用户按键，然后更新数据结构。在 While（）结束后，才把更新的数据结构显示在屏幕上
+  : 同时刷新 FPS，以控制节奏（我以前是在 While（） 里面 sleep() ）
+*** DONE Pygame贪吃蛇：练习 1
+DEADLINE: <2022-10-04 Tue 22:10> SCHEDULED: <2022-10-04 Tue 21:10>
+[[~/code/write/贪吃蛇/main2.py]]
+- 绘制是一件很重要的事情，要是不上色，那就会全黑
+- 基本逻辑都能搞懂
+- 疑问
+  - 为啥要记录变量
+- 缺失的逻辑
+  - 绘制
+  - 碰到自己或墙壁
+  - 苹果的更新（随机生成）逻辑
+  - 游戏结束
+*** DONE Pygame贪吃蛇：练习 1 纠错与改正
+DEADLINE: <2022-10-05 Wed 11:30> SCHEDULED: <2022-10-05 Wed 10:31>
+[[~/code/write/贪吃蛇/main2.py]]
+- 补全缺失的逻辑 [4/4]
+  - [X] 绘制
+  - [X] 碰到自己或墙壁
+  - [X] 苹果的更新（随机生成）逻辑
+  - [X] 游戏结束
+- Bug [4/5]
+  - [ ] 无法监听用户的方向按键
+    - [ ] 原因猜测
+      - [ ]
+    - [ ] 真正原因
+  - [X] 启动后，无法绘制的问题
+    - [X] 猜测原因
+      - [X] 缺失关键启动逻辑
+      - [X] 颜色变量定义错误
+      - [X] 颜色变量传递失误
+    - [X] 真正的原因
+      - 逻辑错误
+	我把贪吃蛇数据结构和苹果的绘制逻辑，写出了 While 循环
+      - 怎么影响程序的
+	陷入 While 监听用户命令的循环中，从而使绘制逻辑，无法实现。
+      - 反思
+	所以，在 While 逻辑中，
+	1. 监听用户，并且改变数据结构
+	2. 根据改变的数据结构绘制逻辑
+	3. 设置 Fps，相当于以前的 Sleep
+  - [X] 贪吃蛇的数据结构溢出：写错
+  - [X] 没有导入 Time 模块
+  - [X] 变量名写错
+** TODO [#A] 用 python 重写野火 im 的服务器端
+DEADLINE: <2022-11-29 Tue>
+
+
+* TODO RPC [100%]
+
+** TODO GRPC [100%]
+
+
+* TODO Python [3/8]
+** DONE [#B] python 异步编程的发展史
+DEADLINE: <2022-11-08 Tue 16:45> SCHEDULED: <2022-11-08 Tue 16:30>
+:LOGBOOK:
+CLOCK: [2022-11-08 Tue 16:31]--[2022-11-08 Tue 16:48] =>  0:17
+:END:
+- [X] 异步回调时代
+  可以追溯到 python2
+    - [X] swisted
+    - [X] tongo
+- [X] 协程时代
+  : Python 很早就开始大规模使用协程
+    - [X] Python 3.4
+        - [X] yield 生成器模拟步进 next()
+        - [X] Gevent : greenlet 和 libev 结合
+          没有内置的同步原语，就是 monkey Patch 替换
+
+    - [X] python 3.5：从标准网络库和原语发展
+        - [X] asyncio
+        - [X] async/await
+          底层是 yield, 所以好好了解下 yield，非常有必要
+
+    - [X] 全面协程化（除了网络）
+      社区，借助 async/await 原语，与类似 asyncio 的数据库 io 复用结合，诞生了数据库连接的协程库，
+
+        - [X] aiomysql
+
+        - [X] aiohttp: 进一步封装 asyncio 作为 http 服务器
+
+** TODO [#A] python 官方文档
+:LOGBOOK:
+CLOCK: [2022-11-11 Fri 08:00]--[2022-11-12 Sat 18:31] => 34:31
+:END:
+: 为什么是最高优先级，因为我看文档比看任何垃圾博客，看任何书要高效，对程序员的锻炼更好，王勇大哥就是这样进步来的。
+: 不是要过面试吗？看什么书都不如看官方文档，所以最高优先级给到官方文档
+- [X] 任务目标
+  全方位的学习 Python
+.......................................
+SCHEDULED: <2022-11-11 8:00> DEADLINE: <2022-11-20>
+https://docs.python.org/zh-cn/3/contents.html
+
+** TODO aiohttp 源码学习 [1/4]
+*** DONE [#B] aiohttp 大纲
+SCHEDULED: <2022-11-08 Tue 15:45> DEADLINE: <2022-11-10 Thu 22:59>
+:LOGBOOK:
+CLOCK: [2022-11-10 Thu 20:04]--[2022-11-10 Thu 21:34] =>  1:30
+CLOCK: [2022-11-08 Tue 18:35]--[2022-11-08 Tue 19:02] =>  0:27
+CLOCK: [2022-11-08 Tue 15:58]--[2022-11-08 Tue 16:30] =>  0:32
+CLOCK: [2022-11-07 Mon 21:48]--[2022-11-07 Mon 22:31] =>  0:43
+CLOCK: [2022-11-05 Sat 23:04]--[2022-11-06 Sun 00:02] =>  0:58
+:END:
+- [X] 任务目标
+  既然是使用 Aio 封装一个 Http 服务器，刚好搞不懂
+    1. Await 和 Asyncio 的关系
+    2. Python 的协程运作原理
+- [X] 延伸
+    - [X] 我想把这个项目搞懂
+    - [X] 通过查找 await with 定义时发现官方网站，决定把文档看一遍，来学习 Python
+.............................................................
+- [X] Readme.md 阅读，非常重要！！！ (等于是大纲了解）
+  : 从这里开始，以后阅读源码的 todo 任务，第一件事情是阅读 readme
+  : 看官方文档，比看那些垃圾教材好 10000 倍啊。
+    - [X] Readme.rst
+        - [X] 先入个门
+            - [X] 特性介绍
+                - [X] connection socket
+                - [X] http 
+                - [X] web server route
+            - [X] 官方例子
+                - [X] 包：asyncio
+                  我懂了， Golang 的协程是内置的，所以不论网络，数据库皆可以借助协程构建
+                  而 python 借助第三方库需要满足两个条件
+                    - [X] 配合抢占式的原语
+                        - [X] async
+                        - [X] async with
+                        - [X] await
+                    - [X] 底层驱动的 io 复用
+                        - [X] 数据库封装
+                        - [X] 网络库封装：
+                            - [X] 标准的 io 复用网络库 就是 asyncio
+                - [X] 关键字
+                    - [X] async：作为协程
+                    - [X] async with
+                    - [X] await：从函数中间让出 cpu, 等协程底层的 LOOP Wait
+                - [X] 业务逻辑
+                    - [X] 先跑起来
+                      跑不起来，因为没有被
+        - [X] Document： 在线文档链接。可以说是官方网站，信息量非常大，要多看
+          https://docs.aiohttp.org/en/stable/
+        - [X] BenchMarks
+        - [X] 其他无用
+            - [X] License
+            - [X] 交流群
+    - [X] Demo/readme.rst: 没啥用
+    - [X] poll/readme.ret: 没啥用
+- [X] 功能描述
+  像 nginx 的 http-server
+- [X] 模块拆解
+    - [X] Http 协议处理
+    - [X] Web Server 路由功能（导入 web 应用服务器）
+*** TODO [#B] aiohttp 第二文档：Example 学习
+- [ ] 任务目标
+........................................................................................
+*** TODO [#B] aiohttp docs
+*** TODO [#B] aiohttp src 
+** STOP [#B] Python 常见编程手法（最佳实践）
+DEADLINE: <2022-11-11 Thu 11:55>
+:LOGBOOK:
+CLOCK: [2022-11-05 Sat 21:10]--[2022-11-05 Sat 21:38] =>  0:28
+CLOCK: [2022-11-05 Sat 20:25]--[2022-11-05 Sat 21:04] =>  0:39
+CLOCK: [2022-11-05 Sat 18:00]--[2022-11-05 Sat 19:00] =>  1:00
+CLOCK: [2022-11-05 Sat 16:08]--[2022-11-05 Sat 17:00] =>  0:52
+CLOCK: [2022-11-05 Sat 15:26]--[2022-11-05 Sat 16:05] =>  0:39
+CLOCK: [2022-11-05 Sat 15:21]--[2022-11-05 Sat 15:26] =>  0:05
+:END:
+
+- [-] 从灵剑的知乎答案汲取之设计
+
+    - [X] 动态语言 Duck 类型的好处
+      : 总结起来就是扩展与修改方便，以及抽象程度高，所以代码精简，表达能力强
+        - [X] 代码精简
+          用到就是 interface, 反之不是。
+
+          不用手动写 interface, 避免了像 java 一样，即使只有一个子类，也要为其创建 interface ，导致代码臃肿
+
+          一个普通函数，就能多态（类似于 c++ 的模板静态多态）
+
+        - [X] 逻辑变更时，优势巨大
+
+            - [X] 例子1：上层不变，底层迁移
+              在静态语言中，如果底层没有架构好依赖倒置原则，上层依赖具体底层实现。
+
+              例如直接调用 tcpserver, 要换成 udp, 基本 gg
+
+              但是对于动态语言来说，只要新的底层模块和原来的使用一样的接口，上层就可以无感升级。
+
+              *因为 duck 类型天生就是接口，天生符合依赖倒置原则。*
+
+            - [X] 例子2:模块迁移
+              把类从 a 模块迁移到 b 模块，只要 mv 过去就行，因为不依赖具体实现，参数全是抽象接口
+              当然调用方要改变包的路径
+
+    - [X] Python 良好的设计模式
+
+        - [X] 设计模式的几大原则必须遵循
+
+        - [X] Duck 函数调用
+          : 因为函数参数就是一个接口，所以需要统一调用方和接收方
+
+            - [X] 接口设计方
+
+                - [X] 传递基础类型
+                  例如内置数据结构，以及贯穿项目的基础类型，如 Loop 等
+
+                - [X] 内部不能直接修改参数
+                  要修改时，通过深拷贝修改，然后返回结果，这样调用方能假定传入的对象不会被修改而担心副作用
+
+            - [X] 调用方
+                - [X] 知道具体业务
+
+                - [X] 主要通过文档，知道具体功能，而不是看源码
+                    1. [X] 假定接口内部不会对参数修改，则不用担心传入的对象的副作用
+
+                    2. [X] 具有多态性
+
+    - [ ] Python 是怎么废掉 java 的设计模式的
+
+- [ ] 函数内部设计
+    - [ ] 参数
+        - [ ] 业务对象
+          每个对象都是可以多态的接口，那么函数怎么处理这些对象呢？
+
+            - [ ] 源码索引
+                - [ ] 找到调用点的地方，多次对比调用方
+                - [ ] 详细阅读函数定义
+
+        - [ ] args 和 kwargs
+
+** STOP [#B] python 设计模式
+DEADLINE: <2022-11-13 Sun>
+:LOGBOOK:
+CLOCK: [2022-11-05 Sat 14:25]--[2022-11-05 Sat 15:26] =>  1:01
+CLOCK: [2022-11-05 Sat 08:06]--[2022-11-05 Sat 12:29] =>  4:23
+:END:
+
+https://weread.qq.com/web/reader/e5c328107159b28fe5c8d02kc1632f5021fc16a5320f3dc
+- [-] 设计模式理论知识
+
+    - [ ] Python 鸭子类型
+      所以的类型都是抽象接口（抽象基类），用到就是接口，没有用到就不是
+
+    - [X] 原则
+
+        - [X] 开闭原则
+          : 精髓部分
+          用户发布的库，对外接口的类 / function 扩展开发，但是对于修改关闭。
+          什么意思呢？就是说接口可以扩展功能的同时，不能修改接口类实现
+          *这就意味模块的对外接口一定是个抽象基类*
+          好处：
+            - 保持代码的向前兼容
+              例如各大网络库的的接口一经发布，就要考虑修改后能否兼容以前的旧版本，它的用户 server 能否升级后使用新功能，而不会出现旧的调用口被破坏的情况。
+
+        - [X] 依赖倒置原则
+          不应该依赖与具体类的实现，而是依赖于抽象类，不同模块之间的通过抽象类来耦合
+
+        - [X] 替换原则
+          子类可以替换抽象基类
+
+        - [X] 单一职责原则
+          每个类都有明确的功能划分
+
+        - [X] 接口隔离原则
+
+    - [-] 设计模式理解与用途
+
+        - [-] 创建型设计模式        :对象的创建
+
+            - [X] 单例模式
+              确保只有一个类的对象被创建，并且提供程序全局访问，防止资源被竞争，例如 logger 对象，就是一个单例模式
+
+            - [ ] 工厂模式
+              一个 final 类，静态函数根据不同的条件，返回基类的不同子类，所以叫做工厂
+
+              #+begin_src java
+                public class MqttMessage { }	// 抽象
+
+                // 具体子类
+                public class MqttPublishMessage extends MqttMessage {}
+                public class MqttSubAckMessage extends MqttMessage {}
+
+                // 工厂
+                public final class MqttMessageFactory {
+                    public static MqttMessage newMessage(MqttMessageHeader header) {
+                        switch (header.type()):
+                            case PUBLISH:
+                              return new MqttPublishMessage(xxoo);
+                    }
+                }
+              #+end_src
+
+                - [ ] 简单工厂
+
+                - [ ] 工厂方法
+
+                - [ ] 抽象工厂
+
+        - [ ] 结构型设计模式        :类和对象之间的关系：组合和继承
+        - [ ] 行为型设计模式        :对象的交互
+
+- [-] Python 实现设计模式
+    - [-] 单例模式
+        - [X] 实现方法
+            - [X] 普通模式
+              #+begin_src python
+                 class Singaton(Logger):
+                     def __new__(cls):
+                         if not hasattr(cls, "fuckyou"):
+                             cls.fuckyou = super(Singaton, cls).__new__(cls)
+
+                         return cls.fuckyou
+
+
+                s = Singaton()
+                print("object created", s)
+
+                s1 = Singaton()
+                print('ojbect1 created", s1)
+
+              #+end_src
+
+            - [X] 懒汉化实现 /（又名通过静态方法 getInstance 创建）
+              类有一个静态 instance 指针，只有通过 getInstance 才能 new 该指针，否则 new 无数个对象该指针也是 None
+              #+begin_src python
+                class Logger:
+                    __instance = None
+                    def __init__(self):
+                        if not __instance:
+                            print('not create __instance')
+                        else:
+                            print('create __instance')
+
+
+                    def getInstance(cls):
+                        __instance = Logger(cls)
+                        return __instance
+
+              #+end_src
+
+            - [X] 元类的单例模式
+
+        - [-] 实战应用
+            - [X] 数据库应用
+
+                - [X] 为什么数据库应用要用到单例模式？
+                  因为一个 web 服务，数据库是作为一个共享资源，不同模块都会对数据库进行读写。
+
+                  所以，即使多次实例化对象，但是实际使用的是同一个数据库实例，能够同步访问，避免竞争条件
+
+                - [X] 尝试封装 Database
+                  通过元类保存各个单例类的 instance 指针，虽然这里只有一个 Database 是单例类
+
+                    #+begin_src python
+                      import sqlite3
+
+                      class MetaSingleton(type):
+                          __instances = {}            # 数组
+                          def __call__(cls, *args, **kwards):
+                              if cls not in __instances:
+                                  cls.__instances[cls] = super(MetaSingleton, cls).__call__(args, kwargs)
+
+                          return cls.__instances[cls]
+                      ...
+
+                      class Database(metaclass=MetaSingleton):
+                          connection = None
+                          def connect(self):
+                              if self.connection is None:
+                                  self.connection = sqlite3.connect()
+                                  self.cursor = self.connection.cursor()
+                          return self.cursor
+
+                      db1 = Database().connect()
+                      db2 = Database().connect()
+
+                    #+end_src
+
+            - [ ] 监控程序
+              https://weread.qq.com/web/reader/e5c328107159b28fe5c8d02k182326e0221182be0c5ca23
+
+    - [X]  MonoState 单态模式
+      和单例模式不同，每个对象是独立的，但是所有的对象功能共享所有的状态
+      在 python 中，可以通过给__dict__ 赋值一个静态变量实现。
+      .__dict__ 用来存储对象的状态，给他赋值的静态变量，意思是所有对象共享状态的意思。
+      #+begin_src python
+        class Logger:
+            __shared_var = {}
+            def __init__(self):
+                self.__dict__ = self.__shared_var
+                self.x = 1
+
+        a = Logger()
+        b = Logger()
+        a.x = 3
+        print(b.x)                      # 改变对象 a 的 x 值，对象 b 的 x 值也会改变
+
+      #+end_src
+
+    - [ ] 工厂方法
+
+        - [ ] 实现方法
+
+        - [ ] 实战应用
+
+
+
+** DONE Python 网络编程 [3/3]
+CLOSED: [2022-11-05 Sat 15:05]
+- State "DONE"       from "TODO"       [2022-11-05 Sat 15:05]
+: 为啥是 Python，因为 Python 可以用 Cython 替换为自己的 C 的模块， 同时适合写业务逻辑，否则自己用 C 写个 Libevent，除了控制台，啥也干不了。
+*** DONE 单线程的异步事件 Echo，使用 Twisted
+CLOSED: [2022-11-05 Sat 15:05]
+- State "DONE"       from              [2022-11-05 Sat 15:05]
+- 作业
+  [[~/code/write/twisted单线程echo/single_thread_echo.py]]
+- 参考资料
+  1. 微信读书： https://weread.qq.com/web/reader/859323d0726e7be5859dbb9
+**** DONE 开发 Protocol 子类
+DEADLINE: <2022-10-05 Wed 15:00> SCHEDULED: <2022-10-05 Wed 14:00>
+**** DONE 开发 Factory 子类
+DEADLINE: <2022-10-05 Wed 15:50> SCHEDULED: <2022-10-05 Wed 15:20>
+**** DONE 了解 Python 模块是怎么封装的，以及是怎么导入的
+DEADLINE: <2022-10-05 Wed 22:15> SCHEDULED: <2022-10-05 Wed 20:50>
+DEADLINE: <2022-10-05 Wed 19:30> SCHEDULED: <2022-10-05 Wed 18:27>
+
+[[~/code/write/code/pymuduo/]]
+
+- [X] Python 导入模块的方式（优雅的感觉）
+  - 使用系统内置的模块，或者一些(没有包)的单文件，则直接 import
+  - 在包里面的，使用 from ... import xxx
+
+    不推荐使用 import，因为没有命名空间隐藏。
+    导致一个很大的包，有很多层子目录，则每次引用一个类都要写很多层
+
+    那 from 很多层包 import 的到底是 模块 还是 类（函数）
+    - 一般都是直接引入类
+    - 除非要外部接口是纯函数，为了避免冲突，则导入模块
+    - 冲突了在考虑模块
+
+- [2/2] 疑问
+  - [X] 导入包和导入模块有什么区别？
+    不论是 from .. import 还是 import ，只能是导入模块，不能导入包。
+  - [X] 过 import 和通过 from xx import xx 有什么区别？
+    - 相同点
+      都不能直接导入包，也就是说最大的粒度就是模块
+    - 不同点
+      - from xx import xx 拥有更细的粒度，可以导入函数，类等模块的具体内容.  例如： from 包.模块 import func
+      - import 导入模块，无法隐藏命名空间，必须写全名
+- [3/3] 方向
+  - [X] 两种导入方式的粒度，是否精度到类或函数
+  - [X] 在 C++ 中，认为 using namespace 是不好的习惯。那么在 Py 中，也是可以导包和导模块（文件），导类，那最最优雅的是？
+  - [X] 作为包的设计者，如何像外部暴露接口。在 C 比较优雅的 Libevent，是裸着的纯函数。
+    目录（包）只是把相似的放在一起
+    功能单元是文件（模块）
+    内部实现通过 __all__ 进行隐藏，对于熟练的，知道该导入具体的什么。 否则，from xxoo.模块 import *(具体到模块)
+
+**** DONE TODO Twisted 的 Factory 和 Protobuf 是怎么封装的
+DEADLINE: <2022-10-06 Thu 09:30> SCHEDULED: <2022-10-06 Thu 08:20>
+
+**** DONE TODO 搞懂 twisted Internel 的 常见的类和接口，它的架构设计
+DEADLINE: <2022-10-06 Thu 11:30> SCHEDULED: <2022-10-06 Thu 09:40>
+
+**** DONE 自己写个 Python 包：要求实现功能：根据不同的平台安装不同的 Selector 后端
+DEADLINE: <2022-10-06 Thu 16:50> SCHEDULED: <2022-10-06 Thu 16:00>
+[[~/code/write/mytwisted/__init__.py]]
+- 四大模块
+  - IO 后端子模块
+    有一个 def install 和 class Reactor
+    install 的作用就是把封装的后端放入 Main.py 的 InstallReactor 函数
+  - Main.py
+    Installreactor（） 函数接收 IO 后端的抽象基类，完成注册
+  - reactor.py
+    调用中间层的抽象指针，以获得真正的 IO 模块安装函数
+  - 中间层：default.py
+    # 根据不同的平台返回不同平台的 install 函数
+    def __install():
+      return install
+
+    install = __install()
+
+
+**** DONE TODO 查看 EPOLL 后端的封装
+DEADLINE: <2022-10-06 Thu 19:17> SCHEDULED: <2022-10-06 Thu 18:10>
+- Epollreactor ：Class
+  - 类的体系
+    - 接口继承 ： IReactorFDSet
+      我想其他后端也是继承这个接口。
+      不实现功能，仅仅定义接口
+
+    - 继承
+      posixbase.PosixReactorBase, Posixbase._PollLikeMixin
+      实现了更多的底层细节，例如 TCP 的连接，中断等细节
+
+  - 数据结构
+    : 注册读写 Socket
+    : 用来保存每个 socket 的读写事件，同时方便查找
+    保存文件的 Socket
+
+  - 功能接口
+    因为一个 Socket 涉及到两个事件。所以，
+    : Add 某个事件有可能是修改
+      例如：读事件已经存在的情况下，注册写事件
+    : Remove 某个事件也可能是修改
+      例如：读写事件同时存在的情况下，移除读事件
+
+    - ？？？？？
+      - 提供的接口能否同时添加，或移除两个事件？
+        不可以，添加和移除 读事件和写事件 的接口分开
+      - 接口调用失败。例如在没有注册写事件的情况下，调用了移除写事件。或者重复注册同一个事件
+	- 重复注册: 通过 Set 检测是否存在
+	-
+
+    - [ ] Add
+      主要关注一件事情，那就是状态的变更
+
+    - [ ] Remove
+      Remove 事件，检测是否
+
+    - [ ] Poll
+
+**** DONE Python怎么使用 EPOLL 的
+DEADLINE: <2022-10-06 Thu 08:10> SCHEDULED: <2022-10-06 Thu 07:40>
+使用系统的内置模块 Select
+
+*** DONE Gevent
+CLOSED: [2022-11-05 Sat 15:05]
+- State "DONE"       from              [2022-11-05 Sat 15:05]
+**** DONE TODO Python 协程生态与入门
+DEADLINE: <2022-10-06 Fri 23:30> SCHEDULED: <2022-10-06 Thu 21:00>
+
+**** DONE TODO 林伟的协程入门
+DEADLINE: <2022-10-07 Fri 09:30> SCHEDULED: <2022-10-07 Fri 08:30>
+DEADLINE: <2022-10-07 Fri 10:30> SCHEDULED: <2022-10-07 Fri 09:30>
+[[~/code/write/林伟协程/main.c]]
+- [X] 通过相关宏学习不同的体系结构
+  - [X] 微软编译器 MSVC 宏
+    微软自己搞的非 C/C++ 扩展标准，用来定义 VC++ 的版本号
+
+    例如：Virtual C++ 2005 的绑定的 VC++ 版本为 8.0 ，所以 MSC_VER 是 1400
+      virtual studio 2015 的绑定的 Vc++ 版本为 14.0，所以 MSC_VER 是 1900
+
+    这个宏在这里的作用是检测是否用 MSVC 进行编译，用来区分 MINGW。
+  - [X] 体系结构宏 ( 主要区分最主流的两种 Arch, 32 位和 64 位，两种使用的寄存器是不一样的）
+    - 32 位 (英特尔主，Amd 小弟）
+      - linux 平台
+        - __i386__
+	- __i486__
+	- __i586__
+      - Window
+	- __M_X86
+	- __X86__
+    - 64 位 (AMD 主，英特尔小弟）
+      : 不同平台的宏定义不同
+      - linux 平台
+	: 经过测试，本机的以下所有宏都能用
+        - __amd64__
+        - __amd64
+        - __x86_64__
+	- __x86_64
+      - window 平台
+	- _M_X86_64_
+	- _M_AMD64_
+    - ARM 和 MIPS 等
+- [ ] 几个接口
+  - [ ] set  (ctx_setcontext)
+  - [ ] get  (ctx_getcontext)
+  - [ ] swap (ctx_swapcontext)
+  - [ ] make (ctx_makecontext)
+- [X] 同是 32 位的微软和 linux 使用寄存器的方法有何不同吗？
+  代码组织形式不同，但是我看了，调用顺序，应该是一样的
+- [X] 上面问题，64 位呢？
+  MSVC 和 MINGW 两种，代码的组织方式不同，但是比较后，是一样的。所以，调用约定是由平台规定，而不是编译器规定。
+  所以，我们只要比较 MINGW 和 GCC 的代码组织方式后得出，是不同的。
+
+**** DONE TODO 切栈的原理
+DEADLINE: <2022-10-08 Sat 12:10> SCHEDULED: <2022-10-08 Sat 11:10>
+: 函数中断后如何入栈，如何切回去
+
+
+**** DONE TODO Python 生成器（可以用来写协程）
+**** DONE 协程生成器 yield
+DEADLINE: <2022-10-07 Fri 08:50> SCHEDULED: <2022-10-07 Fri 06:40>
+- [ ] 生产者消费者模型
+  [[~/tmp/main2.py]]
+  - n = yield y  里面返回值，但是会阻塞，直到被唤醒
+  - y = x.send() 有返回值的化，发送后不是立马返回，而是要等对端再次调用 yield
+**** DONE TODO Await 和 Asyncio
+**** DONE TODO 能用 Gevent 写点代码
+**** DONE 使用 spawn 调度多个任务
+DEADLINE: <2022-10-07 Fri 22:00> SCHEDULED: <2022-10-07 Fri 21:00>
+  - 当遇到阻塞时
+    - select(,,,2)
+    - gevent.sleep(2)   Sleep(n) 只有在 spawn 中，才会主动切换出去，否则只会阻塞
+  - 没有阻塞，调用 gevent.sleep(0) 主动让出
+  能够把 *当前的函数流程* 切换到 *接收调度的函数流*
+  [[~/tmp/main5.py]]
+  [[~/tmp/main3.py]]
+  [[~/tmp/main4.py]]
+**** DONE TODO Gevent 协程通信
+DEADLINE: <2022-10-08 Sat 8:30> SCHEDULED: <2022-10-08 Sat 08:00>
+DEADLINE: <2022-10-08 Sat 10:00> SCHEDULED: <2022-10-08 Sat 9:30>
+- 变量或队列通信
+  - 从队列取，超时触发异常
+  [[   ~/tmp/main6.py]]
+
+- 协作与分组
+  - Group
+    group.add()
+    group.join()
+  - 构造gevent驱动的服务时，会围绕一个池为整个服务的中心。
+    - pool.map()
+
+- 信号量
+
+- 多进程
+
+**** DONE TODO Monkey 代码同步协程化
+**** DONE TODO 检测协程状态（是否超时）
+**** DONE TODO 看文档吧，看看接口，感觉没有啥好学的了，也就是快点把它用起来
+DEADLINE: <2022-10-08 Sat 04:50> SCHEDULED: <2022-10-08 Sat 03:20>
+
+**** DONE TODO Gevent 官方教程
+**** DONE 引导
+DEADLINE: <2022-10-09 Sun 09:20> SCHEDULED: <2022-10-09 Sun 08:20>
+DEADLINE: <2022-10-09 Sun 10:30> SCHEDULED: <2022-10-09 Sun 9:30>
+https://www.osgeo.cn/gevent/intro.html
+- 上手
+  [[~/code/write/gevent_turtal/main1.py ]]
+
+- [-] 猴子补丁
+  [[~/code/write/gevent_turtal/main2.py]]
+  - [X] 历史就是同步的
+    虽然 gevent 采取了同标准库一样的接口，例如 gevent.socket 模块里面的 gethostbyname 同标准库 socket 模块里的 gethostbyname 一样
+    但是，还有不少以前的代码是同步（历史包袱，不同于 nodejs, 第一版就是纯异步的）
+
+  - [ ] 历史代码也能收益
+    通过猴子补丁，能把旧的同步模块也能使用协程调度
+
+  - [X] 引入猴子模块
+    使用猴子补丁时，要放在代码的第一行
+    from gevent import monkey
+    monkey.patch_all()
+
+- [X] 网络库的事件轮询
+  不仅仅是 greenlet 调度，Gevent 结合了 libev 的事件轮询
+
+  - 根据网络事件调度协程，而不是手动档
+    知道何时从套接字读取的数据
+
+- [ ] 协同多任务
+  - 传统的临界区（式微）：
+    : 因为显示交出控制权而不是由操作系统系统强制中断的原因，如果能保证不会跨 greenlet 共享局部变量，则不需要加锁
+    - gevent.lock 模块
+      - gevent.lock.Rlock
+      - gevent.lock.Semaphore
+      - gevent.lock.BoundedSamaphore
+  - 推荐使用的协作方式
+    - Queue 和 JoinableQueue
+    - Event
+    - AsyncResult
+
+- [ ] Greenlet 实例
+  [[~/code/write/gevent_turtal/main3.py]]
+
+  : gevent 的 Greenlet 类
+  - [ ] kill()
+    - 可以接收异常
+    - 可以接受超时
+    - 可以从其他 greenlet 杀死
+
+  - [ ] join()
+
+- [ ] 超时
+  Greenlet 协程是同步的，只不过遇到阻塞时，会切换出去。
+  既然如此，我们可以给他一个设定计时。
+
+  - [ ] 如果超时，那么会发生什么呢？
+
+  - [ ] 许多同步的函数也都有参数，接收 timeout
+    - gevent.Geventlet.join()
+    - gevent.Geventlet.kill()
+**** DONE TODO gevent 模块的常见功能
+https://www.osgeo.cn/gevent/api/gevent.html#module-gevent
+**** DONE Greenlet 学习
+[[~/code/write/Greenlet_learn/main1.py]]
+https://www.osgeo.cn/gevent/api/gevent.greenlet.html
+DEADLINE: <2022-10-09 Sun 11:30> SCHEDULED: <2022-10-09 Sun 10:30>
+- 状态
+  - Greenlet 三种状态
+    - 启动
+      - 方法 1
+        1. 调用构造函数 Greent() 传参
+        2. 调用 start() 启动
+      - 方法 2
+        Greenlet.spawn() 直接
+
+    - 等待
+      Greenlet.join(timeout=None)
+      直到这个协程完成或者超时
+
+    - 停止
+      调用 g.kill()
+      - 如果是阻塞的（默认），则等待协程 die 或直到超时（如果定义了超时）
+      : 该协程会切换出去，所以不会占用 cpu 资源
+      : 默认阻塞的情况下，调用 kill 和 join 效果是一样的
+      - 如果是非阻塞的，则这个 greenlet is not unschedule
+  - gevent 模块对 Greenlet 上面三种状态的封装
+    - [ ] 这些封装有什么用吗？
+      1. 便于对多个不同的 greenlet 进行管理
+	 - gevent.kill() 提供了 kill 其他 Greenlet 功能
+	 - Gevent.killall() 提供了 kill 所有 Greenlet 的功能
+      2.
+    - 启动
+      - api
+	gevent.spawn()
+	gevent.spawn_later()
+	gevent.spawn_raw()
+      - gevent 模块 how 封装方法
+        from gevent.greenlet import Greenlet
+        spawn = Greenlet.spawn
+      - 应用 how 使用该 API
+	import gevent  # 导入上述模块
+	gevent.spawn()
+    - 等待
+      - api
+	gevent.joinall()
+	gevent.wait()
+	gevent.iwait()
+    - 停止
+      - api
+	gevent.kill()
+	gevent.killall()
+
+- 上下文管理
+- 子类
+**** DONE 用更高层的封装做点服务器应用
+DEADLINE: <2022-10-09 Sun 15:30> SCHEDULED: <2022-10-09 Sun 14:20>
+https://www.osgeo.cn/gevent/servers.html#api-reference
+https://www.osgeo.cn/gevent/examples/echoserver.html
+
+[[~/code/write/gevent_turtal/gevent实现服务器.py]]
+[[~/code/write/gevent_turtal/echoserver.py]]
+
+- 相关的类体系
+  - BaseServer 类
+    公共的基类
+  - StreamServer 类
+    对于 Tcp 服务的封装
+    - serve_forever
+      #+begin_src python
+	import gevent.server import StreamServer
+
+	server = StreamServer((ip:str, port), func)
+	server.serve_forever()
+      #+end_src
+  - Pool 类
+    池的功能，设置连接数与（连接方法？）
+    - 结合 StreamServer 使用
+      #+begin_src python
+	pool = Pool(10000)
+	server = StreamServer(('127.0.0.1', 3000), echo, spawn=pool)
+      #+end_src
+
+- 练手项目：EchoServer
+  - 设置的 callback 。当连接到达时，为每个连接开启一个协程（执行此 callback）
+  - 当协程（ callback ）结束时，用户连接结束
+  - 要在 while 里面处理所有的 echo 逻辑
+  - 当收到 quit 时， break,  即结束协程，即中断连接
+  - 感想
+    逻辑全集中在一起，是典型的同步写法，异步执行，非常舒服
+**** DONE TODO 学习了 Echo 后，尝试做个 chat
+DEADLINE: <2022-10-09 Sun 05:40> SCHEDULED: <2022-10-09 Sun 04:40>
+[[~/code/write/gevent_turtal/chat.py]]
+- [X] 群聊功能
+  - [X] 保存 session 连接
+  - [X] 连接断开时把 socket 从 sessions 列表中移除
+  - [X] 当接收到用户消息时，遍历 sessions, 调用 socket.sendall() 发送出去
+
+- [-] 添加单聊功能
+  这意味着需要一个客户端。为了简单（不想自己做一个含有通信功能的客户端）。所以采取类似命令行发送命令的格式，继续使用 telnet 进行调试
+
+  - [-] 标识用户
+    - [X] ip+端口，因为要考虑本机的情况。
+    - [ ] 协程开启的函数，返回的参数是 addr, 也就是说，如果把它变成 ip:port 的字符串的组合，毕竟 addr 对象虽然标识 ip:port, 但是无法在网络中传输，那我客户端怎么才能告诉服务器我要添加的好友的信息呢？
+
+  - [X] 除了保存所有的 sessions 外，需要为每个 session 维护一个好友关系表
+    - [X] 全局 Session 的格式是 Map[ip:port 字符串][socket] 。为了方便搜索好友
+    - [X] 好友关系表使用 Map[ip:port 字符串][socket], 一样的道理
+
+  - [ ] 添加好友：
+    - [ ] 客户端发送添加命令，和在线（没有数据库） ip 地址
+    - [ ] 服务器给对方客户端发送消息，并等待作出应答
+    - [ ] 对方答应，双方都在好友表中添加对方好友信息
+
+  - [ ] 好友单聊
+    - [ ] 发送单聊指令和对方 ip
+    - [ ] 要考虑对方也在单聊怎么办？那就直接拒绝单聊请求。毕竟客户端 telnet 无法做到
+    - [ ] 对方答应，则 1:1 发送消息
+    - [ ] 退出单聊：
+      - [ ] 发送指令，或者一方退出，则结束
+
+  - [ ] 下线删除好友
+    好友关系表是在线的，如果已方退出，那么通知对方，自己下线呢？
+    - 轮询好友关系表，给对方发送自己下线的通知，让对方在他的好友关系表里移除自己的 ip
+
+- 缺点：
+  对 api 不熟，接收信息只会 fileobj.readline(), 发送消息只会 socket.sendall()
+  所以，无法做到更系粒度的操作，例如：自定义应用层协议的解码和编码
+*** DONE Asyncio
+DEADLINE: <2022-10-11 Tue 17:00> SCHEDULED: <2022-10-11 Tue 14:00>
+: 学这个更加能理解协程的原理，因为 gevent 更像是一个魔法盒，无法知道其是怎么调度的。而这个必须知道原理。
+- 生成器
+- future
+- yield
+- Await
+
+
+** DONE python 数据库驱动
+CLOSED: [2022-11-05 Sat 15:05]
+- State "DONE"       from "TODO"       [2022-11-05 Sat 15:05]
+*** DONE 数据库驱动使用入门（简称记住常见的 api 以及了解流行的驱动）
+DEADLINE: <2022-10-11 Tue 23:30>
+https://blog.csdn.net/shdxhsq/article/details/107724207
+*** DONE 生态与趋势
+DEADLINE: <2022-10-11 Tue 10:30> SCHEDULED: <2022-10-11 Tue 09:30>
+- Python 相关 api 和主流的使用框架
+  - 淘汰掉传统的 web(Django) 同步驱动
+  - 环境催生异步数据库驱动的诞生
+    随着实时 web 的发展，传统 web 框架式微，新的 app 等，要支持实时推送。
+    所以 nodejs 大为起到，因为其第一版就是异步的，连数据库 api 也是。
+    python 很多同步的 api 和传统的 web 框架，是要淘汰。
+  - 旧的思路
+    使用 gevent
+  - 时代方向
+    Python 方向向协程(asyncio) 靠拢，使用新的基于 asyncio 包构建的新数据库驱动
+*** DONE 协程化
+在前面说的生态与趋势中，提到了两点，传统 web 框架的（DJango）同步注定淘汰，而 python 向着协程的方向发展，那么注定有两条路
+1. 使用已有的协程，去调度数据库驱动
+2. 使用标准的协程（ asyncio ）重写，像 nodejs 一样，去掉同步代码，全面迎接异步。
+**** DONE Gevent 协程化：
+DEADLINE: <2022-10-11 Tue 11:40> SCHEDULED: <2022-10-11 Tue 10:40>
+https://blog.csdn.net/u011510825/article/details/86632598
+- 介绍两个 gevent 调度数据库驱动的例子
+  https://blog.csdn.net/u011510825/article/details/86632598
+  - myclient( 兼容 MySQLdb)
+    用 c 写的，现在添加了 gevent 的接口
+  - Pymysql
+     老牌的 python 写的驱动库，能够借助 gevent 协程化
+**** DONE 新的数据库驱动适配 python 新时代标准协程原语
+DEADLINE: <2022-10-11 Tue 12:30> SCHEDULED: <2022-10-11 Tue 11:40>
+- aiomysql
+  https://zhuanlan.zhihu.com/p/432243262 ： 简介
+  https://github.com/aio-libs/aiomysql ：还挺流行的
+  https://blog.csdn.net/LIFENG0402/article/details/121276150 使用方法
+  举个例子： aiomysql 使用 asyncio 框架访问 mysql 数据库的驱动，依赖并且重写了 pymysql 的大部分。
+*** DONE 数据库驱动的异步化原理
+DEADLINE: <2022-10-11 Tue 20:40> SCHEDULED: <2022-10-11 Tue 19:40>
+# 数据库驱动怎么异步化
+小弟求助大佬！！！如果要实现单线程异步化，无论是 callback 还是协程，底层都是轮询 + poll + 事件队列（网络，定时，信号）。
+而其中 poll 必须借助操作系统的提供的 select/poll 等接口, 拿 linux 举例，可以把网络 socket 作为文件描述符传入参数。
+那数据库驱动是怎么做到异步化，它也利用 poll 吗？
+#
+答案是走的 epoll
+
+
+* TODO GIT
+要理解这个逻辑，还是有点麻烦的。88
+
+* WAKE Emacs [4/5]
+CLOSED: [2022-11-05 Sat 15:06]
+- State "WAKE"       from "DONE"       [2022-11-05 Sat 15:07]
+- State "DONE"       from              [2022-11-05 Sat 15:06]
+: 有时候思考下，自己的学习习惯，以及反思自己的缺点。
+** DONE [#E] 模块化 gtd 任务，将其自然分类，减轻负担
+DEADLINE: <2022-10-22 Sat 09:30>
+:LOGBOOK:
+CLOCK: [2022-10-22 Sat 15:04]--[2022-10-22 Sat 15:05] =>  0:01
+:END:
+** WAKE [#E] org-GTD 最好的教程
+- State "WAKE"       from "DONE"       [2022-10-22 Sat 08:36] \\
+  这个教程收益非浅，我解决了我的问题，但是其他内容值得一看
+https://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-10-3-3
+** WAKE [#E] add-hook
+DEADLINE: <2022-10-30 Sun>
+- Note taken on [2022-10-23 Sun 23:27] \\
+  - 暂时解决问题
+    为啥直接下面的 org 缩进模式代码，不起作用？？
+    #+begin_src elisp
+      (org-indent-mode 1)
+    #+end_src
+    这是因为这个 org-indent-mode 必须先加载 org-mode, 而 org-mode 不能全局加载，所以办法就是要把 org-indent-mode 作为 org-mode 的 hook 加载
+- State "WAKE"       from "TODO"       [2022-10-23 Sun 23:27] \\
+  暂时解决问题
+https://www.cnblogs.com/SecRetTeam/p/6182771.html
+** WAKE [#E] Org-mode 如何快速操作视图（折叠内容折叠标题）及常用快捷键
+DEADLINE: <2022-10-30 Sun>
+- State "WAKE"       from "TODO"       [2022-10-23 Sun 23:27] \\
+  暂时解决问题，有空在回顾
+https://www.cnblogs.com/halberd-lee/p/12603592.html
+- [X] 标题的展开与折叠
+  - overview: 展示一级标题
+  - content:  所有所有标题
+  - showall:  所有内容
+  ...
+  - 关键的快捷键循环重复上面，一直暗才会重复，否则重置。
+    - <TAB>
+    - <S-TAB>
+** TODO [#E] 如何快速翻阅代码：
+DEADLINE: <2022-11-07 Mon>
+
+- [ ] 特定文件的跳转
+    - [ ] Python 函数跳
+    - [ ] Org 标题跳
