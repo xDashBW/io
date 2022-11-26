@@ -1,323 +1,20 @@
 #+title: 知识
 
-* TODO 散 [1/1]
-** DONE [#C] reactor 加 buffer 是否等于适配成 proactor
-CLOSED: [2022-11-07 Mon 19:11] DEADLINE: <2022-11-07 Mon 18:59>
-:LOGBOOK:
-CLOCK: [2022-11-07 Mon 18:40]--[2022-11-07 Mon 19:11] =>  0:31
-:END:
-
-* TODO android [6/8]
-** DONE 环境搭建
-- 除了本地有的 java SDK, 直接通过 android Studio 安装 android SDk 和模拟器等环境
-  - Adroid stdio
-  - adroid stdio SDK
-  - 模拟器
-  - UI
-- 开启 Studio 后设置开发环境
-  : 然后怎么设置开发环境
-  1. 设置 android-sdk APi 版本
-  2. 设置布局
-  2. 创建安卓虚拟设备 (ADV)
-     有点卡，就有点卡吧，我没有空去像这么多。
-** DONE HOLD 搞懂 android 的大纲 [2/4]
-DEADLINE: <2022-09-12 Mon 12:42> SCHEDULED: <2022-09-12 Mon 10:42>
-https://www.runoob.com/android/android-hello-world-example.html
-- [X] 可能是以 4 大组件为树形架构
-  - Activities 处理 UI 与屏幕进行交互
-  - Services  处理后台逻辑
-  - Broadcast-receivers 负责与底层安卓操作系统进行交互
-  - Centent-providers 处理数据与数据库
-- [-] 项目文件树架构
-  - [ ] 编译后生成信息
-    - bin ：二进制文件
-    - gen : 编译器生成
-  - [X] .gitignore, .idea 等工程管理，IDE 文件
-  - [ ] gradle
-  - [-] App
-    - [X] Lib
-    - [ ] Build
-    - [X] Src
-      - [X] Main
-        - [X] 三剑客
-          - Java 源代码
-          - res : 资源
-            - Value 目录: 包含 xml 文件，含有各式各样的值，例如字符串的颜色等
-            - Layout 目录: 自定义用户界面，布局
-          - AndroidManifest.xml 应用程序的清单文件，定义了各种组件
-      - [X] test
-      - [X] androidTest
-- [-] 几个重要的文件解析
-  - [X] Src 的 MainActivity.java 解析
-    - 与各种 android 的组件进行交互
-      #+begin_src java
-  import android.view.Menu
-
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.activity_main, menu)
-  }
-      #+end_src
-    - 函数中可以直接引用 resourse/layout 目录下的 xml 文件
-      活动类从项目的res/layout中的XML文件加载所有的UI组件。下面的语句从res/layout/activity_main.xml文件中加载UI组件： setContentView(R.layout.activity_main);
-      #+begin_src java
-@Override
-public void onCreate(Bundle savedInstanceState) {
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_main);
-}
-      #+end_src
-      + 难道是通过 R 进行调用的吗？
-        是的！！！
-  - [ ] AndroidManifest.java 文件解析
-  - [X] 布局文件
-    - [X] Resourse/value/strings.xml 文件
-      应用程序用的到的所有文本，例如，按钮，标签的名称，默认文本。
-    - [X] Resourse/layout/active_main.xml
-      当应用程序构建界面时被引用，程序员需要非常频繁的改变应用程序的布局
-  - [ ] R 文件
-    Gen/com.example.helloworld/R.java 自动生成，不能手动修改
-    + 原话理解：例如是，MainActivity.java 和 resourse/value/string.xml 的胶水文件
-- [X] App Activities 状态机
-  [[~/Downloads/activity.jpg]]
-** DONE 安卓学校作业：实验1 和 2 : 大纲，跑起来
-DEADLINE: <2022-09-12 Mon 16:43> SCHEDULED: <2022-09-12 Mon 14:13>
-- State "Done"       from "TODO"       [2022-09-12 Mon 16:40] \\
-  - 规定时间还未完成，需要加钟
-  - 收获
-    1. 掌握了安卓的基本的目录和大纲
-    2. 如何使用 android 虚拟安卓应用
-    3. 了解到可以通过修改资源文件改变布局
-  - 不足
-    1. 无法完成的原因，就是缺少对 android-studio 布局的了解以及不会修改资源文件。
-** DONE 安卓学校作业：实验1 和 2 ：学习组织布局
-DEADLINE: <2022-09-12 Mon 17:43> SCHEDULED: <2022-09-12 Mon 19:43>
-- 收获
-  - 初步了解了控件的工作方式（如何拖控件）
-    - 创建 activity 文件
-    - 控件在哪里
-    - 拖到哪里
-- 不足
-  - 遇到把图片复制到具体 ImageView 控件上这个问题时, 过于执着看书，没有利用搜索引擎去解决。导致重复去实验
-  - 没有鼠标，用触摸板效率感觉很低。
-- 目标
-  - 通过实验 2，用某个控件去了解怎么样与用户交互：
-** DONE HOLD 安卓：Acticity 和 layout 的关系，程序如何加载主 activity, Activities 如何引用 layout, 弹出信息框
-DEADLINE: <2022-09-12 Mon 22:41> SCHEDULED: <2022-09-12 Mon 21:14>
-https://weread.qq.com/web/reader/73532150723f022f73516a6
-- 收获
-  1. 学习方式的转变
-     随着学习的深入，我意识到不能在像今天早上的安卓入门一样，以好奇心的导向，提高认知，索引式的学习方法，因为我对于安卓已经有了一个基本认知，以及能够构建运行。
-     我接下来应该把注意力放在书籍上，仔细读书。
-  2. 安卓会启动主 Activity 作为主窗口，如果手动创建，需要进行标记。
-  3. 可以手动创建多个 layout/first_layout.xml 文件，使用某个控件作为框架，例如 LinearLayout.
-  4. Activity 通过 R.layout 对 layout 目录下的 xml 布局文件进行引用。
-     #+begin_src java
-       setContentView(R.layout.first_layout)  // 在主 Activity 上把该 first_layout 显示为主布局。
-     #+end_src
-  5. [X] Activity 可以直接通过 id 对 res 目录下的具体控件进行引用
-  6. 主 activity 为布局上的控件绑定对象，要通过 findViewId() + ID, 但是在 android Stdio 默认帮你绑定，使得直接使用名字与控件名一致的对象。
-  7. Toast 对话框通过静态方法给 button 注册回调，当 button 触发时就可以弹出对话框。在例子中，把主布局 linearLayout 作为 this 指针传递进去后，可以获取 LinearLayout 上的文本进行输出。
-- 目标：按照书本内容敲一遍
-** DONE 安卓：完成实验，从 empty Activity 中手动创建 activity 与绑定布局，最终结果：弹出对话框。
-** TODO [#B] （控件）与底层网络事件交互
-DEADLINE: <2022-12-07 Wed>
-- State "STOP"       from "STARTED"    [2022-10-27 Thu 08:52]
-- State "STARTED"    from "STARTED"    [2022-10-27 Thu 08:52]
-- State "STARTED"    from "STOP"       [2022-10-26 Wed 16:33]
-- State "STOP"       from "STARTED"    [2022-10-26 Wed 16:23]
-- State "STARTED"    from "STOP"       [2022-10-26 Wed 14:44] \\
-  - 理由
-    本来昨天早上 8 点软件工程的课程就要做的，结果事情多了，又要多补一节《职业规划》，又有签表，又要科技英语学习通。
-  - 回顾之前的复习
-    - 在此 TODO 的 TODO 是 *控件与控件的 io 交互*
-      通过点击同一个 activity 的 button, 能够把 EditView 的字符串读取出来，并且显示在 Toast 上面
-      这个没有啥难度
-      - 通过 main_activity.xml 设置控件布局
-      - 通过 main.java 绑定 R.Id 控件
-      - 通过变量设置回调函数
-      - 字符串的处理，EditView 的读取的内容，怎么以字符串的形式显示出来
-        - Text()
-        -
-    - 这个 TODO 的内容复习
-      - UI Loop
-        - 做法
-          - Service 层把修改 ui 的任务（Handler）封装成 message, 然后传递给 UI 层的 messagequeue
-          - UI 层是 LOOP, 从队列中取出 handler, 执行回调
-        - 好处
-          1. UI 层和 service 层两个线程，可以把耗时任务丢给 service
-          2. 修改 ui 的操作统一 dispatch 给 ui 线程，避免竞争条件
-- State "STOP"       from "STARTED"    [2022-10-24 Mon 22:34] \\
-  困到不行了
-:LOGBOOK:
-CLOCK: [2022-10-27 Thu 08:44]--[2022-10-27 Thu 08:52] =>  0:08
-CLOCK: [2022-10-26 Wed 21:18]--[2022-10-26 Wed 21:50] =>  0:32
-CLOCK: [2022-10-26 Wed 19:37]--[2022-10-26 Wed 20:40] =>  1:03
-CLOCK: [2022-10-26 Wed 17:14]--[2022-10-26 Wed 18:02] =>  0:48
-CLOCK: [2022-10-26 Wed 16:30]--[2022-10-26 Wed 17:11] =>  0:41
-CLOCK: [2022-10-26 Wed 14:48]--[2022-10-26 Wed 16:22] =>  1:34
-CLOCK: [2022-10-24 Mon 22:11]--[2022-10-24 Mon 22:34] =>  0:23
-CLOCK: [2022-10-24 Mon 20:07]--[2022-10-24 Mon 20:48] =>  0:41
-:END:
-- State "STARTED"    from "STOP"       [2022-10-24 Mon 22:11]
-- State "STOP"       from "STARTED"    [2022-10-24 Mon 20:44] \\
-  任务抢占
-- State "STARTED"    from "STOP"       [2022-10-24 Mon 19:47]
-- State "STOP"       from "STARTED"    [2022-10-24 Mon 11:26] \\
-  下课了，零碎时间快点把一些零碎事务搞好
-- State "STARTED"    from "STOP"       [2022-10-24 Mon 11:25]
-- State "STOP"       from "STARTED"    [2022-10-24 Mon 11:15] \\
-  零碎时间，先往前推任务
-- [-] 书本内容总结
-    - [-] 多线程的通信
-        - [X] UI 和 service 的异步通信
-            - [X] Looper
-            - [X] MessageQueue
-            - [X] Message
-            - [X] Handler
-        - [ ] AsyncTask
-    - [X] 启动 service
-      纠正一个错误的误区，那就是 service 并不是开一个多线程，而是在主线程。只有在耗时任务的时候，需要用户手动开启多线程
-        - 主要是两部
-            1. 生命周期
-            2. 连接
-        - [X] 步骤
-            1. 通过 Intent 绑定 service 和 activity
-            2. 给全局的函数传递 intent
-            3. 然后调用 service 的回调函数
-        其中 *连接* 的比较复杂，需要把传入一个匿名对象去接收 service 回调返回的结果，然后调用该匿名对象的回调函数
-        这样就可以在 activity 传入的匿名对象操作 service 回调返回的对象。这样实现了通信
-        - [X] 详细过程
-            - [X] 创建，启动，删除
-              #+begin_src kotlin
-                class MyService : Service {
-                    fun onCreate() { }
-                    fun onDestory() { }
-                    fun onStart() { }
-                }
-                class MainActivity  {
-                    fun onCreate() {
-                        val intent : Intent(this, MyService::class.java)
-                        startService(intent)	//开启服务
-                    }
-                }
-              #+end_src
-            - [X] 绑定 activity 和 Service
-              #+begin_src kotlin
-                class MyService {
-                    private val mbind = DownloadBinder()
-
-                    class DownloadBinder : Binder() {
-                        fun startDownload() {}
-                        fun getProgress() {}
-                    }
-
-                    override fun onBind(intent : Intent) : IBind {
-                        return mbind
-                    }
-                }
-
-                class MainActivity {
-                    // 重写 onServiceConnected 和 onServiceDisconnected
-                    // 应该是写要求 service 做的事情
-                    private val obj = object: ServiceConnection {
-                        override fun onServiceConnected (name: ComponentName, service: IBinder) {
-                            val mbind = service as MyService.MyDownload
-                            mbind.startDownload()
-                            mbind.getProgress()
-                        }
-                    }
-
-                    override fun onCreate() {
-                        val intent = Intent(this, MyService::java.class)
-                        // 第二个参数：传入一个 handler 匿名对象，要求重写
-                        // OnServiceConnected 和 OnServiceDisconnected 方法
-                        //
-                        // 第三个参数则是一个标志位，这里传入BIND_AUTO_CREATE表示在Activity和Service进行绑定后自动创建Service
-                        bingService(intent, obj, BIND_AUTO_CREATE)	//调用 MyService 的绑定回调
-                    }
-                }
-              #+end_src
-    - [X] 主要是要处理字符串，任何控件的 text() 方法之类的要关注
-    - [ ] 网络库
-- [ ] 任务
-    - [ ] 监听网络事件，发送到 textView
-    - [ ] 把 textView 内容主动发送网络上
-** TODO [#B] 完成一个最小 demo ：简单的 echo-client, 和 Gevent 对接
-DEADLINE: <2022-12-07 Wed 22:59>
-- State "STOP"       from "STARTED"    [2022-10-24 Mon 19:46] \\
-  前置条件，Service 层还没有搞定
-- State "STARTED"    from "STOP"       [2022-10-24 Mon 19:01]
-- State "STOP"       from "STARTED"    [2022-10-24 Mon 16:16] \\
-  已经学习控件之间的交互
-:LOGBOOK:
-CLOCK: [2022-10-24 Mon 19:01]--[2022-10-24 Mon 19:46] =>  0:45
-CLOCK: [2022-10-24 Mon 15:05]--[2022-10-24 Mon 16:16] =>  1:11
-CLOCK: [2022-10-24 Mon 14:15]--[2022-10-24 Mon 15:04] =>  0:44
-:END:
-- [X] 要是不知道怎么去快速浏览 Android SDK 的设计大纲，根本不知道调用什么接口
-  Android SDK API 官方网站：https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/
-- [ ] 创建主 acitives
-    - [ ] textView1 和 button: 接收用户信息并发送到 service 网络层
-        - [ ] 创建 service
-        - [ ] TCP 到 echo-server
-        - [ ] 主 Activies 和 service 通信
-    - [ ] textView2 监听 service 网络，并且显示出来
-- [ ] 创建 service
-    - [ ] 响应用户 button
-    - [ ] 监听 gevent 服务器
+* 散                      ---- 散装知识
+** TODO [#D] reactor 加 buffer 是否等于适配成 proactor
 
 
-
-* TODO 计算机网络 [0/0]
-停止等待协议，ARQ 协议，停止等待协议
-停止等待协议，缺点是信道利用率太低了。
-
-连续 ARQ 协议
-每次发送多个分组：回退 N 协议与滑动窗口协议
-
-- 流量控制与拥塞控制的区别
-  流量控制是点对点的通信量的抑制问题，是端到端的过程。
-  通过接收端来抑制发送端的发送速率，以便接收端来的及接收数据。
-
-  - 什么叫接收端来不及接收数据呢？
-    1. 结点的缓存太小。
-    2. 接收端的 CPU 处理速度慢
-       即时接收端结点的缓存增大，但是假如其 CPU 处理速度慢，导致排队时间增大，依旧会触发超时重传。
-
-  - 慢开始，拥塞控制，快重传，快恢复
-    : 假设：发送速率由 *拥塞窗口* 与 *流量窗口* 的最小值决定。假设流量窗口比拥塞窗口大。
-
-    - 原理
-      通过控制 *拥塞窗口* 来控制发送端的发送速率，所以拥塞控制就是控制 *拥塞窗口*
-    - 怎么控制拥塞窗口？
-      先给拥塞窗口设定一个小的值，然后逐渐增大，当发生拥塞时，就减少拥塞窗口的值。
-    - 如何判断发生拥塞？
-      发送端迟迟无法接收到接收方的确认，确认超时，就可以判断网络发生拥塞。
-
-    - 慢开始
-      先将拥塞窗口设置成最大报文段 MSS 的值，每次接收到报文段的确认，把拥塞窗口增加至多一个 MSS 的值，这样逐渐的增加拥塞窗口的值。
-      - 为什每个传输伦次拥塞窗口成倍数增大？
-	因为这里的 +1 MSS，不是指每次传输轮次（RTT），拥塞窗口增加一个报文段长度。而是拥塞窗口能够发送的并且得到确认的报文段，增加一个 MSS 报文段，相当于加倍。
-
-    - ssthresh
-      慢开始的加倍速度太快了，很容易出现拥塞。所以 ssthresh 是一个开关。
-      拥塞窗口值 > ssthresh : 拥塞避免
-      拥塞窗口值 < ssthresh : 慢开始
-
-    - 拥塞避免
-      线性增长。
-
-
-* TODO 计算机体系结构 [5/5]
-** DONE 指令系统简介，（诞生，与其他模块的关系等）
+* 理论知识多看书            ---- 信息差，有时候你想不出来，不是你不聪明，只是信息不够，逻辑无法自恰 
+** 计算机网络
+** 计算机体系结构
+*** DONE 指令系统简介，（诞生，与其他模块的关系等）
 DEADLINE: <2022-10-05 Wed 09:55> SCHEDULED: <2022-10-05 Wed 08:50>
 - 处理器架构，指令集，具体CPU型号 的 关系
   https://www.zhihu.com/question/23474438
   https://www.cnblogs.com/leinuo2016/p/16214796.html
   https://www.zhihu.com/question/349437202
-** DONE 指令系统组成
-** DONE 二进制与数字逻辑电路
+*** DONE 指令系统组成
+*** DONE 二进制与数字逻辑电路
 DEADLINE: <2022-10-04 Tue 08:30> SCHEDULED: <2022-10-04 Tue 08:00>
 - 二进制表示
   - 原码与补码与定点数
@@ -355,7 +52,7 @@ DEADLINE: <2022-10-04 Tue 08:30> SCHEDULED: <2022-10-04 Tue 08:00>
   - CMOS 电路
     讲点具体的，不管是组合逻辑电路还是信号逻辑电路，都是 CMOS 电路（电工知识吧？可能比较安全省电）。
 
-** DONE 简单运算器设计
+*** DONE 简单运算器设计
 DEADLINE: <2022-10-04 Tue 10:00> SCHEDULED: <2022-10-04 Tue 08:40>
 - 基础背诵
   CPU 内负责的组件叫做算术逻辑单元（ALU）
@@ -371,7 +68,7 @@ DEADLINE: <2022-10-04 Tue 10:00> SCHEDULED: <2022-10-04 Tue 08:40>
   加法进位是加法器的核心，根据进位的处理方式不同，进行分类
   - 类别1 ：行波进位加法器
   - 类别2 ：先行进位加法器
-** DONE 总线设计
+*** DONE 总线设计
 DEADLINE: <2022-10-04 Tue 12:00> SCHEDULED: <2022-10-04 Tue 10:43>
 - 总线定义
   不仅用于传输信号，还是软件同硬件架构的桥梁
@@ -389,7 +86,7 @@ DEADLINE: <2022-10-04 Tue 12:00> SCHEDULED: <2022-10-04 Tue 10:43>
   - 系统总线：处理器与桥卡之间，或多个处理器相连成并行处理器
   - 设备总线：处理器与 IO 设备之间
 
-*** DONE 片上总线
+**** DONE 片上总线
 DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
 片上总线是 芯片内部模块， （处理器上芯片：处理器核，内存控制器，缓存）等之间的总线
 - AXI 协议
@@ -416,8 +113,70 @@ DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
        内存控制器   内存控制器   内存控制器
 
 
-* TODO 实战项目
-** Android 客户端与聊天软件
+* 实战项目                 ---- 多练习
+** Pygame 贪吃蛇 [100%]
+*** DONE Pygame贪吃蛇：基本逻辑与代码运行
+DEADLINE: <2022-10-04 Tue 21:00> SCHEDULED: <2022-10-04 Tue 19:18>
+[[~/code/write/贪吃蛇/main.py]]
+- 第一次写完整的业务逻辑
+  - 写业务逻辑和写底层是两回事，我终于意识到过去用 C++ 写逻辑为啥老是失败和那是多么可笑的事情，因为根本不适合。
+  - 写逻辑的时候，就要专注业务逻辑，不要在意为啥是这样生成随机数，那不是应该关心的
+- 第一次写业务逻辑的大致流程（框架），别管琐碎的东西
+  1. 开启框架
+  2. 设置一堆乱七八糟的东西，字体，颜色等等（靠，查资料）
+  3. 数据结构也许没有那么重要（贪吃蛇用列表，坐标用元祖）
+  4. 开启 While （） 循环，循环内是监听用户按键，并且变更外部的状态（在这里是方向键）
+  5. While （） 后，判断 While（） 里面被改变的状态
+  6. 更新里面数据结构（蛇的长度和位置，草莓的位置）
+  7. 把更新的数据结构显示在屏幕，并且设置 FPS 刷新率
+
+  : 6 和 7 解决我一个疑问，我以前是在 While （） 里面刷新屏幕。
+  : 其实更好的做法是只在 While（1） 监听用户按键，然后更新数据结构。在 While（）结束后，才把更新的数据结构显示在屏幕上
+  : 同时刷新 FPS，以控制节奏（我以前是在 While（） 里面 sleep() ）
+*** DONE Pygame贪吃蛇：练习 1
+DEADLINE: <2022-10-04 Tue 22:10> SCHEDULED: <2022-10-04 Tue 21:10>
+[[~/code/write/贪吃蛇/main2.py]]
+- 绘制是一件很重要的事情，要是不上色，那就会全黑
+- 基本逻辑都能搞懂
+- 疑问
+  - 为啥要记录变量
+- 缺失的逻辑
+  - 绘制
+  - 碰到自己或墙壁
+  - 苹果的更新（随机生成）逻辑
+  - 游戏结束
+*** DONE Pygame贪吃蛇：练习 1 纠错与改正
+DEADLINE: <2022-10-05 Wed 11:30> SCHEDULED: <2022-10-05 Wed 10:31>
+[[~/code/write/贪吃蛇/main2.py]]
+- 补全缺失的逻辑 [4/4]
+  - [X] 绘制
+  - [X] 碰到自己或墙壁
+  - [X] 苹果的更新（随机生成）逻辑
+  - [X] 游戏结束
+- Bug [4/5]
+  - [ ] 无法监听用户的方向按键
+    - [ ] 原因猜测
+      - [ ]
+    - [ ] 真正原因
+  - [X] 启动后，无法绘制的问题
+    - [X] 猜测原因
+      - [X] 缺失关键启动逻辑
+      - [X] 颜色变量定义错误
+      - [X] 颜色变量传递失误
+    - [X] 真正的原因
+      - 逻辑错误
+	我把贪吃蛇数据结构和苹果的绘制逻辑，写出了 While 循环
+      - 怎么影响程序的
+	陷入 While 监听用户命令的循环中，从而使绘制逻辑，无法实现。
+      - 反思
+	所以，在 While 逻辑中，
+	1. 监听用户，并且改变数据结构
+	2. 根据改变的数据结构绘制逻辑
+	3. 设置 Fps，相当于以前的 Sleep
+  - [X] 贪吃蛇的数据结构溢出：写错
+  - [X] 没有导入 Time 模块
+  - [X] 变量名写错
+** Android 客户端与聊天软件 [100%]
 *** DONE 安卓 im 软件的问题定义与需求分析
 DEADLINE: <2022-09-19 Mon 11:31> SCHEDULED: <2022-09-19 Mon 09:31>
 - 背景
@@ -541,79 +300,221 @@ DEADLINE: <2022-09-21 Wed 10:00> SCHEDULED: <2022-09-21 Wed 08:00>
       - SELECT * from xxoo;
       - INSERT INTO xxoo VALUE （'','',''# 直接輸入值就行了）
       - UPDATE xxoo SET xx=yy WHERE xx=yy
-** Pygame 贪吃蛇
-*** DONE Pygame贪吃蛇：基本逻辑与代码运行
-DEADLINE: <2022-10-04 Tue 21:00> SCHEDULED: <2022-10-04 Tue 19:18>
-[[~/code/write/贪吃蛇/main.py]]
-- 第一次写完整的业务逻辑
-  - 写业务逻辑和写底层是两回事，我终于意识到过去用 C++ 写逻辑为啥老是失败和那是多么可笑的事情，因为根本不适合。
-  - 写逻辑的时候，就要专注业务逻辑，不要在意为啥是这样生成随机数，那不是应该关心的
-- 第一次写业务逻辑的大致流程（框架），别管琐碎的东西
-  1. 开启框架
-  2. 设置一堆乱七八糟的东西，字体，颜色等等（靠，查资料）
-  3. 数据结构也许没有那么重要（贪吃蛇用列表，坐标用元祖）
-  4. 开启 While （） 循环，循环内是监听用户按键，并且变更外部的状态（在这里是方向键）
-  5. While （） 后，判断 While（） 里面被改变的状态
-  6. 更新里面数据结构（蛇的长度和位置，草莓的位置）
-  7. 把更新的数据结构显示在屏幕，并且设置 FPS 刷新率
-
-  : 6 和 7 解决我一个疑问，我以前是在 While （） 里面刷新屏幕。
-  : 其实更好的做法是只在 While（1） 监听用户按键，然后更新数据结构。在 While（）结束后，才把更新的数据结构显示在屏幕上
-  : 同时刷新 FPS，以控制节奏（我以前是在 While（） 里面 sleep() ）
-*** DONE Pygame贪吃蛇：练习 1
-DEADLINE: <2022-10-04 Tue 22:10> SCHEDULED: <2022-10-04 Tue 21:10>
-[[~/code/write/贪吃蛇/main2.py]]
-- 绘制是一件很重要的事情，要是不上色，那就会全黑
-- 基本逻辑都能搞懂
-- 疑问
-  - 为啥要记录变量
-- 缺失的逻辑
-  - 绘制
-  - 碰到自己或墙壁
-  - 苹果的更新（随机生成）逻辑
-  - 游戏结束
-*** DONE Pygame贪吃蛇：练习 1 纠错与改正
-DEADLINE: <2022-10-05 Wed 11:30> SCHEDULED: <2022-10-05 Wed 10:31>
-[[~/code/write/贪吃蛇/main2.py]]
-- 补全缺失的逻辑 [4/4]
-  - [X] 绘制
-  - [X] 碰到自己或墙壁
-  - [X] 苹果的更新（随机生成）逻辑
-  - [X] 游戏结束
-- Bug [4/5]
-  - [ ] 无法监听用户的方向按键
-    - [ ] 原因猜测
-      - [ ]
-    - [ ] 真正原因
-  - [X] 启动后，无法绘制的问题
-    - [X] 猜测原因
-      - [X] 缺失关键启动逻辑
-      - [X] 颜色变量定义错误
-      - [X] 颜色变量传递失误
-    - [X] 真正的原因
-      - 逻辑错误
-	我把贪吃蛇数据结构和苹果的绘制逻辑，写出了 While 循环
-      - 怎么影响程序的
-	陷入 While 监听用户命令的循环中，从而使绘制逻辑，无法实现。
-      - 反思
-	所以，在 While 逻辑中，
-	1. 监听用户，并且改变数据结构
-	2. 根据改变的数据结构绘制逻辑
-	3. 设置 Fps，相当于以前的 Sleep
-  - [X] 贪吃蛇的数据结构溢出：写错
-  - [X] 没有导入 Time 模块
-  - [X] 变量名写错
-** TODO [#A] 用 python 重写野火 im 的服务器端
-DEADLINE: <2022-11-29 Tue>
+** 用 python 重写野火 im 的服务器端 [100%]
 
 
-* TODO RPC [100%]
+* 领域技能                 ---- 深入具体的领域
+** TODO android [75%]
+*** DONE 环境搭建
+- 除了本地有的 java SDK, 直接通过 android Studio 安装 android SDk 和模拟器等环境
+  - Adroid stdio
+  - adroid stdio SDK
+  - 模拟器
+  - UI
+- 开启 Studio 后设置开发环境
+  : 然后怎么设置开发环境
+  1. 设置 android-sdk APi 版本
+  2. 设置布局
+  2. 创建安卓虚拟设备 (ADV)
+     有点卡，就有点卡吧，我没有空去像这么多。
+*** DONE 搞懂 android 的大纲 [2/4]
+DEADLINE: <2022-09-12 Mon 12:42> SCHEDULED: <2022-09-12 Mon 10:42>
+https://www.runoob.com/android/android-hello-world-example.html
+- [X] 可能是以 4 大组件为树形架构
+  - Activities 处理 UI 与屏幕进行交互
+  - Services  处理后台逻辑
+  - Broadcast-receivers 负责与底层安卓操作系统进行交互
+  - Centent-providers 处理数据与数据库
+- [-] 项目文件树架构
+  - [ ] 编译后生成信息
+    - bin ：二进制文件
+    - gen : 编译器生成
+  - [X] .gitignore, .idea 等工程管理，IDE 文件
+  - [ ] gradle
+  - [-] App
+    - [X] Lib
+    - [ ] Build
+    - [X] Src
+      - [X] Main
+        - [X] 三剑客
+          - Java 源代码
+          - res : 资源
+            - Value 目录: 包含 xml 文件，含有各式各样的值，例如字符串的颜色等
+            - Layout 目录: 自定义用户界面，布局
+          - AndroidManifest.xml 应用程序的清单文件，定义了各种组件
+      - [X] test
+      - [X] androidTest
+- [-] 几个重要的文件解析
+  - [X] Src 的 MainActivity.java 解析
+    - 与各种 android 的组件进行交互
+      #+begin_src java
+  import android.view.Menu
 
-** TODO GRPC [100%]
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.activity_main, menu)
+  }
+      #+end_src
+    - 函数中可以直接引用 resourse/layout 目录下的 xml 文件
+      活动类从项目的res/layout中的XML文件加载所有的UI组件。下面的语句从res/layout/activity_main.xml文件中加载UI组件： setContentView(R.layout.activity_main);
+      #+begin_src java
+@Override
+public void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_main);
+}
+      #+end_src
+      + 难道是通过 R 进行调用的吗？
+        是的！！！
+  - [ ] AndroidManifest.java 文件解析
+  - [X] 布局文件
+    - [X] Resourse/value/strings.xml 文件
+      应用程序用的到的所有文本，例如，按钮，标签的名称，默认文本。
+    - [X] Resourse/layout/active_main.xml
+      当应用程序构建界面时被引用，程序员需要非常频繁的改变应用程序的布局
+  - [ ] R 文件
+    Gen/com.example.helloworld/R.java 自动生成，不能手动修改
+    + 原话理解：例如是，MainActivity.java 和 resourse/value/string.xml 的胶水文件
+- [X] App Activities 状态机
+  [[~/Downloads/activity.jpg]]
+*** DONE Acticity 和 layout 的关系，程序如何加载主 activity, Activities 如何引用 layout, 弹出信息框
+DEADLINE: <2022-09-12 Mon 22:41> SCHEDULED: <2022-09-12 Mon 21:14>
+https://weread.qq.com/web/reader/73532150723f022f73516a6
+- 收获
+  1. 学习方式的转变
+     随着学习的深入，我意识到不能在像今天早上的安卓入门一样，以好奇心的导向，提高认知，索引式的学习方法，因为我对于安卓已经有了一个基本认知，以及能够构建运行。
+     我接下来应该把注意力放在书籍上，仔细读书。
+  2. 安卓会启动主 Activity 作为主窗口，如果手动创建，需要进行标记。
+  3. 可以手动创建多个 layout/first_layout.xml 文件，使用某个控件作为框架，例如 LinearLayout.
+  4. Activity 通过 R.layout 对 layout 目录下的 xml 布局文件进行引用。
+     #+begin_src java
+       setContentView(R.layout.first_layout)  // 在主 Activity 上把该 first_layout 显示为主布局。
+     #+end_src
+  5. [X] Activity 可以直接通过 id 对 res 目录下的具体控件进行引用
+  6. 主 activity 为布局上的控件绑定对象，要通过 findViewId() + ID, 但是在 android Stdio 默认帮你绑定，使得直接使用名字与控件名一致的对象。
+  7. Toast 对话框通过静态方法给 button 注册回调，当 button 触发时就可以弹出对话框。在例子中，把主布局 linearLayout 作为 this 指针传递进去后，可以获取 LinearLayout 上的文本进行输出。
+- 目标：按照书本内容敲一遍
+*** DONE 完成实验，从 empty Activity 中手动创建 activity 与绑定布局，最终结果：弹出对话框。
+*** TODO [#B] （控件）与底层网络事件交互
+SCHEDULED: <2022-12-08 Thu>
+:LOGBOOK:
+CLOCK: [2022-10-27 Thu 08:44]--[2022-10-27 Thu 08:52] =>  0:08
+CLOCK: [2022-10-26 Wed 21:18]--[2022-10-26 Wed 21:50] =>  0:32
+CLOCK: [2022-10-26 Wed 19:37]--[2022-10-26 Wed 20:40] =>  1:03
+CLOCK: [2022-10-26 Wed 17:14]--[2022-10-26 Wed 18:02] =>  0:48
+CLOCK: [2022-10-26 Wed 16:30]--[2022-10-26 Wed 17:11] =>  0:41
+CLOCK: [2022-10-26 Wed 14:48]--[2022-10-26 Wed 16:22] =>  1:34
+CLOCK: [2022-10-24 Mon 22:11]--[2022-10-24 Mon 22:34] =>  0:23
+CLOCK: [2022-10-24 Mon 20:07]--[2022-10-24 Mon 20:48] =>  0:41
+:END:
+- [-] 书本内容总结
+    - [-] 多线程的通信
+        - [X] UI 和 service 的异步通信
+            - [X] Looper
+            - [X] MessageQueue
+            - [X] Message
+            - [X] Handler
+        - [ ] AsyncTask
+    - [X] 启动 service
+      纠正一个错误的误区，那就是 service 并不是开一个多线程，而是在主线程。只有在耗时任务的时候，需要用户手动开启多线程
+        - 主要是两部
+            1. 生命周期
+            2. 连接
+        - [X] 步骤
+            1. 通过 Intent 绑定 service 和 activity
+            2. 给全局的函数传递 intent
+            3. 然后调用 service 的回调函数
+        其中 *连接* 的比较复杂，需要把传入一个匿名对象去接收 service 回调返回的结果，然后调用该匿名对象的回调函数
+        这样就可以在 activity 传入的匿名对象操作 service 回调返回的对象。这样实现了通信
+        - [X] 详细过程
+            - [X] 创建，启动，删除
+              #+begin_src kotlin
+                class MyService : Service {
+                    fun onCreate() { }
+                    fun onDestory() { }
+                    fun onStart() { }
+                }
+                class MainActivity  {
+                    fun onCreate() {
+                        val intent : Intent(this, MyService::class.java)
+                        startService(intent)	//开启服务
+                    }
+                }
+              #+end_src
+            - [X] 绑定 activity 和 Service
+              #+begin_src kotlin
+                class MyService {
+                    private val mbind = DownloadBinder()
+
+                    class DownloadBinder : Binder() {
+                        fun startDownload() {}
+                        fun getProgress() {}
+                    }
+
+                    override fun onBind(intent : Intent) : IBind {
+                        return mbind
+                    }
+                }
+
+                class MainActivity {
+                    // 重写 onServiceConnected 和 onServiceDisconnected
+                    // 应该是写要求 service 做的事情
+                    private val obj = object: ServiceConnection {
+                        override fun onServiceConnected (name: ComponentName, service: IBinder) {
+                            val mbind = service as MyService.MyDownload
+                            mbind.startDownload()
+                            mbind.getProgress()
+                        }
+                    }
+
+                    override fun onCreate() {
+                        val intent = Intent(this, MyService::java.class)
+                        // 第二个参数：传入一个 handler 匿名对象，要求重写
+                        // OnServiceConnected 和 OnServiceDisconnected 方法
+                        //
+                        // 第三个参数则是一个标志位，这里传入BIND_AUTO_CREATE表示在Activity和Service进行绑定后自动创建Service
+                        bingService(intent, obj, BIND_AUTO_CREATE)	//调用 MyService 的绑定回调
+                    }
+                }
+              #+end_src
+    - [X] 主要是要处理字符串，任何控件的 text() 方法之类的要关注
+    - [ ] 网络库
+- [ ] 任务
+    - [ ] 监听网络事件，发送到 textView
+    - [ ] 把 textView 内容主动发送网络上
+*** TODO [#B] 完成一个最小 demo ：简单的 echo-client, 和 Gevent 对接
+SCHEDULED: <2022-12-11 Sun>
+- State "STOP"       from "STARTED"    [2022-10-24 Mon 19:46] \\
+  前置条件，Service 层还没有搞定
+- State "STARTED"    from "STOP"       [2022-10-24 Mon 19:01]
+- State "STOP"       from "STARTED"    [2022-10-24 Mon 16:16] \\
+  已经学习控件之间的交互
+:LOGBOOK:
+CLOCK: [2022-10-24 Mon 19:01]--[2022-10-24 Mon 19:46] =>  0:45
+CLOCK: [2022-10-24 Mon 15:05]--[2022-10-24 Mon 16:16] =>  1:11
+CLOCK: [2022-10-24 Mon 14:15]--[2022-10-24 Mon 15:04] =>  0:44
+:END:
+- [X] 要是不知道怎么去快速浏览 Android SDK 的设计大纲，根本不知道调用什么接口
+  Android SDK API 官方网站：https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/
+- [ ] 创建主 acitives
+    - [ ] textView1 和 button: 接收用户信息并发送到 service 网络层
+        - [ ] 创建 service
+        - [ ] TCP 到 echo-server
+        - [ ] 主 Activies 和 service 通信
+    - [ ] textView2 监听 service 网络，并且显示出来
+- [ ] 创建 service
+    - [ ] 响应用户 button
+    - [ ] 监听 gevent 服务器
+
+** TODO RPC [0%]
+*** TODO BRPC [#C]
+*** TODO GRPC [#C]
 
 
-* TODO Python [3/8]
-** DONE [#B] python 异步编程的发展史
+* 设计语言                 ---- 能力表达的最前端，什么网络编程，什么高并发，表达不出来什么都是假的。
+** C [100%]
+** Python [100%]
+*** DONE [#B] python 异步编程的发展史
 DEADLINE: <2022-11-08 Tue 16:45> SCHEDULED: <2022-11-08 Tue 16:30>
 :LOGBOOK:
 CLOCK: [2022-11-08 Tue 16:31]--[2022-11-08 Tue 16:48] =>  0:17
@@ -641,20 +542,212 @@ CLOCK: [2022-11-08 Tue 16:31]--[2022-11-08 Tue 16:48] =>  0:17
 
         - [X] aiohttp: 进一步封装 asyncio 作为 http 服务器
 
-** TODO [#A] python 官方文档
+*** DONE [#A] CYthon 的底层原理 [83%]
+DEADLINE: <2022-11-23 Wed 16:00> SCHEDULED: <2022-11-23 Wed 14:00>
+:LOGBOOK:
+CLOCK: [2022-11-23 Wed 16:15]--[2022-11-23 Wed 17:36] =>  1:21
+:END:
+-----------------------------------------------------
+- [X] 任务目标
+  根据 socket 模块的 gethostname 的延伸，为啥标准库 lib/python/ 里面没有 def gethostname 的源代码，不得不想联想到和 c 的关系
+-----------------------------------------------------
+- [X] https://awesome-programming-books.github.io/python/Python%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.pdf
+------------------------------------------------------
+- [X] Cython gethostname() 解释工作的原理？
+  背后有一个 c 函数，Python 解释器去调用 c 函数
+- [X] 怎么看 cpython 的解释器源码 / 如何看待 gethostname 对应的 c 代码扩展？
+- [X] 到底是特殊的 c 模块翻译成 py? 还是 py 所有语句都翻译成 c 模块
+  都不是，而是底层虚拟机根据上层的解析后的 py 代码分词作出指令，而虚拟机是 c 写的，所以当然最后是 c 代码。这里的低效是上层 py 代码的低效，而 c 模块直接调用不需要虚拟机的翻译过程
+- [ ] 怎么通过 c 代码扩展 python?
+
+*** python 官方文档 [2/5]
+**** DONE 大纲
 :LOGBOOK:
 CLOCK: [2022-11-11 Fri 08:00]--[2022-11-12 Sat 18:31] => 34:31
 :END:
 : 为什么是最高优先级，因为我看文档比看任何垃圾博客，看任何书要高效，对程序员的锻炼更好，王勇大哥就是这样进步来的。
 : 不是要过面试吗？看什么书都不如看官方文档，所以最高优先级给到官方文档
+-----------------------------------------------------
 - [X] 任务目标
   全方位的学习 Python
-.......................................
-SCHEDULED: <2022-11-11 8:00> DEADLINE: <2022-11-20>
-https://docs.python.org/zh-cn/3/contents.html
+-----------------------------------------------------
+- [X] https://docs.python.org/zh-cn/3/contents.html
+- [X] [[~/code/python教材/]]
+------------------------------------------------------
+**** TODO [#A] 上下文管理 [100%]
+SCHEDULED: <2022-11-25 Fri>
+-----------------------------------------------------
+- [X] 任务目标
+  以 socket 模块的 with...as 语法和， socket 类定义的 __enter__, __exit__ 为契机
+-----------------------------------------------------
+- [X] https://docs.python.org/zh-cn/3/reference/compound_stmts.html#with
+- [X] https://docs.python.org/zh-cn/3/reference/datamodel.html#context-managers
+- [X] https://docs.python.org/zh-cn/3/library/stdtypes.html#typecontextmanager
+------------------------------------------------------
+**** DONE [#A] 数据结构 [90%]
+SCHEDULED: <2022-11-20 23:00> DEADLINE: <2022-11-20 23:59>
+:LOGBOOK:
+CLOCK: [2022-11-21 Mon 14:20]--[2022-11-21 Mon 14:49] =>  0:29
+CLOCK: [2022-11-21 Mon 13:00]--[2022-11-21 Mon 13:45] =>  0:45
+CLOCK: [2022-11-21 Mon 11:40]--[2022-11-21 Mon 12:10] =>  0:30
+CLOCK: [2022-11-21 Mon 08:32]--[2022-11-21 Mon 10:29] =>  1:57
+CLOCK: [2022-11-20 Sun 23:00]--[2022-11-20 Sun 23:51] =>  0:51
+:END:
+--------------------------------------------------------------
+- [X] 任务目标
+  学会内置的数据结构
+--------------------------------------------------------------
+- [X] https://docs.python.org/zh-cn/3/tutorial/datastructures.html#using-lists-as-stacks
+- [X] [[~/code/python教材/数据结构/]]
+--------------------------------------------------------------
+: 都是高级的数据结构，没有数组，链表等底层的数据结构，例如列表，虽然相当于 std::vector, 但是允许甚至鼓励像 std::list 一样进行中间删除，虽然效率很低。
+- [X] 列表：（泛型）
+  : 异常很重要，因为异常相当于接口的健壮性。像 c++ 那种奇葩，竟然为了性能连异常都不用，那还叫编程语言？？？
+    - [X] 可迭代对象
+      num = list(123) 错误代码
+      抛出异常，int object is not iterable 
+    - [X] 功能接口
+        - [X] Add
+            - [X] Append
+            - [X] Insert
+        - [X] Del
+            - [X] Pop( 下标)
+                - [X] 有返回值
+                - [X] 异常（考虑接口使用错误的情况）
+                    - [X] IndexError ：参数（下标）超过范围
+                    - [X] TypeError ：参数类型错误
+                    - [X] ValueError: 参数传递正确，但是逻辑功能错误。：列表里没有这个元素，暂时不会触发（没有机会），
+            - [X] Remove （直接移除元素）
+                - [X] 无返回值
+                - [X] 移除第一个匹配的元素
+                - [X] 异常
+                    - [X] 触发 valueError
+        - [X] 下标索引 / 切片
+          [:] 等同于深拷贝 copy
+        - [X] 算法
+            - [X] Copy
+            - [X] Sort
+            - [X] Reverse
+            - [X] Count: 获取数量
+            - [X] Index 根据元素获取索引
+                - [X] 异常
+                    - [X] ValueError: 'value' not in list
+    - [X] 练习
+        - [X] 模拟栈
+        - [X] 模拟队列
+    - [X] 列表推导式
+        - [X] 嵌套的列表推导式
+    - [X] Del
+      比 pop 更加强大，和切片一样  
+      无返回值
+- [X] 队列：from collections import deque
+  : 双向队列
+  可以从 popleft() 和 pop() 。
+  列表
+- [X] 元祖与序列
+    - [X] 初始化方法
+        - [X] 普通
+            - [X] 直接用逗号
+            - [X] 推荐使用 (）
+        - [X] 空元素：空括号
+        - [X] 只有一个元素的逗号法
+          不用扩号也行，但是一定要有 ,号
+    - [X] 不可变嵌套可变
+      #+begin_src python
+        a = (1, [1, 2, 3], 3)
+        a[1] = [1,2]                    # TypeError
+        a[1][1] = '阿布'                # 正确
+      #+end_src
+- [-] 集合：
+    - [-] 创建
+        - [X] set
+        - [X] {}
+        - [ ] 支持列表推导式
+    - [X] 功能接口
+        - [X] 支持数学符号运算
+- [X] 字典
+    - [X] 创建
+        - [X] 列表推导式
+        - [X] Dict
+        - [X] {}
+    - [X] 功能接口
+        - [X] Del
+- [X] 配合使用的几种非常 nice 的循环写法
+    - [X] items
+      配合迭代取字典的 k,v
+    - [X] reverses: 
+    - [X] enumerate
+    - [X] zip: 两个序列的元素匹配
+    - [X] sorted
+- [X] 序列比较
+    - [X] 相同类型：可以
+    - [X] 不同类型：无法比较
+    - 
+**** STARTED [#A] Socket 模块 [66%]
+SCHEDULED: <2022-11-22 Tue 20:40>
+:LOGBOOK:
+CLOCK: [2022-11-26 Sat 08:43]
+CLOCK: [2022-11-24 Thu 07:39]--[2022-11-24 Thu 10:20] =>  2:41
+CLOCK: [2022-11-23 Wed 07:56]--[2022-11-23 Wed 09:12] =>  1:16
+CLOCK: [2022-11-22 Tue 23:31]--[2022-11-23 Wed 00:19] =>  0:48
+CLOCK: [2022-11-22 Tue 21:23]--[2022-11-22 Tue 22:02] =>  0:39
+:END:
+--------------------------------------------------------------
+- [X] 任务目标
+  学会内置的网络编程模块
+--------------------------------------------------------------
+- [X] https://docs.python.org/zh-cn/3/library/ipc.html
+- [X] https://docs.python.org/zh-cn/3/library/socket.html
+- [X] https://docs.python.org/zh-cn/3/library/socketserver.html#module-socketserver
+- [X] [[~/code/python教材/网络编程/]]
+--------------------------------------------------------------
+- [X] Socket(lib/socket.py)  模块讲解
+    - [X] class
+        - [X] 套接字类 Socket()
+            - [X] 功能函数
+                - [X] accept
+                - [X] connect
+                - [X] bind
+                - [X] listen
+        - [X] 异常类
+            - [X] socket.herror
+    - [X] 全局功能函数
+        - [X] socket.ntohs
+    - [X] 常量之套接字属性
+        - [X] 协议族
+            - [X] #define AF_INET 1
+        - [X] 套接字属性
+            - [X] Fork() 后关闭： #define socket_closexe
+- [ ] 协议族讲解
+- [ ] 网络编程之超时处理
+- [ ] socketserver 模块
 
-** TODO aiohttp 源码学习 [1/4]
-*** DONE [#B] aiohttp 大纲
+**** TODO [#A] 数据库模块 [100%]
+
+*** STARTED [#A] 从底层开始阅读那本神书 (为什么交 org-Mode 呢？）
+DEADLINE: <2022-12-07 Wed> SCHEDULED: <2022-11-23 Wed>
+:LOGBOOK:
+CLOCK: [2022-11-24 Thu 12:11]--[2022-11-24 Thu 13:18] =>  1:07
+CLOCK: [2022-11-24 Thu 11:16]--[2022-11-24 Thu 11:58] =>  0:42 尝试各种索引代码方法，知道了怎么快速索引 cpython 代码
+:END:
+-----------------------------------------------------
+- [X] 任务目标
+  从官方库系统学习后，难道不想彻底深入底层吗？
+-----------------------------------------------------
+- [X] https://awesome-programming-books.github.io/python/Python%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.pdf
+- [X] [[~/code/python源码]]
+------------------------------------------------------
+- 解释器，虚拟机，总之就是要快，我对 org-mode 有自己的理解，我要创建一个 queue-mode.
+- [X] 重点放在虚拟机如何解释 python 字节码上，而不是分词，AST 等编译过程
+- [ ] 虚拟机：
+  : 直接执行 c 模块代码或翻译 python 代码
+- [ ] 内建对象
+  : 在 py 上，一切都是对象，就连类本身也是个对象，那么 python 的内建对象是如何用 c 来表示的呢？
+    - [ ] Python 层面的内建对象，如何映射到 c 上
+
+
+*** TODO aiohttp 源码学习 [1/4]
+**** DONE [#B] aiohttp 大纲
 SCHEDULED: <2022-11-08 Tue 15:45> DEADLINE: <2022-11-10 Thu 22:59>
 :LOGBOOK:
 CLOCK: [2022-11-10 Thu 20:04]--[2022-11-10 Thu 21:34] =>  1:30
@@ -712,12 +805,12 @@ CLOCK: [2022-11-05 Sat 23:04]--[2022-11-06 Sun 00:02] =>  0:58
 - [X] 模块拆解
     - [X] Http 协议处理
     - [X] Web Server 路由功能（导入 web 应用服务器）
-*** TODO [#B] aiohttp 第二文档：Example 学习
+**** TODO [#B] aiohttp 第二文档：Example 学习
 - [ ] 任务目标
 ........................................................................................
-*** TODO [#B] aiohttp docs
-*** TODO [#B] aiohttp src 
-** STOP [#B] Python 常见编程手法（最佳实践）
+**** TODO [#B] aiohttp docs
+**** TODO [#B] aiohttp src 
+*** STARTED [#B] Python 常见编程手法（最佳实践）
 DEADLINE: <2022-11-11 Thu 11:55>
 :LOGBOOK:
 CLOCK: [2022-11-05 Sat 21:10]--[2022-11-05 Sat 21:38] =>  0:28
@@ -727,9 +820,7 @@ CLOCK: [2022-11-05 Sat 16:08]--[2022-11-05 Sat 17:00] =>  0:52
 CLOCK: [2022-11-05 Sat 15:26]--[2022-11-05 Sat 16:05] =>  0:39
 CLOCK: [2022-11-05 Sat 15:21]--[2022-11-05 Sat 15:26] =>  0:05
 :END:
-
 - [-] 从灵剑的知乎答案汲取之设计
-
     - [X] 动态语言 Duck 类型的好处
       : 总结起来就是扩展与修改方便，以及抽象程度高，所以代码精简，表达能力强
         - [X] 代码精简
@@ -790,7 +881,7 @@ CLOCK: [2022-11-05 Sat 15:21]--[2022-11-05 Sat 15:26] =>  0:05
 
         - [ ] args 和 kwargs
 
-** STOP [#B] python 设计模式
+*** STARTED [#B] python 设计模式
 DEADLINE: <2022-11-13 Sun>
 :LOGBOOK:
 CLOCK: [2022-11-05 Sat 14:25]--[2022-11-05 Sat 15:26] =>  1:01
@@ -966,23 +1057,22 @@ https://weread.qq.com/web/reader/e5c328107159b28fe5c8d02kc1632f5021fc16a5320f3dc
         - [ ] 实战应用
 
 
-
-** DONE Python 网络编程 [3/3]
+*** DONE Python 网络编程 [3/3]
 CLOSED: [2022-11-05 Sat 15:05]
 - State "DONE"       from "TODO"       [2022-11-05 Sat 15:05]
 : 为啥是 Python，因为 Python 可以用 Cython 替换为自己的 C 的模块， 同时适合写业务逻辑，否则自己用 C 写个 Libevent，除了控制台，啥也干不了。
-*** DONE 单线程的异步事件 Echo，使用 Twisted
+**** DONE 单线程的异步事件 Echo，使用 Twisted
 CLOSED: [2022-11-05 Sat 15:05]
 - State "DONE"       from              [2022-11-05 Sat 15:05]
 - 作业
   [[~/code/write/twisted单线程echo/single_thread_echo.py]]
 - 参考资料
   1. 微信读书： https://weread.qq.com/web/reader/859323d0726e7be5859dbb9
-**** DONE 开发 Protocol 子类
+***** DONE 开发 Protocol 子类
 DEADLINE: <2022-10-05 Wed 15:00> SCHEDULED: <2022-10-05 Wed 14:00>
-**** DONE 开发 Factory 子类
+***** DONE 开发 Factory 子类
 DEADLINE: <2022-10-05 Wed 15:50> SCHEDULED: <2022-10-05 Wed 15:20>
-**** DONE 了解 Python 模块是怎么封装的，以及是怎么导入的
+***** DONE 了解 Python 模块是怎么封装的，以及是怎么导入的
 DEADLINE: <2022-10-05 Wed 22:15> SCHEDULED: <2022-10-05 Wed 20:50>
 DEADLINE: <2022-10-05 Wed 19:30> SCHEDULED: <2022-10-05 Wed 18:27>
 
@@ -1017,13 +1107,13 @@ DEADLINE: <2022-10-05 Wed 19:30> SCHEDULED: <2022-10-05 Wed 18:27>
     功能单元是文件（模块）
     内部实现通过 __all__ 进行隐藏，对于熟练的，知道该导入具体的什么。 否则，from xxoo.模块 import *(具体到模块)
 
-**** DONE TODO Twisted 的 Factory 和 Protobuf 是怎么封装的
+***** DONE TODO Twisted 的 Factory 和 Protobuf 是怎么封装的
 DEADLINE: <2022-10-06 Thu 09:30> SCHEDULED: <2022-10-06 Thu 08:20>
 
-**** DONE TODO 搞懂 twisted Internel 的 常见的类和接口，它的架构设计
+***** DONE TODO 搞懂 twisted Internel 的 常见的类和接口，它的架构设计
 DEADLINE: <2022-10-06 Thu 11:30> SCHEDULED: <2022-10-06 Thu 09:40>
 
-**** DONE 自己写个 Python 包：要求实现功能：根据不同的平台安装不同的 Selector 后端
+***** DONE 自己写个 Python 包：要求实现功能：根据不同的平台安装不同的 Selector 后端
 DEADLINE: <2022-10-06 Thu 16:50> SCHEDULED: <2022-10-06 Thu 16:00>
 [[~/code/write/mytwisted/__init__.py]]
 - 四大模块
@@ -1042,7 +1132,7 @@ DEADLINE: <2022-10-06 Thu 16:50> SCHEDULED: <2022-10-06 Thu 16:00>
     install = __install()
 
 
-**** DONE TODO 查看 EPOLL 后端的封装
+***** DONE TODO 查看 EPOLL 后端的封装
 DEADLINE: <2022-10-06 Thu 19:17> SCHEDULED: <2022-10-06 Thu 18:10>
 - Epollreactor ：Class
   - 类的体系
@@ -1081,17 +1171,17 @@ DEADLINE: <2022-10-06 Thu 19:17> SCHEDULED: <2022-10-06 Thu 18:10>
 
     - [ ] Poll
 
-**** DONE Python怎么使用 EPOLL 的
+***** DONE Python怎么使用 EPOLL 的
 DEADLINE: <2022-10-06 Thu 08:10> SCHEDULED: <2022-10-06 Thu 07:40>
 使用系统的内置模块 Select
 
-*** DONE Gevent
+**** DONE Gevent
 CLOSED: [2022-11-05 Sat 15:05]
 - State "DONE"       from              [2022-11-05 Sat 15:05]
-**** DONE TODO Python 协程生态与入门
+***** DONE TODO Python 协程生态与入门
 DEADLINE: <2022-10-06 Fri 23:30> SCHEDULED: <2022-10-06 Thu 21:00>
 
-**** DONE TODO 林伟的协程入门
+***** DONE TODO 林伟的协程入门
 DEADLINE: <2022-10-07 Fri 09:30> SCHEDULED: <2022-10-07 Fri 08:30>
 DEADLINE: <2022-10-07 Fri 10:30> SCHEDULED: <2022-10-07 Fri 09:30>
 [[~/code/write/林伟协程/main.c]]
@@ -1135,21 +1225,21 @@ DEADLINE: <2022-10-07 Fri 10:30> SCHEDULED: <2022-10-07 Fri 09:30>
   MSVC 和 MINGW 两种，代码的组织方式不同，但是比较后，是一样的。所以，调用约定是由平台规定，而不是编译器规定。
   所以，我们只要比较 MINGW 和 GCC 的代码组织方式后得出，是不同的。
 
-**** DONE TODO 切栈的原理
+***** DONE TODO 切栈的原理
 DEADLINE: <2022-10-08 Sat 12:10> SCHEDULED: <2022-10-08 Sat 11:10>
 : 函数中断后如何入栈，如何切回去
 
 
-**** DONE TODO Python 生成器（可以用来写协程）
-**** DONE 协程生成器 yield
+***** DONE TODO Python 生成器（可以用来写协程）
+***** DONE 协程生成器 yield
 DEADLINE: <2022-10-07 Fri 08:50> SCHEDULED: <2022-10-07 Fri 06:40>
 - [ ] 生产者消费者模型
   [[~/tmp/main2.py]]
   - n = yield y  里面返回值，但是会阻塞，直到被唤醒
   - y = x.send() 有返回值的化，发送后不是立马返回，而是要等对端再次调用 yield
-**** DONE TODO Await 和 Asyncio
-**** DONE TODO 能用 Gevent 写点代码
-**** DONE 使用 spawn 调度多个任务
+***** DONE TODO Await 和 Asyncio
+***** DONE TODO 能用 Gevent 写点代码
+***** DONE 使用 spawn 调度多个任务
 DEADLINE: <2022-10-07 Fri 22:00> SCHEDULED: <2022-10-07 Fri 21:00>
   - 当遇到阻塞时
     - select(,,,2)
@@ -1159,7 +1249,7 @@ DEADLINE: <2022-10-07 Fri 22:00> SCHEDULED: <2022-10-07 Fri 21:00>
   [[~/tmp/main5.py]]
   [[~/tmp/main3.py]]
   [[~/tmp/main4.py]]
-**** DONE TODO Gevent 协程通信
+***** DONE TODO Gevent 协程通信
 DEADLINE: <2022-10-08 Sat 8:30> SCHEDULED: <2022-10-08 Sat 08:00>
 DEADLINE: <2022-10-08 Sat 10:00> SCHEDULED: <2022-10-08 Sat 9:30>
 - 变量或队列通信
@@ -1177,13 +1267,13 @@ DEADLINE: <2022-10-08 Sat 10:00> SCHEDULED: <2022-10-08 Sat 9:30>
 
 - 多进程
 
-**** DONE TODO Monkey 代码同步协程化
-**** DONE TODO 检测协程状态（是否超时）
-**** DONE TODO 看文档吧，看看接口，感觉没有啥好学的了，也就是快点把它用起来
+***** DONE TODO Monkey 代码同步协程化
+***** DONE TODO 检测协程状态（是否超时）
+***** DONE TODO 看文档吧，看看接口，感觉没有啥好学的了，也就是快点把它用起来
 DEADLINE: <2022-10-08 Sat 04:50> SCHEDULED: <2022-10-08 Sat 03:20>
 
-**** DONE TODO Gevent 官方教程
-**** DONE 引导
+***** DONE TODO Gevent 官方教程
+***** DONE 引导
 DEADLINE: <2022-10-09 Sun 09:20> SCHEDULED: <2022-10-09 Sun 08:20>
 DEADLINE: <2022-10-09 Sun 10:30> SCHEDULED: <2022-10-09 Sun 9:30>
 https://www.osgeo.cn/gevent/intro.html
@@ -1242,9 +1332,9 @@ https://www.osgeo.cn/gevent/intro.html
   - [ ] 许多同步的函数也都有参数，接收 timeout
     - gevent.Geventlet.join()
     - gevent.Geventlet.kill()
-**** DONE TODO gevent 模块的常见功能
+***** DONE TODO gevent 模块的常见功能
 https://www.osgeo.cn/gevent/api/gevent.html#module-gevent
-**** DONE Greenlet 学习
+***** DONE Greenlet 学习
 [[~/code/write/Greenlet_learn/main1.py]]
 https://www.osgeo.cn/gevent/api/gevent.greenlet.html
 DEADLINE: <2022-10-09 Sun 11:30> SCHEDULED: <2022-10-09 Sun 10:30>
@@ -1296,7 +1386,7 @@ DEADLINE: <2022-10-09 Sun 11:30> SCHEDULED: <2022-10-09 Sun 10:30>
 
 - 上下文管理
 - 子类
-**** DONE 用更高层的封装做点服务器应用
+***** DONE 用更高层的封装做点服务器应用
 DEADLINE: <2022-10-09 Sun 15:30> SCHEDULED: <2022-10-09 Sun 14:20>
 https://www.osgeo.cn/gevent/servers.html#api-reference
 https://www.osgeo.cn/gevent/examples/echoserver.html
@@ -1331,7 +1421,7 @@ https://www.osgeo.cn/gevent/examples/echoserver.html
   - 当收到 quit 时， break,  即结束协程，即中断连接
   - 感想
     逻辑全集中在一起，是典型的同步写法，异步执行，非常舒服
-**** DONE TODO 学习了 Echo 后，尝试做个 chat
+***** DONE TODO 学习了 Echo 后，尝试做个 chat
 DEADLINE: <2022-10-09 Sun 05:40> SCHEDULED: <2022-10-09 Sun 04:40>
 [[~/code/write/gevent_turtal/chat.py]]
 - [X] 群聊功能
@@ -1369,7 +1459,7 @@ DEADLINE: <2022-10-09 Sun 05:40> SCHEDULED: <2022-10-09 Sun 04:40>
 - 缺点：
   对 api 不熟，接收信息只会 fileobj.readline(), 发送消息只会 socket.sendall()
   所以，无法做到更系粒度的操作，例如：自定义应用层协议的解码和编码
-*** DONE Asyncio
+**** DONE Asyncio
 DEADLINE: <2022-10-11 Tue 17:00> SCHEDULED: <2022-10-11 Tue 14:00>
 : 学这个更加能理解协程的原理，因为 gevent 更像是一个魔法盒，无法知道其是怎么调度的。而这个必须知道原理。
 - 生成器
@@ -1377,14 +1467,13 @@ DEADLINE: <2022-10-11 Tue 17:00> SCHEDULED: <2022-10-11 Tue 14:00>
 - yield
 - Await
 
-
-** DONE python 数据库驱动
+*** DONE python 数据库驱动
 CLOSED: [2022-11-05 Sat 15:05]
 - State "DONE"       from "TODO"       [2022-11-05 Sat 15:05]
-*** DONE 数据库驱动使用入门（简称记住常见的 api 以及了解流行的驱动）
+**** DONE 数据库驱动使用入门（简称记住常见的 api 以及了解流行的驱动）
 DEADLINE: <2022-10-11 Tue 23:30>
 https://blog.csdn.net/shdxhsq/article/details/107724207
-*** DONE 生态与趋势
+**** DONE 生态与趋势
 DEADLINE: <2022-10-11 Tue 10:30> SCHEDULED: <2022-10-11 Tue 09:30>
 - Python 相关 api 和主流的使用框架
   - 淘汰掉传统的 web(Django) 同步驱动
@@ -1396,11 +1485,11 @@ DEADLINE: <2022-10-11 Tue 10:30> SCHEDULED: <2022-10-11 Tue 09:30>
     使用 gevent
   - 时代方向
     Python 方向向协程(asyncio) 靠拢，使用新的基于 asyncio 包构建的新数据库驱动
-*** DONE 协程化
+**** DONE 协程化
 在前面说的生态与趋势中，提到了两点，传统 web 框架的（DJango）同步注定淘汰，而 python 向着协程的方向发展，那么注定有两条路
 1. 使用已有的协程，去调度数据库驱动
 2. 使用标准的协程（ asyncio ）重写，像 nodejs 一样，去掉同步代码，全面迎接异步。
-**** DONE Gevent 协程化：
+***** DONE Gevent 协程化：
 DEADLINE: <2022-10-11 Tue 11:40> SCHEDULED: <2022-10-11 Tue 10:40>
 https://blog.csdn.net/u011510825/article/details/86632598
 - 介绍两个 gevent 调度数据库驱动的例子
@@ -1409,14 +1498,14 @@ https://blog.csdn.net/u011510825/article/details/86632598
     用 c 写的，现在添加了 gevent 的接口
   - Pymysql
      老牌的 python 写的驱动库，能够借助 gevent 协程化
-**** DONE 新的数据库驱动适配 python 新时代标准协程原语
+***** DONE 新的数据库驱动适配 python 新时代标准协程原语
 DEADLINE: <2022-10-11 Tue 12:30> SCHEDULED: <2022-10-11 Tue 11:40>
 - aiomysql
   https://zhuanlan.zhihu.com/p/432243262 ： 简介
   https://github.com/aio-libs/aiomysql ：还挺流行的
   https://blog.csdn.net/LIFENG0402/article/details/121276150 使用方法
   举个例子： aiomysql 使用 asyncio 框架访问 mysql 数据库的驱动，依赖并且重写了 pymysql 的大部分。
-*** DONE 数据库驱动的异步化原理
+**** DONE 数据库驱动的异步化原理
 DEADLINE: <2022-10-11 Tue 20:40> SCHEDULED: <2022-10-11 Tue 19:40>
 # 数据库驱动怎么异步化
 小弟求助大佬！！！如果要实现单线程异步化，无论是 callback 还是协程，底层都是轮询 + poll + 事件队列（网络，定时，信号）。
@@ -1425,25 +1514,21 @@ DEADLINE: <2022-10-11 Tue 20:40> SCHEDULED: <2022-10-11 Tue 19:40>
 #
 答案是走的 epoll
 
-
-* TODO GIT
-要理解这个逻辑，还是有点麻烦的。88
-
-* WAKE Emacs [4/5]
-CLOSED: [2022-11-05 Sat 15:06]
-- State "WAKE"       from "DONE"       [2022-11-05 Sat 15:07]
-- State "DONE"       from              [2022-11-05 Sat 15:06]
+* 工具篇                   ---- 人类为何崛起
+** Git [100%]
+** Emacs [83%]
 : 有时候思考下，自己的学习习惯，以及反思自己的缺点。
-** DONE [#E] 模块化 gtd 任务，将其自然分类，减轻负担
+*** DONE [#E] 模块化 gtd 任务，将其自然分类，减轻负担
 DEADLINE: <2022-10-22 Sat 09:30>
 :LOGBOOK:
 CLOCK: [2022-10-22 Sat 15:04]--[2022-10-22 Sat 15:05] =>  0:01
 :END:
-** WAKE [#E] org-GTD 最好的教程
+
+*** DONE [#E] org-GTD 最好的教程
 - State "WAKE"       from "DONE"       [2022-10-22 Sat 08:36] \\
   这个教程收益非浅，我解决了我的问题，但是其他内容值得一看
 https://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-10-3-3
-** WAKE [#E] add-hook
+*** DONE [#E] add-hook
 DEADLINE: <2022-10-30 Sun>
 - Note taken on [2022-10-23 Sun 23:27] \\
   - 暂时解决问题
@@ -1455,7 +1540,7 @@ DEADLINE: <2022-10-30 Sun>
 - State "WAKE"       from "TODO"       [2022-10-23 Sun 23:27] \\
   暂时解决问题
 https://www.cnblogs.com/SecRetTeam/p/6182771.html
-** WAKE [#E] Org-mode 如何快速操作视图（折叠内容折叠标题）及常用快捷键
+*** DONE [#E] Org-mode 如何快速操作视图（折叠内容折叠标题）及常用快捷键
 DEADLINE: <2022-10-30 Sun>
 - State "WAKE"       from "TODO"       [2022-10-23 Sun 23:27] \\
   暂时解决问题，有空在回顾
@@ -1468,9 +1553,15 @@ https://www.cnblogs.com/halberd-lee/p/12603592.html
   - 关键的快捷键循环重复上面，一直暗才会重复，否则重置。
     - <TAB>
     - <S-TAB>
-** TODO [#E] 如何快速翻阅代码：
+*** DONE [#E] 如何快速翻阅代码：
 DEADLINE: <2022-11-07 Mon>
 
 - [ ] 特定文件的跳转
     - [ ] Python 函数跳
     - [ ] Org 标题跳
+*** TODO [#E] 修改 Sort-tab [0%]
+----------------------------------------------------
+- [ ] 任务目标：
+  修改 sort-tab 使其符合自己的习惯
+----------------------------------------------------
+
