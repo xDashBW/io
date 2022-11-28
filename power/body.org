@@ -90,170 +90,105 @@
   你的 a 事件，做不完是因为时间不够。但是这已经是最高效率，能挤出最多的时间了。如果你遵循不了，a 事件铁定玩不成，所以我把 a 事件的前置条件做为 a 事件
 **** TODO [#A] 运动1
 DEADLINE: <2022-11-12 Sat 07:10 +1d> SCHEDULED: <2022-11-12 Sat 06:50 +1d>
-- State "DONE"       from "TODO"       [2022-11-11 Fri 07:59]
 :PROPERTIE:LAST_REPEAT: [2022-11-11 Fri 07:59]S:
 
 :END:
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:17]
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:15]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:15]S:
-
-:END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 10:36]
-- CLOSING NOTE [2022-11-07 Mon 09:18] \\
   失败：
   - 直接原因：还在为晚上没有睡好的事情懊恼，
   - 根本原因：没有足够的思想领悟，既定目标，一条路过去的决心。
 **** TODO [#A] 早餐
 DEADLINE: <2022-11-12 Sat 07:50 +1d> SCHEDULED: <2022-11-12 Sat 07:20 +1d>
-- State "DONE"       from "TODO"       [2022-11-11 Fri 07:59]
 :PROPERTIE:LAST_REPEAT: [2022-11-11 Fri 07:59]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 15:14]
-- State "DONE"       from "TODO"       [2022-11-09 Wed 08:12]
-- State "DONE"       from "TODO"       [2022-11-08 Tue 14:51]
 - CLOSING NOTE [2022-11-07 Mon 09:21] \\
   - 失败
       - 直接原因：（1）运动1 延迟，造成的连锁反映，（2）要去做核酸
-**** STARTED [#A] 早修
+**** LOOP [#A] 早修
 DEADLINE: <2022-11-11 Fri 11:59 +1d> SCHEDULED: <2022-11-11 Fri 08:00 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 15:14]
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 15:14]
-- State "DONE"       from "TODO"       [2022-11-09 Wed 12:37]
-- State "DONE"       from "TODO"       [2022-11-08 Tue 12:07]
 **** TODO [#A] 午餐
 DEADLINE: <2022-11-11 Fri 12:55 +1d> SCHEDULED: <2022-11-11 Fri 12:30 +1d>
-- State "DONE"       from "TODO"       [2022-11-10 Thu 17:14]
 :PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:14]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-09 Wed 12:05]
-- State "DONE"       from "STARTED"    [2022-11-08 Tue 12:58]
 **** TODO [#A] 插修1
 DEADLINE: <2022-11-11 Fri 12:25 +1d> SCHEDULED: <2022-11-11 Fri 12:00 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 17:17]
 :END:
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:17]
-- State "CENCEL"     from "STOP"       [2022-11-10 Thu 17:16]
 :PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
-- State "DONE"       from "STARTED"    [2022-11-08 Tue 13:27]
 **** TODO [#A] 午觉
 DEADLINE: <2022-11-11 Fri 13:55 +1d> SCHEDULED: <2022-11-11 Fri 13:25 +1d>
-- State "DONE"       from "TODO"       [2022-11-10 Thu 17:14]
 :PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:14]S:
 
 :END:
-- State "DONE"       from "STARTED"    [2022-11-09 Wed 14:19]
-:LOGBOOK:
-CLOCK: [2022-11-09 Wed 12:49]--[2022-11-09 Wed 14:19] =>  1:30
-:END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 13:27]
 **** TODO [#A] 中修
 DEADLINE: <2022-11-11 Fri 16:30 +1d> SCHEDULED: <2022-11-11 Fri 14:05 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 17:17]
 :END:
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:17]
-- State "CENCEL"     from "STARTED"    [2022-11-10 Thu 17:16]
 :PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
-- State "DONE"       from "STARTED"    [2022-11-08 Tue 16:48]
 **** TODO [#A] 插修2
 DEADLINE: <2022-11-11 Fri 19:00 +1d> SCHEDULED: <2022-11-11 Fri 18:35 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 19:27]
 :END:
-- State "DONE"       from "STARTED"    [2022-11-10 Thu 19:27]
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
 :PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
-:END:
-- State "DONE"       from "STARTED"    [2022-11-08 Tue 19:02]
-:LOGBOOK:
 :END:
 **** TODO [#A] 运动2
 DEADLINE: <2022-11-11 Fri 17:30 +1d> SCHEDULED: <2022-11-11 Fri 17:00 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 18:46]
 :END:
-- State "DONE"       from "STARTED"    [2022-11-10 Thu 18:46]
 :LOGBOOK:
 CLOCK: [2022-11-10 Thu 17:17]--[2022-11-10 Thu 17:35] =>  0:18
 :END:
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
 :PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 18:33]
 **** TODO [#A] 晚餐
 DEADLINE: <2022-11-11 Fri 18:00 +1d> SCHEDULED: <2022-11-11 Fri 17:35 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 18:46]
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 18:46]
 :LOGBOOK:
 CLOCK: [2022-11-10 Thu 17:40]--[2022-11-10 Thu 18:05] =>  0:25
 :END:
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
 :PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 18:33]
 **** TODO [#A] 洗衣服洗澡
 DEADLINE: <2022-11-11 Fri 18:30 +1d> SCHEDULED: <2022-11-11 Fri 18:05 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 18:47]
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 18:47]
 :LOGBOOK:
 CLOCK: [2022-11-10 Thu 18:25]--[2022-11-10 Thu 18:45] =>  0:20
 :END:
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 18:33]
 **** TODO [#A] 晚修
 DEADLINE: <2022-11-11 Fri 22:58 +1d> SCHEDULED: <2022-11-11 Fri 19:05 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 22:57]
 :END:
-- State "DONE"       from "STARTED"    [2022-11-10 Thu 22:57]
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
 :PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:02]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 23:08]
-**** STARTED [#A] 结束晚修，放松
 DEADLINE: <2022-11-10 Thu 23:55 +1d> SCHEDULED: <2022-11-10 Thu 23:00 +1d>
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-09 Wed 00:15]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 23:09]
-**** TODO [#A] 23:59 到 6:40 睡觉
 DEADLINE: <2022-11-13 Sun 06:40 +1d> SCHEDULED: <2022-11-12 Sat 00:05 +1d>
-- State "DONE"       from "TODO"       [2022-11-11 Fri 06:58]
-:PROPERTIE:LAST_REPEAT: [2022-11-11 Fri 06:58]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 15:14]
-- State "DONE"       from "TODO"       [2022-11-09 Wed 07:13]
-:LOGBOOK:
-CLOCK: [2022-11-09 Wed 00:16]--[2022-11-09 Wed 07:13] =>  6:57
-:END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 10:35]
-*** TODO 赶进度模式（避免进入）
-: 螺旋上升，让我知道，合理的规划就是最完美的状态，我无法划分一个比 *最完美时间* 还要高效率的可能，只可能对一些不必要的活动进行阉割。
 
 - 大纲
     - 除了早，中，晚修之外，其余时间全部变为灵活处理时间，用于处理突发紧急事件，
@@ -310,67 +245,26 @@ SCHEDULED: <2022-11-11 Fri +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 22:57]
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 22:57]
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
 
 
-- State "DONE"       from "TODO"       [2022-11-08 Tue 22:49]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 22:35]
-** TODO [#A] 规范：在你的学习时间里，划出花 30 分钟来阅读你的 gtd
 SCHEDULED: <2022-11-10 Thu +1d>
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:02]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 23:03]
-:LOGBOOK:
-CLOCK: [2022-11-07 Mon 22:35]--[2022-11-07 Mon 23:03] =>  0:28
-:END:
-*** TODO [#A] 收集信息
-SCHEDULED: <2022-11-11 Fri +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 22:59]
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 22:59]
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:09]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 22:35]
-*** TODO 将来 [0/2]
 **** TODO [#A] 将来：加入新的任务
 SCHEDULED: <2022-11-10 Thu +1d>
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:02]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 23:02]
-**** TODO [#A] 将来：未来的任务，要提前做
 SCHEDULED: <2022-11-10 Thu +1d>
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:02]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 23:09]
-*** TODO 调整过去 [0/2]
 **** TODO [#A] 过去：调整 deadline
 SCHEDULED: <2022-11-10 Thu +1d>
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:02]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 23:00]
-**** TODO [#A] 过去：调整任务等级
 SCHEDULED: <2022-11-10 Thu +1d>
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:02]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 23:00]
-** TODO [#A] 每个周末复习一个星期的内容
 SCHEDULED: <2022-11-13 Sun +1w>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-07 Mon 09:24]
@@ -381,12 +275,7 @@ SCHEDULED: <2022-11-11 Fri +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 22:22]
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 22:22]
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:02]
-人认识世界的过程，是自底向上，螺旋上升，对于知识点，任务，也是一个推翻，重新建立的过程，所以不能只纠结与具体任务，有很多情况，是前后左右对比，跨任务对比，得出结论
 
 ** TODO [#A] 遗精只是我人生中一个非常小的挫折而已，不要怕，勇敢地去面对它，我迟早会攻克它，在此之前，不要沮丧，迟早会赢。
 - [X] 第 0 阶段：什么方法都不去找，不肯面对，等死
@@ -400,41 +289,21 @@ SCHEDULED: <2022-11-11 Fri +1d>
 *** 血的教训 [0/4]
 **** TODO [#A] 中午午睡，就算睡 10 分钟，都必须把衣服穿好，不能把它当被子盖
 SCHEDULED: <2022-11-11 Fri +1d>
-- State "DONE"       from "TODO"       [2022-11-10 Thu 22:22]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 22:22]S:
 :END:
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-**** TODO [#A] 睡前：裸露双腿。不管在怎么冷，不能有任何被子
 SCHEDULED: <2022-11-10 Thu +1d>
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-09 Wed 00:15]
-- State "DONE"       from "TODO"       [2022-11-08 Tue 00:08]
-**** TODO [#A] 6 点半后不能听歌幻想
 SCHEDULED:<2022-11-14 +1d>
 **** TODO [#A] 晚上必须在 6 点 30 分钟前吃饭 (我算过的极限时间，考虑 6 点下课的情况），如果超过 6 点半，则晚上什么都不能吃
 SCHEDULED: <2022-11-11 Fri +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-11-10 Thu 22:22]
 :END:
-- State "DONE"       from "TODO"       [2022-11-10 Thu 22:22]
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 
 :END:
-- State "DONE"       from "TODO"       [2022-11-08 Tue 23:02]
-- State "DONE"       from "TODO"       [2022-11-07 Mon 22:35]
-  
-*** 最大可能减少概率 [0/3] 
+
 **** TODO [#A] 睡前：每天晚上睡觉前拿湿的毛巾，敷 20 分钟以上
 SCHEDULED: <2022-11-10 Thu +1d>
-- State "CENCEL"     from "TODO"       [2022-11-10 Thu 17:16]
-:PROPERTIE:LAST_REPEAT: [2022-11-10 Thu 17:16]S:
 :END:
-- State "DONE"       from "TODO"       [2022-11-09 Wed 00:15]
-- State "DONE"       from "TODO"       [2022-11-08 Tue 00:08]
-  那天我做了我所做的所有事情，还是失败了。是因为违反了上面的，听歌幻想！！
 **** TODO [#A] 每次看到色情内容一定要主动远离
 SCHEDULED: <2022-11-11 Fri +1d>
 **** TODO [#A] 晚上不要喝奶茶或任何饮料（喝汤或一杯水最好）

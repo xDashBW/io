@@ -6,140 +6,66 @@
 # 优先级, 信息很多，我该怎么做呢？我该怎么做呢？信息很多，我该怎么做呢？我该怎么做呢？
 # 一般来说，学校作业的优先级会稍微高于知识，因为一般要把事件录入 org 的时候，说明已经处于赶作业的状态了
 
-* TMP [100%]
-** DONE [#A] 核酸 11-07
-CLOSED: [2022-11-07 Mon 13:16] DEADLINE: <2022-11-07 Mon 12:00> SCHEDULED: <2022-11-07 Mon 11:30>
-:LOGBOOK:
-CLOCK: [2022-11-07 Mon 11:29]--[2022-11-07 Mon 12:00] =>  0:31
-:END:
-** DONE [#A] 核酸 11-09
-SCHEDULED: <2022-11-09 Wed 08:40> DEADLINE: <2022-11-09 Wed 08:50>
-:LOGBOOK:
-CLOCK: [2022-11-09 Wed 8:32]--[2022-11-09 Wed 09:07] =>  0:35
-:END:
-** DONE [#C] ACE 缺陷了解：陈硕讲解
-CLOSED: [2022-11-07 Mon 17:07] DEADLINE: <2022-11-07 Mon 16:55>
-:LOGBOOK:
-CLOCK: [2022-11-07 Mon 16:34]--[2022-11-07 Mon 17:07] =>  0:33
-:END:
-** DONE [#A] 写份说明书给软件工程的老师，附带补修表照片
-DEADLINE: <2022-11-10 19:00>
-:LOGBOOK:
-CLOCK: [2022-11-10 Thu 18:50]--[2022-11-10 Thu 19:33] =>  0:43
-:END:
-陈老师好，我有些情况需要向您汇报。
-
-我是这个学期来补修《软件工程》的学生，已经跟随 3 班完成了课程。
-
-本来有张签好的《补修表复印件》要给你了一份的，结果发生了疫情。我不知道什么时候会结束，所以我先暂时把《补修表》的照片拍给你。
+* 学校实习
+** TASK 泰迪云线上课堂
 
 
-这里顺便附上我的信息：
-
-名字：       谢健安
-学号：       18034460227
-所在班级：    网络工程 19-2
-跟随补修班级： 网络工程 20-3
-课程分组 ：   3 班 11 组
-
-麻烦老师帮我录入成绩，谢谢老师。
-
-PS：最后的项目是我一个人做的，我又是毕业班的，时间赶做的不好希望老师体谅，给多点分。 [哭][哭][哭]
-
-* 学校实习 [0%]
-** 泰迪云课堂所有作业 [0%]
-*** 前置课程之 Python 编程基础 [100%]
-*** 数据分析与应用 [0%]
-**** TODO [#C] Numpy
-**** TODO [#C] Pandans 统计分析基础
-**** STARTED [#C] Pandans 数据预处理 [0%]
-SCHEDULED: <2022-11-23 Wed 9:00>
-:LOGBOOK:
-CLOCK: [2022-11-23 Wed 09:46]--[2022-11-23 Wed 11:26] =>  1:40
-:END:
-- [-] 合并
-    - [-] 主键合并
-        - [X] 定义：通过 '连接键‘ 将 '行’ 连接起来
-        - [X] 应用场景：一个‘（连接）键’存在与与多张表的情况，将他们合并起来，简化数据量
-        - [ ] 方法
-        - [X] 得到结果
-            - [X] 行不变
-            - [X] 列总数增加 = 列总数 - ‘连接键’的数量
-        - [ ] 例子1： 多张数据库表导成订单详情
-            - [ ] 问题：具体原理是啥？是否只是直接调用接口 append 然后输出就行了？
-- [-] 数据清洗
-    - [-] 数据去重
-        - [X] 定义：把重复的值去掉
-        - [X] 使用场景：其实重复前每个表也会重复的，但合并之前不能去重，因为合并后可能不一样，而是合并后，把重复的去掉。
-        - [-] 方法
-            - [X] For 循环然后判断去重
-              #+begin_src python
-                list1 = ['c', 'c++']
-                list2 = ['c', 'java']
-                for item in list1:
-                    if item not in list2:
-                        list2.append(item)
-              #+end_src
-            - [ ] Set 去重
-    - [ ] 缺失值处理
-        - [ ] 定义：
-        - [ ] 使用场景：
-        - [ ] 方法
-            - [ ] 删除法
-            - [ ] 替换法，只有这种程度吗？          
-            - [ ] 插值法
-                - [ ] 线性插值
-                - [ ] 多项式插值
-                - [ ] 样条插值
-
-* 作业安排 [66%]
-** DONE [#D] 课后实验：安卓
+* 作业
+** DONE 课后实验：安卓
 DEADLINE: <2022-10-19 Wed 12:00>
-** DONE [#D] 课后实验1-6: 软件定义网络
+
+
+** DONE 课后实验1-6: 软件定义网络
 DEADLINE: <2022-10-21 Fri>
 通过链接上交
-** DONE [#D] 课后实验1-6: 无线定义网络
+
+
+** DONE 课后实验1-6: 无线定义网络
 DEADLINE: <2022-10-21 Fri>
-** DONE 软件工程 [3/3]
-*** DONE [#B] 软件工程大纲
+
+
+** 软件工程
+*** DONE 软件工程大纲
 DEADLINE: <2022-09-15 Thu 12:36> SCHEDULED: <2022-09-15 Thu 10:35>
 https://weread.qq.com/web/reader/b6e32290721a1238b6ed18bkc20321001cc20ad4d76f5ae
-- 软件过程
-  - 定义
-    1. 软件过程规定了完成各项任务的工作步骤
-    2. 软件工作模型（软件生命周期模型）是一种划分方法，用来描述软件过程。
-      : 软件工程采用的生命周期方法学就是从时间角度对软件开发和维护的复杂问题进行分解，把软件生存的漫长周期依次划分为若干个阶段，每个阶段有相对独立的任务，然后逐步完成每个阶段的任
-  - [ ] 步骤
-    - [ ] 问题定义
-    - [ ] 需求开发
-    - [ ] 软件开发
-    - [ ] 软件构造
-    - [ ] 软件测试
-- [80%] 软件过程模型（软件生命周期模型） (描述方法)
+- [X] 软件过程
+    - 定义
+        1. 软件过程规定了完成各项任务的工作步骤
+        2. 软件工作模型（软件生命周期模型）是一种划分方法，用来描述软件过程。
+          : 软件工程采用的生命周期方法学就是从时间角度对软件开发和维护的复杂问题进行分解，把软件生存的漫长周期依次划分为若干个阶段，每个阶段有相对独立的任务，然后逐步完成每个阶段的任
+    - [X] 步骤
+        - [X] 问题定义
+        - [X] 需求开发
+        - [X] 软件开发
+        - [X] 软件构造
+        - [X] 软件测试
+- [X] 软件过程模型（软件生命周期模型） (描述方法)
   软件过程模型是对软件过程的抽象描绘，用于描述软件开发全过程。
-  - [X] 瀑布模型
-    瀑布模型把软件开发划分为独立的子阶段，每个阶段线性地顺序执行。
-  - [X] 原型法模型
-    瀑布模型借鉴了制造业，但是软件开发是一个创造的过程，随着开发，会有新的想法，新的需求，这是瀑布模型的缺陷。原型法模型是怎么做的呢？先实现一个原型，然后在其的基础上完善。
-  - [X] 迭代式模型
-    从前的软件开发，从编写文档到系统实现需要若干年，客户有耐心等待。但是现在什么都要快。
-    迭代式模型，每隔段时间（2-3个星期）就要进行实现一次局部子系统（必须包含完整的需求分析，编码，测试等步骤）。
+    - [X] 瀑布模型
+      瀑布模型把软件开发划分为独立的子阶段，每个阶段线性地顺序执行。
+    - [X] 原型法模型
+      瀑布模型借鉴了制造业，但是软件开发是一个创造的过程，随着开发，会有新的想法，新的需求，这是瀑布模型的缺陷。原型法模型是怎么做的呢？先实现一个原型，然后在其的基础上完善。
+    - [X] 迭代式模型
+      从前的软件开发，从编写文档到系统实现需要若干年，客户有耐心等待。但是现在什么都要快。
+      迭代式模型，每隔段时间（2-3个星期）就要进行实现一次局部子系统（必须包含完整的需求分析，编码，测试等步骤）。
 
-    随着时间发展，系统一次一次迭代，增量式地迭代与发展。
-  - [X] 可转换模型
-  - [ ] 敏捷开发
-    - [ ] 极限编程
-      让客户直接和开发人员在一起，降低需求的变更成本
-    - [ ] 并列争球法
-      天天开会？
-    - [ ] 水晶法
-      最重要的人（之间的交流？），适合多个人数少的小组
-    - [ ] 动态系统开发方法
-    - [ ] 特征驱动开发
-      划分特征
-    - [ ] 自适应软件开发
-      设立一个目标作为指导，但是不描述如何达到目标
-*** DONE [#B] 软件工程作业之 jsd 层次结构图（也叫 jackon 图）
+      随着时间发展，系统一次一次迭代，增量式地迭代与发展。
+    - [X] 可转换模型
+    - [X] 敏捷开发
+        - [X] 极限编程
+          让客户直接和开发人员在一起，降低需求的变更成本
+        - [X] 并列争球法
+          天天开会？
+        - [X] 水晶法
+          最重要的人（之间的交流？），适合多个人数少的小组
+        - [X] 动态系统开发方法
+        - [X] 特征驱动开发
+          划分特征
+        - [X] 自适应软件开发
+          设立一个目标作为指导，但是不描述如何达到目标
+
+
+*** DONE 软件工程作业之 jsd 层次结构图（也叫 jackon 图） 
 https://max.book118.com/html/2018/0618/173309862.shtm
   - [X] 定义
     面向数据结构的设计方法（用数据结构作为）
@@ -160,251 +86,14 @@ https://max.book118.com/html/2018/0618/173309862.shtm
       - [X] 为操作添加输入框
   - [X] 图形
     从上到下，方块组成
-*** DONE [#A] 组内自评
-CLOSED: [2022-11-06 Sun 16:39] DEADLINE: <2022-11-06 Sun 16:44>
-** TODO 大学生职业与发展规划 [2/2]
-*** DONE [#B] PPT
-CLOSED: [2022-10-29 Sat 23:15] DEADLINE: <2022-10-29 Sat>
-:LOGBOOK:
-CLOCK: [2022-10-29 Sat 22:12]--[2022-10-29 Sat 23:15] =>  1:03
-CLOCK: [2022-10-29 Sat 20:52]--[2022-10-29 Sat 22:12] =>  1:20
-:END:
-- [X] 《职业规划》
-    - [X] 自我介绍
-      我的名字叫谢健安，是一名大四学生，我因为缺了这么课，所以来补修。
-
-      既然是大四的学生，所以看待职业规划的视角可能有点不同。
-
-    - [X] 最初的职业规划
-      刚入大学的时候，我就是选择的计算机专业，所以，我那时就打算当一名码农，写代码的。
-
-        - 原因
-          因为自己不太喜欢社交，加上那时候（2018年），互联网的工资很高，我觉得有吸引力，就选择当程序员。
-
-    - [X] 现在的职业规划
-      我还是和当初一样，想要当一名码农，但是又有点不同。
-
-        - 过去：狭隘的职业观
-          对于以脑力为主的职业，我过去喜欢在寻找一个‘道’。
-          因为我认为，即便 '术' 是千变万化的，但 '道' 是不变的。所以只要掌握了道，术就能触类旁通。
-          如果用计算机来类比，就是多学《计算机网络》，《体系结构》，更多的了解底层知识，即使新技术层出或需求在变，自己也能应付。
-
-        - 现在：更加宽广的心态（躺平）
-          经过和这个行业的前辈更多的接触，我认识到了过去的错误。
-          因为其实不管做什么，都是拧螺丝。进厂打工 7 分靠运气。
-          完成任务其实才是最重要，所以会学习本身比具体学什么更加重要
-
-    - [X] 总结：放松心态
-      主要是希望能从事服务器研发的相关工作，准时上下班，早点毕业进厂拧螺丝，早点退休。
-*** DONE [#A] 重写 PPT
-DEADLINE: <2022-11-09 Tue 09:55> SCHEDULED: <2022-11-09 Tue 09:00>
-:LOGBOOK:
-CLOCK: [2022-11-09 Wed 20:12]--[2022-11-09 Wed 20:37] =>  0:25
-CLOCK: [2022-11-09 Wed 19:25]--[2022-11-09 Wed 20:00] =>  0:35
-CLOCK: [2022-11-09 Wed 17:45]--[2022-11-09 Wed 18:10] =>  0:25
-CLOCK: [2022-11-09 Wed 16:18]--[2022-11-09 Wed 17:45] =>  1:27
-CLOCK: [2022-11-09 Wed 09:08]--[2022-11-09 Wed 09:52] =>  0:44
-CLOCK: [2022-11-09 Wed 08:21]--[2022-11-09 Wed 8:30] =>  0:09
-:END:
-- [X] 自我介绍：
-
-- [X] 性格分析：
-    - [X] 性格内向
-      是当程序员，螺丝工，加班工具人的好料子。
-
-      喜好独处，所以，我上大学最开心的事情，就是可以躲在宿舍，写一天的代码，玩一天的游戏，谁也不理。
-
-    - [X] 比较平和，也可以说是躺平
-      不喜欢与人争抢，主要是因为怕累，也可以说是胆小。
-
-      也有一部分原因是，见识到了很多东西，更加理解一句话，“尽人事，听天命”。
-
-      我只要保持我每天的能尽的效率就好啦，开夜车弯道超车成为顶级大神的这种事情，我是不感兴趣的，（被逼除外）
-
-    - [X] 喜好运动
-      但是我不太喜好篮球，足球等竞争，团队的运动，可能和我的性格有关。
-
-      我只喜欢骑行，一个人骑行的感觉真的很爽，如果是没人的自行车道或山间小路，我还可以集中注意力去思考一些问题。
-
-- [X] 爱好：
-    - [X] 最喜欢的爱好，其实也是我的工作，写代码
-      所以，真的很庆幸，自己选了这个专业，也很喜欢这个专业。但是，其实职业和爱好是两回事，爱好可以根据自己感兴趣的内容去学习，可以实现自己的想法。
-
-      但是职业的话，要考虑的事情很多。
-
-        - 细节上，你要考虑团队成员的协作，不单是要考虑一个人，要照顾其他人的想法和思路。
-        - 方向上，上司叫你干什么，你就干什么，打工人不要自己搞一套（下班了除外了）
-
-        ....
-        更加重要的一点是，把它当成爱好的话，不用加班，虽然我觉得符合生理规律的劳作是最高效率的，加班赶工的东西质量差远了，还把第二天的精力赔了上去。
-        但是要考虑的东西太多了，例如上层领导的决策，临时改需求等。
-
-        所以，其实爱好和职业还是差很远的。
-    - [X] 第二喜好的爱好
-      是玩掌机吧，我对掌机有一种莫名的喜好，如果我有钱的话，我一定被鉴定为掌机收藏癖。
-
-      可能和我小时候，被压抑不能打游戏有关，我很羡慕同龄人可以去打游戏，而我要偷偷摸摸的玩。
-
-        - [X] 所以，我很喜欢掌机，也许是掌机带给我的安全感。可以拿在手心，我去哪都可以把它带上，公交车上，学校里。
-
-- [X] 为什么选择广油和本专业
-  喜好广油是因为分数刚好就上来了，其实我对于这个事情不是很看重，因为学计算机的学生就是要自学，我认识的很多计算机的高手，高中就开始自学了，真的很厉害。
-
-  除了 985/211 有学历加持外，其他的学校我觉得都差不多吧。
-
-    - 其实选择广油挺好的
-
-- [X] 过去的广油岁月
-  其实，过去的广油岁月也没啥好写的，我的生活就是三点一线，宿舍，饭堂，教室。
-  : 在宿舍就是写代码，去教室是看老师写代码，去饭堂是为了更好的写代码
-
-    - 但是凭心而论，我是走了弯路，浪费了不少时间的。
-        - 过于依赖自学
-        - 过于依赖老师
-
-- [X] 剩下的广油时间有何打算
-    - 我要写一个吓死面试官（开个玩笑）的项目
-    - 写论文
-    - 毕业
-
-- [X] 未来的职业规划
-    未来的职业规划，其实我可以用我的偶像来总结，因为他们就是我想成为的样子
-    - [X] 王勇
-      王勇是国产Linux操作系统的前任 cto, 可以说，写代码就是他的生命，我每天都在论坛看到它和别人分享他写的插件，我也经常使用使用他的插件帮我提高我的编写代码的效率。
-      我为啥想佩服他，因为他从来不会限制自己，动手能力强，新的技术从来，他总是第一个去学习。
-    - [X] 韦易笑
-      前网易游戏服务器的主程，一个字，牛，从小学开始写游戏，写到现在。
-      他说的一句话让我很佩服。当你把这个行业的东西学完的时候，才刚刚开始。因为这时候跳出了模仿别人的阶段，不再是可以替换的劳动力。
-      当你研究一个东西，谷歌搜不到，你去问别人，别人也不懂，你需要自己去开辟的时候，你就真正成为这个行业的中流砥柱。
-
-      PS: 他是游戏同步的影子算法的创始人，所以，我认为他就是那个在行业前头披荆斩棘的中流砥柱。
-    ...
-    1. 30 岁之前，我打算能够和他们做同事，从他们身上学点东西
-    2. 40 岁之前，我希望成为他们
-
-- [X] 总结下：
-  尽人事，听天命。我有目标，但是我不强求。
-
-** TODO 科技英语学习通 [4/5]
-*** DONE [#A] 2022四级作文第一篇
-DEADLINE: <2022-10-21 Fri 07:20>
-*** DONE [#A] 2022四级作文第二篇
-CLOSED: [2022-10-26 Wed 10:11] DEADLINE: <2022-10-25 Tue 21:10>
-- State "DONE"       from "TODO"       [2022-10-26 Wed 10:11]
-:LOGBOOK:
-CLOCK: [2022-10-26 Wed 09:22]--[2022-10-26 Wed 10:10] =>  0:48
-:END:
-- 题目
-  Directions （方向）: Suppose you are going to write a proposal （建议） to your student union （学生会） for enriching
-  students' extracurricular （课外） activities. You are to write about what activities to organize and why.
-- 题目要求
-  : 给你的学生会写一个关于课外活动的建议书，可以写组织什么活动和理由。
-  - 主题：给学生会写一个关于课外活动的建议书。
-  - 内容：组织什么活动，和为什么组织
-- 中文
-  - 推荐：公路车运动
-    可以在周末组织一场为期两天的长途的骑行，沿着城市的非机动车道前往郊区或者环绕城市一圈。
-  - 理由
-    - 放松：在学校呆太久，偶尔出去走走，能放松精神
-    - 团队活动：每个人都能参与，增加学生会成员之间的感情
-    - 锻炼
-      - 锻炼身体
-        公路车是一项非常好的运动，不仅能锻炼心肺和大腿肌肉，同时长时间的骑行不会像跑步一样对膝盖产生很大的伤害。
-      - 锻炼学生会处理问题的能力
-        在为期两天的旅行中，脱离了熟悉的环境，要求学生会成员具有处理事情的能力去应对随机事件。
-        - 例如，要提前规划骑行的路线，以免进入机动车道。
-        - 成员的骑行速度是不确定的，所以也不知道什么时候会到达哪里，所以必须在自己控制时间以便能到达便利店获取补给，饭店吃饭，旅店睡觉
-- 英文翻译
-  公路车旅行
-  Road Bike Journey
-
-  i suggest to organize a two-day, long weekend ride along the city's non-motorized lanes to the suburbs or around the city.
-
-  For the following reason. Being in school for too long, going out for a walk can relax your mind. It is a team activity, everyone can participate in this activity, which can increase the feelings between students.
-
-  More important, It is a good exercise for students.  Road biking is a great exercise that exercises the heart and students' ability to deal with problems. The speed of the ride is uncertain, so there is no way to know when and where they will arrive, so they must control their own time in order to get to the convenience store for supplies, restaurants to eat, hotels to sleep.
-
-  For the reasons above, i suggest hold activity about road bike.
-*** DONE [#A] 2022四级作文第三篇
-CLOSED: [2022-10-27 Thu 18:00] DEADLINE: <2022-10-26 Wed 11:50>
-- State "DONE"       from "STARTED"    [2022-10-27 Thu 18:00]
-- State "STARTED"    from "STOP"       [2022-10-27 Thu 17:11]
-- State "STOP"       from "STARTED"    [2022-10-26 Wed 11:14]
-:LOGBOOK:
-CLOCK: [2022-10-27 Thu 17:11]--[2022-10-27 Thu 18:00] =>  0:49
-CLOCK: [2022-10-26 Wed 10:12]--[2022-10-26 Wed 11:14] =>  1:02
-:END:
-- 题目
-  Directions: Suppose you are going to write a proposal to your school library for improving its
-  service. You are to write about its current problems and possible solutions to these problems.
-- 题目分析
-  向学校写建议改进图书馆
-- 中文
-    - 存在的问题
-        - 首先霸占座位的问题严重
-        - 其次有用电脑设备的同学，据反映，键盘和鼠标声很吵
-    - 如何改进
-        - 霸占座位
-            - 增加监管方式
-                - 离开作为要扫二维码
-                  学生离开座位需要扫码，扫码后有 10 分钟的时间倒计时。代表你可以离开 10 分钟，否则座位可以被别人抢占
-
-                  如果同学，发现一个位置上面有书，但是没有人，可以直接扫码。如果显示该学生已经离开超过 30 分钟，则可以直接占用该位置。
-                - 增加志愿者进行定期巡视，如果有个座位经常有书，但是看不到人，那就要留意该学生
-            - 增加惩罚力度
-                - 如果多次犯规，则限制她进入图书馆的时间
-                - 如果态度恶劣，则永久禁止进入图书馆，并且通报批评
-        - 电脑设备
-            - 统计人数，根据人数开放专门供使用电脑的学生使用，例如写论文的学生。
-- 英文
-  Suggestions for improving the school library
-
-  The library is a friend that students should get to konw.
-  Forming the habit of going to the library is wonderful to college life.
-  However, our school library is not perfect and there are many problems, so i would like to offer some advices to improve it.
-
-  The most serious problem is use books to grab a seat. firstly, there are very few places in the library. Students need get up very early in the morning to find a place in the library.
-  So there will be a situation that students find a place but full of books and no one is sitting here.
-
-  The second problem is that some students said that keyboard and mouse in the library are very noise, but there is no reason to blame them, because they may be writing papers, or writing documents, or need to use the computer to finish their homework.
-
-  According to the above problem, i put forward several proposals. For
-  grabbing a seat problem, i think need to increase regulatory.
-  when You will leave the seat, need to scan the QR code (二维码), you can get 10 minutes to get out the seat. If you haven't come back in 10 minutes and other students find your seat and scan the qr code, your seat is no longer belong to you.
-
-  And the last problem, i think can offer special classrooms for those who use computer so that no matter how furiously they are typing, no one is affected.
-*** DONE [#A] 2020年12月大学英语四级选词填空真题（15选10)
-CLOSED: [2022-10-27 Thu 22:11] DEADLINE: <2022-10-27 Thu 19:15> SCHEDULED: <2022-10-27 Thu 18:40>
-- State "DONE"       from "STARTED"    [2022-10-27 Thu 22:11]
-- State "STARTED"    from "STOP"       [2022-10-27 Thu 21:44]
-- State "STOP"       from "STARTED"    [2022-10-27 Thu 19:11]
-:LOGBOOK:
-CLOCK: [2022-10-27 Thu 21:44]--[2022-10-27 Thu 22:11] =>  0:27
-CLOCK: [2022-10-27 Thu 18:51]--[2022-10-27 Thu 19:10] =>  0:19
-:END:
-- State "STARTED"    from "TODO"       [2022-10-27 Thu 18:51]
-  Trust is fundamental to life. If you can't trust anything, life becomes intolerable （无法忍受的）. You can't have relationships without trust, let alone good ones. In the workplace, too, trust is 1          An organization without trust will be full of fear and 2      If you work for a boss who doesn't trust their employees to do things right, you'll have a  3 Per         time. They'll be checking up on you all the time, correcting “mistakes” and 4      reminding you to do this or that. Colleagues who don't trust one another will need to spend more time track  their backs than doing any useful work.
-
-Organizations are always trying to cut costs. Think of all the additional tasks caused by lack of trust. Audit（审计）departments only exist because of it． Companies keep (保留) large volumes （容量） of record because they don't trust their suppliers （供应商）, their contractors （承包商） or their customers. Probably more than half of all administrative （行政的） work is only there because of an ever-existing sense that “ you can't trust anyone these days. " If even a small part of such valueless work could be 7       , the savings would run into millions of dollars.  All this is extra work we  8 load onto ourselves because we don't trust people-the checking, following through, doing things ourselves because we don't believe others will do them properly or at all. If we took all that away, how much extra time would we suddenly （突然的） find in our life? How much of our work 10         would disappear?
-
-- fuckyou
-    1. [X] essential C
-    2. [X] suspicion M
-    3. [ ] pressure  H -> G miserable 痛苦
-    4. [X] constantly A
-    5. [ ] tracked N -> 0 watching
-    6. [ ] exploring D -> J recored
-    7. [X] removed K
-    8. [X] load F
-    9. [ ] -> I properly
-    10. [ ] credible  B -> H  pressure
 
 
-A) constantly 总是    B) credible 可信的     C) essential 基本的     D) exploring 探索     E) gather 采集      F) load       K) removed         G) miserable Adj 痛苦的     L) stacks         H) pressure 压力     M) suspicion 怀疑     I) properly 正确的  N) tracked 追踪     J) records 记录     0) watching
-*** TODO [#A] 科技英语学习通每天练 半小时
+*** DONE 组内自评
 
-* 期末考试 [78%]
-** DONE [#D] 科技文献检索实验报告
+
+
+* 期末考试
+** DONE 科技文献检索实验报告
 - 实验报告
   - 课题选型与分析
     - 课题名称：
@@ -483,10 +172,18 @@ A) constantly 总是    B) credible 可信的     C) essential 基本的     D) 
       [1]Cloud gaming: architecture and performance. [J] . Ryan Shea,Jiangchuan Liu,Edith C. H. Ngai,Yong Cui 0001.  IEEE Network . 2013 (4)
 - 科技文献索引心得体会
     无
-** DONE [#A] 软件工程演示
-CLOSED: [2022-11-01 Tue 20:21] DEADLINE: <2022-11-01 Tue 09:40> SCHEDULED: <2022-11-01 Tue 08:05>
 
-** DONE [#A] 劳动周
+
+** 软件工程
+*** DONE 软件工程演示
+DEADLINE: <2022-11-01 Tue 09:40> SCHEDULED: <2022-11-01 Tue 08:05>
+
+
+*** WAIT 交补修表和像学委打听事情（是否规范）
+DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
+
+
+** DONE 劳动周
 DEADLINE: <2022-11-16 Wed> SCHEDULED: <2022-11-09 Wed 10:05>
 :LOGBOOK:
 CLOCK: [2022-11-22 Tue 15:11]--[2022-11-22 Tue 17:08] =>  1:57
@@ -711,12 +408,10 @@ CLOCK: [2022-11-09 Wed 10:12]--[2022-11-09 Wed 11:05] =>  0:53
   看了，华为的直播，联想到国家的未来发展，我思考了我应该怎么发展，我先想到了几个方面。永远也不限制自己的发展，敢于去学习新技术。
   我国在“十三五”规划纲要中，将培育人工智能、移动智能终端、第五代移动通信(5G)、先进传感器等作为新一代信息技术产业创新重点发展，拓展新兴产业发展空间。当前，信息技术发展的总趋势是从典型的技术驱动发展模式向应用驱动与技术驱动相结合的模式转变，信息技术发展趋势和新技术应用主要包括以下几个方面：1. 高速度大容量 2．集成化和平台化 3．智能化 4. 虚拟计算  5。通信领域。所以，这给了我一个方向，一个研究的方向，要想更强，不是要干体力活，而是要精，所以平时除了完成工作，还要多去关注以上的这些发展，去研究更深层次的知识。
 
-** DONE 实训周：SDN [3/3]
-*** DONE 实现把 [5/5]
-CLOSED: [2022-11-06 Sun 17:32]
 
-http://t.zoukankan.com/huanglong1123-p-13754038.html
-**** DONE 确认路线 [4/4]
+
+** SDN 实训周
+**** 确认路线
 ***** DONE 实训课题入门
 DEADLINE: <2022-10-18 Tue 20:00>
 : 我要先知道实训到底是做什么的
@@ -730,9 +425,13 @@ DEADLINE: <2022-10-18 Tue 20:00>
   - 结构
     - 拓扑
     - 组表
+
+
 ***** DONE SDN 入门
 DEADLINE: <2022-10-18 Tue 21:00>
 [[~/Downloads/软件定义网络考试知识点.docx]]
+
+
 ***** DONE 实验所用的工具入门
 DEADLINE: <2022-10-18 Tue 21:40>
   - [X] 还没有搞定一些东西
@@ -749,20 +448,16 @@ DEADLINE: <2022-10-18 Tue 21:40>
   https://blog.51cto.com/u_15060510/4056084
   Mininet 是一款轻量级的进程虚拟化网络仿真工具,其最重要的一个特点就是它的所有代码几乎可以无缝迁移到真实的硬件环境,方便为网络添加新的功能并进行相关测试
 - [X] opendaylight
+
+
 ***** DONE 从过去的实验中找到合适的工具
 DEADLINE: <2022-10-18 Tue 22:40>
 确认了是 openvswitch,mininet,opendaylight
-***** CENCEL 编译安装 opendaylight （怎么在 linux 服务器编译 java 成 native 应用）
-DEADLINE: <2022-10-18 Tue 23:00>
-- State "CENCEL"     from              [2022-10-23 Sun 15:36] \\
-  还是很慢了，还是通过 yay 安装好点，可以解决依赖问题。
-https://www.freesion.com/article/2253727374/
+
+
+
 **** DONE 路线确定后，开始重点学习三个模块与他们组成的架构： openvswitch,opendaylight,mininet
 DEADLINE: <2022-10-19 Wed 09:50>
-- State "STAT"       from "STOP"       [2022-10-19 Wed 09:21]
-- State "STOP"       from "TODO"       [2022-10-19 Wed 08:45] \\
-  太困了
-
 - [X] SDN 架构
   - 三个层次
     - 应用层 : 用户在上层通过下层提供的接口实现功能
@@ -779,14 +474,14 @@ DEADLINE: <2022-10-19 Wed 09:50>
 - [X] OpenVswitch ：开源的（交换机）基础设施层，
 - [X] mininet     ：为底层的多个交换机提供交互网络和开关，以便建立拓扑结构，所以开启需要 openvswitch 的支持。
 - [X] Opendaylight ：开源的控制层
-**** DONE 搭建环境 [3/3]
+
+
+
+**** 搭建环境
 ***** DONE 开启 opendaylight
-****** FIX! 开启服务时，java.lang.module.FindException: Module java.xml.bind not found
-1. 要安装 java8
-   #+begin_src shell
-     sudo pacman -S jdk8-openjdk
-   #+end_src
-2. 设置环境变量 /etc/profile, 因为是 root 用户开启
+
+
+
 ***** DONE 开启 openvswitch 服务
 - linux 的好处就出来了
   #+begin_src shell
@@ -794,19 +489,18 @@ DEADLINE: <2022-10-19 Wed 09:50>
     ls /usr/lib/systemed/system/ovs*
     sudo systemctl start ovsdb-server
   #+end_src
+
+
+
 ***** DONE 开启 mn 服务
-****** FIX! 安装和运行 mininet VM （包含 openvswitch）
-DEADLINE: <2022-10-19 Wed 14:30>
-- FileNotFoundError: [Errno 2] No such file or directory: 'mnexec'
-  mnexec 是被 python 程序 mininet 调用的 c 模块
-    - [X] +_Pip 安装 mininet ：失败，没有安装 c 的 mnexec 模块+
-    - [X] Yay 安装 mininet
-        - Yay 短暂出现了无法连接 163 的问题
-            1. [X] 可能是没有 yay -Yu 更新
-            2. [ ] 可能是选择 cleanbuild 依赖的时候选错了，不能选默认？
-**** DONE 开始协作 [4/4]
+
+
+**** DONE 开始协作
 https://www.sdnlab.com/sy12-opendaylight-mininet/
-***** DONE 建立 mininet 拓扑 (实验4）
+
+
+
+**** DONE 建立 mininet 拓扑 (实验4）
 DEADLINE: <2022-10-19 Wed 20:30>
  - 拓扑类型
      - 基本拓扑
@@ -844,1361 +538,92 @@ DEADLINE: <2022-10-19 Wed 20:30>
              5. 执行 run
              6. 导出为脚本文件
                   1. 可以关闭 x 图形，通过 cli 继续命令式
-***** WAKE Opendaylight 控制 mininet （实验5）
-DEADLINE: <2022-10-19 Wed 21:00>
-- State "WAKE"       from "STAT"       [2022-10-19 Wed 22:17] \\
-  掌握了大纲后，把时间留给最重要的实验。如果遇到不会的，在回来补齐细节
-- [ ] 连接到 mininet
-  步骤基本等于上一节 《mininet 拓扑建立》讲的可视化
-- [ ] 两边通信
-- [ ] 流表操作
-- [ ] Yany UI
-***** WAKE 消息抓包 and 流表的学习
-DEADLINE: <2022-10-19 Wed 22:00>
-- State "WAKE"       from "STAT"       [2022-10-19 Wed 22:31] \\
-  了解了大纲，把注意力集中在最重要的实验上。遇到不懂的在回来补齐细节。
-- [ ] 抓包
-  - [ ] TCP 连接过程
-  - [ ] 发送 hello 消息
-- [ ] 流表
-  通过交换机，输入命令，和 grep, 输出不同的流表信息，来检测交换机下面的主机是否连通。
-***** WAKE 模拟演示实验
-DEADLINE: <2022-10-19 Wed 22:59>
-- State "WAKE"       from "STAT"       [2022-10-20 Thu 22:24] \\
-  还差点意思
-- [X] 搭建：本地 mininet
-  - [X] virtualbox 开启 ssh
-    先不用了，因为要改虚拟机的网络连接方式，我怕待会影响实验
-  - [X] 安装 mininet
-  - [X] ubuntu 安装 openvswitch
-  - [X] ubuntu 开启 openvswitch 服务
-  - [X] 连接到远程控制器
-    - 没有检测到虚拟机的控制器：
-      no default openflow controller found for default switch!
-      falling back ovs bridge
-- [X] 搭建：本地 OpenDayLight
-  - [X] 检测 jdk8 环境变量是否正确设置
-  - [X] 进入 karaf 终端
-    - [X] 通过 ./bin/karaf 进入
-    - [X] 安装 docx 的输入密码进入
-  - [X] 检测是否开启
-  - [X] 安装各种插件的支持
-       https://www.xiexianbin.cn/sdn/opendaylight/2021-04-03-opendaylight-install/index.html
-    - [X] Web UI 插件
-      版本不支持
-  - [X] 必备插件：监听 6633 插件
-      odl-netvirt-openstack
-      安装 odl-netvirt-openstack 后：controller 默认监听在 6633
-- [X] 两者通信，然后用 wireshark 监听网卡
-- [-] 抓包辨识
-  - [X] Packet_in:
-    - 作用：交换机端口 指示→ 控制器端口
-    - 分析：
-      buffer_id：数据通道分配的缓存id，标志数据包存在交换机中的位置，如果没有缓存在交换机中则buffer_id则为-1
-      total_len：整个数据帧的长度
-      in_port：接收数据帧的端口
-      : reason：将数据包发送给控制器的原因，一般有俩原因，一是没有匹配到流表项，二是动作要求发给控制器
-    - 源码图示
-      [[/home/xdash-bw/Downloads/packet_in.jpeg]]
-  - [X] Packet_out:
-    - 作用：控制器端口（请按照我给你的action进行处理） → 交换机端口
-    - 分析：Action 和 Action 类型
-    - 源码图示：
-      [[/home/xdash-bw/Downloads/packet_out.jpeg]]
-  - [X] Flow_Mod:
-    - 作用：控制器下发流表
-    - 分析：
-      1. 通用头
-      2. Match
-      3. Instrcution 指令
-    - SRC
-      [[/home/xdash-bw/Downloads/flow_mod1.jpeg]]
-      [[/home/xdash-bw/Downloads/flow_mod2.jpeg]]
-  - [ ] 组表学习
-    1. 查看各个交换机的端口信息sh ovs-ofctl -O OpenFlow13 show s1
-    2. 向 s1 添加组表项：
-       sh ovs-ofctl -O OpenFlow13 add-group s1 group_id=1,type=all,bucket=output:1,output:2,output:3
-    3. 查看结果：
-       sh ovs-ofctl -O OpenFlow13 dump-groups s1 （展示结果）
-    4. 给s1加入一个流表项，所有从h1进来的封包，都执行刚刚创建的组表
-       sh ovs-ofctl -O OpenFlow13 add-flow s1 in_port=3,actions=group:1
-       sh ovs-ofctl -O OpenFlow13 dump-flows s1
-    5. PingAll: 查看主机之间是否通信
 
-*** DONE [#A] 验收
-DEADLINE: <2022-10-21 Fri 16:00>
-在计算机二楼尽头找老师
-*** DONE 上交实验报告 [2/2]
-**** DONE [#B] SDN 电子版实验报告
-CLOSED: [2022-11-06 Sun 17:18]
-**** DONE [#D] 纸质实验报告：SDN
-DEADLINE: <2022-11-15 Tue 22:59>
-** DONE 实训周：Android [5/5]
-*** DONE [#B] 复习以前学过的内容，有个大纲
-DEADLINE: <2022-10-24 Mon 09:00>
-:LOGBOOK:
-CLOCK: [2022-10-24 Mon 07:43]--[2022-10-24 Mon 08:52] =>  1:09
-:END:
 
 
-*** DONE [#B] 快速把常用控件的 io 交互了解下
-DEADLINE: <2022-11-09 Wed 8:55> SCHEDULED: <2022-11-09 Wed 08:00>
-:LOGBOOK:
-CLOCK: [2022-11-09 Wed 08:12]--[2022-11-09 Wed 08:20] =>  0:08
-CLOCK: [2022-10-24 Mon 08:55]--[2022-10-24 Mon 09:54] =>  0:59
-:END:
-- [X] Activity
-    - activies 类
-      安卓项目创建第一件事就是，创建一个 activies. 默认情况下，他会在 1. 在 res/layout 目录下，创建 xml 文件。2.并且将其作为启动主 activies.
-    - res/layout/xxoo.xml
-       可以说，安卓通过 activis 引用 res/layout/xml ，以及在其定义的所有控件。
-       例： setLayoutView(R.layout.main_activity.xml);
-        - 控件由布局进行排版
-            - 布局：
-                - LinearLayout
-                - AbstructLayout
-            - 控件
-- [X] Indent ：从 A Activity 到 B Activity
-  #+begin_src java
-    Intent intent = new Intent(this, SMSLoginActivity.class);
-    startActivity(intent);
-    // 登录 acitivy 和其服务结束
-  #+end_src
-- [X] 某个 Acitivy 下的控件与服务
-    - 为某个控件绑定成员变量
-        - 通过 @符号为成员变量绑定具体的控件
-        - 通过 @符号为成员变量（绑定）的回调函数
-    - 控件 a 和控件 b 的交互
-      都是成员变量，直接读取
-*** DONE 实现/找到 im 聊天软件 [5/5]
-CLOSED: [2022-11-06 Sun 17:31]
-**** DONE [#A] 网上找别人的开源项目
-CLOSED: [2022-10-27 Thu 23:34] DEADLINE: <2022-10-27 Thu 12:00>
-- State "DONE"       from "STARTED"    [2022-10-27 Thu 23:34]
-- State "STARTED"    from "DONE"       [2022-10-27 Thu 23:20]
-- State "DONE"       from "STARTED"    [2022-10-27 Thu 10:56]
-- Note taken on [2022-10-27 Thu 10:54] \\
-  我找到了两个非常好用的项目，其中一个还带有服务器端。
-  这样我就先不用考虑，去解决旧项目的旧 grade 在我的 java 版本的兼容问题
-:LOGBOOK:
-CLOCK: [2022-10-27 Thu 23:20]--[2022-10-27 Thu 23:34] =>  0:14
-CLOCK: [2022-10-27 Thu 08:53]--[2022-10-27 Thu 10:56] =>  2:03
-:END:
-在 github 搜这个关键词，结果挺多的：https://github.com/search?p=3&q=android+聊天&type=Repositories
-- [ ] ToOld
-  : Tooold 的先不考虑，或许可以做到兼容，但那是最后的才要考虑的事情
-    - [ ] Adnroid-IM [[~/android-example/Android-IM]]
-      https://github.com/wapchief/Android-IM
-        - [ ] 构建：失败
-          : 该项目使用的 Gradle 4.1 不支持 java11 以上版本，我的 java 版本过新
-          : 解决方法，就是将该项目的 gradle 升级到 4.8 以上
-          Unable to start the daemon process.
-          The project uses Gradle 4.1 which is incompatible with Java 11 or newer.
-          Possible solution:
-          Upgrade Gradle wrapper to 4.8 version and re-import the project
-            - [ ] 升级后失败：旧的 api 被废弃了
-              Unable to load class 'javax.xml.bind.annotation.XmlSchema'.
-    - [ ] TimDemo-Android
-      https://github.com/wapchief/TimDemo-Android
-        - [ ] 构建：失败
-          Grade 3.5 太老了，我的 Java 太新了
-            - [ ] 把它升级到 4.1 以上
-              出现了兼容问题
-              Could not initialize class com.android.sdklib.repository.AndroidSdkHandler
-    - [ ] EasyIM-Android [[~/android-example/EasyIm-Android]]
-      https://github.com/xiezefan/EasyIM-Android
-        - [ ] 构建：版本太老，无法构建
-          This version of Android Studio requires projects to use Gradle 4.8.1 or newer. This project is using Gradle 2.2.1.
-          : 太老了，老到连 android Studio 都不支持
-          Change to minimum versions (plugin 3.2.0, Gradle 4.8.1) and sync project
-          Change to latest versions (plugin 7.2.2, Gradle 7.3.3) and sync project
-          Open build file
-            - [ ] 给项目配置最新的版本 :Grade 7.3.3
-               Required by:
-               project : > com.android.tools.build:gradle:7.2.2
-               project : > com.android.tools.build:gradle:7.2.2 > com.android.tools:sdk-common:30.2.2
-               : 果然跑步了
-            - [ ] 给项目配置最低兼容版本 :Grade 4.8.1
-    - [ ] NodeJs Socket
-      https://github.com/githuanl/socket.io-android-client
-- [X] EmojiChat [[~/android-example/EmojiChat]]
-  https://github.com/kymjs/EmojiChat
-    - [X] 构建情况：可以构建
-      因为最后的 grade 更新是 2 年前，上面 tooold 的都是 5-7 年
-    - [X] 完成度：
-        - [X] 非常美观的 ui
-        - [X] 功能
-            - [X] 单聊 echo 功能
-            - [X] 表情
-            - [X] 发送图片
-            - [X] 可以打开网页链接
-- [-] im ：两年前的新项目，还是挺新的，怎么会构建失败？
-  https://github.com/zhifeijishu/im
-    - [X] 客户端构建成功，因为是 2 年前的项目，还是挺新的。
-    - [ ] 服务器端构建失败
+**** DONE Opendaylight 控制 mininet （实验5）
 
-**** FIX! [#A] 无法 run im-server 的 connectApp
-CLOSED: [2022-10-28 Fri 01:32] DEADLINE: <2022-10-28 Fri 02:00>
-- State "FIX!"       from "BUG!"       [2022-10-28 Fri 01:32]
-:LOGBOOK:
-CLOCK: [2022-10-27 Thu 23:45]--[2022-10-28 Fri 01:32] =>  1:47
-:END:
-- State "BUG!"       from "TODO"       [2022-10-27 Thu 23:43]
 
-  实错阶段，随便试，到时候全新下载一个新的，跑一遍就行了
+**** DONE 编译 IM 的服务器端
+541:1
 
-- [-] 判断 bug 原因
-    - [X] 缺少第三方库
-    - [X] 不是在 root 执行：  把 root 的日志配置去掉后，依旧报错
-    - [X] SpringBoot 版本问题：因为 build 时候规定了版本，且解决了。
-      新 jdk 向后兼容 5 年是很正常的，所以即使构建工具导入旧 2-3 年的 springboot, 也能够兼容
-    - [ ] 代码的部署环境出了问题
-        * [ ] 根据 error 信息：ERROR SpringApplication: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:863) - Application run failed
 
-**** DONE [#A] 编译 IM 的服务器端
-CLOSED: [2022-10-28 Fri 01:33] DEADLINE: <2022-10-27 Thu 15:20>
-- State "DONE"       from "STOP"       [2022-10-28 Fri 01:33]
-- State "STOP"       from "STARTED"    [2022-10-27 Thu 23:44] \\
-  先找 bug
-- State "STARTED"    from "DONE"       [2022-10-27 Thu 23:34]
-- State "DONE"       from "STARTED"    [2022-10-27 Thu 23:15]
-- State "STARTED"    from "STOP"       [2022-10-27 Thu 22:11]
-- State "STOP"       from "STARTED"    [2022-10-27 Thu 17:10]
-- State "STARTED"    from "TODO"       [2022-10-27 Thu 15:17]
-:LOGBOOK:
-CLOCK: [2022-10-27 Thu 23:34]--[2022-10-27 Thu 23:44] =>  0:10
-CLOCK: [2022-10-27 Thu 22:18]--[2022-10-27 Thu 23:15] =>  0:57
-CLOCK: [2022-10-27 Thu 15:17]--[2022-10-27 Thu 17:10] =>  1:53
-CLOCK: [2022-10-27 Thu 14:34]--[2022-10-27 Thu 15:17] =>  0:43
-:END:
-- [ ] 编译 java 项目
-    - [ ] 命令行老路
-        - 构建工具
-            - C++ ：Makefile 或 cmake
-            - Python ：一键 python
-            - Java ：用 maven, 怎么用命令行
-        - 导入第三方库（语言的重要的生态）
-            - C++ ： 使用 include 的方式导包，基本就是源码 clone 下来，然后设置下路径， gcc 编译
-            - Python ：使用 pip 安装到全局的系统路径
-    - [ ] IDE 工具链
-        - 用 idea 导入项目
-        - 读取项目的 pom.xml
-          在 pom.xml 里面规定了使用的库，以及他们的版本
-          例如：
-          #+begin_src xml
-            <protobuf.version>3.11.1</protobuf.version>
-          #+end_src
-        - 开始下载依赖
-        - 为项目配置 jdk
-            - 本地 jdk
-            - IDE 提供 jdk
-        - 选择语言特性，我选择了最新的 java19, 也是 jdk 能提供的最新的语言特性了
-          根据向下兼容，应该是跑的起来的
-        - [#A] Build Success
-        - [#A] Run
-          我是不是可以理解为整个项目已经 build 成功了，我可以选择选择不同模块的 bin/ 执行 Run?
-            - 知道 main 的那个入口文件
-                - 测试文件: 都是 connect 模块的测试
-                    - [ ] connect/SingleMsgTest.java
-                    - [ ] connect/PingPongTest.java
-                - [-] 执行文件: 三个模块
-                    - [-] connect/connectApp.java
-                        - [-] 失败原因
-                            - [X] Linux 没有 springboot
-                              排除，因为 sprintboot 不依赖与系统，而是被 java Maven 管理，Build 的时候，已经安装了
-                            - [X] springboot 版本问题
-                            - [X] 要部署到 linux 服务器以 root 运行
-                              应该不可能，那本地怎么测试？不符合逻辑
-                            - [ ] 最大的可能，代码的某个配置出错，或者我没有设置
-                    - [ ] process/ProcessApp.java
-                    - [ ] api/ApiApp.java
-**** DONE [#A] 部署环境
-CLOSED: [2022-10-29 Sat 08:49] DEADLINE: <2022-10-28 Fri 03:00>
-- State "DONE"       from "STARTED"    [2022-10-29 Sat 08:49]
-:LOGBOOK:
-CLOCK: [2022-10-29 Sat 08:26]--[2022-10-29 Sat 08:49] =>  0:23
-CLOCK: [2022-10-28 Fri 22:47]--[2022-10-28 Fri 23:26] =>  0:39
-CLOCK: [2022-10-28 Fri 01:35]--[2022-10-28 Fri 01:39] =>  0:04
-:END:
-- State "STARTED"    from "TODO"       [2022-10-28 Fri 01:35]
-**** DONE 野火im [3/3]
-CLOSED: [2022-11-06 Sun 17:26]
-***** DONE [#B] 全部 build 成功和 run 起来
-CLOSED: [2022-10-29 Sat 10:37]
-- State "DONE"       from "TODO"       [2022-10-29 Sat 10:37]
-***** DONE [#B] Android 端源码赏析
-CLOSED: [2022-11-06 Sun 17:26] DEADLINE: <2022-10-29 Sat 12:00>
-- State "STOP"       from "STARTED"    [2022-10-29 Sat 20:52] \\
-  休息会，空闲时间可以写下《职业规划》 ppt
-- State "STARTED"    from "TODO"       [2022-10-29 Sat 15:07]
-:LOGBOOK:
-CLOCK: [2022-10-29 Sat 19:32]--[2022-10-29 Sat 20:48] =>  1:16
-CLOCK: [2022-10-29 Sat 18:07]--[2022-10-29 Sat 19:12] =>  1:05
-CLOCK: [2022-10-29 Sat 10:37]--[2022-10-29 Sat 15:07] =>  4:30
-:END:
-- [-] 项目架构
-    - [-] chat 模块 : 基本就是我打算演示的比较基本，但是又是核心的模块
-        - [X] 模块的 AndroidManifest 定义了标题，需要修改去掉 "野火“
-        - [X] 模块内公共控件与引用
-            - res/layout/xxoo.xml  定义各种 activity 的控件，以及其布局
-            - res/value/string.xml 设置模块所有定义的控件的 text
-            - res/value/color.xml  设置模块所有定义的控件的 color
-        - [X] Activity 之间跳转（Intent)
-          #+begin_src java
-            // 从 LoginActivity 跳转到 MainActivity
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-          #+end_src
+** 科技英语 
+*** 学习通 (打算这个星期写完，所以划分 6 个子任务）
+**** WAIT 单词
+DEADLINE: <2022-11-29 Tue 17:00> SCHEDULED: <2022-11-29 Tue 14:00>
 
-        - [-] Activity 和其布局
-            - [X] 入口 activity : SplashActivity （layout/activity_splash）
 
-            - [X] 登录帐号与密码  ：LoginActivity  (layout/login_activity_password)
+**** WAIT 翻译
+DEADLINE: <2022-11-30 Tue 17:00> SCHEDULED: <2022-11-30 Tue 14:00>
 
-            - [ ] 登录后IM的骨架  : MainActivity   (layout/main_activity, layout/main_bottom_navigation)
-                - [ ] 进入第一层：conversation/conversationlist
-                - [ ] 第二层   : 通讯录
-                - [ ] 第三层   : 工作台
-                - [ ] 第四层   : 发现
-                - [ ] 第五层   : 我的
 
-        - [-] 网络层
-            - [-] 网络层使用的网络库
-                - [X] OkIO 和 OKhttp ：登录服务器，验证帐号和密码，直接走 http 协议
-                - [-] OKHttpHelper ：对 okhttp 的封装
-                    - [ ] 处理 token 认证
-                    - [ ] Cookie 封装
-                    ...
-                    - [X] 公共接口
-                        - [X] Get
-                        - [X] Post
+**** WAIT 写作
+DEADLINE: <2022-12-01 Thu 17:00> SCHEDULED: <2022-12-01 Thu 14:00>
 
-            - [X] UI 层和网络层如何连接
-                - [X] 登录验证：UI 层调用 AppService 类的服务
-                  分层的思想
-                  原理解析：网络模块提供回调接口，允许 ui 模块把注册进去，因为不涉及 socket 的内容，所以，直接走 http,
-                  注册一个回调，成功就调用，否则就失败
 
-                  代码赏析：
-                  #+begin_src java
-                    String account = accountEditText.getText().toString().trim();
-                    String password = passwordEditText.getText().toString().trim();
+**** WAIT 10 选 5 
+DEADLINE: <2022-12-02 Fri 17:00> SCHEDULED: <2022-12-02 Fri 14:00>
 
-                    AppService.Instance().passwordLogin(account, password, new AppService.LoginCallback() {
-                            // 在 ui 模块中，注册网络模块的成功回调
-                            @Override
-                            public void onUiSuccess(LoginResult loginResult) {
-                                if (isFinishing()) {
-                                    return;
-                                }
-                                // 如果登录成功
-                                // 从 LoginActivity 到 MainActivity
-                                Intent intent = new Intent(LoginActivity, MainActivity);
-                                startService(intent);
-                            }
-                        }
-                  #+end_src
 
-            - [X] 登录服务器
-                - [X] 源码模块解析
-                    - [X] 把 LoginResult 作为参数传入 SimpleCallback 中
-                        - [X] LoginResult: 用户验证有关的信息 : 用户 id, 消息，Code
-                        - [X] SimpleCallback : 当 OkHttp 触发时回调
+**** WAIT 阅读理解
+DEADLINE: <2022-12-03 Sat 17:00> SCHEDULED: <2022-12-03 Sat 14:00>
 
-                    - [X] AppService
-                        - [X] LoginCallback(Interface) ：定义回调接口
-                          允许 ui 模块把 *更新 UI* 的逻辑注册进来
-                            - [X] onUiSuccess
-                            - [X] onUiFailure
 
-                        - [X] 提供给 UI 模块的接口 / OKHttp 请求的逻辑封装
-                            - [X] passwordLogin : 输入密码登录
-***** DONE [#B] IM 服务端研究
-CLOSED: [2022-11-06 Sun 17:26] DEADLINE: <2022-10-30 Sun 17:00>
-- State "STOP"       from "STARTED"    [2022-10-30 Sun 15:25] \\
-  划分任务
-:LOGBOOK:
-CLOCK: [2022-10-30 Sun 14:44]--[2022-10-30 Sun 15:24] =>  0:40
-CLOCK: [2022-10-30 Sun 12:42]--[2022-10-30 Sun 13:52] =>  1:10
-:END:
-- State "STARTED"    from "STOP"       [2022-10-30 Sun 12:42]
-    - [ ] 项目模块
-      第一次研究 java 的项目，目录结构，如果是 c++, 则是找 main() 函数，找 include/ 的第三底层模块，例如网络通信（后端必备）
-      基础库（C++ 通病），然后从 src 往下延伸，功能模块。
+**** WAIT 听力
+DEADLINE: <2022-12-04 Sun 17:00> SCHEDULED: <2022-12-04 Sun 14:00>
 
-      如果按照这种想法，
 
-      Java 的模块化，非常好，基本没有单独把 include/ 的操作
+*** WAIT 英语课文复习（能复习多少算多少）
+SCHEDULED: <2022-11-29 Tue> DEADLINE: <2022-12-07 Wed>
 
-      就是，每个目录都是 app/ 的功能模块，只是里面的目录结构也太长了吧
 
-p      Broker: 在分布式架构中，客户端和服务器端通信，需要经过一个经纪人。经纪人负责协调客户端与服务器端的通信，所以是网关？
+*** WAIT 考场考试
+DEADLINE: <2022-12-08 Thu 21:00> SCHEDULED: <2022-12-08 Thu 19:00>
 
-      Common: 一些网络模块的封装
 
-      Distribution: 分发？
-      SDK: Sortware Development Kit 软件开发工具包
-      Utilites
+** 职业规划
+*** WAIT 职业规划书，手写 1500 字
+DEADLINE: <2022-11-29 Mon 12:00> SCHEDULED: <2022-11-29 Tue 08:00>
 
-      关于 broker 的第三库的问题，混用的问题，答案是不区分？？？我懂了，但是为啥还要把源码 clone 下来一份？
 
-      Netty 和 mqtt
-      我还是有点不懂？
+*** WAIT 职业规划书籍和补修表和询问如何录入成绩
+DEADLINE: <2022-11-28 Mon 16:00> SCHEDULED: <2022-11-29 Tue 14:00>
 
-      去思考，这个问题需要那么久吗？
 
-      找到其架构，如果是第三方库是由 maven 管理的，为啥要把 src clone 下来？
-
-    : broker 和 sdk 共同引用 common 模块，同时 broker 和 sdk 都不被其余引用
-    - [ ] common 公共组件
-    - [ ] 经纪人 broker
-        - [ ] cn ：事件开启模块
-            - [ ] Push
-            - [ ] Server
-        - [ ] io
-            - [ ] mqtt 消息协议
-              https://blog.csdn.net/thc1987/article/details/119138479
-              牛逼，竟然自己封装了一个，真的强
-            - [ ] Mqtt 的 netty 封装：完成基本的 io 通信与 codec
-            - [ ] Moquette ：一个完整的接收者发布者 broker
-        - [ ] com/xiaoleiyu : 为啥第三方库直接 clone 下来？
-            - [ ] loServer: 基于 netty 的 http 服务器（可以像 c++ 一样摆脱 web 的 tomcat 等各种依赖）
-              : 问题来了，要这个干嘛？协议不是走 mqtt 协议吗？
-              : 又不是 web 应用走 http 协议，有啥好处吗？
-        - [ ] win ：业务逻辑封装？
-    - [ ] sdk
-****** DONE [#A] mtqq 协议大纲
-CLOSED: [2022-10-30 Sun 17:14] DEADLINE: <2022-10-30 Sun 16:40>
-- State "DONE"       from "STARTED"    [2022-10-30 Sun 17:14]
-:LOGBOOK:
-CLOCK: [2022-10-30 Sun 15:43]--[2022-10-30 Sun 17:14] =>  1:31
-:END:
-- [ ] 功能
-    - [ ] （消息的）发布与订阅
-      : 术语：发布与订阅，发布者（Publisher)，订阅者（Subscriber），主题（Topic）
-    - [ ] Qos 服务质量
-        - [ ] 0 ：依赖于下层的 tcp/ip 协议
-        - [ ] 1 ：消息最少一次给订阅者
-        - [ ] 2 ：消息仅仅到达一次
-- [ ] 协议段
-    - [ ] 固定头
-    - [ ] 可变头
-    - [ ] 消息体 payload
-        - [ ] 类型
-            - [ ] Connect     ：用户名和密码
-            - [ ] subscribe   ：消息内容是要一系列订阅的主题和 qos
-            - [ ] suback      ：消息内容是对 subscribe 消息订阅主题和 qos 的进行确认和回复
-            - [ ] unsubscribe ：消息体内容是要订阅的主题（取消）
-- [ ] 发布订阅好处的必要性。
-****** WAKE [#A] 自己封装 mtqq
-CLOSED: [2022-10-30 Sun 19:48] DEADLINE: <2022-10-30 Sun 19:30>
-- State "WAKE"       from "TODO"       [2022-10-30 Sun 19:48]
-:LOGBOOK:
-CLOCK: [2022-10-30 Sun 19:02]--[2022-10-30 Sun 19:48] =>  0:46
-:END:
-- [ ] MqttMessage 的公共组成部分
-    - [ ] MqttFixedHeader
-    - [ ] Mqtt*Header
-    - [ ] ByteBuf (payload)
-
-- [ ] MqttMessage （基类）
-  : 就是对 MqttMessage 的那三个部分的拼装，只要知道 mqtt 的各种消息含义，就能理解
-    - [ ] MqttPublishMessage
-    - [ ] MqttConnAckMessage
-    - [ ] MqttConnectMessage
-    - [ ] MqttUnsubAckMessage
-    - [ ] MqttSubAckMessage
-    - [ ] MqttPubAckMessage
-    - [ ] MqttUnsubscribeMessage
-    - [ ] MqttSubscribeMessage
-
-- [ ] MqttMessageFactory : MqttMessage 工厂方法，通过基类 MqttMessage 灵活地可以向下转型
-
-- [ ] encoder/decoder
-  : 借助 netty 的 MessageToMessageEncoder 阶码器进行解码
-    - [ ] MqttEncoder
-    - [ ] Mqttdecoder
-****** WAKE [#A] Netty 融合 mtqq
-CLOSED: [2022-10-31 Mon 09:25] DEADLINE: <2022-10-30 Sun 20:50>
-- State "WAKE"       from "TODO"       [2022-10-31 Mon 09:25]
-:LOGBOOK:
-CLOCK: [2022-10-31 Mon 08:05]--[2022-10-31 Mon 09:25] =>  1:20
-CLOCK: [2022-10-31 Mon 00:14]--[2022-10-31 Mon 00:24] =>  0:10
-CLOCK: [2022-10-31 Mon 00:06]--[2022-10-31 Mon 00:13] =>  0:07
-CLOCK: [2022-10-30 Sun 19:50]--[2022-10-30 Mon 21:30] =>  1:40
-:END:
-****** WAKE [#A] netty 详解
-CLOSED: [2022-10-31 Mon 10:40] DEADLINE: <2022-10-31 Mon 10:25>
-- State "WAKE"       from "TODO"       [2022-10-31 Mon 10:40]
-:LOGBOOK:
-CLOCK: [2022-10-31 Mon 09:25]--[2022-10-31 Mon 10:40] =>  1:15
-:END:
-****** WAKE [#A] imhandler 业务代码
-CLOSED: [2022-10-31 Mon 12:55] DEADLINE: <2022-10-31 Mon 13:25> SCHEDULED: <2022-10-31 Mon 11:20>
-- State "WAKE"       from "TODO"       [2022-10-31 Mon 12:55]
-:LOGBOOK:
-CLOCK: [2022-10-31 Mon 11:28]--[2022-10-31 Mon 12:54] =>  1:26
-:END:
-****** DONE [#A] 数据库 (如何在网络层中融入数据库)
-CLOSED: [2022-10-31 Mon 13:22] DEADLINE: <2022-10-31 Mon 13:20> SCHEDULED: <2022-10-31 Mon 13:00>
-:LOGBOOK:
-CLOCK: [2022-10-31 Mon 13:00]--[2022-10-31 Mon 13:22] =>  0:22
-:END:
-
-
-- State "DONE"       from "STARTED"    [2022-10-31 Mon 13:22]
-- State "STARTED"    from "TODO"       [2022-10-31 Mon 12:55]
-****** DONE [#A] 演示要用到的 ppt
-CLOSED: [2022-11-01 Tue 20:21] DEADLINE: <2022-10-31 Mon 21:10> SCHEDULED: <2022-10-31 Mon 19:40>
-- State "DONE"       from "TODO"       [2022-11-01 Tue 20:21]
-*** DONE [#A] 验收安卓实验
-CLOSED: [2022-11-07 Mon 10:28] DEADLINE: <2022-11-12 Sat 22:59>
-:LOGBOOK:
-CLOCK: [2022-11-07 Mon 09:33]--[2022-11-07 Mon 10:28] =>  0:55
-:END:
-- [X] 什么时候交： 12 周前
-- [X] 交到哪里 :  发送到 QQ 邮箱 1062219923@qq.com
-- [X] 有什么要求
-    - 从 Android 开始编译运行，能看到代码
-    - 功能演示
-    - 最好在演示里面写上自己的信息（包括组号）
-    - 邮件标识：题目 + 姓名 + 学号 + 组号
-
-*** DONE 实验报告 [2/2]
-**** DONE [#B] 电子实验报告: 安卓
-CLOSED: [2022-11-07 Mon 10:35] DEADLINE: <2022-11-06 Sun 22:59>
-:LOGBOOK:
-CLOCK: [2022-11-07 Mon 10:30]--[2022-11-07 Mon 10:40] =>  0:10
-:END:
-**** DONE [#D] 纸质实验报告：安卓
-DEADLINE: <2022-11-15 Wed 22:59>
-      
-** DONE 实训周：无线网络定义 [2/2]
-*** DONE 三个上机实训 [3/3]
-CLOSED: [2022-11-06 Sun 17:09]
-**** DONE [#A] 实训1 ：平台认识
-CLOSED: [2022-11-06 Sun 16:55]
-- CLOSING NOTE [2022-11-06 Sun 16:55]
-**** DONE [#A] 实训2 ：软件认识
-CLOSED: [2022-11-06 Sun 16:55]
-- CLOSING NOTE [2022-11-06 Sun 16:55]
-**** CENCEL [#A] 实训3 ：农业检测
-CLOSED: [2022-11-06 Sun 16:55]
-- CLOSING NOTE [2022-11-06 Sun 16:55] \\
-  疫情取消
-*** DONE 实训报告 [2/2]
-**** DONE [#B] 电子实验报告: 无线定义网络
-CLOSED: [2022-11-07 Mon 15:14] DEADLINE: <2022-11-06 Sun 22:59>
-:LOGBOOK:
-CLOCK: [2022-11-07 Mon 14:08]--[2022-11-07 Mon 15:14] =>  1:06
-CLOCK: [2022-11-07 Mon 10:51]--[2022-11-07 Mon 11:27] =>  0:36
-:END:
-
-- 要求
-    - [X] 主题
-        - 实训1 ： 实验2 ：无线网络认知
-        - 实训2 ： 实验3 ：无线传感器工具
-    - [X] 模板
-      : 可以无视扩展实验
-      : 实训 1 模板需要写 567
-      : 实训 2 模板需要写 1234567
-        1. [X] 理论回顾
-        2. [X] 目的
-        3. [X] 环境
-        4. [X] 步骤
-        5. [X] 演示照片
-        6. [X] 扩展实验
-        7. [X] 小结
-
-
-
-
-
-**** DONE [#D] 纸质实训报告：无线定义网络
-DEADLINE: <2022-11-15 Wed 22:59>
-
-** DONE 形式与政策 [100%]
-*** DONE 手稿 [6/6]
-**** DONE 课堂笔记四篇 [4/4]
-***** DONE [#C] 形式与政策课堂笔记：第一篇：保证粮食安全的中国策
-DEADLINE: <2022-11-08 Tue 09:50>
-:LOGBOOK:
-CLOCK: [2022-11-08 Tue 11:31]--[2022-11-08 Tue 12:06] =>  0:35
-:END:
-- [X] 自力更生（我国的粮食发展历史与现状）
-    - [X] 新中国初期
-    - [X] 改革开放以来
-    - [X] 21 世界以来
-        - [X] 最严的食品安全法
-        - [X] 消费升级，肉类需求增多
-
-- [X] 认清现状（当前形势，我国遇到的问题）
-    - [X] 一多三少
-    - [X] 淡水问题
-    - [X] 结构性问题
-    - [X] 区域问题
-    - [X] 数量到质量：从吃得饱到吃得好
-    - [X] 贸易问题
-
-- [X] 系统推进（出绝招了，新形势下怎么解决问题）
-    - [X] 保护耕地
-    - [X] 科技才是出路
-    - [X] 建立粮食观
-***** DONE [#C] 形式与政策课堂笔记：第二篇：乌克兰危机及影响
-DEADLINE: <2022-10-13 Thu 09:30> SCHEDULED: <2022-10-13 Thu 08:30>
-: 事件导火索，过程，影响，深层次的原因与预测
-- [X] 乌克兰危机演变及其影响
-    - 事件简介
-      俄罗斯总统普京，宣布承认乌克兰的顿涅茨克人民共和国和卢干斯克人民共和国独立，并且对乌克兰进行宣战。同时俄罗斯也收到欧洲的制裁。
-    - 事件的导火线
-        1. 乌克兰加入北约
-    - 深层次的原因与预测
-        1. 乌克兰和俄罗斯的历史问题
-        2. 美国扩张问题
-    - 过程
-        - 俄罗斯行动
-        - 乌克兰方行动
-    - 影响
-        - 对乌克兰的影响
-          被战争侵略
-        - 对俄罗斯的影响
-          在经济，社会，舆论领域被全面制裁，美欧将俄银行排除出支付系统，麦当劳退出俄罗斯市场，对俄罗斯球员禁赛等。
-        - 全球的国际影响
-            - 能源危机
-	    能源价格上涨，影响全球能源的供需平衡
-            - 粮食危机
-            - 冲击了国际形式
-	        打破了地区安全平衡，导致战火蔓延到其他地方，乌克兰，波兰，阿塞拜疆和亚美尼亚都在开火
-    - 中国的立场
-      中国的始终保持公正的态度与立场，尊重各国主权和领土，会积极向乌克兰民众提供人道主义援助。
-      同时不要沦为 '乌克兰‘式的美国棋子，中国希望和平解决问题。因为在中国始终坚持走和平发展道路。
-***** DONE [#C] 形式与政策课堂笔记：第三篇: 习近平谈治国理政
-DEADLINE: <2022-11-08 Tue 8:55>
-:LOGBOOK:
-CLOCK: [2022-11-08 Tue 10:58]--[2022-11-08 Tue 11:31] =>  0:33
-CLOCK: [2022-11-08 Tue 09:17]--[2022-11-08 Tue 09:24] =>  0:07
-CLOCK: [2022-11-08 Tue 08:45]--[2022-11-08 Tue 09:15] =>  0:30
-:END:
-: 习近平讲了什么东西？为什么要讲这个？对未来有什么影响？
-- [X] 背景解码：为什么要讲这个？（为了解决，过去面临的什么问题？）
-    - [X] 为了系统性的回答 4 问，那么 4 个问题是怎么产生的呢？？
-        - [X] 中国之问：这个不用说了，从毛主席开始一直探索的问题，中国怎么发展？
-        - [X] 世界之问：世界百年大变局，我们应该怎么办？
-            - [X] A 赤字
-            - [X] 和平赤字
-        - [X] 人民之问：解放人类
-        - [X] 时代之问：解放时代
-- [ ] 内容解码：习近平讲话内容：本书收录了收录习近平的讲话，演讲内容
-  : 内容解码并没有解释：背景解码提出的四个问题，反正我是看不出来
-    - [ ] 内容总结
-        - [ ] 三个 1 ：一个主题，一个红线，一个关键
-        - [ ] 两件大事
-        - [ ] 三个新
-        - [ ] 四个新概括
-        - [ ] 五大实践
-- [X] 价值解码：我们学会了什么？
-    - [X] 让我们深悟中国之道：更高更快更强
-    - [X] 让我们深悟中国之治：
-        - [X] 安全感提升
-        - [X] 农村可支配收入提高
-        - [X] 创新指数提高
-    - [X] 让我们深度中国之理：习近平新时代社会主义是新时代的思想武器
-***** DONE [#C] 形式与政策课堂笔记：第四篇：高效统筹疫情防控和经济社会发展
-DEADLINE: <2022-11-08 Tue 22:59>
-:LOGBOOK:
-CLOCK: [2022-11-08 Tue 15:13]--[2022-11-08 Tue 15:32] =>  0:19
-CLOCK: [2022-11-07 Mon 21:26]--[2022-11-07 Mon 21:45] =>  0:19
-:END:
-- [X] 从科学的角度歌颂我国的（傻逼）防疫政策
-
-    - [X] 科学在哪？
-        - [X] 我国人口基数大，所以不能搞 "集体免疫“ ，否则后果不堪设想
-        - [X] 使用 "小成本” 在更短的时间内控制住疫情
-            1. 一时的管，是为了更好的放
-            2. 动态清零，科学有效可持续
-
-    - [X] 狗熊事迹
-        - [X] 2020: 三个月打赢武汉保卫战
-        - [X] 2021: 迅速扑灭 30 余其本土聚集性疫情
-        - [X] 2022: 应对奥密克戎变异毒株取得阶段性胜利
-
-- [ ] 从经济的角度证明这个傻逼防疫政策没有毛病（赢！！！！！！！！！）
-    - [ ] 民生好
-        - 职业返岗
-
-    - [ ] 赢
-        - [ ] 疫情后，中国的世界贸易地位不断回升，美国对中国的赤字上升
-        - [ ] 新能源汽车（特斯拉）领跑全球
-
-- [X] 鸡汤：我们一定能赢
-  坚定信心，不能对不同地区采取一刀切的做法，
-  对着 ppt 照抄就好了
-    - [X] 9 不准
-      对着
-**** DONE 一篇时事
-DEADLINE: <2022-10-13 Thu 13:22> SCHEDULED: <2022-10-13 Thu 12:50>
-: 佩洛西访台
-- 概述
-  [[https://baike.baidu.com/item/2022年南希·佩洛西窜访台湾事件/61814472?fr=aladdin][百度百科]]
-  2022年8月2日，美国国会众议长南希·佩洛西窜访中国台湾地区，中方对此强烈谴责、坚决反对；同时，全球多国政府及国际组织发表声明，表示坚持一个中国原则，反对美方侵害中国主权和领土完整的行径。 [1]  [25]
-  2022年8月2日晚开始，中国人民解放军东部战区陆续在台岛周边开展一系列联合军事行动，在台岛北部、西南、东南海空域进行联合海空演训，将在台湾海峡进行远程火力实弹射击，在台岛东部海域组织常导火力试射 [11]  。8月4日12时至7日12时，解放军重要军事演训行动进行，并组织实弹射击 [30]  。8月5日，外交部发言人宣布中方对美国国会众议长佩洛西实施制裁。 [59]  8月24日，新华社发布《佩洛西窜台的若干事实》。 [104]
-- 思考
-  [[https://zhuanlan.zhihu.com/p/549616519][案例1]]
-  [[https://zhuanlan.zhihu.com/p/549205328][案例2]]
-**** DONE 一篇 300 字读书笔记《习近平的会议4》
-DEADLINE: <2022-10-13 Thu 11:00> SCHEDULED: <2022-10-13 Thu 10:00>
-- 内容概括 ( 对应 ppt 怎么学)
-  - 背景：四问，然后出书
-    - 世界之问
-    - 中国之问
-    - 人民之问
-    - 时代之问
-  - 21 个主题
-- 内容理解（对应 ppt 之讲了什么）
-  - 体现两个结合的的理论创新等
-  ...
-  集中展示了了马克思主义中国化时代化的最新成果
-**** DONE 社会实践（没说只写 300 字）
-DEADLINE: <2022-10-13 Thu 16:40> SCHEDULED: <2022-10-13 Thu 15:40>
-: 题目信息：关于粮食安全的调查，提供调研报告和相关影像资料
-: 难点就在于， *形势与政策调研报告* 和 *粮食安全* 网上没有结合的案例，要么是形势与政策调研别的主题，要么这个主题不符合形势与政策的要求
-- [X] 形势与政策调研报告入门
-  [[http://www.fanwen118.com/info_23/fw_3630435.html][ 参考1]]
-  - 课题选择
-  - 调查目的
-  - 调查内容
-  - 调查对象
-  - 调查方式
-  - 调查步骤
-- [X] 主题是粮食安全
-  - 为啥主题起粮食安全？
-    1. 过去的事情不能忘，中国还没有达到飞跃
-    2. 乌克兰危机作为导火线，影像全球的产业链
-  - 所以，我们应该做什么，或者说我们能做什么？
-    大错特错，这里存在一个思维误区，就是你提前看过 ppt 之后，知道中国有粮食安全问题，你已经知道了。所以，你想的是怎么面对粮食安全问题，
-    我们怎么去解决，其实，它只是要你把粮食安全的问题通过调研提出来，是否存在这样的问题！！！
-    : 不过还是被误打误撞抓对了方向：那就是描述问题
-    +我们要做的不是去改变什么，或者喊着节约的空洞口号，而是去当记者，把问题给描述出来。所以叫做调研报告+
-    [[https://wenku.baidu.com/view/198853f8941ea76e58fa0477.html?fr=aladdin664466&ind=1][ 我国粮食安全的隐忧与对策思考]]
-- [X] 怎么写？
-  [[https://www.ruiwen.com/baogao/5927297.html][看看官员是怎么调研和写报告的]]
-**** DONE 课程总结：学习本课程的收获
-DEADLINE: <2022-10-13 Thu 15:35> SCHEDULED: <2022-10-13 Thu 15:10>
-[[https://www.xiexiebang.com/a13/201905153/017194a5e0bdd9ce.html][很多篇不错的文章可以抄]]
-**** DONE 自我成绩认定表
-DEADLINE: <2022-10-13 Thu 13:30> SCHEDULED: <2022-10-13 Thu 13:25>
-- 申请成绩：75
-- 申请理由：
-  准时上课，每节课认真完成了本学时形式与政策的学习。
-  平时在生活上，对时事，以及社会的发展有一定的关注。
-  对于一些问题有自己的见解和思考。
-  所以，在完成作业时，常常会自己的思考背后的原因，分析出合理的解释。
-  
-*** DONE [#A] 按格式写实验报告 [100%]
-SCHEDULED: <2022-11-08 Tue 22:00>
-:LOGBOOK:
-CLOCK: [2022-11-22 Tue 00:16]--[2022-11-22 Tue 03:15] =>  2:59
-CLOCK: [2022-11-21 Mon 20:39]--[2022-11-21 Mon 22:36] =>  1:57
-CLOCK: [2022-11-08 Tue 22:24]--[2022-11-08 Tue 22:47] =>  0:23
-:END:
-- [X] 课堂笔记 [100%]
-    - [X] 《习近平谈治国理政》
-      习近平提出了四问。那什么是四问以及怎么产生的呢？四问即‘中国之问‘，’世界之问‘， '人民之问’，‘时代之问’。四问本质都是实践之问，是马克思主义随着实践的进一步发展。
-
-      ‘中国之问’即中国问题，马克思中国化的百年历程就是回答不同历史时期的‘中国之问’，解决‘中国问题’的理论创新史。从毛主席的新民主主义革命时期提出的‘开辟农村包围城市，武装夺取政权的正确革命道路，创立了毛泽东思想。再到邓小平同志为核心的党的第二代中央领导集体的改革开放时期。现在习近平总书记在《习近平谈治国理政》回答了新时代的需求。
-
-      ’世界之问‘指的是当前世界面临着严峻的挑战，中国面临着百年大变局，霸权主义，信任赤字，和平赤字有增无减。国际局势动荡，地区冲突与局部冲突继续，恐怖主义仍然猖獗。
-
-      而’人民之问‘在于解决人民问题，马克思主义的核心归根到底是为人类求解放
-
-      而’时代之问‘在于党的十八大以来，进入了实现中华民族复兴的伟大时期，我们应该怎么做，强调的是马克思主义随着时代的进步。
-
-      而针对四问，习近平谈治国理政里面提出了三个1:一个主题，一个红线，一个关键，两件大事，三个新，四个新概括，五大实践。
-      
-      价值解码，这本书教会我们什么，让我们深悟中国之道，更高更快更强。深悟中国之治疗，安全感替身，农村可支配收入提高，创新指数提高，让我们深悟中国之理，习近平新时代社会主义是新时代的思想武器。
-    - [X] 《乌克兰危机及影响》
-      2022年2月21万。俄罗斯总统普京，宣布承认乌克兰的顿涅茨克人民共和国和卢干斯克人民共和国独立，并且对乌克兰进行宣战。同时俄罗斯也收到欧洲的制裁，这场事件的直接导火线是乌克兰加入北约。但是更深层次的原因，一是乌克兰和俄罗斯的历史问题，二是美国扩张问题。乌克兰对俄罗斯采取了极端排斥策略，形成了去俄罗斯化，同时美欧继续拱火，通过意识形态渗透策动颜色革命，并且美国多次表示支持乌克兰进入北约，激化矛盾，触俄底线。这是乌克兰东西部的民族和政治斗争，和美俄在乌克兰在乌克兰的角逐，陷乌克兰与泥潭中。
-
-      对乌克兰的影响是最直接的，乌克兰饱受战争侵略。对俄罗斯的影响，在经济，社会，舆论领域被全面制裁，美欧将俄银行排除出支付系统，麦当劳退出俄罗斯市场，对俄罗斯球员禁赛等。更重要的是，这直接影响了全球的国际局势。首先是能源危机，能源价格上涨，影响全球能源的供需平衡。其次是粮食危机。同时冲击了国际形式，打破了地区安全平衡，导致战火蔓延到其他地方，乌克兰，波兰，阿塞拜疆和亚美尼亚都在开火。
-      
-      我们中国的立场是始终保持公正的态度与立场，尊重各国主权和领土，会积极向乌克兰民众提供人道主义援助。
-      同时不要沦为 '乌克兰‘式的美国棋子，中国希望和平解决问题。因为在中国始终坚持走和平发展道路。
-    - [X] 《保证粮食安全的中国国策》
-      : 教师
-      : 上课时间
-      : 课堂记录开始
-      粮食一直以来都是全人类需要面对的问题。我们国家秉持着自力更生的精神，立足国情，粮食安全战略随势而动从新中国初期的集中力量提升粮食常量，到改革开放后同时兼顾质量与效益，在到 21 世纪以来更加注重食品营养。所以，我们取得了不错的成绩，粮食产量稳步增长，连续 7 年保持在 1.3 万亿斤以上。
-
-      但是，我们要认清现状，资源环境约束明显，我们面临着一多三少的问题，人多，人均占有量少，优质的耕地少，耕地后备资源少。同时
-      我国是一个缺水大国。淡水资源仅仅有全球的 6%，结构性矛盾突出，种类上，小麦够，但优质小麦不够，玉米产量不稳定，大豆对外依存度超过 80% 。区域上粮食生产中心北移，主产区输出压力变大。随着乌克兰危机爆发后，全球粮食供应链受到严重影响，我国农产品的副食品和大豆等主要饲料原料，集中与进口，容易被卡脖子。
-
-      面对这些问题，我们应该怎么解决呢？首先，要保护耕地，确保农田就是农田，而且是良田，用于发展种植业特别是粮食生产。坚持‘科技是第一生产力’，截至 2021 年底，我国农业科技进步贡献率超过 60%，综合机械化率超过 72%。建立一个粮食观，把抓好粮食生产和重要农产品供给摆放在首要位置，用科技赋能产出。
-    - [X] 《高效统筹疫情防控与经济社会发展》
-      我们当前的抗疫策略是科学高效的。我国人口基数大，不能搞集体免疫，如果搞集体免疫，躺平之类的防疫控制，后果不看设想，我们实施动态清零，是党中央从国情确定的，宁可暂时影响经济，也不能让人民群众生命受到伤害。基于此我们漂亮的完成很多历史任务，2020年，我们三个月打赢武汉保卫战。2021: 迅速扑灭 30 余其本土聚集性疫情。2022年，应对奥密克戎变异毒株取得阶段性胜利。
-
-      从经济的角度出发，我们经济破浪前行，中国 2021 年的 gdp 比上一年增加 8.1%, 上半年中国国内的生产同比增长 2.5%. 我们对于经济要从多个方面入手，保市场主体经济大盘，增加减税降费的总规模超过 3 万亿元。加强协调调动，解决外资企业具体困难，推动重大外资项目落地实施。释放红利，稳岗返还比例从 60% 提升至 90%
-      
-      只要我们团结一心，一定能度过这场难关。我们要坚定信心，不能对不同地区采取一刀切的做法，
-- [X] 时事评论 [100%]
-  : 佩洛西访台
-    - [X] 大事概括
-        [[https://baike.baidu.com/item/2022年南希·佩洛西窜访台湾事件/61814472?fr=aladdin][百度百科]]
-        2022年8月2日，美国国会众议长南希·佩洛西窜访中国台湾地区，中方对此强烈谴责、坚决反对；同时，全球多国政府及国际组织发表声明，表示坚持一个中国原则，反对美方侵害中国主权和领土完整的行径。 [1]  [25]
-        
-        2022年8月2日晚开始，中国人民解放军东部战区陆续在台岛周边开展一系列联合军事行动，在台岛北部、西南、东南海空域进行联合海空演训，将在台湾海峡进行远程火力实弹射击，在台岛东部海域组织常导火力试射 [11]  。8月4日12时至7日12时，解放军重要军事演训行动进行，并组织实弹射击 [30]  。8月5日，外交部发言人宣布中方对美国国会众议长佩洛西实施制裁。 [59]  8月24日，新华社发布《佩洛西窜台的若干事实》。 [104]
-    - [X] 我对这件事情的思考
-      佩洛西窜访台湾本身就是一种挑衅行为，想试探我们的底线，想挑起台海战争，想把俄乌战争的套路再来一遍。俄罗斯之所以不能速战速决，主要是因为以美国为首的北约国家在后面支援撺掇乌克兰，大大消耗了俄罗斯的财力物力。那佩洛西窜访台湾，中国不可能去采取一些引发中美战争的措施，只能是一些比较缓和的外交措施，等佩洛西走了以后，去收拾台湾。那什么时候收拾台湾，这个要根据我国的军事实力、财力等来决定。
-      美国想引发台海战争，主要也是想长周期消耗我国财力物力，美国会联同其它北约国家支援撺掇台湾与我们做对抗，美国还会趁机发一笔战争财。如果佩洛西到台湾后，我们真的发起了战争，那可能正中美国下怀。如果没有，那后续美国可能还会有一系列的挑衅动作，去挑起战争，比如英国发文称将在11月份左右访问台湾。
-      
-      有一天我们收复台湾，是在国家做好了充分准备后有所动作，而不是被别人牵着鼻子走。
-      因为中国上下五千年文明，并非一介莽夫。我们并非不敢战，也并非战不赢，我们国家考虑的是全社会全人类的利益，而不是趁一时之快贸然开战。陷中国人民，世界人民于危难之中。
-- [X] 阅读笔记 [100%]
-    - [X] 内容概括
-      出版于百年变局和世纪疫情相互叠加的复杂时期，坚持把马克思主义基本原理同中国具体实际相结合，《习近平谈治国理政》第四卷设有“以伟大自我革命引领伟大社会革命”专题并收录了十篇文稿，集中展现了习近平总书记对于为什么要自我革命、怎样推进自我革命的重大理论和实践课题的最新思考。同时，第四卷科学回答了中国之问、世界之问、人民之问、时代之问，深刻阐发了中国之路、中国之治、中国之理，集中展现了马克思主义中国化时代化的最新成果。
-    - [X] 我的理解
-      该书深刻阐述了习近平总书记关于青年和青年工作的重要论述，充分体现了习近平总书记对当代青年的关心关怀和殷切期盼，对指引当代青年成长成才、做好新时代的青年工作具有很强的针对性和指导性。作为当代青年干部，我们要把学习《习近平谈治国理政》第四卷作为加强理论武装、增强理想信念、提升能力本领、激发使命担当的重要途径
-      
-        - [X] 做一个坚定信仰，做赤诚报国的“有志”青年
-          《习近平谈治国理政》第四卷《努力成为可堪大用能担重任的栋梁之才》这篇文章强调，党员干部有了坚定理想信念，才能经得住各种考验，走得稳、走得远；没有理想信念，或者理想信念不坚定，就经不起风吹浪打，关键时刻就会私心杂念丛生，甚至临阵脱逃。坚定的理想信念，鲜明的政治品格，正是共产党人不懈奋斗的动力源泉。新时代的青年干部要赓续红色血脉，筑牢理想信念之基，把青春注入党和人民的事业，用实际行动不懈奋斗，自觉将个人理想融入到伟大事业当中去，
-
-        - [X] 勤奋学习，做本领过硬的“有识”青年
-          《习近平谈治国理政》第四卷中习近平总书记强调，我们处在前所未有的变革时代，干着前无古人的伟大事业，如果知识不够、眼界不宽、能力不强，就会耽误事。年轻干部精力充沛、思维活跃、接受能力强，正处在长本事、长才干的大好时期，一定要珍惜光阴、不负韶华，如饥似渴学习，一刻不停提高。最是书香能致远，年轻正是学习好时节，面对新时代、新矛盾、新任务，青年干部要在常学常新中加强理论修养，以时不待我的紧迫感勤奋学习，不断增长知识、增加智慧、增强本领。把勤学苦练、增强本领当成一种生活态度、一种工作责任、一种精神追求，勇挑重担，勤修“内功”，锻造出奔赴新时代的过硬本领，在迎接风险与挑战中勇立潮头。
-
-        - [X] 解放思想，做开拓进取的创新青年
-          鼓励年轻人大胆创新、勇于创新，让青年才俊像泉水一样奔涌而出。科技引领发展，创新决定未来，在技术革命日新月异的今天，我们的国家尤其需要创新，只有不断创新，国家和民族才能在世界范围内始终处于领先地位。青年正是创新思维最活跃、最能跟得上时代的群体。在新时代新征程上，作为新时代的青年干部，我们要与时俱进，在头脑里树立创新思维，在行动上拿出创新魄力，在工作上探索创新方法，以创新的昂扬姿态不懈奋斗，以聪明才智贡献国家，以开拓进取服务社会，助力乡村全面振兴，在平凡的岗位上创造出不平凡的业绩，让青春的能量“绽放异彩”。
-- [X] 课程总结
-  形势与政策课程总结转眼间，大学四年已然接近尾声。这四年里，除了学习，我们的的确确学到了很多书本之外的东西。就拿《形势与政策课程》来说，关注时事，聚焦社会形势政策变化，给了我们更多的机会去了解社会，熟悉社会生活。当今世界飞速发展，很显然“两耳不闻窗外事，一心只读圣贤书”的时代已经一去不复返，地球村里的变化日新月异，作为生在当代的大学生，我们不能只做墙角的书柜，必须走出象牙塔，去拥抱外面精彩的世界. 形势政策课程，让我们能更全面更清楚的了解到当今社会，我们因该学会抓住和好好利用这个机会去拓宽自己的知识面，汲取有益于自己的部分，争取将书本里学到的专业知识与社会需求相联系，争取走在形式的前沿，立足现在，踏踏实实为自己以后步入社会打下坚实的基础。四年的大学生涯，这门课程虽然课堂节数不多，但是却也让我收获颇丰. 帮助我正确认识到国家的政治、经济形势，以及国家改革与发展所处的国际环境、时代背景，正确理解党的基本路线、重大方针和政策，正确分析社会关注的热点问题，极大激发了我的爱国主义热情，增强了民族自信心和社会责任感，有利于我更好的树立正确的人生观和价值观，努力学习，把握未来
-
-  当今形势，表面一片平和下蕴含着巨大的能量。全球的经济、政治、文化发展都朝着多元化方向迈进，观念的冲突、理念的碰撞，新潮事物的成长，这些无不要求着我们每个年轻人去不断学习不断接触新鲜事物，充实自己的知识库。从基层到高层，从国内到全球等等各个层面，都隐含着波涛汹涌的发展、竞争的态势。我们目前要做的是关注时事变化，居安思危。全球化的经济危机，虽然我国能继续保持着GDP的连续增长，但也难免出现了国内经济市场的通货膨胀率上升现象；全球环境变化引起广泛关注，各国政府和人民扮演者何种角色；各国政治体制的不同，对各自发展的影响各有千秋；中国内政问题的演变，台湾问题仍然处于僵局；伴随着经济全球化而来的西方文化入侵，对我国文化传统的影响加剧等等。所有这一系列的问题都是我们大学生必要关注的焦点。我们要把握形势与政策的发展，形成自己独立的思考和见解，拓宽自己的见闻视野，为自己今后的发展储备知识力量
-
-** DONE [#A] 职业与规划职业规划书
-
-** DONE [#A] 期末考试：无线网络定义                                 :move:
-DEADLINE: <2022-11-14 Mon> SCHEDULED: <2022-11-14 Mon>
-*** DONE [#A] 从考试卷提取知识点
-SCHEDULED: <2022-11-08 Tue 20:00>
-:LOGBOOK:
-CLOCK: [2022-11-08 Tue 20:05]--[2022-11-08 Tue 21:33] =>  1:28
-:END:
-- [X] 任务目标
-  知道怎么学习这门学习
-- [X] 收获
-  知道怎么快速复习（预习）这门课程的考试。
-  - 题库已经给出来了，直接背效率太低了。
-  - 从头开始看教科书，也没有时间了
-  - 办法1:
-    根据书的目录构建大纲，然后根据题目，逐渐的把知识点补充完整。
-    - [X] 延伸：没有
-  ----------------------------------------------------
-- [X] 考试资料文件夹解析 
-    - [X] 样卷：可以看题型：选择，填空，判断，名词解释，简答题
-    - [X] 大纲
-        - [X] 规定考试题型
-        - [X] 规定教材与参考书
-        - [X] 给出考试内容出处
-            - [X] 课后习题: 两本书
-                - [X] 选择，填空，判断，名词解释 出自 <参考书>
-                - [X] <教材> 只出简答题
-            - [X] 网上资源之未知的《无线网络定义试题集》
-    - [X] 列出课后题，给出答案 : 两本书
-*** DONE [#A] 把目录背下来
-DEADLINE: <2022-11-12 20:00>
-:LOGBOOK:
-CLOCK: [2022-11-12 Sat 18:31]--[2022-11-15 Tue 10:07] => 63:36
-:END:
-- [X] 任务目标
-  通过掌握这个学科的大纲
-
-------------------------------------------------------------------------------
-
-- [X] 从计算机网络到无线网络（历史）
-- [ ] 无线网络与仿真网络基础（基础）
-    - [ ] 频谱
-    - [ ] 传输介质
-    - [ ] 损耗与衰减
-    - [ ] 调制
-    - [ ] 扩频
-      
-场景分析
-- [ ] 局域网               （场景分析1）
-    - [ ] 组成与拓扑
-    - [ ] 802.11 协议
-        - [ ] 协议
-        - [ ] 物理层规范
-        - [ ] MAC 层规范
-- [-] 城域网与蜂窝移动网络   （场景分析2）
-  : 不用分析城域网和蜂窝移动网络的组成和拓扑
-    - [ ] 802.16 协议分析
-        - [ ] 协议
-        - [ ] 体系结构与系统组成
-    - [ ] 具体的蜂窝移动网络分析
-        - [ ] 2G
-        - [ ] 3G
-        - [ ] 4G
-        - [ ] 5G
-    - [-] WiMax 
-        - [X] 和蜂窝移动网络的区别
-          WiMax 一个基站覆盖很大的范围，属于集中式，蜂窝一个区域由多个蜂窝单元（小区）组成，属于分布式
-        - [X] 调查 WiMax 的应用场景，为什么不如蜂窝使用广泛
-          应用只有咋日，韩等有应用，因为蜂窝起步早，由各大运营商部署建设，不断演进，覆盖和应用逐渐成熟。
-        - [ ] 蜂窝网络为啥比 Wifi 网络更能保证信号传输质量？
-          采用了 cdma, tdma, ofdma 提高用户的共存性，Wifi 资源争用性机制，需要避免冲突。
-          同时蜂窝有运营商提高质量，而 Wifi 没有
-无线网络的类型
-难道我只有这种程度吗？
-- [X] 无线自组织网
-    - [X] 网络概括
-    - [X] 体系结构 
-    - [X] 路由协议
-- [ ] 无线传感器网络
-    - [ ] 传感器技术介绍：
-    - [ ] 网络概括
-    - [ ] 体系结构
-    - [ ] 路由协议分析
-    - [ ] 传感器网络的应用
-- [ ] 无线个域网
-    - [ ] 概括
-    - [ ] 关键技术：
-    - [ ] 协议分析
-        - [ ] 蓝牙协议
-        - [ ] 低消耗蓝牙协议
-        - [ ] Zigbee 协议
-- [X] 物联网
-  一些应用而已，不用管了
-  
-** DONE [#A] 期末考试：安卓                                         :move:
-DEADLINE: <2022-11-16 Wed> SCHEDULED: <2022-11-16 Wed>
-*** DONE [#A] 复习 android 内容
-SCHEDULED: <2022-11-08 Tue 21:00>
-:LOGBOOK:
-CLOCK: [2022-11-08 Tue 21:34]--[2022-11-08 Tue 22:22] =>  0:48
-:END:
-*** DONE [#A] 直接复习题库
-https://view.inews.qq.com/k/20210706A0ACS100?web_channel=wap&openApp=false&f=newdc&cv=0x70000001&dt=6&lang=zh_CN&pass_ticket=hHWSXh1SM3t9Qxrg9L7OKhwPBpy6TePhZtt%2BOOMfYAggCJjz3XiQv4H9rK08aSq3
-- [X] Android 的系统架构
-    - [X] 应用程序层
-    - [X] 应用框架层
-    - [X] 核心类层
-    - [X] Linux内核层
-- [X] 四大组件
-    - [X] Intent
-        - [X] 定义
-          Intent 被称为意图，是各组件交流的方式，不仅可以指定动作，还可以交流信息
-    - [X] Acitivity
-        - [X] 定义：负责与用户交互
-        - [X] 状态与生命周期
-            - [X] 状态
-                - [X] 启动状态：很短暂，马上进入运行状态
-                - [X] 运行：用户前台能看见，能获取焦点
-                - [X] 暂停：对用户仍然可见，不能获取焦点
-                - [X] 停止：在此状态完成不可见
-                - [X] 销毁：Activity 将被清除内存
-            - [X] 生命周期
-                - [X] 全生命周期：onCreate()->onStart()->onResume()->onPause()->onStop()->onDestroy()
-                - [X] 可视生命周期：onStart()->onResume()->onPause()->onStop()
-                - [X] 前台生命周期：onResume()->onPause()
-                - [X] 函数定义
-                    - [X] onPause方法
-                      在Activity被暂停或收回cpu和其他资源时调用，该方法用于保存活动状态，也是对运行时数据的现场保护。
-                    - [X] onStop 方法
-                        - [X] 退出 activity 的方法
-                            - [X] finish()
-                            - [X] 抛出异常
-                            - [X] onStop
-            - [X] 直接或间接影响Android 进程分类
-              : 优先级排序
-                - [X] Activity 影响
-                    - [X] 前台进程：正在与用户交互的进程                            :对应 activity 的前台生命周期
-                    - [X] 可见进程：能够被用户看见，但是没有和用户交互的进程            :对应 activity 的可见生命周期
-                - [X] Service 影响
-                    - [X] 服务进程：后台服务的进程
-                    - [X] 后台进程：放在后台，没有启动服务
-                    - [X] 空进程：不包含任何活跃组件              
-        - [X] 不同 Activity 交互
-            - [X] A Activity 开启 B Activity
-              #+begin_src
-                Intent a = new Intent(this, FuckLogin.class);
-                startActivity(Intent);
-              #+end_src
-            - [X] 获取 B Acitivity 的返回结果
-                - [X] startActivityForResult
-                - [X] setResult()
-                - [X] onActivityResult()
-        - [X] 布局
-            - [X] 线性布局：LinearLayout
-                - [X] layout_width
-                - [X] layout_height
-                - [X] layout_orientation
-            - [X] 相对布局：RelativeLayout
-            - [X] 表格布局：TableLayout
-            - [X] 帧布局： FrameLayout
-            - [X] 约束布局：ConstraintLayout
-        - [X] 资源文件
-            - [X] raw   : 音乐目录
-            - [X] layout: 存放布局文件
-            - [X] drawable: 用户自定义的形状
-            - [X] mipmap: 图标文件
-            - [X] values: 存储 xml 类型的资源描述文件，例如字符串的名字，颜色，字符串的样式
-        - [X] 控件
-    - [X] Service
-        - [X] 定义
-          能够在后台长时间执行操作并且不提供用户界面
-        - [X] AsyncTask 类
-            - [X] doInBackground
-              在AsyncTask中负责执行那些很耗时的后台计算工作
-            - [X] 规则
-                - [X] 子类实例在 ui 线程创建
-                - [X] execute 方法在 ui 线程调用
-                - [X] 同一个对象实例只能执行 1 次
-        - [X] 生命周期：
-            - [X] 当通过startService()方法启动服务时，执行的生命周期方法依次为onCreate()、onStartCommand()、onDestroy()；
-            - [X] 当通过bindService()方法启动服务时，执行的生命周期方法依次为onCreate()、onBind()、onUnbind()、onDestroy()。
-        - [X] 启动方法
-            - [X] startService
-              会长期在后台运行，并且启动服务的组件与服务之间没有关联，即使启动服务的组件被销毁，服务依旧会运行；
-            - [X] bindService
-              服务会与组件绑定，程序允许组件与服务交互，组件一旦退出或者调用unbindService()方法解绑服务，服务就会被销毁；多个组件可以绑定一个服务
-            - [X] bindService 和 UnBindService
-              当调用bindService()方法启动Service时，如果该Service是第一次被创建，则首先会执行onCreate()方法，之后自动调用onBind()方法。当调用unbindService()方法时，Service首先会执行onUnbind()方法，然后执行onDestroy()方法结束生命周期。
-        - [X] 线程同步
-            - [X] messagequeue
-              主要用于存放所有通过Handler发送的消息
-            - [X] 子线程和主线程的通信方式
-                - [X] 借助于广播
-                - [X] 通过Handler与消息Message相结合的方式
-                - [X] 通过Handler.Post()的方式
-    - [X] Content-provider
-        - [X] 主要用于应用程序之间的数据交换，它可以将自己的数据共享给其他应用程序使用。
-        - [X] Android有哪5种数据存储方式
-          文件存储、SharedPreference、SQLite数据库、ContentProvider、网络存储
-        - [X] 使用方法：
-          首先要创建底层的数据源，数据源可以是数据库、文件系统或网络等，然后继承ContentProivder类实现基本数据操作的接口函数          
-    - [X] Broadcast-receivers
-        - [X] 定义：监听系统中的广播信息，实现在不同组件之间的通信
-        - [X] 两种注册方法
-            - [X] 动态注册
-              : intent->getExtra putExtra()
-                - [X] 发送广播消息
-                  Intent intent = new Intent(action);
-                  intent.putExtr("string", "123");
-                  sendBrostcast(intent);
-                                    
-                - [X] 接收广播消息
-                  #+begin_src java
-                    class MyBrostcast extends Broadcast {
-                        @override
-                        public void onReceive(Context context, Intent intent) {
-                            string str = intent.getStringExtra("string");
-                        }
-                    }
-                    MyBroadcast bc = new MyBroadcast();
-                    registerReceiver(bc);
-                  #+end_src
-            - [X] AndroidManifest 注册 
-- [X] 配置文件
-  : 包含的内容很多，但是我不会输的。
-    - [X] AndroidManifest.xml文件的作用，及其包含的主要内容。
-        - [X] 定义
-          Androidmanifest.xml 是系统的顶级配置文件
-        - [X] 包含的内容
-            - [X] （1）应用程序包的名词。
-            - [X] （2）应用程序申请自身锁需要的权限。
-            - [X] （3）应用程序所包含的组件。
-                - [X] 主 Activity
-                  不管是显示启动还是隐式启动，Activity都需在Androidmanifest.xml中进行声明
-                  Activity将作为程序的主Activity，并且在LAUNCHER菜单中启动
-                - [X] 注册广播
-    - [X] R
-        - [X] 定义
-          R.java文件是定义项目中所有资源的索引文件，其在项目建立时自动生成，是只读模式，不能修改。
-        - [X] android:id=@+id/fuckyou
-        - [X] XML中应用资源文件的格式，代码中应用资源文件的格式，@id和@+id的区别
-            - [X] @id：是指在XML文件中引用一个id，用于引用资源，即已经在R文件中注册的资源；
-            - [X] @+id：是指在XML文件中定义一个id，用于定义资源，即新增加的资源，+表示要在R文件中添加对该资源的注册。
-- [X] 日志功能
-    - [X] Log.v()：用来打印比较琐碎的数据
-    - [X] Log.d()：用来打印调试信息
-    - [X] Log.i()：用来打印重要的信息
-    - [X] Log.w()：警告信息
-    - [X] Log.e()：错误信息
-- [X] Bundle
-  对象存储整数和读取整数的方法putInt()、getInt()
-
-- [X] 数据库模块
-    - [X] 通过继承 SQLiteOpenHelper 类实现
-        - [X] 创建数据库
-        - [X] 创建表
-        - [X] 数据库变动时删除表并且重新创建
-    ----------------------------------------------------
-    #+begin_src java
-      public class MyHelper extends SQliteOpenHelper {
-          public MyHelper(Context context, String name) {
-              super(context, name, null, 2);
-          }
-
-          public void onCreate(SQLiteDatabasedb) {
-              db.execSQL("sql");
-          }
-
-          public void onUpgrade(SQLiteDatabasedb, intoldVersion, intnewVersion) {
-              db.execSQL("sql");
-              onCreate(db);
-          }
-      }
-    #+end_src
-
-- [-] 编程题目
-    - [X] 简述 button 的使用步骤
-        - [X] 在 oncreate 中绑定变量和控件
-        - [X] 调用 findViewById 方法
-        - [X] 添加 button 的 OnClickListener 监视器，实现 onClick 方法
-    - [ ] SPinner
-        - [ ] string.xml
-
-
-** DONE [#A] 期末考试：SDN
-DEADLINE: <2022-11-18 Fri> SCHEDULED: <2022-11-18 Fri>
-*** DONE [#A] 复习以前 sdn 做实验的内容
-SCHEDULED: <2022-11-08 Mon 19:05>
-:LOGBOOK:
-CLOCK: [2022-11-08 Tue 19:06]--[2022-11-08 Tue 20:05] =>  0:59
-:END:
-SDN 内容复习
-南北通信，南北架构，还有啥？
-- [X] 层级划分
-    - [X] 应用层：通过 REST 实现一些功能
-    - [X] REST 协议：北向接口
-    - [X] 控制层：opendaylight：实现网络的控制与转发功能
-    - [X] Openswitch 协议，南向接口。控制器用来控制底层设备
-    - [X] 底层设备层：ovs(openvswitch) 模拟
-    - [X] Mininet ：模拟底层设备的拓扑结构
-*** TODO [#A] 从简答题中获取知识点
-
-- [-] SDN
-    - [X] SDN 架构
-        - [X] SDN 架构的组成部分：应用，控制，转发
-        - [X] 平面的组成
-            - [X] 应用平面：
-              实现控制逻辑，并且转换为安装在数据平面的信令，描述与指导行为
-            - [X] 数据平面：
-              处理流程中的所有模块，所有都是可以编程的。和协议无关
-        - [X] 协议接口
-            - [X] 北向接口：
-            - [X] 南向接口：Openflow
-              控制器与交互机之间的通信协议，实现设备层转发功能
-    - [X] SDN 策略 ？？？
-      : 定义: 可以表达和处理请求的行为流表的集合
-        - [X] 策略部署
-        - [X] 控制器
-        - [X] 交换机
-        - [X] 典型的策略的表达方式？？
-            - [X] 中间件
-            - [X] 状态机
-            - [X] 网络编程语言
-    - [X] SDN 的性能指标
-        - [X] IP 的传输延迟
-        - [X] 时延
-        - [X] 数据流粒度
-        - [X] 流表的生存期
-    - [X] SDN 的应用分类
-      轻量级和重量级
-    - [-] SDN 网络视图
-        - [ ] 定义：SDN 网络视图的定义是啥？
-        - [X] 作用
-          实时反映网络各个实体的变化
-        - [ ] 怎么生成？
-- [-] 控制器
-    - [ ] 两表
-        - [ ] 组表
-        - [ ] 流表
-            - [ ] OPenflow 流水线的定义与功能
-                - [ ] 定义就是流表
-                - [ ] 功能是匹配收到的数据包并且转发，结束了吗？
-                  没有多少时间了
-    - [X] 控制器模型的功能部件那几个部分组成？
-        - [X] 拓扑
-        - [X] 统计
-        - [X] 消息通知
-        - [X] 设备管理
-        - [X] 最短路径转发
-        - [X] 安全机制
-    - [X] 分布式
-        - [X] 分布式控制器与集中式控制器
-          集中式集中监视，集中管理，分布式分为多个过程站，分别控制不同的设备，实现分散控制
-        - [X] 分布式控制器的开销指标有那些？
-            - 存储开销
-            - 通信开销
-            - 扩展性？
-            - 响应时间？
-
-** 科技英语 [100%]
-------------------------------------------------------------------------------
-- [X] 任务目标
-  过考试，出题范围就是课本，
-    - [X] 课本单词
-    - [X] 课本翻译
-    - [X] 课后习题
-----------------------------------------------------------------------
-- [X] https://res.sflep.com/3460f844-dc41-40ad-9718-b30ee0e8fa07.pdf?title=新目标大学英语系列教材：科技英语教程 PDF
-- [X] https://we.sflep.com/books/bookdetail.aspx?id=666 课后 PPT
-----------------------------------------------------------
-*** 科技英语课文翻译与理解 [100%]
-**** DONE [#A] Unit1 A [66%]
-DEADLINE: <2022-11-23 Wed 22:59> SCHEDULED: <2022-11-23 Wed 13:30>
-:LOGBOOK:
-CLOCK: [2022-11-23 Wed 20:21]--[2022-11-23 Wed 23:21] =>  3:00
-CLOCK: [2022-11-23 Wed 15:11]--[2022-11-23 Wed 16:13] =>  1:02
-CLOCK: [2022-11-23 Wed 13:45]--[2022-11-23 Wed 14:48] =>  1:03
-:END:
-- [ ] 生词
-  energy 能量
-  efficient 高效的
-  steam 蒸汽
-  motorist 乘客
-  vehicle 交通工具
-  Mention 提到
-  advantages 优势的
-  internal combustion machine 内燃机
-  continuous 继续的
-  pressure 压力，压强
-  harness 马力
-  convert 转化
-  stroke 划船 
-  fuelled 燃料，作为燃料供给的
-  rest 休息
-  pedestrian 行人
-  ineffective 无效的
-  brake 刹车
-  rival 竞争对手 
-  partially 一部分
-  remedy 修改的
-  introduction 介绍，引导
-  condensers 冷凝机
-  liquid 液体
-  escape 逃避
-  achieve 归档，达到
-  substantial 本质的 
-  turn back 回到
-  drawback 缺点
-  我懂了，要把控方向
-  
-我好像发现了一种很厉害的逻辑，让我看到了希望
-- [X] 秘籍
-    - [X] 主语
-    - [X] 形容词
-    - [X] 两点
-        - [X] 时间
-        - [X] 地点
-    - [X] 动作的副词
-    - [X] 动作
-        - [X] 主语
-        - [X] 形容词
-        - [X] 时间
-        - [X] 地点
-        - [X] 动作的副词
-        - [X] 动作
-- [X] 句子
-    - [X] clean and energy efficient, the steam-powered car was the motorist's vehicle of choice at one time
-        - [X] 主语：  the steam-powered car
-        - [X] 形容词：clean and energy efficient
-        - [X] 动词 / 逻辑 / 要表达的意思 : the motorist's vehicle of choice ：作为乘客的交通工具选择
-        - [X] 副词（用与形容动作）
-        - [X] 时间：at one time
-        ------------------------
-        - [X] 用自己熟悉的语言去表达上面的意思
-          在那个时候，干净，能源高效的蒸汽汽车做为乘客的交通工作选择。
-    - [X] ran quietly and could be fuelled with anything that burned.
-    - [X] They produce 100% of their power from rest so were also easier to drive, and safer for pedestrian.
-    - [X] their power could be switched into reverse at any point to reduce speed more quickly than the ineffective brakes of the time.
-      与当时无效的制动器相比，他们的功率可以在任何时候转换为反向，以更快地降低速度。
-    - [X] substantial bonilers and water tanks were needed with early steam cars losing up to a gallon of water.
-    - [X] which turned much of the steam back to liquid water before it could escape.
-    - [X] Another drawback was how long it took to build up steam pressure before a journey could begin.
-    - [X] starting had also been an issue for cars powered by the new combustion engines.
-      对于由新燃烧发动机提供动力的汽车来说，起点也是一个问题。
-**** DONE [#A] Unit1 B [50%]
-SCHEDULED: <2022-11-24 Thu 15:00> DEADLINE: <2022-11-24 Thu 17:00>
-:LOGBOOK:
-CLOCK: [2022-11-24 Thu 15:11]--[2022-11-24 Thu 16:55] =>  1:44
-:END:
-- [ ] 单词
-    - [ ] ahead 领先
-    - [ ] get out 离开
-    - [ ] attention 关注  
-    - [ ] industry 行业，产业  
-    - [ ] embarrassed 阻碍
-    - [ ] Guard 守卫，防御
-    - [ ] old guard 守旧派 
-    - [ ] Sure 肯定的
-    - [ ] Rank 等级，讨厌
-    - [ ] Profile 评论 
-    - [ ] charge 费用，指控
-    - [ ] industry 工业，产业
-    - [ ] prodding 戳
-    - [ ] charge 费用，指控
-    - [ ] ambitions 野心
-    - [ ] diminish 减少
-    - [ ] Remark 评论，备注
-    - [ ] effort 努力
-    - [ ] complicate 弄复杂
-    - [ ] Robo 机器人
-    - [ ] Initiative 主动的
-    - [ ] Phase 阶段
-    - [ ] Reality 真实
-    - [ ] Roof 屋顶，顶点
-    - [ ] Rolling Out 首次展示
-    - [ ] Laser 激光
-    - [ ] Scanner 扫描
-    - [ ] Hardware 硬件
-    - [ ] Software 软件
-    - [ ] Awkward 尴尬的
-    - [ ] Perch 栖息
-    - [ ] Lab 实验室
-    - [ ] Consider 认为，考虑
-    - [ ] Confirmed 证实
-    - [ ] Involve 专注，卷入
-    - [ ] Describe 描述
-    - [ ] Production 产品，产品
-    - [ ] Automaker 汽车制作者
-    - [ ] Separately 分离的
-    - [ ] Craft 工艺
-    - [ ] Partnership 合作伙伴
-    - [ ] Supplied 提供
-    - [ ] Continental 欧洲的
-- [X] 句子
-  这样太慢了，我先想想有没有好的办法，有了，先自己翻译一遍，再背单词后翻译一遍。
-**** DONE [#A] unit1 C [100%]
-DEADLINE: <2022-11-24 Thu 20:00> SCHEDULED: <2022-11-24 Thu 18:00>
-:LOGBOOK:
-CLOCK: [2022-11-24 Thu 19:40]--[2022-11-24 Thu 21:10] =>  1:30
-:END:
-*** TODO [#A] 期末考试：科技英语
-DEADLINE: <2022-12-08 Thu> SCHEDULED: <2022-12-08 Thu>
-** TODO [#A] 毕业补考：线性代数
-DEADLINE: <2023-02-28 Wed> SCHEDULED: <2023-02-28 Tue>
-
-* 办理补修 [100%]
-CLOSED: [2022-11-06 Sun 15:39]
-- State "DONE"       from "TODO"       [2022-11-06 Sun 15:39]
+* 办理补修
 ** DONE 填写并且上交所有《就业表》和《档案》
 DEADLINE: <2022-10-20 Thu 18:00>
 :LOGBOOK:
 CLOCK: [2022-10-22 Sat 15:10]--[2022-10-22 Sat 15:10] =>  0:00
 :END:
+
+
 ** DONE 找到具体的任课老师和开课教研室
 DEADLINE: <2022-10-18 Tue 17:00>
+
+
 ** DONE 找教务员商量高等数学和线性代数补修适宜
 DEADLINE: <2022-10-18 Tue 16:00>
+
+
 ** DONE 去快递点拿表，然后签名好
 DEADLINE: <2022-10-18 Mon 11:00>
+
+
 ** DONE 上交签好的软件工程和科技英语。没签的置换表，和补修表
 DEADLINE: <2022-10-18 Tue 10:00>
+
+
 ** DONE 打印和填好免修，补修表：
 DEADLINE: <2022-10-17 Mon 16:00>
+
+
 ** DONE 核对要补修和置换的科目
 DEADLINE: <2022-10-17 Mon 12:00>
 [[~/tmp/补修和置换.org]]
+
+
 ** DONE 把所有要做的作业，考试，日期，计划核对清楚
 DEADLINE: <2022-10-17 Mon 12:00>
 - [X] 形式与政策
@@ -2212,80 +637,68 @@ DEADLINE: <2022-10-17 Mon 12:00>
   - [X] 链接上传
 - [X] 无线网络技术
 
-** CENCEL [#B] 高等数学任课老师（陶鲜花）签名
-DEADLINE: <2022-10-21 Wed 16:10>
-- State "CENCEL"     from "WAIT"       [2022-10-23 Sun 20:09] \\
-  还是买软著最划算
-** CENCEL [#B] 理学院教务处签名
-DEADLINE: <2022-10-21 Wed 17:00>
-- State "CENCEL"     from "WAIT"       [2022-10-23 Sun 20:09] \\
-  高数取消
-** DONE [#B] 马克思新青年老师签名
+
+** DONE 马克思新青年老师签名
 DEADLINE: <2022-10-24 Mon 20:50>
-- State "TODO"       from "WAIT"       [2022-10-23 Sun 15:38]
-** DONE [#B] 马克思学院教务处签名
+
+
+** DONE 马克思学院教务处签名
 SCHEDULED: <2022-10-25 Tue 16:05> DEADLINE: <2022-10-25 Tue 16:30>
-- State "TODO"       from "WAIT"       [2022-10-23 Sun 15:38]
-** DONE [#B] 创业教研室签名
+
+
+** DONE 创业教研室签名
 DEADLINE: <2022-10-25 Tue 16:00> SCHEDULED: <2022-10-25 Tue 15:30>
-** DONE [#B] 一次上交剩余补修签名（马克思）
+
+
+** DONE 一次上交剩余补修签名（马克思）
 DEADLINE: <2022-10-25 Tue 17:00> SCHEDULED: <2022-10-25 Tue 16:40>
-- State "TODO"       from "WAIT"       [2022-10-23 Sun 15:38]
 
-* 办理置换 [25%]
-** CENCEL [#A] 置换：就业创业教育教研室
-DEADLINE: <2022-10-24 Wed 10:40>
-- State "CENCEL"     from "DONE"       [2022-11-06 Sun 15:32] \\
-  无法置换，所以重修
-- State "DONE"       from "WAIT"       [2022-10-25 Tue 12:29]
-- State "WAIT"       from "TODO"       [2022-10-24 Mon 11:14] \\
-  随时准备接电话
-- State "TODO"       from "WAIT"       [2022-10-23 Sun 20:11]
-** WAIT [#B] 置换：教育心理教研室
-SCHEDULED: <2022-11-18 Wed 16:30>
-** WAIT [#B] 置换：计算机教研室
-SCHEDULED: <2022-11-18 Wed 16:35>
-** WAIT [#B] 置换：军事教研室
-SCHEDULED: <2022-11-18 Tue 16:40>
 
-* 毕业相关事情 [0%]
-** TODO 三张表 [2/3]
-*** DONE [#B] 拍照
-CLOSED: [2022-10-28 Fri 22:44] DEADLINE: <2022-10-30 Sun>
-- State "DONE"       from "WAIT"       [2022-10-28 Fri 22:44]
-- State "WAIT"       from "TODO"       [2022-10-25 Tue 19:21] \\
-  暂时没钱
-*** DONE 学年鉴定表 [2/2]
-CLOSED: [2022-11-06 Sun 15:36]
-**** DONE [#B] 快递点取学年鉴定表
-DEADLINE: <2022-10-24 Mon 12:30>
-**** DONE [#B] 修正两张表上交
-CLOSED: [2022-10-28 Fri 22:44] DEADLINE: <2022-10-24 Mon 12:20>
-*** TODO 就业推荐表 [2/3]
-**** DONE [#B] 去补学年鉴定表
-CLOSED: [2022-10-28 Fri 22:44] DEADLINE: <2022-11-01 Tue 22:30> SCHEDULED: <2022-11-01 Tue 12:00>
-- State "DONE"       from "DONE"       [2022-11-01 Tue 20:21]
-- State "DONE"       from "TODO"       [2022-10-28 Fri 22:44]
-**** DONE [#B] 填好就业推荐表
-DEADLINE: <2022-11-07 Mon 22:59>
+
+* 办理课程置换
+** WAIT 置换：计算机教研室
+DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
+
+
+** WAIT 置换：军训教研室
+DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
+
+
+** WAIT 置换：教育心理教研室
+DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
+
+
+* 毕业相关事情
+** TASK 三张表
+
+
+** LOOP 公选课
+DEADLINE: <2022-12-11 Thu> SCHEDULED: <2022-11-28 Mon>
+
+
+** 素扩分
+*** DONE 艾滋病问卷调查 0.4 
+DEADLINE: <2022-11-29 Tue 00:45>
 :LOGBOOK:
-CLOCK: [2022-11-07 Mon 19:50]--[2022-11-07 Mon 21:02] =>  1:12
-CLOCK: [2022-11-07 Mon 15:29]--[2022-11-07 Mon 16:32] =>  1:03
+CLOCK: [2022-11-29 Tue 00:14]--[2022-11-29 Tue 01:29] =>  1:15
 :END:
-**** WAIT [#B] 上交就业推荐表
-** TODO [#A] 公选课每天挂机
-DEADLINE: <2022-12-17 Sat> SCHEDULED: <2022-11-24 Thu>
-** WAIT [#C] 素扩分
-** TODO 软著 [3/5]
-*** DONE [#A] 打听最迟补办时间和费用
+
+
+*** WAIT 写征文活动
+DEADLINE: <2022-12-05 Tue> SCHEDULED: <2022-12-05 Mon>
+
+
+
+** 软著
+*** DONE 打听最迟补办时间和费用
 DEADLINE: <2022-10-24 Mon 18:00>
 每个 300 块钱，一个抵消 5 分，最多抵消 10 分，3 月份前办好
-*** CENCEL [#A] 向教务员打听                                 :信息获取:
-DEADLINE: <2022-10-25 Tue>
-*** CENCEL [#A] 搞张新银行卡
-CLOSED: [2022-10-25 Tue 19:09] DEADLINE: <2022-12-06 Mon 22:59>
-还不急，先把所有的事情办完再说
-*** TODO [#A] 购买软著
-DEADLINE: <2022-12-10 Thu>
-*** TODO [#A] 上交软著
-DEADLINE: <2023-01-01 Sun>
+
+
+*** TASK 搞张新银行卡
+
+
+*** TASK 购买软著
+
+
+*** TASK 上交软著
