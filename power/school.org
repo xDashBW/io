@@ -583,12 +583,18 @@ DEADLINE: <2022-12-08 Thu 21:00> SCHEDULED: <2022-12-08 Thu 19:00>
 
 
 ** 职业规划
-*** WAIT 职业规划书，手写 1500 字
+*** LOOP [#B] 职业规划书，手写 1500 字
 DEADLINE: <2022-11-29 Mon 12:00> SCHEDULED: <2022-11-29 Tue 08:00>
+:LOGBOOK:
+CLOCK: [2022-11-29 Tue 11:10]
+:END:
+直接抄网上的吧，艹，写条毛啊
+https://www.yjbys.com/jiuyezhidao/zhiyeguihua/1888438.html
+------------------------------------------------------
 
 
 *** WAIT 职业规划书籍和补修表和询问如何录入成绩
-DEADLINE: <2022-11-28 Mon 16:00> SCHEDULED: <2022-11-29 Tue 14:00>
+DEADLINE: <2022-11-29 Mon 16:00> SCHEDULED: <2022-11-29 Tue 14:00>
 
 
 * 办理补修
@@ -672,7 +678,7 @@ DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
 ** TASK 三张表
 
 
-** LOOP 公选课
+** LOOP [#B] 公选课
 DEADLINE: <2022-12-11 Thu> SCHEDULED: <2022-11-28 Mon>
 
 
