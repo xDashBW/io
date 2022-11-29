@@ -67,6 +67,7 @@
 
   你的 a 事件，做不完是因为时间不够。但是这已经是最高效率，能挤出最多的时间了。如果你遵循不了，a 事件铁定玩不成，所以我把 a 事件的前置条件做为 a 事件
 
+
 *** 目标
  - 不追求短期目标，为长期目标
      - 学英语
@@ -96,34 +97,79 @@
 
  - 轻松，人生不就是图个轻松吗？
 
-*** JUST 运动1
-SCHEDULED: <2022-11-29 Tue 07:15 +1d>
-*** JUST 早餐
-SCHEDULED: <2022-11-29 Tue 07:40 +1d>
-*** JUST 进入早修状态
-SCHEDULED: <2022-11-29 Tue 08:00 +1d>
-*** JUST 插修1
-SCHEDULED: <2022-11-29 Tue 12:30 +1d>
-*** JUST 午餐
+
+
+*** JUST 结束：运动1
+SCHEDULED: <2022-11-30 Wed 07:15 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-11-29 Tue 14:58]
+:END:
+- State "FAIL"       from "JUST"       [2022-11-29 Tue 14:58] \\
+  昨晚连夜制定计划，太累了
+
+  
+*** JUST 结束：早餐
+SCHEDULED: <2022-11-30 Wed 07:40 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-11-29 Tue 14:58]
+:END:
+- State "FAIL"       from "JUST"       [2022-11-29 Tue 14:58] \\
+  昨天晚上连夜指定计划，太累了。
+
+
+*** JUST 开始：早修
+SCHEDULED: <2022-11-30 Wed 08:00 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-11-29 Tue 14:59]
+:END:
+- State "FAIL"       from "JUST"       [2022-11-29 Tue 14:59] \\
+  昨天晚上连夜指定计划，太累了
+
+
+*** JUST 开始：插修1
+SCHEDULED: <2022-11-30 Wed 12:00 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-11-29 Tue 15:00]
+:END:
+- State "GOOD"       from "JUST"       [2022-11-29 Tue 15:00]
+
+
+*** JUST 结束：午餐
 SCHEDULED: <2022-11-29 Tue 13:00 +1d>
-*** JUST 午觉
-SCHEDULED: <2022-11-29 Tue 13:50 +1d>
-*** JUST 进入中修状态
+
+
+*** JUST 开始：中休
 SCHEDULED: <2022-11-29 Tue 14:00 +1d>
-*** JUST 插修2
+
+
+*** JUST 开始：插修2
 SCHEDULED: <2022-11-29 Tue 16:30 +1d>
-*** JUST 去运动2
-SCHEDULED: <2022-11-29 Tue 17:10 +1d>
-*** JUST 吃完晚餐
+
+
+*** JUST 结束：运动2
 SCHEDULED: <2022-11-29 Tue 18:00 +1d>
-*** JUST 洗衣服洗澡
-SCHEDULED: <2022-11-29 Tue 18:00 +1d>
-*** JUST 进入插修 3 
+
+
+*** JUST 结束：晚餐
+SCHEDULED: <2022-11-29 Tue 18:15 +1d>
+
+
+*** JUST 结束：洗好衣服洗澡
 SCHEDULED: <2022-11-29 Tue 18:30 +1d>
-*** JUST 进入晚修状态
+
+
+*** JUST 开始：插修 3 
+SCHEDULED: <2022-11-29 Tue 18:30 +1d>
+
+
+*** JUST 开始：晚修状态
 SCHEDULED: <2022-11-29 Tue 19:00 +1d>
-*** JUST 结束今天一天劳作
-SCHEDULED: <2022-11-29 Tue 11:30 +1d>
+
+
+*** JUST 结束：今天一天劳作
+SCHEDULED: <2022-11-29 Tue 23:30 +1d>
+
+
 *** ???
 - 大纲
     - 除了早，中，晚修之外，其余时间全部变为灵活处理时间，用于处理突发紧急事件，
@@ -158,24 +204,29 @@ SCHEDULED: <2022-11-29 Tue 11:30 +1d>
         - 不睡午觉         （下午要 commit）
 
 
-* 意识流规范
+* 规范：意识流
 ** JUST 规范：确保过去一天，在有任务的时间段，时刻携带并且能够打开电脑，并且做到任务准时严格执行
 SCHEDULED: <2022-11-29 Tue +1d>
+
 
 ** JUST 规范：保持愤怒
 SCHEDULED: <2022-11-29 Tue +1d>
 
-* 防治遗精规范
+
+* 规范：防治遗精规范
 : 社区林大概是 1-2 个月的有效控制范围，所以遵循以下措施可以保持在正常人范围内
 : 所以，有两次不全是盖被子（用桌子顶住的虚盖）的问题，是本来到极限范围了。
-** JUST 晚上睡觉前一定要冲冷水澡
-SCHEDULED: <2022-11-29 Tue +1d 11:30>
+** JUST 规范：睡觉前一定要冲冷水澡
+SCHEDULED: <2022-11-29 Tue 23:50 +1d>
 
-** JUST 睡觉前半小时不能进行脑力活动（所以要换插修和午饭时间）
-SCHEDULED: <2022-11-29 Tue +1d 11:30>
 
-** JUST 8 点后不能听歌幻想
-SCHEDULED: <2022-11-29 Tue +1d 11:30>
+** JUST 规范：睡觉前半小时不能进行脑力活动（所以要换插修和午饭时间）
+SCHEDULED: <2022-11-29 Tue 23:50 +1d>
+
+
+** JUST 规范：8 点后不能听歌幻想
+SCHEDULED: <2022-11-29 Tue 23:50 +1d>
+
 
 * 饮食规范
 ** 处理潜力提神剂（咖啡，茶）与胃的矛盾
@@ -183,11 +234,21 @@ SCHEDULED: <2022-11-29 Tue +1d 11:30>
 咖啡与茶能大幅提高我的战斗力，但是胃会受不了，我怎么处理这个矛盾，让我尽可能的爆发潜力？
 
 
-** JUST 早餐：完全不吃碳水，最好吃饺子，一定要和咖啡和茶
-SCHEDULED: <2022-11-29 Tue +1d 8:00>
+** JUST 规范：早餐：完全不吃碳水，最好吃饺子，一定要和咖啡和茶
+SCHEDULED: <2022-11-30 Wed 7:50 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-11-29 Tue 14:59]
+:END:
+- State "GOOD"       from "JUST"       [2022-11-29 Tue 14:59]
 
-** JUST 中午：少吃碳水，4 两足够。不要睡午觉，备好下午的到 17:00 的茶或咖啡
-SCHEDULED: <2022-11-29 Tue +1d 12:30>
 
-** JUST 晚饭：可以适当多吃碳水，8 两饭吧。
-SCHEDULED: <2022-11-29 Tue +1d 18:30>
+** JUST 规范：中午：少吃碳水，4 两足够。不要睡午觉，备好下午的到 17:00 的茶或咖啡
+SCHEDULED: <2022-11-30 Wed 13:10 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-11-29 Tue 15:00]
+:END:
+- State "GOOD"       from "JUST"       [2022-11-29 Tue 15:00]
+
+
+** JUST 规范：晚饭：可以适当多吃碳水，8 两饭吧。
+SCHEDULED: <2022-11-29 Tue 18:40 +1d>
