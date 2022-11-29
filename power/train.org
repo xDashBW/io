@@ -2,7 +2,7 @@
 # 某数学家说：不做题，就不会不断地逼自己思考
 
 * 月练 
-** WAIT 模仿 libevnet 写一个网络库，导给 py 使用
+** WAIT [#B] 模仿 libevnet 写一个网络库，导给 py 使用
 DEADLINE: <2022-12-30 Fri> SCHEDULED: <2022-12-01 Thu>
 
 

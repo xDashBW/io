@@ -179,7 +179,7 @@ https://max.book118.com/html/2018/0618/173309862.shtm
 DEADLINE: <2022-11-01 Tue 09:40> SCHEDULED: <2022-11-01 Tue 08:05>
 
 
-*** WAIT 交补修表和像学委打听事情（是否规范）
+*** WAIT [#B] 交补修表和像学委打听事情（是否规范）
 DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
 
 
@@ -550,35 +550,35 @@ DEADLINE: <2022-10-19 Wed 20:30>
 
 ** 科技英语 
 *** 学习通 (打算这个星期写完，所以划分 6 个子任务）
-**** WAIT 单词
+**** LOOP [#B] 单词
 DEADLINE: <2022-11-29 Tue 17:00> SCHEDULED: <2022-11-29 Tue 14:00>
 
 
-**** WAIT 翻译
+**** WAIT [#B] 翻译
 DEADLINE: <2022-11-30 Tue 17:00> SCHEDULED: <2022-11-30 Tue 14:00>
 
 
-**** WAIT 写作
+**** WAIT [#B] 写作
 DEADLINE: <2022-12-01 Thu 17:00> SCHEDULED: <2022-12-01 Thu 14:00>
 
 
-**** WAIT 10 选 5 
+**** WAIT [#B] 10 选 5 
 DEADLINE: <2022-12-02 Fri 17:00> SCHEDULED: <2022-12-02 Fri 14:00>
 
 
-**** WAIT 阅读理解
+**** WAIT [#B] 阅读理解
 DEADLINE: <2022-12-03 Sat 17:00> SCHEDULED: <2022-12-03 Sat 14:00>
 
 
-**** WAIT 听力
+**** WAIT [#B] 听力
 DEADLINE: <2022-12-04 Sun 17:00> SCHEDULED: <2022-12-04 Sun 14:00>
 
 
-*** WAIT 英语课文复习（能复习多少算多少）
+*** WAIT [#B] 英语课文复习（能复习多少算多少）
 SCHEDULED: <2022-11-29 Tue> DEADLINE: <2022-12-07 Wed>
 
 
-*** WAIT 考场考试
+*** WAIT [#A] 考场考试
 DEADLINE: <2022-12-08 Thu 21:00> SCHEDULED: <2022-12-08 Thu 19:00>
 
 
@@ -586,14 +586,16 @@ DEADLINE: <2022-12-08 Thu 21:00> SCHEDULED: <2022-12-08 Thu 19:00>
 *** LOOP [#B] 职业规划书，手写 1500 字
 DEADLINE: <2022-11-29 Mon 12:00> SCHEDULED: <2022-11-29 Tue 08:00>
 :LOGBOOK:
-CLOCK: [2022-11-29 Tue 11:10]
+CLOCK: [2022-11-29 Tue 14:20]
+CLOCK: [2022-11-29 Tue 13:10]--[2022-11-29 Tue 13:55] =>  0:45
+CLOCK: [2022-11-29 Tue 11:10]--[2022-11-29 Tue 13:06] =>  1:56
 :END:
 直接抄网上的吧，艹，写条毛啊
 https://www.yjbys.com/jiuyezhidao/zhiyeguihua/1888438.html
 ------------------------------------------------------
 
 
-*** WAIT 职业规划书籍和补修表和询问如何录入成绩
+*** LOOP [#B] 职业规划书籍和补修表和询问如何录入成绩
 DEADLINE: <2022-11-29 Mon 16:00> SCHEDULED: <2022-11-29 Tue 14:00>
 
 
@@ -662,15 +664,15 @@ DEADLINE: <2022-10-25 Tue 17:00> SCHEDULED: <2022-10-25 Tue 16:40>
 
 
 * 办理课程置换
-** WAIT 置换：计算机教研室
+** WAIT [#B] 置换：计算机教研室
 DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
 
 
-** WAIT 置换：军训教研室
+** WAIT [#B] 置换：军训教研室
 DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
 
 
-** WAIT 置换：教育心理教研室
+** WAIT [#B] 置换：教育心理教研室
 DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
 
 
@@ -690,8 +692,8 @@ CLOCK: [2022-11-29 Tue 00:14]--[2022-11-29 Tue 01:29] =>  1:15
 :END:
 
 
-*** WAIT 写征文活动
-DEADLINE: <2022-12-05 Tue> SCHEDULED: <2022-12-05 Mon>
+*** WAIT [#B] 写征文活动
+DEADLINE: <2022-12-02 Tue> SCHEDULED: <2022-12-01 Mon>
 
 
 
