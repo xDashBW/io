@@ -1,7 +1,7 @@
 #+title: 知识
 
 * 散                      ---- 散装知识
-** LOOP reactor 加 buffer 是否等于适配成 proactor
+** LOOP [#C] reactor 加 buffer 是否等于适配成 proactor
 
 
 * 理论知识多看书           ---- 信息差，有时候你想不出来，不是你不聪明，只是信息不够，逻辑无法自恰 
@@ -128,10 +128,11 @@ DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
 * LOOP [#B] 四级核心词汇
 DEADLINE: <2022-12-01 Thu 22:59> SCHEDULED: <2022-11-29 Tue 19:40>
 :LOGBOOK:
+CLOCK: [2022-11-30 Wed 13:40]--[2022-11-30 Wed 14:43] =>  0:58
 CLOCK: [2022-11-30 Wed 09:14]--[2022-11-30 Wed 11:50] =>  2:36
 CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
 :END:
-- [-] 知乎 300 词  https://zhuanlan.zhihu.com/p/440011937
+- [X] 知乎 300 词  https://zhuanlan.zhihu.com/p/440011937
     - [X] 1-25 [100%]
         - [X] 答案版
             - [X] alter 改变
@@ -206,14 +207,66 @@ CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
             - [X]  变化的，改变 vary
             - [X]  燕子，吞，忍 swallow
 
-    - [ ] 26-45 [0%]
+    - [X] 26-45 [100%]
+        - [X] Nuisance 讨厌的
 
-        - [ ] List
+            - [X] Annoy 烦恼
 
-        - [ ] 英文 -> 中文
+            - [X] Annoying 讨厌的
 
-        - [ ] 中文 -> 英文
+        - [X] Insignificant 无意义的
 
+            - [X] Significant 重要的
+
+            - [X] Import 进口，重要
+
+        - [X] Suspicion 怀疑
+
+        - [X] Suspicious 怀疑的
+
+        - [X] Mild 温柔的
+
+            - [X] Mile 里
+
+            - [X] Milk 牛奶
+
+        - [X] Tender 温柔的，不成熟的
+
+        - [X] Vain 徒劳的
+
+            - [X] Pain 痛苦的
+
+        - [X] Absolute 绝对的
+
+            - [X] Solution 解决方法
+
+            - [X] Evolution 发展，进化
+
+        - [X] Extinct 灭绝的
+
+            - [X] Extra 多余的
+
+            - [X] Exact 确切的
+
+        - [X] Vague 含糊的
+
+        - [X] Extraordinary 非凡的
+
+        - [X] Extreme 最大程度的，极端的
+
+        - [X] Agent 代理
+
+        - [X] Appeal 呼吁，要求
+
+        - [X] Approve 赞成
+
+        - [X] Acquire 取得
+
+        - [X] Accomplish 达到
+
+            - [X] Accompany 陪伴
+
+        - [X] Alcohol 酒精 
 ------------------------------------------------------------
 
 
@@ -524,3 +577,12 @@ CLOCK: [2022-11-11 Fri 08:00]--[2022-11-12 Sat 18:31] => 34:31
 
 ** Emacs
 *** TASK 写一个 eaf-code-search
+
+
+*** LOOP [#C] Org-agenda 关闭显示 SCHEDULED 的开关
+:LOGBOOK:
+CLOCK: [2022-11-30 Wed 12:25]--[2022-11-30 Wed 13:39] =>  1:14
+:END:
+- [X] 失败的原因是缺少一个代码分析工具，一点一点的盲搜太慢了
+-----------------------------------------------------
+
