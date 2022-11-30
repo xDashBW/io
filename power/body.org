@@ -135,13 +135,21 @@ SCHEDULED: <2022-11-30 Wed 12:00 +1d>
 
 
 *** JUST 结束：午餐
-SCHEDULED: <2022-11-29 Tue 13:00 +1d>
+SCHEDULED: <2022-11-30 Wed 13:00 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-11-29 Tue 15:11]
+:END:
 
 
-*** JUST 开始：中休
-SCHEDULED: <2022-11-29 Tue 14:00 +1d>
+- State "GOOD"       from "JUST"       [2022-11-29 Tue 15:11]
+*** JUST 开始：中修
+SCHEDULED: <2022-11-30 Wed 14:00 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-11-29 Tue 15:11]
+:END:
 
 
+- State "GOOD"       from "JUST"       [2022-11-29 Tue 15:11]
 *** JUST 开始：插修2
 SCHEDULED: <2022-11-29 Tue 16:30 +1d>
 

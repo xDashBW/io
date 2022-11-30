@@ -550,31 +550,34 @@ DEADLINE: <2022-10-19 Wed 20:30>
 
 ** 科技英语 
 *** 学习通 (打算这个星期写完，所以划分 6 个子任务）
-**** LOOP [#B] 单词
-DEADLINE: <2022-11-29 Tue 17:00> SCHEDULED: <2022-11-29 Tue 14:00>
+**** WAIT [#B] 单词
+DEADLINE: <2022-12-03 Sat 12:00> SCHEDULED: <2022-12-03 Sat 08:00>
+:LOGBOOK:
+CLOCK: [2022-11-29 Tue 19:34]--[2022-11-29 Tue 19:42] =>  0:08
+:END:
 
 
 **** WAIT [#B] 翻译
-DEADLINE: <2022-11-30 Tue 17:00> SCHEDULED: <2022-11-30 Tue 14:00>
-
-
-**** WAIT [#B] 写作
-DEADLINE: <2022-12-01 Thu 17:00> SCHEDULED: <2022-12-01 Thu 14:00>
-
-
-**** WAIT [#B] 10 选 5 
-DEADLINE: <2022-12-02 Fri 17:00> SCHEDULED: <2022-12-02 Fri 14:00>
-
-
-**** WAIT [#B] 阅读理解
 DEADLINE: <2022-12-03 Sat 17:00> SCHEDULED: <2022-12-03 Sat 14:00>
 
 
-**** WAIT [#B] 听力
+**** WAIT [#B] 写作
+DEADLINE: <2022-12-04 Sun 12:00> SCHEDULED: <2022-12-04 Sun 08:00>
+
+
+**** WAIT [#B] 10 选 5 
 DEADLINE: <2022-12-04 Sun 17:00> SCHEDULED: <2022-12-04 Sun 14:00>
 
 
-*** WAIT [#B] 英语课文复习（能复习多少算多少）
+**** WAIT [#B] 阅读理解
+DEADLINE: <2022-12-05 Mon 12:00> SCHEDULED: <2022-12-05 Mon 08:00>
+
+
+**** WAIT [#B] 听力
+DEADLINE: <2022-12-05 Mon 17:00> SCHEDULED: <2022-12-05 Mon 14:00>
+
+
+*** LOOP [#B] 英语课文复习（能复习多少算多少）
 SCHEDULED: <2022-11-29 Tue> DEADLINE: <2022-12-07 Wed>
 
 
@@ -583,10 +586,10 @@ DEADLINE: <2022-12-08 Thu 21:00> SCHEDULED: <2022-12-08 Thu 19:00>
 
 
 ** 职业规划
-*** LOOP [#B] 职业规划书，手写 1500 字
+*** DONE [#B] 职业规划书，手写 1500 字
 DEADLINE: <2022-11-29 Mon 12:00> SCHEDULED: <2022-11-29 Tue 08:00>
 :LOGBOOK:
-CLOCK: [2022-11-29 Tue 14:20]
+CLOCK: [2022-11-29 Tue 14:20]--[2022-11-29 Tue 15:57] =>  1:37
 CLOCK: [2022-11-29 Tue 13:10]--[2022-11-29 Tue 13:55] =>  0:45
 CLOCK: [2022-11-29 Tue 11:10]--[2022-11-29 Tue 13:06] =>  1:56
 :END:
@@ -595,8 +598,11 @@ https://www.yjbys.com/jiuyezhidao/zhiyeguihua/1888438.html
 ------------------------------------------------------
 
 
-*** LOOP [#B] 职业规划书籍和补修表和询问如何录入成绩
+*** DONE [#B] 职业规划书籍和补修表和询问如何录入成绩
 DEADLINE: <2022-11-29 Mon 16:00> SCHEDULED: <2022-11-29 Tue 14:00>
+:LOGBOOK:
+CLOCK: [2022-11-29 Tue 15:58]--[2022-11-29 Tue 16:32] =>  0:34
+:END:
 
 
 * 办理补修
@@ -682,6 +688,22 @@ DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
 
 ** LOOP [#B] 公选课
 DEADLINE: <2022-12-11 Thu> SCHEDULED: <2022-11-28 Mon>
+:LOGBOOK:
+CLOCK: [2022-11-30 Wed 11:51]--[2022-11-30 Wed 12:11] =>  0:20
+:END:
+- 中华民族精神
+
+    - https://www.docin.com/p-2646997224.html 准确率还行，4 题 3 题有答案；免费。
+      
+    - https://cn.bing.com/search?q=超星尔雅中华民族精神答案&qs=n&form=QBRE&sp=-1&pq=超星尔雅中华民族精神答案&sc=1-12&sk=&cvid=55E64F5A61454032A366F080826522B6&ghsh=0&ghacc=0&ghpl= 必应关键字搜索
+      
+- 文化遗产概括
+
+    - https://www.18183.com/zqnews/rjjc/202101/3215980.html 免费；准确率非常高
+
+    - https://cn.bing.com/search?q=超星尔雅文化遗产概括答案&qs=n&form=QBRE&sp=-1&pq=超星尔雅文化遗产概括答案&sc=0-12&sk=&cvid=5360B368067346498F0E499016243D3A&ghsh=0&ghacc=0&ghpl= 必应关键字搜索
+
+-----------------------------------------------------------------------------
 
 
 ** 素扩分
@@ -692,9 +714,12 @@ CLOCK: [2022-11-29 Tue 00:14]--[2022-11-29 Tue 01:29] =>  1:15
 :END:
 
 
-*** WAIT [#B] 写征文活动
+*** WAIT [#B] 写征文活动：疫情防控
 DEADLINE: <2022-12-02 Tue> SCHEDULED: <2022-12-01 Mon>
 
+
+*** WAIT [#B] 写征文活动：爱国
+DEADLINE: <2022-12-03 Sat> SCHEDULED: <2022-12-02 Fri>
 
 
 ** 软著

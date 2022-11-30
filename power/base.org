@@ -125,6 +125,98 @@ DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
        内存控制器   内存控制器   内存控制器
        
 
+* LOOP [#B] 四级核心词汇
+DEADLINE: <2022-12-01 Thu 22:59> SCHEDULED: <2022-11-29 Tue 19:40>
+:LOGBOOK:
+CLOCK: [2022-11-30 Wed 09:14]--[2022-11-30 Wed 11:50] =>  2:36
+CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
+:END:
+- [-] 知乎 300 词  https://zhuanlan.zhihu.com/p/440011937
+    - [X] 1-25 [100%]
+        - [X] 答案版
+            - [X] alter 改变
+            - [X] burst 爆裂，爆发
+            - [X] Dispose 处理，处置
+            - [X] Blast 爆炸
+            - [X] consume 消费，消灭
+            - [X] Split 切割
+            - [X] spit 唾弃，吐（口水）
+            - [X] spill 充满，溢出
+            - [X] slip 滑
+            - [X] slide 滑
+            - [X] breed N. 种类 V. 养殖
+            - [X] budget 预算，廉价的 
+            - [X] candidate 候选词
+            - [X] campus 大学校园
+            - [X] liberal 自由
+            - [X] transform 转化
+            - [X] Transmit 转变
+            - [X] Transplant 
+            - [X] Transport 
+            - [X] Shift 移位
+            - [X] Vary 改变
+            - [X] Vanish 消失
+            - [X] Swallow 吐下，咽下，忍受 
+
+        - [X] 英文 -》中文 [22/22]
+            - [X] Alter 改变
+            - [X] burst 炸
+            - [X] Blast 炸
+            - [X] Dispose 安排，处理
+            - [X] Budget 预算
+            - [X] Vanish 消失的
+            - [X] consume 消费，消灭
+            - [X] Split 分割
+            - [X] spill 溢出
+            - [X] slip 滑
+            - [X] slide 滑 
+            - [X] breed  种类 
+            - [X] candidate 候选
+            - [X] campus 大学校园
+            - [X] liberal 自由的
+            - [X] transform 转化
+            - [X] Transmit 传输（文件）
+            - [X] Transplant 移植
+            - [X] Transport 传输（货物）
+            - [X] Shift 移动
+            - [X] Vary 变化的，改变
+            - [X] Swallow 燕子，吞，忍
+
+        - [X] 中文 -》英文 [22/22]
+            - [X]  改变 alter
+            - [X]  炸 
+            - [X]  炸 blast
+            - [X]  布置，安排，处理 dispose 
+            - [X]  预算 budget
+            - [X]  消失的 vanish
+            - [X]  消费，消灭 consume
+            - [X]  分割 split
+            - [X]  溢出 spill
+            - [X]  滑 slide
+            - [X]  滑 slid
+            - [X]  种类 breed
+            - [X]  候选 candidate
+            - [X]  大学校园 campus
+            - [X]  自由的 liberal 
+            - [X]  转化 transform
+            - [X]  传输（文件） transfer
+            - [X]  移植 transplant
+            - [X]  传输（货物）transport
+            - [X]  移位 shift
+            - [X]  变化的，改变 vary
+            - [X]  燕子，吞，忍 swallow
+
+    - [ ] 26-45 [0%]
+
+        - [ ] List
+
+        - [ ] 英文 -> 中文
+
+        - [ ] 中文 -> 英文
+
+------------------------------------------------------------
+
+
 * 实战项目                 ---- 多练习
 ** Pygame 贪吃蛇
 *** DONE Pygame贪吃蛇：基本逻辑与代码运行
