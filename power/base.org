@@ -1,10 +1,10 @@
 #+title: 知识
 
-* 散                      ---- 散装知识
+* 散
 ** LOOP [#C] reactor 加 buffer 是否等于适配成 proactor
 
 
-* 理论知识多看书           ---- 信息差，有时候你想不出来，不是你不聪明，只是信息不够，逻辑无法自恰 
+* 理论知识多看书
 ** 计算机网络
 
 
@@ -123,106 +123,67 @@ DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
                 AXI 总线
 	  （9）     （9）    （9）
        内存控制器   内存控制器   内存控制器
-       
+-----------  ---------------       
 
-* LOOP [#B] 四级核心词汇
+
+** LOOP <<Python 源码剖析>>
+SCHEDULED: <2022-12-01 Thu> DEADLINE: <2022-12-30 Fri>
+-----------------------------------------------------
+
+
+* 英语 
+** LOOP [#B] 四级核心词汇
 DEADLINE: <2022-12-01 Thu 22:59> SCHEDULED: <2022-11-29 Tue 19:40>
 :LOGBOOK:
+CLOCK: [2022-12-01 Thu 08:55]--[2022-12-01 Thu 10:38] =>  1:43
+CLOCK: [2022-12-01 Thu 01:13]--[2022-12-01 Thu 01:56] =>  0:43
+CLOCK: [2022-11-30 Wed 21:17]--[2022-11-30 Wed 22:40] =>  1:23
 CLOCK: [2022-11-30 Wed 13:40]--[2022-11-30 Wed 14:43] =>  0:58
 CLOCK: [2022-11-30 Wed 09:14]--[2022-11-30 Wed 11:50] =>  2:36
 CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
 :END:
-- [X] 知乎 300 词  https://zhuanlan.zhihu.com/p/440011937
+- [-] 知乎 300 词  https://zhuanlan.zhihu.com/p/440011937
     - [X] 1-25 [100%]
-        - [X] 答案版
-            - [X] alter 改变
-            - [X] burst 爆裂，爆发
-            - [X] Dispose 处理，处置
-            - [X] Blast 爆炸
-            - [X] consume 消费，消灭
-            - [X] Split 切割
-            - [X] spit 唾弃，吐（口水）
-            - [X] spill 充满，溢出
-            - [X] slip 滑
-            - [X] slide 滑
-            - [X] breed N. 种类 V. 养殖
-            - [X] budget 预算，廉价的 
-            - [X] candidate 候选词
-            - [X] campus 大学校园
-            - [X] liberal 自由
-            - [X] transform 转化
-            - [X] Transmit 转变
-            - [X] Transplant 
-            - [X] Transport 
-            - [X] Shift 移位
-            - [X] Vary 改变
-            - [X] Vanish 消失
-            - [X] Swallow 吐下，咽下，忍受 
-
-        - [X] 英文 -》中文 [22/22]
-            - [X] Alter 改变
-            - [X] burst 炸
-            - [X] Blast 炸
-            - [X] Dispose 安排，处理
-            - [X] Budget 预算
-            - [X] Vanish 消失的
-            - [X] consume 消费，消灭
-            - [X] Split 分割
-            - [X] spill 溢出
-            - [X] slip 滑
-            - [X] slide 滑 
-            - [X] breed  种类 
-            - [X] candidate 候选
-            - [X] campus 大学校园
-            - [X] liberal 自由的
-            - [X] transform 转化
-            - [X] Transmit 传输（文件）
-            - [X] Transplant 移植
-            - [X] Transport 传输（货物）
-            - [X] Shift 移动
-            - [X] Vary 变化的，改变
-            - [X] Swallow 燕子，吞，忍
-
-        - [X] 中文 -》英文 [22/22]
-            - [X]  改变 alter
-            - [X]  炸 
-            - [X]  炸 blast
-            - [X]  布置，安排，处理 dispose 
-            - [X]  预算 budget
-            - [X]  消失的 vanish
-            - [X]  消费，消灭 consume
-            - [X]  分割 split
-            - [X]  溢出 spill
-            - [X]  滑 slide
-            - [X]  滑 slid
-            - [X]  种类 breed
-            - [X]  候选 candidate
-            - [X]  大学校园 campus
-            - [X]  自由的 liberal 
-            - [X]  转化 transform
-            - [X]  传输（文件） transfer
-            - [X]  移植 transplant
-            - [X]  传输（货物）transport
-            - [X]  移位 shift
-            - [X]  变化的，改变 vary
-            - [X]  燕子，吞，忍 swallow
+        - [X] alter 改变
+        - [X] burst 炸
+        - [X] Dispose 处理，处置, 安排
+        - [X] Blast 炸
+        - [X] consume 消费, 消耗
+        - [X] Split 分割
+        - [X] spit 唾弃
+        - [X] spill 填满, 溢出 
+        - [X] slip 滑
+        - [X] slide 滑
+        - [X] breed 种类
+        - [X] budget 预算 
+        - [X] candidate 候选词
+        - [X] campus 大学校园
+        - [X] liberal 自由
+        - [X] transform 转化
+        - [X] Transmit 传输
+        - [X] Transplant 移植
+        - [X] Transport 传输
+        - [X] Shift 移动
+        - [X] Vary 改变
+        - [X] Vanish 消失的
+        - [X] Swallow 燕子, 忍受
 
     - [X] 26-45 [100%]
         - [X] Nuisance 讨厌的
 
-            - [X] Annoy 烦恼
+            - [X] Annoy 厌烦
 
-            - [X] Annoying 讨厌的
+            - [X] Annoying 厌烦的
 
         - [X] Insignificant 无意义的
 
-            - [X] Significant 重要的
+            - [X] Significant 有意义的
 
-            - [X] Import 进口，重要
+            - [X] Import 导入, 重要
 
         - [X] Suspicion 怀疑
 
-        - [X] Suspicious 怀疑的
+        - [X] Suspicious 怀疑
 
         - [X] Mild 温柔的
 
@@ -230,7 +191,7 @@ CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
 
             - [X] Milk 牛奶
 
-        - [X] Tender 温柔的，不成熟的
+        - [X] Tender 温柔的
 
         - [X] Vain 徒劳的
 
@@ -238,40 +199,209 @@ CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
 
         - [X] Absolute 绝对的
 
-            - [X] Solution 解决方法
+            - [X] Solution 解决方案
 
-            - [X] Evolution 发展，进化
+            - [X] Evolution 进化
 
         - [X] Extinct 灭绝的
 
             - [X] Extra 多余的
 
-            - [X] Exact 确切的
+            - [X] Exact 确信的
 
-        - [X] Vague 含糊的
+        - [X] Vague 含糊不清
 
-        - [X] Extraordinary 非凡的
+        - [X] Vanish 消失 
 
-        - [X] Extreme 最大程度的，极端的
+        - [X] Dispose 处理
+
+        - [X] Consume 消费, 消耗
+
+        - [X] Breed 种子
+
+        - [X] Extraordinary
+
+        - [X] Extreme 极端的
 
         - [X] Agent 代理
 
-        - [X] Appeal 呼吁，要求
+        - [X] Appeal 呼吁  
 
-        - [X] Approve 赞成
+        - [X] Approve 批准
 
-        - [X] Acquire 取得
+        - [X] Acquire 获得(学分) 
 
-        - [X] Accomplish 达到
+        - [X] Accomplish
 
-            - [X] Accompany 陪伴
+            - [X] Accompany
 
-        - [X] Alcohol 酒精 
+        - [X] Alcohol 
+
+    - [X] 46 - 65 [16/16]
+        - [X] tide 潮
+
+        - [X] tidy 整齐的
+
+        - [X] Trace 轨迹
+
+        - [X] torture 拷打
+
+        - [X] wander 迷失的
+
+        - [X] wax 蜡
+
+        - [X] weave 编排
+
+        - [X] preserve 保护, 保存
+
+            - [X] Prevent Prevent 预防, 避免
+
+        - [X] abuse 滥用
+
+            - [X] Refuse 拒绝
+
+        - [X] academic 大学学会
+
+        - [X] academy 大学学会
+
+        - [X] battery 电池 
+
+        - [X] barrier 障碍
+
+        - [X] cargo 船只
+
+        - [X] career 经历
+
+        - [X] vessel 船只
+
+    - [-] 65 - 85 [19/20]
+        - [ ] Expensive
+
+            - [ ] Experienced 有经验的
+
+            - [ ] Experiential 经验的
+
+            - [ ] Expert 专业的
+
+            - [ ] Experiment 实验
+
+            - [ ] Expend V.花费
+
+            - [ ] Expense N.费用
+
+        - [X] Expand 扩展
+
+        - [X] Expend 花费
+
+        - [X] Individual 个体
+
+        - [X] Personal 个人的
+
+        - [X] Personnel 个人的
+
+        - [X] The Pacific 太平洋
+
+        - [X] The Atlantic 大西洋
+
+        - [X] Grant 给予, 提供 
+
+        - [X] Grand 宏伟的, 壮观的 
+
+        - [X] Invade 入侵
+
+        - [X] Acid 酸
+
+        - [X] Acknowledge 承认
+
+        - [X] balcony 阳台
+
+        - [X] calculate 计算
+
+        - [X] calendar 日历
+
+        - [X] optimise 乐观 
+
+        - [X] optional 可选择的
+
+        - [X] impose 强迫
+
+        - [X] Religion 宗教
+
+- [-] 85 - 100 [13/23]
+    - [ ] Religious
+
+    - [ ] Victim
+
+    - [X] Video 录像 
+
+    - [X] Videotape 录像带
+
+    - [X] Offend 犯罪
+
+        - [X] Office 办公室 
+
+        - [X] Offical 官方
+
+        - [X] Offer 提供
+
+            - [X] Afford 负担得起 
+
+    - [ ] Bother 麻烦, 纠纷  
+
+        - [ ] brother 兄弟 
+
+    - [-] Internal 内部的
+
+        - [X] International 国际的
+
+        - [ ] Interfere 干涉, 冲突
+
+    - [X] Beforehand 提前
+
+    - [ ] Racial 种族的
+
+    - [ ] Radiation 放射
+
+    - [ ] Radical 激进
+
+    - [X] Range 范围
+
+    - [X] Wonder 惊奇
+
+        - [X] Wander 迷失的
+
+    - [ ] Isolate 隔离
+
+    - [X] Issue 提出问题
+
+    - [X] Hollow 洞
+
+    - [X] Adequate 适用的
+
+        - [X] Adapt 适应
+
+        - [X] Adjust 调整
+
+    - [ ] Adhere 坚持, 依附
+
+    - [X] Capture 捕获
+
+    - [X] Valid 有效的
+
+    - [X] Valley 山谷
+
+    - [ ] Consistent 一致的
+
+    - [X] Continual 继续
+
+- [-] 100 - 120 [0/1]
+    - [-] Explode 爆炸
+        - [X] Explore 探索
 ------------------------------------------------------------
 
 
-* 实战项目                 ---- 多练习
-** Pygame 贪吃蛇
+* 实战项目
+** TASK Pygame 贪吃蛇
 *** DONE Pygame贪吃蛇：基本逻辑与代码运行
 DEADLINE: <2022-10-04 Tue 21:00> SCHEDULED: <2022-10-04 Tue 19:18>
 [[~/code/write/贪吃蛇/main.py]]
@@ -337,7 +467,7 @@ DEADLINE: <2022-10-05 Wed 11:30> SCHEDULED: <2022-10-05 Wed 10:31>
   - [X] 贪吃蛇的数据结构溢出：写错
   - [X] 没有导入 Time 模块
   - [X] 变量名写错
-
+--------------------------------------------
 
 
 ** Android 客户端与聊天软件
@@ -484,14 +614,14 @@ DEADLINE: <2022-09-21 Wed 10:00> SCHEDULED: <2022-09-21 Wed 08:00>
 ** TASK 用 python 重写野火 im 的服务器端
 
 
-* 领域技能                 ---- 深入具体的领域
+* 领域技能
 ** TASK RPC 
 
 
 ** TASK android
 
 
-* 设计语言                 ---- 能力表达的最前端，什么网络编程，什么高并发，表达不出来什么都是假的。
+* 设计语言
 ** TASK C 
 
 
@@ -571,18 +701,61 @@ CLOCK: [2022-11-11 Fri 08:00]--[2022-11-12 Sat 18:31] => 34:31
 **** TASK socket 
 
 
-* 工具篇                   ---- 人类为何崛起
-** TASK Git
+* 工具篇
+** Git
+*** TASK [#C] git 如何回退版本
+https://zhuanlan.zhihu.com/p/137856034
+--------------------------------------
 
 
 ** Emacs
-*** TASK 写一个 eaf-code-search
+*** TASK [#C] 怎么高效使用 emacs 的快捷键，减少无效的键盘敲击
+
+- [ ] 针对每行的 copy 和 yank
+
+  Emacs 的 copy 真的效率很低，两个问题
+
+    - [ ] 无法从中间开始操作，每次都要定位到行首或行尾
+
+    - [ ] 没有（找到）专用的针对整行的 copy 方法，每次都要 mask 一次
+
+- [ ] 像 vim 一样选定多行操作，例如多行复制，拷贝
+-----------------------------------------------------
 
 
-*** LOOP [#C] Org-agenda 关闭显示 SCHEDULED 的开关
+*** LOOP [#C] Mode, Hook 设置快捷键和设置变量，Local 快捷键
+:LOGBOOK:
+CLOCK: [2022-12-01 Thu 00:15]--[2022-12-01 Thu 00:55] =>  0:40
+CLOCK: [2022-11-30 Wed 19:15]--[2022-11-30 Wed 21:16] =>  2:01
+:END:
+
+- [ ] hook
+    - [ ] 快捷键
+
+    - [ ] 变量
+
+- [ ] 主 mode 和 submode
+
+- [ ] 全局快捷键和某个 mode 的 local 快捷键
+
+----------------------------------------------------------------
+
+
+*** TASK [#C] 写一个 eaf-code-search
+:LOGBOOK:
+CLOCK: [2022-11-30 Wed 18:48]--[2022-11-30 Wed 19:01] =>  0:13
+:END:
+
+
+*** TASK [#C] Org-agenda 关闭显示 SCHEDULED 的开关
 :LOGBOOK:
 CLOCK: [2022-11-30 Wed 12:25]--[2022-11-30 Wed 13:39] =>  1:14
 :END:
 - [X] 失败的原因是缺少一个代码分析工具，一点一点的盲搜太慢了
 -----------------------------------------------------
 
+
+*** TASK [#C] 添加功能: Sort-tab 隐藏当前 buffer 的开关 
+- 难点在哪?
+变量: 把变量放入队列里面
+-----------------------------------------------------
