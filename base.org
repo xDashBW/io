@@ -1,7 +1,45 @@
 #+title: 知识
 
 * 散
-** LOOP [#C] reactor 加 buffer 是否等于适配成 proactor
+** LOOP [#C] 计算机术语读法和听力
+DEADLINE: <2022-12-12 Mon> SCHEDULED: <2022-12-09 Fri>
+--------------------------------------------
+
+
+** DONE [#C] proactor 和 reactor
+DEADLINE: <2022-12-06 Tue> SCHEDULED: <2022-12-06 Tue>
+:LOGBOOK:
+CLOCK: [2022-12-06 Tue 23:08]--[2022-12-06 Tue 23:26] =>  0:18
+CLOCK: [2022-12-06 Tue 20:55]--[2022-12-06 Tue 23:07] =>  2:12
+:END:
+- [X] reactor 和 proactor 的区别 
+
+  就绪态与完成态
+
+  不是因为 reactor 有 Buffer 就是 proactor，即使 reactor 有了 buffer 依旧是 ‘就绪态’，而 proactor 是完成态
+  
+- [X] 设计对比 / 为啥 reactor 更优雅 / 为啥 proactor 造成代码割裂？
+
+    - [X] 多做多错
+
+      多做一步不一定是好的，reactor 虽然是封装半成品 epoll，但是是最佳的设计。而 proactor 反倒是过度设计了。
+
+    - [X] 割裂的 socket 数据
+
+        - [X] reactor 的队列模型
+
+          对于本来就有序的 socket 数据来说，就绪后网络库将其存放到 buffer（队列） 里，等程序员根据需求取数据。就是最优雅的做法
+
+        - [X] proactor 的一个 callback 一个 buffer 
+
+          本来有序的 socket 数据，散落在不同的 callback 中
+
+    - [X] 对代码的影响：主动变成被动
+
+      reactor 主动从 queue 取数据是主动，有助于整理代码
+
+      而 proactor 的代码逻辑依赖与被动 callback，逻辑割裂
+---------------
 
 
 * 理论知识多看书
@@ -18,7 +56,7 @@ DEADLINE: <2022-10-05 Wed 09:55> SCHEDULED: <2022-10-05 Wed 08:50>
 
 
 *** DONE 指令系统组成
-hen 
+hen
 
 
 *** DONE 二进制与数字逻辑电路
@@ -51,11 +89,11 @@ DEADLINE: <2022-10-04 Tue 08:30> SCHEDULED: <2022-10-04 Tue 08:00>
     - D 触发器
       两个 D 锁存器组成
       - C=0
-	第一个锁存器直通，第二个保持
-      - C=1
-	第一个保持，第二个直通
-      - C 从 0 变成 1
-	D 的值被锁起来了
+    第一个锁存器直通，第二个保持
+    - C=1
+    第一个保持，第二个直通
+    - C 从 0 变成 1
+    D 的值被锁起来了
   - CMOS 电路
     讲点具体的，不管是组合逻辑电路还是信号逻辑电路，都是 CMOS 电路（电工知识吧？可能比较安全省电）。
 
@@ -78,7 +116,7 @@ DEADLINE: <2022-10-04 Tue 10:00> SCHEDULED: <2022-10-04 Tue 08:40>
   - 类别1 ：行波进位加法器
   - 类别2 ：先行进位加法器
 
-    
+
 *** DONE 总线设计
 DEADLINE: <2022-10-04 Tue 12:00> SCHEDULED: <2022-10-04 Tue 10:43>
 - 总线定义
@@ -115,293 +153,25 @@ DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
   但是片上总线要求的是并行性，所以具有分离通道的 AXI 脱颖而出。
 - 通过AXI总线互连架构连接 高性能CPU的组件
   主设备：  CPU 核   CPU 核   CPU 核
-          (9)       (9)     (9)
-                AXI 总线
-		   （9）
-	        最后缓存
-	  （9）	   （9）    （9）
-                AXI 总线
-	  （9）     （9）    （9）
-       内存控制器   内存控制器   内存控制器
------------  ---------------       
+  (9)       (9)     (9)
+  AXI 总线
+  （9）
+  最后缓存
+  （9）    （9）    （9）
+  AXI 总线
+  （9）     （9）    （9）
+  内存控制器   内存控制器   内存控制器
+-----------  ---------------
 
 
-** LOOP <<Python 源码剖析>>
-SCHEDULED: <2022-12-01 Thu> DEADLINE: <2022-12-30 Fri>
+** LOOP [#C] <<Python 源码剖析>>
+SCHEDULED: <2022-12-03 Sat> DEADLINE: <2022-12-30 Fri>
 -----------------------------------------------------
 
 
-* 英语 
-** LOOP [#B] 四级核心词汇
-DEADLINE: <2022-12-01 Thu 22:59> SCHEDULED: <2022-11-29 Tue 19:40>
-:LOGBOOK:
-CLOCK: [2022-12-01 Thu 08:55]--[2022-12-01 Thu 10:38] =>  1:43
-CLOCK: [2022-12-01 Thu 01:13]--[2022-12-01 Thu 01:56] =>  0:43
-CLOCK: [2022-11-30 Wed 21:17]--[2022-11-30 Wed 22:40] =>  1:23
-CLOCK: [2022-11-30 Wed 13:40]--[2022-11-30 Wed 14:43] =>  0:58
-CLOCK: [2022-11-30 Wed 09:14]--[2022-11-30 Wed 11:50] =>  2:36
-CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
-:END:
-- [-] 知乎 300 词  https://zhuanlan.zhihu.com/p/440011937
-    - [X] 1-25 [100%]
-        - [X] alter 改变
-        - [X] burst 炸
-        - [X] Dispose 处理，处置, 安排
-        - [X] Blast 炸
-        - [X] consume 消费, 消耗
-        - [X] Split 分割
-        - [X] spit 唾弃
-        - [X] spill 填满, 溢出 
-        - [X] slip 滑
-        - [X] slide 滑
-        - [X] breed 种类
-        - [X] budget 预算 
-        - [X] candidate 候选词
-        - [X] campus 大学校园
-        - [X] liberal 自由
-        - [X] transform 转化
-        - [X] Transmit 传输
-        - [X] Transplant 移植
-        - [X] Transport 传输
-        - [X] Shift 移动
-        - [X] Vary 改变
-        - [X] Vanish 消失的
-        - [X] Swallow 燕子, 忍受
-
-    - [X] 26-45 [100%]
-        - [X] Nuisance 讨厌的
-
-            - [X] Annoy 厌烦
-
-            - [X] Annoying 厌烦的
-
-        - [X] Insignificant 无意义的
-
-            - [X] Significant 有意义的
-
-            - [X] Import 导入, 重要
-
-        - [X] Suspicion 怀疑
-
-        - [X] Suspicious 怀疑
-
-        - [X] Mild 温柔的
-
-            - [X] Mile 里
-
-            - [X] Milk 牛奶
-
-        - [X] Tender 温柔的
-
-        - [X] Vain 徒劳的
-
-            - [X] Pain 痛苦的
-
-        - [X] Absolute 绝对的
-
-            - [X] Solution 解决方案
-
-            - [X] Evolution 进化
-
-        - [X] Extinct 灭绝的
-
-            - [X] Extra 多余的
-
-            - [X] Exact 确信的
-
-        - [X] Vague 含糊不清
-
-        - [X] Vanish 消失 
-
-        - [X] Dispose 处理
-
-        - [X] Consume 消费, 消耗
-
-        - [X] Breed 种子
-
-        - [X] Extraordinary
-
-        - [X] Extreme 极端的
-
-        - [X] Agent 代理
-
-        - [X] Appeal 呼吁  
-
-        - [X] Approve 批准
-
-        - [X] Acquire 获得(学分) 
-
-        - [X] Accomplish
-
-            - [X] Accompany
-
-        - [X] Alcohol 
-
-    - [X] 46 - 65 [16/16]
-        - [X] tide 潮
-
-        - [X] tidy 整齐的
-
-        - [X] Trace 轨迹
-
-        - [X] torture 拷打
-
-        - [X] wander 迷失的
-
-        - [X] wax 蜡
-
-        - [X] weave 编排
-
-        - [X] preserve 保护, 保存
-
-            - [X] Prevent Prevent 预防, 避免
-
-        - [X] abuse 滥用
-
-            - [X] Refuse 拒绝
-
-        - [X] academic 大学学会
-
-        - [X] academy 大学学会
-
-        - [X] battery 电池 
-
-        - [X] barrier 障碍
-
-        - [X] cargo 船只
-
-        - [X] career 经历
-
-        - [X] vessel 船只
-
-    - [-] 65 - 85 [19/20]
-        - [ ] Expensive
-
-            - [ ] Experienced 有经验的
-
-            - [ ] Experiential 经验的
-
-            - [ ] Expert 专业的
-
-            - [ ] Experiment 实验
-
-            - [ ] Expend V.花费
-
-            - [ ] Expense N.费用
-
-        - [X] Expand 扩展
-
-        - [X] Expend 花费
-
-        - [X] Individual 个体
-
-        - [X] Personal 个人的
-
-        - [X] Personnel 个人的
-
-        - [X] The Pacific 太平洋
-
-        - [X] The Atlantic 大西洋
-
-        - [X] Grant 给予, 提供 
-
-        - [X] Grand 宏伟的, 壮观的 
-
-        - [X] Invade 入侵
-
-        - [X] Acid 酸
-
-        - [X] Acknowledge 承认
-
-        - [X] balcony 阳台
-
-        - [X] calculate 计算
-
-        - [X] calendar 日历
-
-        - [X] optimise 乐观 
-
-        - [X] optional 可选择的
-
-        - [X] impose 强迫
-
-        - [X] Religion 宗教
-
-- [-] 85 - 100 [13/23]
-    - [ ] Religious
-
-    - [ ] Victim
-
-    - [X] Video 录像 
-
-    - [X] Videotape 录像带
-
-    - [X] Offend 犯罪
-
-        - [X] Office 办公室 
-
-        - [X] Offical 官方
-
-        - [X] Offer 提供
-
-            - [X] Afford 负担得起 
-
-    - [ ] Bother 麻烦, 纠纷  
-
-        - [ ] brother 兄弟 
-
-    - [-] Internal 内部的
-
-        - [X] International 国际的
-
-        - [ ] Interfere 干涉, 冲突
-
-    - [X] Beforehand 提前
-
-    - [ ] Racial 种族的
-
-    - [ ] Radiation 放射
-
-    - [ ] Radical 激进
-
-    - [X] Range 范围
-
-    - [X] Wonder 惊奇
-
-        - [X] Wander 迷失的
-
-    - [ ] Isolate 隔离
-
-    - [X] Issue 提出问题
-
-    - [X] Hollow 洞
-
-    - [X] Adequate 适用的
-
-        - [X] Adapt 适应
-
-        - [X] Adjust 调整
-
-    - [ ] Adhere 坚持, 依附
-
-    - [X] Capture 捕获
-
-    - [X] Valid 有效的
-
-    - [X] Valley 山谷
-
-    - [ ] Consistent 一致的
-
-    - [X] Continual 继续
-
-- [-] 100 - 120 [0/1]
-    - [-] Explode 爆炸
-        - [X] Explore 探索
-------------------------------------------------------------
-
-
 * 实战项目
-** TASK Pygame 贪吃蛇
+** WAIT [#C] Pygame 贪吃蛇
+SCHEDULED: <2022-12-07 Wed> DEADLINE: <2022-12-09 Fri>
 *** DONE Pygame贪吃蛇：基本逻辑与代码运行
 DEADLINE: <2022-10-04 Tue 21:00> SCHEDULED: <2022-10-04 Tue 19:18>
 [[~/code/write/贪吃蛇/main.py]]
@@ -456,14 +226,14 @@ DEADLINE: <2022-10-05 Wed 11:30> SCHEDULED: <2022-10-05 Wed 10:31>
       - [X] 颜色变量传递失误
     - [X] 真正的原因
       - 逻辑错误
-	我把贪吃蛇数据结构和苹果的绘制逻辑，写出了 While 循环
-      - 怎么影响程序的
-	陷入 While 监听用户命令的循环中，从而使绘制逻辑，无法实现。
-      - 反思
-	所以，在 While 逻辑中，
-	1. 监听用户，并且改变数据结构
-	2. 根据改变的数据结构绘制逻辑
-	3. 设置 Fps，相当于以前的 Sleep
+    我把贪吃蛇数据结构和苹果的绘制逻辑，写出了 While 循环
+    - 怎么影响程序的
+    陷入 While 监听用户命令的循环中，从而使绘制逻辑，无法实现。
+    - 反思
+    所以，在 While 逻辑中，
+    1. 监听用户，并且改变数据结构
+    2. 根据改变的数据结构绘制逻辑
+    3. 设置 Fps，相当于以前的 Sleep
   - [X] 贪吃蛇的数据结构溢出：写错
   - [X] 没有导入 Time 模块
   - [X] 变量名写错
@@ -507,9 +277,9 @@ DEADLINE: <2022-09-19 Mon 21:30> SCHEDULED: <2022-09-19 Mon 22:30>
   - greenlet
     - QUESTION
       + 是否是内置模块？
-	不是，Greenlet 依旧是一个第三方模块，通过 C 扩展实现协程。
-      + Python 的协程通过第三方库实现，难道没有一套内置的线程 / 协程实现吗？
-	？？
+    不是，Greenlet 依旧是一个第三方模块，通过 C 扩展实现协程。
+    + Python 的协程通过第三方库实现，难道没有一套内置的线程 / 协程实现吗？
+    ？？
     -
   - Libev
 - 源码阅读
@@ -526,12 +296,12 @@ DEADLINE: <2022-09-20 Tue 10:40> SCHEDULED: <2022-09-20 Tue 07:40>
 
     - 缺点
       - 全局引起的 *无法利用多核*
-	即时有多个 CPU 依旧无法利用多核优势
+    即时有多个 CPU 依旧无法利用多核优势
 
-      - 粗粒度锁，依旧无法做到 *线程安全*
-	虽然，GIL 锁限制了只有一个 CPU / (执行单元) 访问变量。
-	但是这个锁的粒度并非像以前的 C++ mutex 一样，由程序员进行控制。
-	换句话说，很多 Python 的操作并不是原子的，依旧不是线程安全的。
+    - 粗粒度锁，依旧无法做到 *线程安全*
+    虽然，GIL 锁限制了只有一个 CPU / (执行单元) 访问变量。
+    但是这个锁的粒度并非像以前的 C++ mutex 一样，由程序员进行控制。
+    换句话说，很多 Python 的操作并不是原子的，依旧不是线程安全的。
 
 - 协程
   - 生态的发展
@@ -540,7 +310,7 @@ DEADLINE: <2022-09-20 Tue 10:40> SCHEDULED: <2022-09-20 Tue 07:40>
     - 带来的优势
       1. 已经积累了大量的协程框架和协程服务。
       2. 文件与数据库
-	 异步框架都只是涉及到网络部分，而 Python 经过多年的发展很多地方均已协程化。
+      异步框架都只是涉及到网络部分，而 Python 经过多年的发展很多地方均已协程化。
 
   - 底层协程化
     ？？
@@ -588,41 +358,44 @@ DEADLINE: <2022-09-21 Wed 10:00> SCHEDULED: <2022-09-21 Wed 08:00>
 
 *** DONE POSTGRESQL
 : from 七周七數據庫
-  - 命令行
-    1. 創建數據庫：createdb xxoo
-    2. 進入數據庫: psql xxoo (使用 psql)
-  - SQL 語句
-    - 屬性類型
-      - 字符串
-	- varchar(9) ： 長度可以達到 9 個字節
-	- char(2)    ： 正好要存儲 2 個字節
-	- text    ： 任意長度
-    - 修飾符
-      - Primary Key：主鍵，具有唯一性約束，可以設置 *定義的兩個屬性* 爲主鍵
-	+ 如果不指定主鍵會怎麼樣？
-      - UNIQUE ：讓除了 Primary Key 外的其他列（屬性） 具有唯一性
-      - NOT NULL ： 不能爲空
-      - CHECK （指定約束）   ： 指定約束
-      - REFERENCE 表： 外鍵約束，該屬性能夠引用另一張表
-    - CRUD
-      - CREATE TABLE xxoo (name 類型 屬性，);
-      - SELECT * from xxoo;
-      - INSERT INTO xxoo VALUE （'','',''# 直接輸入值就行了）
-      - UPDATE xxoo SET xx=yy WHERE xx=yy
+- 命令行
+  1. 創建數據庫：createdb xxoo
+  2. 進入數據庫: psql xxoo (使用 psql)
+- SQL 語句
+  - 屬性類型
+    - 字符串
+  - varchar(9) ： 長度可以達到 9 個字節
+  - char(2)    ： 正好要存儲 2 個字節
+  - text    ： 任意長度
+  - 修飾符
+    - Primary Key：主鍵，具有唯一性約束，可以設置 *定義的兩個屬性* 爲主鍵
+  + 如果不指定主鍵會怎麼樣？
+    - UNIQUE ：讓除了 Primary Key 外的其他列（屬性） 具有唯一性
+    - NOT NULL ： 不能爲空
+    - CHECK （指定約束）   ： 指定約束
+    - REFERENCE 表： 外鍵約束，該屬性能夠引用另一張表
+  - CRUD
+    - CREATE TABLE xxoo (name 類型 屬性，);
+    - SELECT * from xxoo;
+    - INSERT INTO xxoo VALUE （'','',''# 直接輸入值就行了）
+    - UPDATE xxoo SET xx=yy WHERE xx=yy
 
 
-** TASK 用 python 重写野火 im 的服务器端
+** WAIT [#C] 用 python 重写野火 im 的服务器端
+SCHEDULED: <2022-12-13 Tue> DEADLINE: <2022-12-20 Tue>
 
 
 * 领域技能
-** TASK RPC 
+** WAIT [#C] RPC
+SCHEDULED: <2022-12-16 Fri> DEADLINE: <2023-01-05 Thu>
 
 
-** TASK android
+** WAIT [#C] android
+SCHEDULED: <2022-12-10 Sat> DEADLINE: <2022-12-20 Tue>
 
 
 * 设计语言
-** TASK C 
+** TASK [#C] C
 
 
 ** Python
@@ -633,26 +406,26 @@ CLOCK: [2022-11-08 Tue 16:31]--[2022-11-08 Tue 16:48] =>  0:17
 :END:
 - [X] 异步回调时代
   可以追溯到 python2
-    - [X] swisted
-    - [X] tongo
+  - [X] swisted
+  - [X] tongo
 - [X] 协程时代
   : Python 很早就开始大规模使用协程
-    - [X] Python 3.4
-        - [X] yield 生成器模拟步进 next()
-        - [X] Gevent : greenlet 和 libev 结合
-          没有内置的同步原语，就是 monkey Patch 替换
+  - [X] Python 3.4
+    - [X] yield 生成器模拟步进 next()
+    - [X] Gevent : greenlet 和 libev 结合
+      没有内置的同步原语，就是 monkey Patch 替换
 
-    - [X] python 3.5：从标准网络库和原语发展
-        - [X] asyncio
-        - [X] async/await
-          底层是 yield, 所以好好了解下 yield，非常有必要
+  - [X] python 3.5：从标准网络库和原语发展
+    - [X] asyncio
+    - [X] async/await
+      底层是 yield, 所以好好了解下 yield，非常有必要
 
-    - [X] 全面协程化（除了网络）
-      社区，借助 async/await 原语，与类似 asyncio 的数据库 io 复用结合，诞生了数据库连接的协程库，
+  - [X] 全面协程化（除了网络）
+    社区，借助 async/await 原语，与类似 asyncio 的数据库 io 复用结合，诞生了数据库连接的协程库，
 
-        - [X] aiomysql
+    - [X] aiomysql
 
-        - [X] aiohttp: 进一步封装 asyncio 作为 http 服务器
+    - [X] aiohttp: 进一步封装 asyncio 作为 http 服务器
 
 
 *** DONE CYthon 的底层原理
@@ -691,14 +464,17 @@ CLOCK: [2022-11-11 Fri 08:00]--[2022-11-12 Sat 18:31] => 34:31
 ------------------------------------------------------
 
 
-**** TASK 上下文管理
+**** WAIT [#C] 上下文管理
+SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
 
 
 
-**** TASK 数据结构
+**** WAIT [#C] 数据结构
+SCHEDULED: <2022-12-10 Sat> DEADLINE: <2022-12-10 Sat>
 
 
-**** TASK socket 
+**** WAIT [#C] socket
+SCHEDULED: <2022-12-08 Thu> DEADLINE: <2022-12-10 Sat>
 
 
 * 工具篇
@@ -708,31 +484,69 @@ https://zhuanlan.zhihu.com/p/137856034
 --------------------------------------
 
 
+*** TASK [#C] 如何不同的模式使用通一套快捷键
+-----------------------------
+
+
 ** Emacs
+*** DONE 如何调整变化
+- [X] 终极任务
+
+  反而好改，直接改截止时间
+
+- [X] 衍生任务
+
+  A 类任务不会作为衍生任务，因为 A 类任务是打卡任务
+
+  先取消一部分任务，然后在对剩余任务调整
+
+  目的是啥？把时间空出来
+
+    - [X] 取消
+
+        - [X] WAIT 可以考虑取消，减少工作量
+
+        - [X] LOOP 可以考虑完结
+
+    - [X] 调整
+
+        - [X] 把关键任务提前
+
+            - [X] WAIT：最好，还没有开始，调整截止时间和起始时间
+
+            - [X] LOOP ：调整截止时间，
+
+        - [X] 把不关键的任务，但是取消了可惜的任务，往后面延期（这个任务一定是 LOOP）
+
+          那么就简单了，直接把截止时间延迟到 终极任务 DEADLINE + 原来截止时间
+
+
 *** TASK [#C] 怎么高效使用 emacs 的快捷键，减少无效的键盘敲击
 
 - [ ] 针对每行的 copy 和 yank
 
   Emacs 的 copy 真的效率很低，两个问题
 
-    - [ ] 无法从中间开始操作，每次都要定位到行首或行尾
+  - [ ] 无法从中间开始操作，每次都要定位到行首或行尾
 
-    - [ ] 没有（找到）专用的针对整行的 copy 方法，每次都要 mask 一次
+  - [ ] 没有（找到）专用的针对整行的 copy 方法，每次都要 mask 一次
 
 - [ ] 像 vim 一样选定多行操作，例如多行复制，拷贝
 -----------------------------------------------------
 
 
-*** LOOP [#C] Mode, Hook 设置快捷键和设置变量，Local 快捷键
+*** TASK [#C] Mode, Hook 设置快捷键和设置变量，Local 快捷键
 :LOGBOOK:
 CLOCK: [2022-12-01 Thu 00:15]--[2022-12-01 Thu 00:55] =>  0:40
 CLOCK: [2022-11-30 Wed 19:15]--[2022-11-30 Wed 21:16] =>  2:01
 :END:
+: 为了防止陷入无尽的 emacs 折腾中。以后每次改 emacs 都要先把需求写清楚，然后定好时间才去改。
 
+: 这样做是有道理的，我不否认很多折腾提升了我的学习效率，以至于我用其他的时候真的很不习惯。但是你要考虑最终的目的，也许提升的效率实际影响不大？更糟糕的是，也许这个提升只是个错觉，不久我就会花时间去改，反反复复。所以，一定要仔细想清楚需求。
 - [ ] hook
-    - [ ] 快捷键
+  - [ ] 快捷键
 
-    - [ ] 变量
+  - [ ] 变量
 
 - [ ] 主 mode 和 submode
 
@@ -755,7 +569,11 @@ CLOCK: [2022-11-30 Wed 12:25]--[2022-11-30 Wed 13:39] =>  1:14
 -----------------------------------------------------
 
 
-*** TASK [#C] 添加功能: Sort-tab 隐藏当前 buffer 的开关 
+*** TASK [#C] 添加功能: Sort-tab 隐藏当前 buffer 的开关
 - 难点在哪?
 变量: 把变量放入队列里面
+-----------------------------------------------------
+
+
+*** TASK [#C] fork sort-tab 开发分组功能，分组内优先级计数和分组外优先级计数
 -----------------------------------------------------

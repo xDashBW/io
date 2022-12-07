@@ -6,8 +6,13 @@
 # 优先级, 信息很多，我该怎么做呢？我该怎么做呢？信息很多，我该怎么做呢？我该怎么做呢？
 # 一般来说，学校作业的优先级会稍微高于知识，因为一般要把事件录入 org 的时候，说明已经处于赶作业的状态了
 
+* 散
+** DONE [#B] 请教老师软件工程的问题
+SCHEDULED: <2022-12-06 Tue> DEADLINE: <2022-12-06 Tue 18:00>
+
+
 * 学校实习
-** TASK 泰迪云线上课堂
+** TASK [#B] 泰迪云线上课堂
 
 
 * 作业
@@ -179,7 +184,7 @@ https://max.book118.com/html/2018/0618/173309862.shtm
 DEADLINE: <2022-11-01 Tue 09:40> SCHEDULED: <2022-11-01 Tue 08:05>
 
 
-*** LOOP [#B] 交补修表和像学委打听事情（是否规范）
+*** DONE [#B] 交补修表和像学委打听事情（是否规范）
 DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
 
 
@@ -549,40 +554,484 @@ DEADLINE: <2022-10-19 Wed 20:30>
 
 
 ** 科技英语 
-*** 学习通 (打算这个星期写完，所以划分 6 个子任务）
-**** WAIT [#B] 单词
-DEADLINE: <2022-12-03 Sat 12:00> SCHEDULED: <2022-12-03 Sat 08:00>
+*** DONE [#B] 学习元音。使用最平的读法，不深挖细节，快速知道怎么读单词
+DEADLINE: <2022-12-03 Sat 11:00> SCHEDULED: <2022-12-03 Sat>
 :LOGBOOK:
+CLOCK: [2022-12-03 Sat 10:26]--[2022-12-03 Sat 11:15] =>  0:49
+:END:
+- [X] 预习
+    - [X] 目标：在科技英语的学习通 ‘4级核心词汇单词’ 中，我发现我不需要读的多么好，我要记住高频和其最平的元音读法，做到 8，9 不离十即可，辅音暂时不用学
+
+    - [X] 预计时间：快速 1 小时
+
+    - [X] 资料：
+        - [X] 根据科技英语学习通的‘根据音标写出词’ 来研磨
+
+        - [X] https://www.jiwake.com/yinbiaofayin/ 跟读音标的网站
+  
+- [X] 开始
+    - [X] 普通
+        - [X] i 字头
+
+            - [X] 英文 e
+
+                - [X] I
+
+                - [X] i:
+
+        - [X] e 字头
+            - [X] 英文 at
+                - [X] a
+                - [X] ae
+
+        - [X] a 字头
+            - [X] 拼音 a
+
+                - [X] ^
+
+                - [X] a:
+
+        - [X] 倒 e 字头
+
+            - [X] 拼音 e
+
+                - [X] 倒 e
+
+                - [X] 耳：
+
+        - [X] 倒 c 字头
+
+            - [X] 拼音 o
+
+                - [X] |倒 c
+
+                - [X] 倒 c：
+
+        - [X] U 字头
+
+            - [X] 拼音 u
+
+                - [X] u
+
+                - [X] u：
+                  
+    - [X] 组合
+
+-----------------------------
+
+
+*** 单词 
+**** DONE [#C] 知乎找到的四级词，连练手
+:LOGBOOK:
+CLOCK: [2022-12-01 Thu 08:55]--[2022-12-01 Thu 10:38] =>  1:43
+CLOCK: [2022-12-01 Thu 01:13]--[2022-12-01 Thu 01:56] =>  0:43
+CLOCK: [2022-11-30 Wed 21:17]--[2022-11-30 Wed 22:40] =>  1:23
+CLOCK: [2022-11-30 Wed 13:40]--[2022-11-30 Wed 14:43] =>  0:58
+CLOCK: [2022-11-30 Wed 09:14]--[2022-11-30 Wed 11:50] =>  2:36
+CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
+:END:
+- [-] 知乎 300 词  https://zhuanlan.zhihu.com/p/440011937
+    - [X] 1-25 [100%]
+        - [X] alter 改变
+        - [X] burst 炸
+        - [X] Dispose 处理，处置, 安排
+        - [X] Blast 炸
+        - [X] consume 消费, 消耗
+        - [X] Split 分割
+        - [X] spit 唾弃
+        - [X] spill 填满, 溢出 
+        - [X] slip 滑
+        - [X] slide 滑
+        - [X] breed 种类
+        - [X] budget 预算 
+        - [X] candidate 候选词
+        - [X] campus 大学校园
+        - [X] liberal 自由
+        - [X] transform 转化
+        - [X] Transmit 传输
+        - [X] Transplant 移植
+        - [X] Transport 传输
+        - [X] Shift 移动
+        - [X] Vary 改变
+        - [X] Vanish 消失的
+        - [X] Swallow 燕子, 忍受
+
+    - [X] 26-45 [100%]
+        - [X] Nuisance 讨厌的
+
+            - [X] Annoy 厌烦
+
+            - [X] Annoying 厌烦的
+
+        - [X] Insignificant 无意义的
+
+            - [X] Significant 有意义的
+
+            - [X] Import 导入, 重要
+
+        - [X] Suspicion 怀疑
+
+        - [X] Suspicious 怀疑
+
+        - [X] Mild 温柔的
+
+            - [X] Mile 里
+
+            - [X] Milk 牛奶
+
+        - [X] Tender 温柔的
+
+        - [X] Vain 徒劳的
+
+            - [X] Pain 痛苦的
+
+        - [X] Absolute 绝对的
+
+            - [X] Solution 解决方案
+
+            - [X] Evolution 进化
+
+        - [X] Extinct 灭绝的
+
+            - [X] Extra 多余的
+
+            - [X] Exact 确信的
+
+        - [X] Vague 含糊不清
+
+        - [X] Vanish 消失 
+
+        - [X] Dispose 处理
+
+        - [X] Consume 消费, 消耗
+
+        - [X] Breed 种子
+
+        - [X] Extraordinary
+
+        - [X] Extreme 极端的
+
+        - [X] Agent 代理
+
+        - [X] Appeal 呼吁  
+
+        - [X] Approve 批准
+
+        - [X] Acquire 获得(学分) 
+
+        - [X] Accomplish
+
+            - [X] Accompany
+
+        - [X] Alcohol 
+
+    - [X] 46 - 65 [16/16]
+        - [X] tide 潮
+
+        - [X] tidy 整齐的
+
+        - [X] Trace 轨迹
+
+        - [X] torture 拷打
+
+        - [X] wander 迷失的
+
+        - [X] wax 蜡
+
+        - [X] weave 编排
+
+        - [X] preserve 保护, 保存
+
+            - [X] Prevent Prevent 预防, 避免
+
+        - [X] abuse 滥用
+
+            - [X] Refuse 拒绝
+
+        - [X] academic 大学学会
+
+        - [X] academy 大学学会
+
+        - [X] battery 电池 
+
+        - [X] barrier 障碍
+
+        - [X] cargo 船只
+
+        - [X] career 经历
+
+        - [X] vessel 船只
+
+    - [-] 65 - 85 [19/20]
+        - [ ] Expensive
+
+            - [ ] Experienced 有经验的
+
+            - [ ] Experiential 经验的
+
+            - [ ] Expert 专业的
+
+            - [ ] Experiment 实验
+
+            - [ ] Expend V.花费
+
+            - [ ] Expense N.费用
+
+        - [X] Expand 扩展
+
+        - [X] Expend 花费
+
+        - [X] Individual 个体
+
+        - [X] Personal 个人的
+
+        - [X] Personnel 个人的
+
+        - [X] The Pacific 太平洋
+
+        - [X] The Atlantic 大西洋
+
+        - [X] Grant 给予, 提供 
+
+        - [X] Grand 宏伟的, 壮观的 
+
+        - [X] Invade 入侵
+
+        - [X] Acid 酸
+
+        - [X] Acknowledge 承认
+
+        - [X] balcony 阳台
+
+        - [X] calculate 计算
+
+        - [X] calendar 日历
+
+        - [X] optimise 乐观 
+
+        - [X] optional 可选择的
+
+        - [X] impose 强迫
+
+        - [X] Religion 宗教
+
+    - [-] 85 - 100 [13/23]
+        - [ ] Religious
+
+        - [ ] Victim
+
+        - [X] Video 录像 
+
+        - [X] Videotape 录像带
+
+        - [X] Offend 犯罪
+
+            - [X] Office 办公室 
+
+            - [X] Offical 官方
+
+            - [X] Offer 提供
+
+                - [X] Afford 负担得起 
+
+        - [ ] Bother 麻烦, 纠纷  
+
+            - [ ] brother 兄弟 
+
+        - [-] Internal 内部的
+
+            - [X] International 国际的
+
+            - [ ] Interfere 干涉, 冲突
+
+        - [X] Beforehand 提前
+
+        - [ ] Racial 种族的
+
+        - [ ] Radiation 放射
+
+        - [ ] Radical 激进
+
+        - [X] Range 范围
+
+        - [X] Wonder 惊奇
+
+            - [X] Wander 迷失的
+
+        - [ ] Isolate 隔离
+
+        - [X] Issue 提出问题
+
+        - [X] Hollow 洞
+
+        - [X] Adequate 适用的
+
+            - [X] Adapt 适应
+
+            - [X] Adjust 调整
+
+        - [ ] Adhere 坚持, 依附
+
+        - [X] Capture 捕获
+
+        - [X] Valid 有效的
+
+        - [X] Valley 山谷
+
+        - [ ] Consistent 一致的
+
+        - [X] Continual 继续
+
+    - [X] 100 - 120 [1/1]
+        - [X] Explode 爆炸
+            - [X] Explore 探索
+------------------------------------------------------------
+
+
+**** LOOP [#C] 高中 3500 单词快速过：所有单词看一遍能知道中文意思
+DEADLINE: <2022-12-10 Sat> SCHEDULED: <2022-12-02 Fri>
+:LOGBOOK:
+CLOCK: [2022-12-07 Tue 00:01]--[2022-12-07 Wed 01:05] =>  1:04
+CLOCK: [2022-12-06 Tue 23:31]--[2022-12-06 Wed 23:50] =>  0:19
+CLOCK: [2022-12-04 Sun 00:37]--[2022-12-04 Sun 01:43] =>  1:06
+CLOCK: [2022-12-03 Sat 21:30]--[2022-12-03 Sat 21:46] =>  0:16
+CLOCK: [2022-12-03 Sat 21:14]--[2022-12-03 Sat 21:30] =>  0:16
+CLOCK: [2022-12-03 Sat 20:21]--[2022-12-03 Sat 20:59] =>  0:38
+CLOCK: [2022-12-03 Sat 15:19]--[2022-12-03 Sat 17:07] =>  1:48
+CLOCK: [2022-12-03 Sat 15:03]--[2022-12-03 Sat 15:19] =>  0:16
+CLOCK: [2022-12-02 Fri 22:25]--[2022-12-02 Fri 22:43] =>  0:18 
+CLOCK: [2022-12-02 Fri 21:26]--[2022-12-02 Fri 22:15] =>  0:49
+:END:
+- [X] 预习。              ：明白目标，调整方向，预计时间
+    - [X] 时间安排
+
+      必须 20 分钟一页，一小时 3 页，18 个小时，那么只要一天 6 小时，3 天足矣
+
+    - [X] 目标：
+
+      所有单词看一遍能知道中文意思。
+
+    - [X] 资料
+
+      https://zhuanlan.zhihu.com/p/125155772 知乎的简化版
+      https://pan.baidu.com/link/zhihu/7VhXzeuZhTiWeoFUhzaE53ZzXUTPVVcQQ4t0== 百度网盘直接预览
+
+- [ ] 开始：
+
+- [ ] 复习：
+
+--------------------------------------------
+
+
+*** 学习通 (打算这个星期写完，所以划分 6 个子任务）
+**** DONE [#B] 单词
+DEADLINE: <2022-12-03 Sat 12:00> SCHEDULED: <2022-12-03 Sat>
+:LOGBOOK:
+CLOCK: [2022-12-05 Mon 16:13]--[2022-12-05 Mon 17:08] =>  0:55
+CLOCK: [2022-12-05 Mon 14:10]--[2022-12-05 Mon 15:12] =>  1:02
+CLOCK: [2022-12-03 Sat 11:20]--[2022-12-03 Sat 12:03] =>  0:43
+CLOCK: [2022-12-03 Sat 09:11]--[2022-12-03 Sat 10:05] =>  0:54
 CLOCK: [2022-11-29 Tue 19:34]--[2022-11-29 Tue 19:42] =>  0:08
+:END:
+- [X] 预习
+    - [X] 目标：快速学会四级常用词汇
+
+    - [X] 资料
+      http://mooc2-ans.gdhkmooc.com/mycourse/stu?courseid=227272645&clazzid=64261625&cpi=82748476&enc=060b3b94cb1f79b11b9040ee185f76c8&t=1668065307830&pageHeader=8&v=0 学习通网站
+
+    - [X] 时间安排：最快
+
+----------
+
+
+**** LOOP [#C] 翻译
+DEADLINE: <2022-12-16 Fri> SCHEDULED: <2022-12-03 Sat>
+:LOGBOOK:
+CLOCK: [2022-12-06 Tue 09:18]--[2022-12-06 Tue 09:51] =>  0:33
+:END:
+
+----------
+
+
+**** LOOP [#C] 写作
+DEADLINE: <2022-12-18 Sun> SCHEDULED: <2022-12-04 Sun>
+:LOGBOOK:
+CLOCK: [2022-12-06 Tue 09:53]--[2022-12-06 Tue 10:18] =>  0:25
+:END:
+---------
+
+
+**** LOOP [#C] 选词填空
+DEADLINE: <2022-12-20 Tue> SCHEDULED: <2022-12-04 Sun>
+-----------------------------
+
+
+**** DONE [#C] 阅读理解
+SCHEDULED: <2022-12-05 Mon> DEADLINE: <2022-12-05 Mon 12:00>
+:LOGBOOK:
+CLOCK: [2022-12-05 Mon 13:47]--[2022-12-05 Mon 14:07] =>  0:20
+CLOCK: [2022-12-05 Mon 12:23]--[2022-12-05 Mon 12:51] =>  0:28
 :END:
 
 
-**** WAIT [#B] 翻译
-DEADLINE: <2022-12-03 Sat 17:00> SCHEDULED: <2022-12-03 Sat 14:00>
+**** LOOP [#C] 听力
+DEADLINE: <2022-12-22 Thu> SCHEDULED: <2022-12-05 Mon>
 
 
-**** WAIT [#B] 写作
-DEADLINE: <2022-12-04 Sun 12:00> SCHEDULED: <2022-12-04 Sun 08:00>
+*** DONE [#C] 英语课文复习（能复习多少算多少）
+:LOGBOOK:
+CLOCK: [2022-12-05 Mon 18:03]--[2022-12-05 Mon 18:46] =>  0:43
+CLOCK: [2022-12-05 Mon 17:17]--[2022-12-05 Mon 18:03] =>  0:46
+:END:
+- [X] 题型
+
+    - [X] 完形填空
+
+    - [X] 从课文把句子抄上去
+
+    - [X] 判断对错
+
+    - [X] 另类写作题
+
+        - [X] 根据课文内讨论题，写下你的想法
+
+        - [X] 解决课文难题
+          
+- [X] 题型总结
+
+    - 单词
+
+    - 课文意思理解
+
+    - 写作
+
+    - 翻译
+
+- [ ] 通过互联网找到科技英语的教材和背后习题答案
+
+    - [ ] 教材是方便快速翻译
+
+    - [ ] 答案是为了防止搜索引擎直接搜不到答案
+
+- [ ] 四级
+
+    - 听力（不用）
+
+    - 阅读理解
+
+    - 10 选 5
+
+    - 翻译
+
+    - 作文
+---------------
 
 
-**** WAIT [#B] 10 选 5 
-DEADLINE: <2022-12-04 Sun 17:00> SCHEDULED: <2022-12-04 Sun 14:00>
-
-
-**** WAIT [#B] 阅读理解
-DEADLINE: <2022-12-05 Mon 12:00> SCHEDULED: <2022-12-05 Mon 08:00>
-
-
-**** WAIT [#B] 听力
-DEADLINE: <2022-12-05 Mon 17:00> SCHEDULED: <2022-12-05 Mon 14:00>
-
-
-*** LOOP [#B] 英语课文复习（能复习多少算多少）
-SCHEDULED: <2022-11-29 Tue> DEADLINE: <2022-12-07 Wed>
-
-
-*** WAIT [#A] 考场考试
-DEADLINE: <2022-12-08 Thu 21:00> SCHEDULED: <2022-12-08 Thu 19:00>
+*** DONE [#A] 考场考试
+DEADLINE: <2022-12-05 Mon 21:00> SCHEDULED: <2022-12-05 Mon 19:00>
+:LOGBOOK:
+CLOCK: [2022-12-05 Mon 18:51]--[2022-12-05 Mon 20:37] =>  1:46
+:END:
 
 
 ** 职业规划
@@ -670,24 +1119,21 @@ DEADLINE: <2022-10-25 Tue 17:00> SCHEDULED: <2022-10-25 Tue 16:40>
 
 
 * 办理课程置换
-** WAIT [#B] 置换：计算机教研室
-DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
+** TASK [#B] 置换：计算机教研室
 
 
-** WAIT [#B] 置换：军训教研室
-DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
+** TASK [#B] 置换：军训教研室
 
 
-** WAIT [#B] 置换：教育心理教研室
-DEADLINE: <2022-12-02 Fri> SCHEDULED: <2022-12-01 Thu>
+** TASK [#B] 置换：教育心理教研室
 
 
 * 毕业相关事情
-** TASK 三张表
+** TASK [#B] 三张表
 
 
 ** LOOP [#B] 公选课
-DEADLINE: <2022-12-11 Thu> SCHEDULED: <2022-11-28 Mon>
+DEADLINE: <2022-12-10 Sat> SCHEDULED: <2022-11-28 Mon>
 :LOGBOOK:
 CLOCK: [2022-11-30 Wed 11:51]--[2022-11-30 Wed 12:11] =>  0:20
 :END:
@@ -714,10 +1160,11 @@ CLOCK: [2022-11-29 Tue 00:14]--[2022-11-29 Tue 01:29] =>  1:15
 :END:
 
 
-*** LOOP [#B] 写征文活动：疫情防控
+*** DONE [#B] 写征文活动：疫情防控
 DEADLINE: <2022-12-02 Tue> SCHEDULED: <2022-12-01 Mon>
 :LOGBOOK:
-CLOCK: [2022-12-01 Thu 12:51]
+CLOCK: [2022-12-02 Fri 12:26]--[2022-12-02 Fri 14:41] =>  2:15
+CLOCK: [2022-12-01 Thu 12:51]--[2022-12-01 Thu 16:51] =>  4:00
 :END:
 [[~/code/pirture/tmp/lasjdlkfj.txt]]
 800 字数
@@ -727,11 +1174,32 @@ CLOCK: [2022-12-01 Thu 12:51]
 正文写明作者姓名, 学号, 班级, 联系方式
 文件名字: 素拓征文 + 班级 + 姓名
 jisuanjisutuo2019@163.com
+网络工程 19-2 
+
 ------------------------------------------------------
 
 
-*** WAIT [#B] 写征文活动：爱国
+*** DONE [#B] 写征文活动：爱国
 DEADLINE: <2022-12-03 Sat> SCHEDULED: <2022-12-02 Fri>
+:LOGBOOK:
+CLOCK: [2022-12-02 Fri 15:20]--[2022-12-02 Fri 18:30] =>  3:10
+:END:
+[[~/code/pirture/tmp/素拓征文-爱国.txt]]
+--------------------------------------
+
+
+*** DONE [#B] 禁毒调研答题竞赛
+DEADLINE: <2022-12-03 Sat 23:00> SCHEDULED: <2022-12-02 Fri>
+:LOGBOOK:
+CLOCK: [2022-12-02 Fri 20:50]--[2022-12-02 Fri 21:08] =>  0:18
+:END:
+
+------------------------------------------------
+
+
+*** DONE [#B] 艾滋病参加官网竞赛
+SCHEDULED: <2022-12-25 Sun> DEADLINE: <2022-12-30 Fri>
+-----------------------------------------------------
 
 
 ** 软著
@@ -740,10 +1208,10 @@ DEADLINE: <2022-10-24 Mon 18:00>
 每个 300 块钱，一个抵消 5 分，最多抵消 10 分，3 月份前办好
 
 
-*** TASK 搞张新银行卡
+*** TASK [#B] 搞张新银行卡
 
 
-*** TASK 购买软著
+*** TASK [#B] 购买软著
 
 
-*** TASK 上交软著
+*** TASK [#B] 上交软著
