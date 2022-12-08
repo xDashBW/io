@@ -11,36 +11,50 @@ SCHEDULED: <2022-12-09 Fri +2d> DEADLINE: <2022-12-09 Fri 12:00 +2d>
 :END:
 - State "FAIL"       from "LOOP"       [2022-12-07 Wed 16:08] \\
   遗精
+---------
 
 
-** WAIT [#C] 深吨 100 个
-SCHEDULED: <2022-12-08 Tue +2d> DEADLINE: <2022-12-08 Wed 12:00 +2d>
+** TASK [#C] 深吨 100 个
+SCHEDULED: <2022-12-10 Sat +2d> DEADLINE: <2022-12-10 Sat 12:00 +2d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-08 Thu 13:46]
+:END:
+- State "FAIL"       from "WAIT"       [2022-12-08 Thu 13:46] \\
+  同上
+---------
 
 
 ** TASK [#C] 跑步 4 公里
-SCHEDULED: <2022-12-08 Thu +1d> DEADLINE: <2022-12-08 Thu 18:00 +1d>
-:PROPERTIES:
-:LAST_REPEAT: [2022-12-07 Wed 20:44]
+SCHEDULED: <2022-12-09 Fri +1d> DEADLINE: <2022-12-09 Fri 18:00 +1d>
+- State "DONE"       from "TASK"       [2022-12-08 Thu 20:44]
+:PROPERTIE:LAST_REPEAT: [2022-12-08 Thu 20:44]S:
+
 :END:
 - State "FAIL"       from "LOOP"       [2022-12-07 Wed 20:44] \\
   遗精
+---------
 
 
 ** TASK [#C] 6 点钟起床
-SCHEDULED: <2022-12-08 Thu +1d> DEADLINE: <2022-12-08 Thu 06:10 +1d>
-:PROPERTIES:
-:LAST_REPEAT: [2022-12-07 Wed 10:23]
+SCHEDULED: <2022-12-09 Fri +1d> DEADLINE: <2022-12-09 Fri 06:10 +1d>
+- State "FAIL"       from "TASK"       [2022-12-08 Thu 13:45] \\
+  昨晚反思，这是第三阶段前的最后通牒
+:PROPERTIE:LAST_REPEAT: [2022-12-08 Thu 13:45]S:
+
 :END:
 - State "FAIL"       from "WAIT"       [2022-12-07 Wed 10:23] \\
   遗精
+---------
 
 
 ** TASK [#C] 6 点之前吃晚饭，最迟 6点半，否则不吃！！！
-SCHEDULED: <2022-12-08 Thu +1d> DEADLINE: <2022-12-08 Thu 18:10 +1d>
-:PROPERTIES:
-:LAST_REPEAT: [2022-12-07 Wed 16:09]
+SCHEDULED: <2022-12-09 Fri +1d> DEADLINE: <2022-12-09 Fri 18:10 +1d>
+- State "DONE"       from "TASK"       [2022-12-08 Thu 20:44]
+:PROPERTIE:LAST_REPEAT: [2022-12-08 Thu 20:44]S:
+
 :END:
 - State "DONE"       from "LOOP"       [2022-12-07 Wed 16:09]
+---------
 
 
 * 月练 

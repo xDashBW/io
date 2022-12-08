@@ -170,41 +170,32 @@ SCHEDULED: <2022-12-03 Sat> DEADLINE: <2022-12-30 Fri>
 
 
 * 实战项目
-** WAIT [#C] Pygame 贪吃蛇
+** LOOP [#C] Pygame 贪吃蛇
 SCHEDULED: <2022-12-07 Wed> DEADLINE: <2022-12-09 Fri>
-*** DONE Pygame贪吃蛇：基本逻辑与代码运行
-DEADLINE: <2022-10-04 Tue 21:00> SCHEDULED: <2022-10-04 Tue 19:18>
-[[~/code/write/贪吃蛇/main.py]]
-- 第一次写完整的业务逻辑
-  - 写业务逻辑和写底层是两回事，我终于意识到过去用 C++ 写逻辑为啥老是失败和那是多么可笑的事情，因为根本不适合。
-  - 写逻辑的时候，就要专注业务逻辑，不要在意为啥是这样生成随机数，那不是应该关心的
-- 第一次写业务逻辑的大致流程（框架），别管琐碎的东西
-  1. 开启框架
-  2. 设置一堆乱七八糟的东西，字体，颜色等等（靠，查资料）
-  3. 数据结构也许没有那么重要（贪吃蛇用列表，坐标用元祖）
-  4. 开启 While （） 循环，循环内是监听用户按键，并且变更外部的状态（在这里是方向键）
-  5. While （） 后，判断 While（） 里面被改变的状态
-  6. 更新里面数据结构（蛇的长度和位置，草莓的位置）
-  7. 把更新的数据结构显示在屏幕，并且设置 FPS 刷新率
+:LOGBOOK:
+CLOCK: [2022-12-08 Thu 11:42]--[2022-12-08 Thu 13:00] =>  1:18
+:END:
 
-  : 6 和 7 解决我一个疑问，我以前是在 While （） 里面刷新屏幕。
-  : 其实更好的做法是只在 While（1） 监听用户按键，然后更新数据结构。在 While（）结束后，才把更新的数据结构显示在屏幕上
-  : 同时刷新 FPS，以控制节奏（我以前是在 While（） 里面 sleep() ）
+- [-]  第一次写业务逻辑的大致流程（框架），别管琐碎的东西
+    - [X] 开启框架和 fps 
+    - [X] 全局常量：字体，颜色
+    - [X] 全局变量，贪吃蛇结构，地图
+    - [X] 开启 While （） 的事件循环
+    - [X] 在 while 里面开启 for 键盘监听
+    - [ ] 更新对应的数据结构（蛇的长度和位置，草莓的位置，方向等）
+    - [ ] 根据把更新的数据结构在屏幕刷新，并且设置 FPS 刷新率
 
-
-*** DONE Pygame贪吃蛇：练习 1
-DEADLINE: <2022-10-04 Tue 22:10> SCHEDULED: <2022-10-04 Tue 21:10>
+- [ ] bug2       
 [[~/code/write/贪吃蛇/main2.py]]
-- 绘制是一件很重要的事情，要是不上色，那就会全黑
-- 基本逻辑都能搞懂
-- 疑问
-  - 为啥要记录变量
-- 缺失的逻辑
-  - 绘制
-  - 碰到自己或墙壁
-  - 苹果的更新（随机生成）逻辑
-  - 游戏结束
-
+     - [X] 绘制是一件很重要的事情，要是不上色，那就会全黑
+     - 基本逻辑都能搞懂
+     - 疑问
+         - 为啥要记录变量
+     - 缺失的逻辑
+         - 绘制
+         - 碰到自己或墙壁
+         - 苹果的更新（随机生成）逻辑
+         - 游戏结束
 
 *** DONE Pygame贪吃蛇：练习 1 纠错与改正
 DEADLINE: <2022-10-05 Wed 11:30> SCHEDULED: <2022-10-05 Wed 10:31>
@@ -460,7 +451,6 @@ CLOCK: [2022-11-11 Fri 08:00]--[2022-11-12 Sat 18:31] => 34:31
   全方位的学习 Python
 -----------------------------------------------------
 - [X] https://docs.python.org/zh-cn/3/contents.html
-- [X] [[~/code/python教材/]]
 ------------------------------------------------------
 
 
@@ -473,11 +463,98 @@ SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
 SCHEDULED: <2022-12-10 Sat> DEADLINE: <2022-12-10 Sat>
 
 
-**** WAIT [#C] socket
+**** LOOP [#C] socket
 SCHEDULED: <2022-12-08 Thu> DEADLINE: <2022-12-10 Sat>
+:LOGBOOK:
+CLOCK: [2022-12-08 Thu 13:58]--[2022-12-08 Thu 15:10] =>  1:12
+:END:
+https://docs.python.org/zh-cn/3/library/socket.html
+[[~/code/pirture/python教材/网络编程/lkjsdklfj.py]]
+
+- [X] 预测
+
+    - [X] socket 模块功能
+
+      socket 模块，你觉得需要什么？
+
+        - [X] socket 从概念上，应该和 io 事件复用解耦。
+
+            一个异步框架，底层是 io 复用为核心的 reactor 反应堆。
+
+            socket 可以模块可以注册进入这个异步框架，得到一个异步网络框架。
+
+            同理，其余模块，例如数据库也可以把 event 注册进入 reactor 得到异步数据库。
+
+        - [X] 功能，就是 unix 的那些同步 read，write，listen 功能
+
+            - [X] 宏
+
+              设置 socket 的底层网络类型，例如 tcp， udp
+
+            - [X] 网络监听设置
+                - [X] listen
+                - [X] bind 地址，ipv4，ipv6
+
+            - [X] 普通文件描述符号，收发数据
+
+    - [X] socket 代码组织方式
+        - [X] socket 常量宏： socket.INET_ADDR
+        - [X] socket 异常  ： socket.error
+        - [X] 功能函数：inet_hton (和 muduo 一样优雅)
+        - [X] 关键类
+            - [X] socket
+            - [X] AddressFamily: 十分关键，参数里十分常见
+                - [X] socket 类
+                    - [X] __init__(AddressFamily)
+                    - [X] family() -> AddressFamily
+                - [X] getaddrinfo -> list[tuple(AddressFamily)]
+      
+- [-] 官方例子：
+
+    - [X] 核心模型，只服务一个对象的 echo，示范最简单的 socket 模块的 bind,listen,accept
+
+      [[~/code/pirture/python教材/网络编程/socket模块/server0.py]]
+
+    - [ ] 学习如何处理边界条件, 例如 getaddrinfo 处理 bind 多个地址, 以及异常处理
+
+      
+
+---------
 
 
 * 工具篇
+
+** LOOP [#C] Latex
+DEADLINE: <2022-12-08 Thu> SCHEDULED: <2022-12-08 Thu>
+:LOGBOOK:
+CLOCK: [2022-12-08 Thu 23:00]--[2022-12-08 Thu 23:56] =>  0:56
+:END:
+
+https://emacs-china.org/u/zhcosin/activity Emacs 社区很会搞 latex 的大牛, 多看他回答
+
+- [X] Org-mode 和 latex-mode : 公式多就 latex-mode, 文字多就 org-mode 里面插入 latex 代码 
+
+- [X] 几种可以输入公式的工具
+    - [X] Word
+    - [X] Emacs Latex (或其他 latex 宿主)
+        - [X] auctex
+        - [X] cdlatex
+    - [X] GNU TexMacs 
+
+        aur/texmacs 2.1.2-1 (+4 0.10) 
+        Free scientific text editor, inspired by TeX and GNU Emacs. Wysiwyg editor TeX-fonts and CAS-interface (Giac, GTybalt, Macaulay 2, Maxima, Octave, Pari, Qcl, R and Yacas) in one. 是不是和 emacs 一样? 先看看!!!
+
+    - [X] 莫干编辑器
+
+      GNU Texmacs 是一个数学排版工具, 但是维护者的野心不止于此, 所以出现了像 emacs 架构靠近的 mogan editor, 专门为科研人员设计.
+
+- [ ] 学习思路
+    - [ ] 适用下 texmacs
+    - [ ] 使用下莫甘编辑器
+    - [ ] 把他们结合下 emacs 
+--------------------------------------------
+
+
 ** Git
 *** TASK [#C] git 如何回退版本
 https://zhuanlan.zhihu.com/p/137856034

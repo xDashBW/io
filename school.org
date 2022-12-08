@@ -891,6 +891,7 @@ CLOCK: [2022-11-29 Tue 19:52]--[2022-11-29 Tue 23:18] =>  3:26
 **** LOOP [#C] 高中 3500 单词快速过：所有单词看一遍能知道中文意思
 DEADLINE: <2022-12-10 Sat> SCHEDULED: <2022-12-02 Fri>
 :LOGBOOK:
+CLOCK: [2022-12-08 Thu 16:23]--[2022-12-08 Thu 17:25] =>  1:02
 CLOCK: [2022-12-07 Tue 00:01]--[2022-12-07 Wed 01:05] =>  1:04
 CLOCK: [2022-12-06 Tue 23:31]--[2022-12-06 Wed 23:50] =>  0:19
 CLOCK: [2022-12-04 Sun 00:37]--[2022-12-04 Sun 01:43] =>  1:06
@@ -916,9 +917,70 @@ CLOCK: [2022-12-02 Fri 21:26]--[2022-12-02 Fri 22:15] =>  0:49
       https://zhuanlan.zhihu.com/p/125155772 知乎的简化版
       https://pan.baidu.com/link/zhihu/7VhXzeuZhTiWeoFUhzaE53ZzXUTPVVcQQ4t0== 百度网盘直接预览
 
-- [ ] 开始：
+- [-] 1 页
+    - [ ] abandon 抛弃
+    - [ ] ability 能力
+    - [ ] able 能够
+    - [ ] abnormal 不正常的
+    - [ ] aboard 在船上
+    - [ ] absent 缺席的
+    - [ ] absence 缺席的
+    - [ ] abolish 废弃
+    - [ ] absolute 完全的，绝对的
+    - [ ] abstract 抽象的
+    - [ ] absurd 荒唐的 
+    - [ ] abundant 大量的
+    - [ ] activity 活动
+    - [ ] actor 男角色
+    - [ ] advertisement 广告
+    - [ ] adapt 适应
+    - [ ] adjust 调整
+    - [ ] adjustment 调整
+    - [ ] adequate 足够的
+    - [ ] add 增加
+    - [ ] addict 上瘾的
+    - [ ] admire 赞扬
+    - [ ] admirable 赞扬的
+    - [ ] admission 进入权, 准入的  
+    - [ ] admit 准许
+    - [ ] abuse 滥用的
+    - [ ] academe 学术的
+    - [X] academic 学术的
+    - [X] adopt 领养的
+    - [X] adult 成年人
 
-- [ ] 复习：
+- [ ] 2 页
+    - [ ] agress 侵入
+    - [ ] aggressive 侵入
+    - [ ] ago  岁
+    - [ ] agree 同意
+    - [ ] culture 文化
+    - [ ] agricultural 农业的
+    - [ ] agriculture 农业
+    - [ ] ahead 领先
+    - [ ] aid 救援
+    - [ ] aircraft 飞机  
+    - [ ] airline 航空公司
+    - [ ] airmail 航空邮件
+    - [ ] airplane 飞机
+    - [ ] amount 数目
+    - [ ] among 在 .. 中间
+    - [ ] amuse 娱乐
+    - [ ] amusement 娱乐
+    - [ ] analyse 分析
+    - [ ] analysis 分析
+    - [ ] ancident 古代的
+    - [ ] anger n 愤怒
+    - [ ] angry adj 
+    - [ ] annoy 厌烦的 
+    - [ ] annual 年刊
+    - [ ] ant 蚂蚁
+    - [ ] answer 回答
+    - [ ] alive 生存的
+    - [ ] alike 相同的
+    - [ ] alcohol 酒精 
+    - [ ] alarm 警告
+    - [ ] album 相簿
 
 --------------------------------------------
 
@@ -944,20 +1006,57 @@ CLOCK: [2022-11-29 Tue 19:34]--[2022-11-29 Tue 19:42] =>  0:08
 ----------
 
 
-**** LOOP [#C] 翻译
+**** 最快入门方法之语感训练 
+- [-] 任务
+
+  比起无脑背诵 3500 单词, 这样练更加容易掌握大纲和脉络, 更快速成,
+
+    - [X] 翻译:把中文翻译成英文
+    - [X] 作文:直接写英文
+
+- [X] 学习方法
+    - [X] 仿写英文句子
+    - [X] 听力, 能大致听懂意思
+    - [X] 读陌生单词, 从而读懂音标
+    - [X] 背诵, 学会朗诵
+
+***** LOOP [#C] 翻译
 DEADLINE: <2022-12-16 Fri> SCHEDULED: <2022-12-03 Sat>
 :LOGBOOK:
+CLOCK: [2022-12-08 Thu 20:45]--[2022-12-08 Thu 21:30] =>  0:45
 CLOCK: [2022-12-06 Tue 09:18]--[2022-12-06 Tue 09:51] =>  0:33
 :END:
 
-----------
+- [X] 学习目标
+    - 现在这个阶段就是以模仿别人的写法为主, 不用太在意他们为什么不用你那种中式去翻译, 主要是练习语感
+    - 辅助听力, 要听懂
+
+- [X] 卢沟桥
+
+      卢沟桥位于天安门广场西南 15 公里处，横跨永定河，是北京现存最古老的多拱石桥。
+      卢沟桥最初建成于 1192 年 ， 1698 年重建，由 281 根柱子支撑。每根柱子上都有一头石狮。
+      这些石狮的头、背、腹部或爪子上都藏着更多的狮子。这些石狮生动逼真、千姿百态，是
+      卢沟桥石刻艺术的精品。桥上的石狮不计其数，因而北京地区流传着“卢沟桥上的石狮子数不清”的说法。
+
+--------------------------------------------
 
 
-**** LOOP [#C] 写作
+***** LOOP [#C] 写作
 DEADLINE: <2022-12-18 Sun> SCHEDULED: <2022-12-04 Sun>
 :LOGBOOK:
+CLOCK: [2022-12-08 Thu 21:34]--[2022-12-08 Thu 22:55] =>  1:21
 CLOCK: [2022-12-06 Tue 09:53]--[2022-12-06 Tue 10:18] =>  0:25
 :END:
+
+- [-] 给学校图书管的建议
+
+    - [X] 资料
+      http://mooc1.gdhkmooc.com/mooc2/work/dowork?courseId=227272645&classId=64261625&cpi=82748476&workId=22844483&answerId=51558925&standardEnc=1a6f94578fc1024bd591be4fd7db7805&enc=ce5d4b9918b95afc46186590ce14e229
+
+    - [X] 开头
+    - [ ] ???
+    - [ ] ???
+
 ---------
 
 
