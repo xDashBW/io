@@ -2,9 +2,21 @@
 # 某数学家说：不做题，就不会不断地逼自己思考
 
 * 日练
-: 如果，有失败了，那么就失败了。一切按照进度进行。
-: 例如，今天没有准时起床，那就没有把，记录原因，继续堆任务。如果 18:00 前没有吃饭，也不好吃了
-** TASK [#C] 俯卧撑 100 个
+如果，有失败了，那么就失败了。一切按照进度进行。
+例如，今天没有准时起床，那就没有把，记录原因，继续堆任务。如果 18:00 前没有吃饭，也不好吃了
+** LOOP [#C] 反思和布置任务
+DEADLINE: <2022-12-10 Sat +1d 23:59> SCHEDULED: <2022-12-10 Sat +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-10 Sat 00:54]
+:END:
+- State "GOOD"       from "LOOP"       [2022-12-10 Sat 00:54]
+
+:LOGBOOK:
+CLOCK: [2022-12-09 Sat 23:10]--[2022-12-09 Sat 23:59] =>  0:49
+:END:
+
+
+** LOOP [#C] 俯卧撑 100 个
 SCHEDULED: <2022-12-11 Sun +2d> DEADLINE: <2022-12-11 Sun 12:00 +2d>
 - State "DONE"       from "LOOP"       [2022-12-09 Fri 13:23]
 :PROPERTIE:LAST_REPEAT: [2022-12-09 Fri 13:23]S:
@@ -15,7 +27,7 @@ SCHEDULED: <2022-12-11 Sun +2d> DEADLINE: <2022-12-11 Sun 12:00 +2d>
 ---------
 
 
-** TASK [#C] 深吨 100 个
+** LOOP [#C] 深吨 100 个
 SCHEDULED: <2022-12-10 Sat +2d> DEADLINE: <2022-12-10 Sat 12:00 +2d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-12-08 Thu 13:46]
@@ -25,7 +37,7 @@ SCHEDULED: <2022-12-10 Sat +2d> DEADLINE: <2022-12-10 Sat 12:00 +2d>
 ---------
 
 
-** TASK [#C] 跑步 4 公里
+** LOOP [#C] 跑步 4 公里
 SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 18:00 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-12-09 Fri 18:51]
@@ -44,7 +56,7 @@ SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 18:00 +1d>
 ---------
 
 
-** TASK [#C] 6 点钟起床
+** LOOP [#C] 6 点钟起床
 SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 06:10 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-12-09 Fri 09:07]
@@ -61,7 +73,7 @@ SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 06:10 +1d>
 ---------
 
 
-** TASK [#C] 6 点之前吃晚饭，最迟 6点半，否则不吃！！！
+** LOOP [#C] 6 点之前吃晚饭，最迟 6点半，否则不吃！！！
 SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 18:10 +1d>
 :PROPERTIES:
 :LAST_REPEAT: [2022-12-09 Fri 18:52]
@@ -78,6 +90,8 @@ SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 18:10 +1d>
 * 月练 
 ** LOOP [#C] 模仿 libevent 写一个网络库，导给 py 使用
 DEADLINE: <2022-12-14 Fri> SCHEDULED: <2022-12-01 Thu>
+<2022-12-10 Sat 8:00>
+
 :LOGBOOK:
 CLOCK: [2022-12-07 Wed 21:09]--[2022-12-07 Wed 22:21] =>  1:12
 CLOCK: [2022-12-07 Wed 18:30]--[2022-12-07 Wed 20:00] =>  1:30
