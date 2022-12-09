@@ -11,6 +11,10 @@
 SCHEDULED: <2022-12-06 Tue> DEADLINE: <2022-12-06 Tue 18:00>
 
 
+** WAIT [#C] 早上去桌子学习, 试试体验
+DEADLINE: <2022-12-10 Sat 08:00> SCHEDULED: <2022-12-10 Sat>
+
+
 * 学校实习
 ** TASK [#B] 泰迪云线上课堂
 

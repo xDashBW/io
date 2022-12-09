@@ -5,9 +5,10 @@
 : 如果，有失败了，那么就失败了。一切按照进度进行。
 : 例如，今天没有准时起床，那就没有把，记录原因，继续堆任务。如果 18:00 前没有吃饭，也不好吃了
 ** TASK [#C] 俯卧撑 100 个
-SCHEDULED: <2022-12-09 Fri +2d> DEADLINE: <2022-12-09 Fri 12:00 +2d>
-:PROPERTIES:
-:LAST_REPEAT: [2022-12-07 Wed 16:08]
+SCHEDULED: <2022-12-11 Sun +2d> DEADLINE: <2022-12-11 Sun 12:00 +2d>
+- State "DONE"       from "LOOP"       [2022-12-09 Fri 13:23]
+:PROPERTIE:LAST_REPEAT: [2022-12-09 Fri 13:23]S:
+
 :END:
 - State "FAIL"       from "LOOP"       [2022-12-07 Wed 16:08] \\
   遗精
@@ -25,7 +26,15 @@ SCHEDULED: <2022-12-10 Sat +2d> DEADLINE: <2022-12-10 Sat 12:00 +2d>
 
 
 ** TASK [#C] 跑步 4 公里
-SCHEDULED: <2022-12-09 Fri +1d> DEADLINE: <2022-12-09 Fri 18:00 +1d>
+SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 18:00 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-09 Fri 18:51]
+:END:
+- State "FAIL"       from "LOOP"       [2022-12-09 Fri 18:51] \\
+  没有跑 4 公里, 才跑了几圈
+  
+  1. 没有提前准备
+  2. 没有做好觉悟
 - State "DONE"       from "TASK"       [2022-12-08 Thu 20:44]
 :PROPERTIE:LAST_REPEAT: [2022-12-08 Thu 20:44]S:
 
@@ -36,7 +45,12 @@ SCHEDULED: <2022-12-09 Fri +1d> DEADLINE: <2022-12-09 Fri 18:00 +1d>
 
 
 ** TASK [#C] 6 点钟起床
-SCHEDULED: <2022-12-09 Fri +1d> DEADLINE: <2022-12-09 Fri 06:10 +1d>
+SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 06:10 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-09 Fri 09:07]
+:END:
+- State "FAIL"       from "LOOP"       [2022-12-09 Fri 09:07] \\
+  失败, 因为没有把手机藏好，早上闹钟一响就无意识的手机关了.
 - State "FAIL"       from "TASK"       [2022-12-08 Thu 13:45] \\
   昨晚反思，这是第三阶段前的最后通牒
 :PROPERTIE:LAST_REPEAT: [2022-12-08 Thu 13:45]S:
@@ -48,7 +62,11 @@ SCHEDULED: <2022-12-09 Fri +1d> DEADLINE: <2022-12-09 Fri 06:10 +1d>
 
 
 ** TASK [#C] 6 点之前吃晚饭，最迟 6点半，否则不吃！！！
-SCHEDULED: <2022-12-09 Fri +1d> DEADLINE: <2022-12-09 Fri 18:10 +1d>
+SCHEDULED: <2022-12-10 Sat +1d> DEADLINE: <2022-12-10 Sat 18:10 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-09 Fri 18:52]
+:END:
+- State "DONE"       from "LOOP"       [2022-12-09 Fri 18:52]
 - State "DONE"       from "TASK"       [2022-12-08 Thu 20:44]
 :PROPERTIE:LAST_REPEAT: [2022-12-08 Thu 20:44]S:
 
