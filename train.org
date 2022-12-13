@@ -7,9 +7,10 @@
 例如，今天没有准时起床，那就没有把，记录原因，继续堆任务。如果 18:00 前没有吃饭，也不好吃了
 
 ** JUST [#C] 反思和布置任务
-DEADLINE: <2022-12-11 Sun 00:00> SCHEDULED: <2022-12-11 Sun +1d>
+DEADLINE: <2022-12-14 Wed 23:59 +1d> SCHEDULED: <2022-12-14 Wed +1d>
 
 :LOGBOOK:
+CLOCK: [2022-12-11 Sun 23:50]--[2022-12-12 Mon 00:06] =>  0:16
 CLOCK: [2022-12-10 Sat 23:26]--[2022-12-11 Sun 00:32] =>  1:06
 CLOCK: [2022-12-10 Sat 22:40]--[2022-12-10 Sat 23:18] =>  0:38
 CLOCK: [2022-12-09 Sat 23:10]--[2022-12-09 Sat 23:59] =>  0:49
@@ -19,11 +20,14 @@ CLOCK: [2022-12-09 Sat 23:10]--[2022-12-09 Sat 23:59] =>  0:49
 :LAST_REPEAT: [2022-12-10 Sat 23:18]
 :END:
 
+- State "GOOD"       from "JUST"       [2022-12-14 Wed 00:04]
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 00:00] \\
+  一天都看学习通去了
+- State "GOOD"       from "JUST"       [2022-12-12 Mon 00:06]
 - State "GOOD"       from "JUST"       [2022-12-10 Sat 23:18]
-
 - State "GOOD"       from "JUST"       [2022-12-10 Sat 00:54]
 
-- [X] 2022.12.10
+- [-] 2022.12.10
 
     - [X] 行动复盘
 
@@ -102,12 +106,8 @@ CLOCK: [2022-12-09 Sat 23:10]--[2022-12-09 Sat 23:59] =>  0:49
             - [X] 专门 loop 的函数
 
                用来设置各种状态, 接入上层
-          
-- [ ] 2022.12.11
 
-    - [ ] 复盘
-
-    - [ ] 全天
+    - [ ] 疑问
 
         - [ ] Dispatch 模块专门设个 poll 唤醒队列的函数, 有啥用吗?
 
@@ -115,26 +115,73 @@ CLOCK: [2022-12-09 Sat 23:10]--[2022-12-09 Sat 23:59] =>  0:49
 
         - [ ] Nginx 的那个链表数据结构有什么用? 就是作为无限扩容的 buffer ??
 
+- [X] 2022.12.11
+
+    - [X] 复盘
+
+        - [X] Linux System Api 半通水
+
+            今天早上起床看了 <<nginx>>, 翻了很多章, 我觉得就内存分配器有点难度. Http 章节还没有打算开始学
+
+            普通内存分配器以前研究过韦易笑大佬的, 所以能够理解. 但是同时进程间共享内存与共享内存的内存分配器就难倒了. 这暴露了自己对 linux System Api 的匮乏
+
+        - [X] 献血
+
+          献血之后头有点晕, 因为我的学习方法是需要把大腿的血液倒流, 我怕血液不够出了意外, 所以休息了几个小时.
+
+          确实对身体有点影响, 下午想眯一会, 结果眯了下午 5 点多
+
+        - [X] Python 基础很差
+
+          Python 不同于 c/c++, 看了源码懂了原理就行了, Python 写出优雅是很重要的, 我以前没有打好基础, 所以泰迪的考试都过不了
+
+        - [X] 数据挖掘情况紧急
+
+          很多不会做, 明天又要上课了, 要快点去补了.
+
+    - [X] 知识总结
+
+      总结: 啥也没有学到的一天
+      
+        - [X] <<Python 工匠>> 的编码规范
+
+        - [X] RPC 的历史由来与相关分支了解
+
+    - [X] 疑问: 无
+
+- [X] 2022.12.12
+
+  什么都没有学, 看了一天的学习通
+
+- [X] 2022.12.13
+
+  看了一天的 <<python工匠>>, 你别说, 很多我以前不懂的东西豁然开朗, 看的很爽
+  
 ------------------------------------
   
 
 ** JUST [#C] 俯卧撑 100 个 : 30 分钟
-SCHEDULED: <2022-12-11 Sun +2d> DEADLINE: <2022-12-11 Sun 8:00 +2d>
-
+SCHEDULED: <2022-12-15 Thu +2d> DEADLINE: <2022-12-15 Thu 08:00 +2d>
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 00:01] \\
+  我也不知道为什么?
+- State "FAIL"       from "JUST"       [2022-12-11 Sun 14:09] \\
+  献血, 今天不能剧烈运动
 - State "GOOD"       from "JUST"       [2022-12-09 Fri 13:23]
-
 - State "FAIL"       from "JUST"       [2022-12-07 Wed 16:08] \\
   遗精
-
 ---------
 
 
 ** JUST [#C] 深吨 100 个 : 30 分钟
-SCHEDULED: <2022-12-12 Sat +2d> DEADLINE: <2022-12-12 Mon 08:00 +2d>
+SCHEDULED: <2022-12-14 Wed +2d> DEADLINE: <2022-12-14 Wed 08:00 +2d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-14 Wed 00:00]
+:END:
 
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 00:00] \\
+  放假一天, 研究学习通
 - State "FAIL"       from "JUST"       [2022-12-10 Sat 22:31] \\
   起床晚了,  7 点钟也晚了
-
 - State "FAIL"       from "JUST"       [2022-12-08 Thu 13:46] \\
   起床晚了
 
@@ -142,48 +189,70 @@ SCHEDULED: <2022-12-12 Sat +2d> DEADLINE: <2022-12-12 Mon 08:00 +2d>
 
 
 ** JUST [#C] 跑步 4 公里
-SCHEDULED: <2022-12-11 Sun +1d> DEADLINE: <2022-12-11 Sun 18:00 +1d>
-
+SCHEDULED: <2022-12-14 Wed +1d> DEADLINE: <2022-12-14 Wed 18:00 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-14 Wed 00:02]
+:END:
+- State "GOOD"       from "JUST"       [2022-12-14 Wed 00:02]
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 00:01] \\
+  放假一天, 研究学习通
+- State "FAIL"       from "JUST"       [2022-12-11 Sun 14:10] \\
+  献血, 今天不能剧烈运动
 - State "GOOD"       from "JUST"       [2022-12-10 Sat 19:21]
-
 - State "FAIL"       from "JUST"       [2022-12-09 Fri 18:51] \\
   没有跑 4 公里, 才跑了几圈
   
   1. 没有提前准备
   2. 没有做好觉悟
-
 - State "GOOD"       from "JUST"       [2022-12-08 Thu 20:44]
-
 - State "FAIL"       from "JUST"       [2022-12-07 Wed 20:44] \\
   遗精
-
 ---------
 
 
 ** JUST [#C] 6 点钟起床
-SCHEDULED: <2022-12-11 Thu +1d> DEADLINE: <2022-12-11 Thu 06:10 +1d>
-
+SCHEDULED: <2022-12-14 Wed +1d> DEADLINE: <2022-12-14 Wed 06:10 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-14 Wed 00:01]
+:END:
+- State "GOOD"       from "JUST"       [2022-12-14 Wed 00:01]
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 00:00] \\
+  放假一天, 研究学习通
+- State "GOOD"       from "JUST"       [2022-12-11 Sun 07:12]
 - State "GOOD"       from "JUST"       [2022-12-10 Sat 23:20]
-
 - State "FAIL"       from "JUST"       [2022-12-10 Sat 07:16] \\
   虽然失败, 但是 7 点起来了, 所以还能接收
   起床了, 然后又睡下去了. 因为只调了一个闹钟, 下次调 3 个
-
 - State "FAIL"       from "JUST"       [2022-12-09 Fri 09:07] \\
   失败, 因为没有把手机藏好，早上闹钟一响就无意识的手机关了.
-
 - State "FAIL"       from "JUST"       [2022-12-08 Thu 13:45] \\
   昨晚反思，这是第三阶段前的最后通牒
-
 - State "FAIL"       from "JUST"       [2022-12-07 Wed 10:23] \\
   遗精
-
 ---------
 
 
 ** JUST [#C] 6 点之前吃晚饭，最迟 6点半，否则不吃！！！
-SCHEDULED: <2022-12-11 Sun +1d> DEADLINE: <2022-12-11 Sun 18:10 +1d>
+SCHEDULED: <2022-12-14 Wed +1d> DEADLINE: <2022-12-14 Wed 18:10 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2022-12-14 Wed 00:02]
+:END:
 
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 00:02] \\
+  吃宵夜了. 因为太饿了.
+  
+  1. 喝了农茶
+  2. 晚饭吃的太少了，才吃一包泡面
+  
+  记住这个教训, 以后不管怎么样, 晚饭一定要吃好, 吃饱, 不好怕肥. 晚饭过后, 想休息就休息吧, 不要喝茶
+
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 00:01] \\
+  放假一天, 研究学习通
+:PROPERTIE:LAST_REPEAT: [2022-12-14 Wed 00:01]S:
+
+:END:
+
+- State "GOOD"       from "JUST"       [2022-12-11 Sun 18:41]
 - State "GOOD"       from "JUST"       [2022-12-10 Sat 19:21]
 
 - State "GOOD"       from "JUST"       [2022-12-09 Fri 18:52]
@@ -194,10 +263,15 @@ SCHEDULED: <2022-12-11 Sun +1d> DEADLINE: <2022-12-11 Sun 18:10 +1d>
 
 
 * 月练 
+** LOOP 把知识迁移到 base.org 
+DEADLINE: <2022-12-30 Sun +1m> SCHEDULED: <2022-12-29 Fri +1m>
+
+--------
+
+
 ** LOOP [#C] 写一个网络库，导给 py 使用 [28%]
 DEADLINE: <2022-12-14 Fri> SCHEDULED: <2022-12-01 Thu>
 
-- [ ] <2022-12-11 Sun 08:00> / 2 个小时 / Dispatch 模块 /
 - [X] <2022-12-10 Sat 08:00> 
 
 :LOGBOOK:
