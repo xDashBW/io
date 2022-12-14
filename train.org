@@ -173,9 +173,11 @@ SCHEDULED: <2022-12-15 Thu +2d> DEADLINE: <2022-12-15 Thu 08:00 +2d>
 
 
 ** JUST [#C] 深吨 100 个 : 30 分钟
-SCHEDULED: <2022-12-14 Wed +2d> DEADLINE: <2022-12-14 Wed 08:00 +2d>
-:PROPERTIES:
-:LAST_REPEAT: [2022-12-14 Wed 00:00]
+SCHEDULED: <2022-12-16 Fri +2d> DEADLINE: <2022-12-16 Fri 08:00 +2d>
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 23:21] \\
+  训练量太大了，现在的我根本没有时间空出一个小时来训练
+:PROPERTIE:LAST_REPEAT: [2022-12-14 Wed 23:21]S:
+
 :END:
 
 - State "FAIL"       from "JUST"       [2022-12-14 Wed 00:00] \\
@@ -189,9 +191,10 @@ SCHEDULED: <2022-12-14 Wed +2d> DEADLINE: <2022-12-14 Wed 08:00 +2d>
 
 
 ** JUST [#C] 跑步 4 公里
-SCHEDULED: <2022-12-14 Wed +1d> DEADLINE: <2022-12-14 Wed 18:00 +1d>
-:PROPERTIES:
-:LAST_REPEAT: [2022-12-14 Wed 00:02]
+SCHEDULED: <2022-12-15 Thu +1d> DEADLINE: <2022-12-15 Thu 18:00 +1d>
+- State "GOOD"       from "JUST"       [2022-12-14 Wed 23:21]
+:PROPERTIE:LAST_REPEAT: [2022-12-14 Wed 23:21]S:
+
 :END:
 - State "GOOD"       from "JUST"       [2022-12-14 Wed 00:02]
 - State "FAIL"       from "JUST"       [2022-12-14 Wed 00:01] \\
@@ -211,9 +214,11 @@ SCHEDULED: <2022-12-14 Wed +1d> DEADLINE: <2022-12-14 Wed 18:00 +1d>
 
 
 ** JUST [#C] 6 点钟起床
-SCHEDULED: <2022-12-14 Wed +1d> DEADLINE: <2022-12-14 Wed 06:10 +1d>
-:PROPERTIES:
-:LAST_REPEAT: [2022-12-14 Wed 00:01]
+SCHEDULED: <2022-12-15 Thu +1d> DEADLINE: <2022-12-15 Thu 06:10 +1d>
+- State "FAIL"       from "JUST"       [2022-12-14 Wed 09:12] \\
+  太晚睡, 起不来
+:PROPERTIE:LAST_REPEAT: [2022-12-14 Wed 09:12]S:
+
 :END:
 - State "GOOD"       from "JUST"       [2022-12-14 Wed 00:01]
 - State "FAIL"       from "JUST"       [2022-12-14 Wed 00:00] \\
@@ -233,9 +238,10 @@ SCHEDULED: <2022-12-14 Wed +1d> DEADLINE: <2022-12-14 Wed 06:10 +1d>
 
 
 ** JUST [#C] 6 点之前吃晚饭，最迟 6点半，否则不吃！！！
-SCHEDULED: <2022-12-14 Wed +1d> DEADLINE: <2022-12-14 Wed 18:10 +1d>
-:PROPERTIES:
-:LAST_REPEAT: [2022-12-14 Wed 00:02]
+SCHEDULED: <2022-12-15 Thu +1d> DEADLINE: <2022-12-15 Thu 18:10 +1d>
+- State "GOOD"       from "JUST"       [2022-12-14 Wed 23:21]
+:PROPERTIE:LAST_REPEAT: [2022-12-14 Wed 23:21]S:
+
 :END:
 
 - State "FAIL"       from "JUST"       [2022-12-14 Wed 00:02] \\

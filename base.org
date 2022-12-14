@@ -2,6 +2,10 @@
 
 * 散
 ** TASK [#C] 测试 asyncio 的性能和 libevent 进行对比
+:LOGBOOK:
+CLOCK: [2022-12-14 Wed 01:10]--[2022-12-14 Wed 01:14] =>  0:04
+:END:
+https://zhuanlan.zhihu.com/p/27258289
 --------
 
 
@@ -180,6 +184,8 @@ DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
 DEADLINE: <2022-12-11 Sun> SCHEDULED: <2022-12-11 Sun>
 
 :LOGBOOK:
+CLOCK: [2022-12-14 Wed 00:45]--[2022-12-14 Wed 01:10] =>  0:25
+CLOCK: [2022-12-14 Wed 00:32]--[2022-12-14 Wed 00:45] =>  0:13
 CLOCK: [2022-12-13 Tue 22:04]--[2022-12-13 Tue 22:50] =>  0:46
 CLOCK: [2022-12-13 Tue 21:07]--[2022-12-13 Tue 21:42] =>  0:35
 CLOCK: [2022-12-13 Tue 20:09]--[2022-12-13 Tue 20:41] =>  0:32
@@ -246,7 +252,7 @@ CLOCK: [2022-12-11 Sun 15:36]--[2022-12-11 Sun 15:49] =>  0:13
       当集合 / 字典为空时, 他们使用符号的构建方式一样, 所以此时集合不能使用 {} 构建, 要使用 set()
       
         - [X] 列表 : 列表推导式 ; []        ; 内置函数 list()   ; 
-        - [X] 元祖 :           ; () / 逗号 ; 内置函数 tuple()  ; 函数返回值
+        - [X] 元祖 :           ; () / 逗号 ; 内置函数 tuple()  ; 函数返回值 / 函数参数: *
         - [X] 集合 : 集合推导式 ; {}        ; 内置函数 set()    ;
         - [X] 字典 : 字典推导式 ; {}        ; 内置函数 dict()   ;
 
@@ -665,85 +671,39 @@ CLOCK: [2022-11-11 Fri 08:00]--[2022-11-12 Sat 18:31] => 34:31
 ------------------------------------------------------
 
 
-**** LOOP [#C] Python 内置类型
-SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
-
-
-- [X] 上下文管理类型
-
-    Python 定义了一些上下文管理器来支持简易的线程同步、文件或其他对象的快速关闭，以及更方便地操作活动的十进制算术上下文
-
-
-**** LOOP [#C] Python 数据模型
-SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
-
-
+**** 主教材 
+***** DONE [#C] 数字, 字符串
+DEADLINE: <2022-12-14 Wed> SCHEDULED: <2022-12-14 Wed>
 :LOGBOOK:
-CLOCK: [2022-12-09 Fri 19:26]--[2022-12-09 Fri 19:57] =>  0:31
+CLOCK: [2022-12-14 Wed 16:50]--[2022-12-14 Wed 18:55] =>  2:05
 :END:
 
-- [X] 特殊方法 
-    - [X]  上下文管理有关的 with 两招
-        - [X] __enter__() 
-        - [X] __exit__()
----------------------
-
-
-**** DONE [#C] Python 复合语句 [100%]
-SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
+***** DONE [#C] 流程控制
+DEADLINE: <2022-12-14 Wed 20:30> SCHEDULED: <2022-12-14 Wed>
 :LOGBOOK:
-CLOCK: [2022-12-09 Fri 22:27]--[2022-12-09 Fri 23:00] =>  0:33
-CLOCK: [2022-12-09 Fri 18:52]--[2022-12-09 Fri 20:00] =>  1:08
-CLOCK: [2022-12-09 Fri 17:08]--[2022-12-09 Fri 17:19] =>  0:11
-CLOCK: [2022-12-09 Fri 16:26]--[2022-12-09 Fri 16:50] =>  0:24
-CLOCK: [2022-12-09 Fri 15:31]--[2022-12-09 Fri 16:26] =>  0:55
+CLOCK: [2022-12-14 Wed 20:46]--[2022-12-14 Wed 21:51] =>  1:05
 :END:
 
-[[~/code/pirture/python教材/复合语句/except_as.py]]
-
-- [X] 普通逻辑 if,for,while
-- [X] 函数定义与类定义: 从 python 的角度来说, 这也是一种 "python 复合语句定义"
-- [X] 异常 try 语句
-
-- [X] With
-    - [X] 使用上下文表达式求值得到上下文管理器   模块:  Python / 内置类型 / 上下文表达式
-        - [X] 使用上下文管理器调用特殊方法      模块: Python / 数据模型 / 特殊方法  
-            - [X] __enter__()
-            - [X] __exit__()
-  
-- [X] 协程原语
-    - [X] await 唤醒
-    - [X] async 
-        - [X] 函数细粒度: async
-        - [X] for     : async for
-            - [X] 模块
-                - [X] Python / 数据模型 / 特殊方法
-            - [X] __aiter__()
-            - [X] __anext__()
-        - [X] with    : async with
-            - [X] 模块
-                - [X] Python / 内置类型 / 上下文表达式
-                - [X] Python / 数据模型 / 特殊方法
-            - [X] __aenter__()
-            - [X] __aexit__()
-
-    是提供了协程原语, 用来保留寄存器, 跳出函数
-
-    要能够服务应用生产, 还需要配合其他东西,
-        - [X] 底层事件轮询 asyncio + 网络模块 socket =  Python 网络编程 2022 
-        - [X] 底层事件轮询 aysncio + 数据库模块      =  Python 非阻塞数据库 2022
-
--------------------------------------------
-
-
-**** LOOP [#C] python 数据结构
+***** DONE [#C] python 数据结构
 SCHEDULED: <2022-12-10 Sat> DEADLINE: <2022-12-10 Sat>
 
 
------------
+***** DONE [#C] Python 错误与异常
+DEADLINE: <2022-12-14 Wed 22:30> SCHEDULED: <2022-12-14 Wed>
+:LOGBOOK:
+CLOCK: [2022-12-14 Wed 21:54]--[2022-12-14 Wed 22:09] =>  0:15
+:END:
 
 
-**** DONE [#C] python socket
+***** DONE [#C] Python 标准库大纲
+DEADLINE: <2022-12-14 Wed 23:00> SCHEDULED: <2022-12-14 Wed>
+:LOGBOOK:
+CLOCK: [2022-12-14 Wed 22:20]--[2022-12-14 Wed 23:20] =>  1:00
+:END:
+
+
+**** Python 标准库模块
+***** DONE [#C] python socket
 SCHEDULED: <2022-12-08 Thu> DEADLINE: <2022-12-10 Sat>
 :LOGBOOK:
 CLOCK: [2022-12-09 Fri 14:53]--[2022-12-09 Fri 15:29] =>  0:36
@@ -802,6 +762,78 @@ https://docs.python.org/zh-cn/3/library/socket.html
       
 
 ---------
+
+
+***** TASK [#C] python asynio
+
+
+**** 句法与核心语义 
+***** LOOP [#C] Python 内置类型
+SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
+
+- [X] 上下文管理类型
+
+    Python 定义了一些上下文管理器来支持简易的线程同步、文件或其他对象的快速关闭，以及更方便地操作活动的十进制算术上下文
+
+
+***** LOOP [#C] Python 数据模型
+SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
+:LOGBOOK:
+CLOCK: [2022-12-09 Fri 19:26]--[2022-12-09 Fri 19:57] =>  0:31
+:END:
+
+- [X] 特殊方法 
+    - [X]  上下文管理有关的 with 两招
+        - [X] __enter__() 
+        - [X] __exit__()
+---------------------
+
+
+***** DONE [#C] Python 复合语句 [100%]
+SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
+:LOGBOOK:
+CLOCK: [2022-12-09 Fri 22:27]--[2022-12-09 Fri 23:00] =>  0:33
+CLOCK: [2022-12-09 Fri 18:52]--[2022-12-09 Fri 20:00] =>  1:08
+CLOCK: [2022-12-09 Fri 17:08]--[2022-12-09 Fri 17:19] =>  0:11
+CLOCK: [2022-12-09 Fri 16:26]--[2022-12-09 Fri 16:50] =>  0:24
+CLOCK: [2022-12-09 Fri 15:31]--[2022-12-09 Fri 16:26] =>  0:55
+:END:
+
+[[~/code/pirture/python教材/复合语句/except_as.py]]
+
+- [X] 普通逻辑 if,for,while
+- [X] 函数定义与类定义: 从 python 的角度来说, 这也是一种 "python 复合语句定义"
+- [X] 异常 try 语句
+
+- [X] With
+    - [X] 使用上下文表达式求值得到上下文管理器   模块:  Python / 内置类型 / 上下文表达式
+        - [X] 使用上下文管理器调用特殊方法      模块: Python / 数据模型 / 特殊方法  
+            - [X] __enter__()
+            - [X] __exit__()
+  
+- [X] 协程原语
+    - [X] await 唤醒
+    - [X] async 
+        - [X] 函数细粒度: async
+        - [X] for     : async for
+            - [X] 模块
+                - [X] Python / 数据模型 / 特殊方法
+            - [X] __aiter__()
+            - [X] __anext__()
+        - [X] with    : async with
+            - [X] 模块
+                - [X] Python / 内置类型 / 上下文表达式
+                - [X] Python / 数据模型 / 特殊方法
+            - [X] __aenter__()
+            - [X] __aexit__()
+
+    是提供了协程原语, 用来保留寄存器, 跳出函数
+
+    要能够服务应用生产, 还需要配合其他东西,
+        - [X] 底层事件轮询 asyncio + 网络模块 socket =  Python 网络编程 2022 
+        - [X] 底层事件轮询 aysncio + 数据库模块      =  Python 非阻塞数据库 2022
+
+-------------------------------------------
 
 
 * 工具篇
