@@ -55,6 +55,9 @@ CLOCK: [2022-12-06 Tue 20:55]--[2022-12-06 Tue 23:07] =>  2:12
 * 理论知识多看书
 ** LOOP [#C] <<操作系统导论>>
 DEADLINE: <2022-12-12 Mon> SCHEDULED: <2022-12-12 Mon>
+:LOGBOOK:
+CLOCK: [2022-12-16 Fri 20:38]--[2022-12-16 Fri 20:38] =>  0:00
+:END:
 
 --------
 
@@ -180,10 +183,31 @@ DEADLINE: <2022-10-04 Tue 16:00> SCHEDULED: <2022-10-04 Tue 14:10>
 -----------  ---------------
 
 
-** LOOP [#C] Python 工匠 [62%]
+** LOOP [#C] <<python 数据结构与算法分析>>  : 我想拼一把, 我想看看现在到晚上, 我能做到什么程度, 如果明天之前还没有搞定, 那就把它放入 task 吧.
+DEADLINE: <2022-12-15 Thu> SCHEDULED: <2022-12-15 Thu>
+:LOGBOOK:
+CLOCK: [2022-12-15 Thu 14:08]--[2022-12-15 Thu 15:26] =>  1:18
+:END:
+- [X] 目标: 知识体系与课后所有题目
+- [X] [[~/code/git/xDashBW-create/base/]]
+--------
+  - [-] 栈
+      - [X] 使用内置列表封装
+      - [ ] 应用
+          - [ ] 匹配括号
+          - [ ] 十进制转化为二进制
+          - [ ] 前中后序
+          - [ ] 对协程也算有点了解了 ? 好了，一份工作而已.
+
+--------
+
+
+** DONE [#C] Python 工匠 [62%]
 DEADLINE: <2022-12-11 Sun> SCHEDULED: <2022-12-11 Sun>
 
 :LOGBOOK:
+CLOCK: [2022-12-15 Thu 11:10]--[2022-12-15 Thu 13:37] =>  2:27
+CLOCK: [2022-12-15 Thu 09:10]--[2022-12-15 Thu 10:37] =>  1:27
 CLOCK: [2022-12-14 Wed 00:45]--[2022-12-14 Wed 01:10] =>  0:25
 CLOCK: [2022-12-14 Wed 00:32]--[2022-12-14 Wed 00:45] =>  0:13
 CLOCK: [2022-12-13 Tue 22:04]--[2022-12-13 Tue 22:50] =>  0:46
@@ -515,7 +539,7 @@ DEADLINE: <2022-09-21 Wed 10:00> SCHEDULED: <2022-09-21 Wed 08:00>
     - UPDATE xxoo SET xx=yy WHERE xx=yy
 
 
-** LOOP [#C] 用 python 重写野火 im 的服务器端
+** TASK [#C] 用 python 重写野火 im 的服务器端
 SCHEDULED: <2022-12-13 Tue> DEADLINE: <2022-12-20 Tue>
 
 
@@ -531,8 +555,8 @@ SCHEDULED: <2022-12-12 Mon> DEADLINE: <2022-12-12 Mon>
 --------
 
 
-** LOOP [#C] KCP 
-DEADLINE: <2022-12-16 Wed> SCHEDULED: <2022-12-14 Wed>
+** TASK [#C] KCP 
+DEADLINE: <2022-12-20 Tue> SCHEDULED: <2022-12-14 Wed>
 
 :LOGBOOK:
 
@@ -586,7 +610,7 @@ CLOCK: [2022-12-11 Sun 22:18]--[2022-12-11 Sun 22:54] =>  0:36
 
 
 
-** LOOP [#C] pyqt
+** TASK [#C] pyqt
 DEADLINE: <2022-12-20 Sun> SCHEDULED: <2022-12-11 Sun>
 
 
@@ -698,7 +722,7 @@ CLOCK: [2022-12-14 Wed 21:54]--[2022-12-14 Wed 22:09] =>  0:15
 ***** DONE [#C] Python 标准库大纲
 DEADLINE: <2022-12-14 Wed 23:00> SCHEDULED: <2022-12-14 Wed>
 :LOGBOOK:
-CLOCK: [2022-12-14 Wed 22:20]--[2022-12-14 Wed 23:20] =>  1:00
+CLOCK: [2022-12-14 Wed 22:20]--[2022-12-14 Wed 23:40] =>  1:20
 :END:
 
 
@@ -769,7 +793,10 @@ https://docs.python.org/zh-cn/3/library/socket.html
 
 **** 句法与核心语义 
 ***** LOOP [#C] Python 内置类型
-SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
+DEADLINE: <2022-12-20 Tue> SCHEDULED: <2022-12-09 Fri>
+:LOGBOOK:
+CLOCK: [2022-12-16 Fri 20:38]--[2022-12-16 Fri 20:38] =>  0:00
+:END:
 
 - [X] 上下文管理类型
 
@@ -777,7 +804,7 @@ SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
 
 
 ***** LOOP [#C] Python 数据模型
-SCHEDULED: <2022-12-09 Fri> DEADLINE: <2022-12-10 Sat>
+DEADLINE: <2022-12-20 Tue> SCHEDULED: <2022-12-09 Fri>
 :LOGBOOK:
 CLOCK: [2022-12-09 Fri 19:26]--[2022-12-09 Fri 19:57] =>  0:31
 :END:
