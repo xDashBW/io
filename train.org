@@ -269,7 +269,7 @@ SCHEDULED: <2022-12-15 Thu +1d> DEADLINE: <2022-12-15 Thu 18:10 +1d>
 
 
 * 月练 
-** LOOP 把知识迁移到 base.org 
+** TASK [#C] 把知识迁移到 base.org 
 DEADLINE: <2022-12-30 Sun +1m> SCHEDULED: <2022-12-29 Fri +1m>
 
 --------
