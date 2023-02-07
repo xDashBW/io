@@ -1,0 +1,107 @@
+你好,奇怪, 怎么突然觉醒了呢? 我弄了什么吗?
+
+现在的问题是, 继续思考, 继续思考. 如果是查找哈希表, 哈希表的任务是给定一个直,把他着出来.
+
+* DONE 封装哈希表 [2/2]
+CLOSED: [2023-02-01 Wed 14:04]
+- State "DONE"       from "STARTED"    [2023-02-01 Wed 14:04]
+:LOGBOOK:
+CLOCK: [2023-01-31 Tue 21:06]--[2023-01-31 Tue 23:22] =>  2:16
+CLOCK: [2023-01-31 Tue 15:20]--[2023-01-31 Tue 17:22] =>  2:02
+:END:
+
+- [X] 内部哈希链表
+
+  #+begin_src c
+  void hlist_add_head(struct hlist_node *n, struct hlist_head *h)
+   {
+    struct hlist_node *first = h->first; 
+
+    n->next = first;
+    n->pprev = &n->first;
+    h->first = n;
+
+    if (first)
+       first->pprev = &n->next;
+  }
+
+  bool hlist_unhash(struct hlist_node *n) {
+       return !n->pprev;
+  }
+
+  void __hlist_del(struct hlist_node *n) {
+       *n->pprev = n->next;
+       if (n->next)
+          n->next->pprev = n->pprev;
+  }
+
+  void hlist_del_init(struct hlist_node *n) 
+  {
+    if (!hlist_unhash(n))
+    {
+      __hlist_del(n);
+      hlist_init_node(n);
+    }
+  }
+
+  #+end_src
+
+- [X] 用户接口: 封装住桶数组
+
+  - [X] 声明和初始化, 判断空
+
+    #+begin_src c
+    #define DECLARE_HLIST_HASH(name, bits)          \
+      struct hlist_head name[1 << (bits)]
+
+    void __hlist_hash_init(struct hlist_head *hashtable, unsigned int sz) {
+          for (unsigned i = 0; i < sz; ++i) {
+              hlist_head_init(&hashtable[i]);
+          }
+    }
+
+    #define hash_size(hashtable)  (sizeof((hashtable)) / sizeof((hashtable)[0]))
+    #define hlist_hash_init(hashtable) __hlist_hash_init(hastable, hash_size(hashtable))
+
+    bool __hlist_hash_empty(struct hlist_head *hashtable, unsigned int sz) {
+          for (unsigned i = 0; i < sz; ++i) {
+              if (!hlist_empty(&hashtable[i])) 
+                return false; 
+          }
+          return true;
+    }
+
+    #define hlist_hash_empty(hashtable) __hlist_hash_empty(hashtable, hash_size(hashtable))
+
+    #+end_src
+
+  - [X] 插入删除
+
+    #+begin_src c
+
+    #define hlist_hash_add(hashtable, node, key)    \
+            hlist_add_head(node, &hashtable[hash_min(key, bits)])
+
+    void hlist_hash_del(struct hlist_node *node) {
+        hlist_del(node);
+    }
+
+    #+end_src
+
+  - [X] 哈希查找
+
+    根据 key 重新计算那个桶数组, 当然没有问题, 但是问题是桶内的链表节点, 怎样去判断是否正确呢? 
+
+
+* STARTED 哈希算法 (计算桶(链表)数组的下标)
+:LOGBOOK:
+CLOCK: [2023-02-01 Wed 14:05]--[2023-02-01 Wed 15:14] =>  1:09
+CLOCK: [2023-02-01 Wed 13:17]--[2023-02-01 Wed 14:05] =>  0:48
+:END:
+
+不管是 hlist_hash 还是 avl_hash 都适用的哈希算法, 因为两者的数组是通用的. 
+
+
+有情有义的都要回来.
+我需要压倒性的力量. 
+说石化, 真的优点困阿..
