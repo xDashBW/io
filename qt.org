@@ -1,0 +1,63 @@
+* Qt 入门
+  - [X] pro 项目构建信息, 例如: 我记得以前用 qt 的时候, 要用到网络模块是需要手动添加进去的.
+  - [X] 一个模块是 .h/.cc/.ui
+    - [X] 程序中如何调用 ui 呢 ?
+      - [X] Private: XX *ui
+         他的类是 qt 帮你生成的, 集合了拖动控件的所有变量, 以及生成一个 setupUi () 去初始化
+      - [X] 在构造函数里面调用 ui->setuiUI(this) ;; 实际这里使用的是 this 继承的 widget
+        为什么要在 .cc 里面调用构造, 因为 ui 的信息不能暴露在 .h 文件
+  - [-] 信号与槽
+    - [X] 定义类中的信号与槽函数
+      - [X] signals:
+      - [X] private slot : 
+      - [X] Connect : A类的信号发送给 B 的槽函数 : connect(&a, &a::, &b, &b::);
+    - [X] 注册      : 好像 ui 器能够帮你生成, 但是专业的可维护的代码都是在构造函数里面注册.
+    - [X] 发射信号  : 使用 emit 发射信号, 相当于 eventloop 中的 wakeup
+
+* Chat Server
+** STARTED Chat Server 常见控件交互
+- State "STARTED"    from "DONE"       [2023-02-15 Wed 00:38] 不自己复刻一个叫做会了 ??? 
+- State "DONE"       from "STARTED"    [2023-02-15 Wed 00:14]
+:LOGBOOK:
+CLOCK: [2023-02-15 Wed 00:38]--[2023-02-15 Wed 02:02] =>  1:24
+CLOCK: [2023-02-14 Tue 23:21]--[2023-02-15 Wed 00:14] =>  0:53
+:END:
+- [X] 看下 ui
+- [X] 看下入口, 以及如何进去图形 loop 和连接业务
+  - [X] 使用 QApplication 的 exec 相当于 loop(); 而触发 QDigloa 的 x 号则通过信号发送给 QApplication.quit() 函数
+  - [X] Main 里面构造 chat 模块，Chat 模块的构造函数里面又把第二个模块的构造好, 使用默认的 Qwidget, 相当于把这个 ui 扔给 widget 调度
+  - [X] Main 里面调用 chat 继承的 qdiglog 的 show, 相当于 loop 的唤醒
+- [-] 业务模块
+  - [-] chat 模块
+    - [X] UI 
+      - [X] 发送信息按钮
+      - [X] 输入框
+    - [-] 声明信号与槽函数 : ( 什么业务?)
+      - [ ] Chat 发送消息, ChatServer 响应
+        - [ ] 信号: 
+        - [ ] 槽: 
+      - [X] 按钮发送信号, 内置函数响应
+        - [X] 信号: QPushButton::onClicked
+        - [X] 槽  : sendClicked()
+    - [X] 注册信号:
+      - [X] sendButton 发送信号: connect(ui->sendButton, &QPushButton::clicked, this, &chat::sendClicked);
+    - [X] 编写槽函数业务逻辑:
+      - [X] 简单逻辑, 把 lineEdit 的 text 从输出到另一个 text
+
+#+begin_src cpp
+Chat::Chat (QWidget *q = nullptr) {
+  ui->setupUI(this);
+
+  /* 开始注册信息 */
+  connect(ui->pushbutton, this, Chat::onPush);
+}
+
+void Chat::onPush() {
+  QString str = ui->textview->text();
+  // 对 str 进行处理
+  // 或者存储
+}
+
+#+end_src
+  
+** TODO Chat Server 调用 qt 内置网络服务

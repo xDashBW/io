@@ -1,0 +1,85 @@
+* rpc
+** DONE 重构模块, 解决依赖关系
+CLOSED: [2023-02-14 Tue 16:07]
+- State "DONE"       from "STARTED"    [2023-02-14 Tue 16:07]
+:LOGBOOK:
+CLOCK: [2023-02-14 Tue 15:28]--[2023-02-14 Tue 16:07] =>  0:39
+:END:
+
+- [X] Eventloop 与 Base_poll
+
+   Eventloop.h -> Base_poll.h <- Epoll.h
+
+- [X] Socket 与 Eventloop
+
+  从功能上来说, Socket 依赖 eventloop, 而为什么要隐藏 eventloop 的实现呢? 
+
+- [X] Accept 和 socket 
+
+  Accept 依赖 socket, 自然就依赖 eventloop 了.
+
+** DONE eventloop 
+CLOSED: [2023-02-14 Tue 16:08] DEADLINE: <2023-02-13 Mon>
+- State "DONE"       from "STARTED"    [2023-02-14 Tue 16:08]
+- State "STARTED"    from "DONE"       [2023-02-14 Tue 14:36]
+- State "DONE"       from "STARTED"    [2023-02-14 Tue 11:06]
+:LOGBOOK:
+CLOCK: [2023-02-14 Tue 09:59]--[2023-02-14 Tue 11:00] =>  1:01
+CLOCK: [2023-02-13 Mon 22:17]--[2023-02-13 Tue 23:58] =>  1:41
+CLOCK: [2023-02-13 Mon 19:29]--[2023-02-13 Mon 20:22] =>  0:53
+CLOCK: [2023-02-13 Mon 16:14]--[2023-02-13 Mon 16:45] =>  0:31
+CLOCK: [2023-02-13 Mon 15:20]--[2023-02-13 Mon 16:10] =>  0:50
+:END:
+    
+- [-] 模块设计
+   
+  要仔细思考类的设计, 要自己思考类的设计
+  
+  - [-] Socket: 只关注网络事件, 那就直接 socket 就行了.  
+    - [ ] 数据类型
+      - [ ] 两个事件的回调是否一样
+      
+    - [X] 用户添加事件:
+      - [X] 只有两个事件, 进行判断重复添加
+      - [X] 如何与 eventloop 交互
+
+        - [X] 通过状态码判定是否 Add, Mod, Del 
+        - [X] 然后直接调用 eventloop 实现上面的三个函数:add,mode,del 即可
+
+  - [X] EventLoop
+    - [X] 与 io 复用后端的交互, 直接把 socket 传进去, 让它自己处理 
+    - [X] 主要是复用多个 poll 后端, 所以, 类里面不能出现具体 poll 后端相关, 例如 epoll_event*
+
+  - [X] IO 复用后端
+
+    - [X] 根据 eventloop 传进来的 socket 的 state() 判断 add,del??
+    - [X] 唤醒后, 根据 loop 传入的 vector<socket*>, 把 fd 给他找到唤醒的 socket, 然后根据唤醒的事件设置其唤醒位. 给上层, 上层能够根据唤醒 state 决定调用 read_cb 还是 write_cb
+      
+** DONE Acceptor 
+CLOSED: [2023-02-14 Tue 21:22]
+- State "DONE"       from "STARTED"    [2023-02-14 Tue 21:22]
+:LOGBOOK:
+CLOCK: [2023-02-14 Tue 20:29]--[2023-02-14 Tue 21:22] =>  0:53
+CLOCK: [2023-02-14 Tue 19:19]--[2023-02-14 Tue 20:22] =>  1:03
+CLOCK: [2023-02-14 Tue 14:39]--[2023-02-14 Tue 15:28] =>  0:49
+CLOCK: [2023-02-14 Tue 11:55]--[2023-02-14 Tue 12:14] =>  0:19
+CLOCK: [2023-02-14 Tue 11:50]--[2023-02-14 Tue 11:51] =>  0:01
+:END:
+
+- [X] 职责:
+
+   上层根据地址和 socket 绑定后, 将具体 socketfd 传给该模块的成员变量 socket 模块.
+
+    主要是 Listen: 开启监听. 给 socket 模块添加读事件, 和添加读回调函数
+
+    读回调是内部处理, 不需要经过用户, 唤醒后从 accpe_fd 读取新的文件 fd, 创建 Socket 对象, 为其添加读回到和读事件. 设置一系列玩意.
+
+- [X] 构造与西沟: 
+- [X] 回调参数
+- [X] 然后 listen
+  - [X] 接收 fd
+  - [X] 从 fd 读取
+- [X] 接收上层的两个回调
+
+** STARTED Epoll 层处理的回调参数, 和最终用户给用户呈现的回调函数的参数区别, 和中间过程的转化.
+DEADLINE: <2023-02-15 Wed 10:00> 
