@@ -1,4 +1,4 @@
-* Qt 入门
+* TODO Qt 
   - [X] pro 项目构建信息, 例如: 我记得以前用 qt 的时候, 要用到网络模块是需要手动添加进去的.
   - [X] 一个模块是 .h/.cc/.ui
     - [X] 程序中如何调用 ui 呢 ?
@@ -14,8 +14,11 @@
     - [X] 注册      : 好像 ui 器能够帮你生成, 但是专业的可维护的代码都是在构造函数里面注册.
     - [X] 发射信号  : 使用 emit 发射信号, 相当于 eventloop 中的 wakeup
 
-* Chat Server
-** STARTED Chat Server 常见控件交互
+
+    
+
+* Chat Server Demo 
+** TODO Chat Server 常见控件交互
 - State "STARTED"    from "DONE"       [2023-02-15 Wed 00:38] 不自己复刻一个叫做会了 ??? 
 - State "DONE"       from "STARTED"    [2023-02-15 Wed 00:14]
 :LOGBOOK:

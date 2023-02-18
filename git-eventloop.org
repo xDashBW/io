@@ -1,0 +1,61 @@
+* DONE EventLoop 模型
+CLOSED: [2023-02-04 Sat 15:48]
+- State "DONE"       from "STARTED"    [2023-02-04 Sat 15:48]
+:LOGBOOK:
+CLOCK: [2023-02-04 Sat 14:45]--[2023-02-04 Sat 15:48] =>  1:03
+:END:
+- [ ] 思考 libevent1.4 在 eventloop 保留一个 inserted 链表有什么用吗 ? 
+
+- [ ] 画出模型
+
+  eventloop
+  [
+    callback :   watcher -> watcher -> watcher
+    [fds]:   [watcher->watcher, ... ,  watcher->watcher]
+  ]
+
+- [ ] 添加节点会怎么样?
+
+  - 先根据 fd 找到 fds 的下表, 判断是否有 other 事件( 读/ 写)节点, 从而判断是否是 add 还是 mod
+  - 如果是 add,
+  - 如果是 mod.
+  - 插入链表
+  - 调用 epoll->add()
+
+- [ ] 删除节点
+  - 通过遍历两遍看能否找出除了我之外的节点或者计算次数，就能判断是否本 watcher 是注册的 socke 唯一. 如果是 list_head 循环可以直接在一个 if() 里面判断
+  - 如果修改, 确认另一个事件的注册事件就好了. 相当于把两个变成一个
+  - 如果删除
+  - 移除节点(watcher)
+
+* DONE EPOLL 后端
+CLOSED: [2023-02-04 Sat 19:39]
+- State "DONE"       from "STARTED"    [2023-02-04 Sat 19:39]
+:LOGBOOK:
+CLOCK: [2023-02-04 Sat 19:13]--[2023-02-04 Sat 19:39] =>  0:26
+:END:
+- [X] 如果要同时处理 fd 的两个
+  - [X] 怎么判断是否唤醒? 返回的是某个 fd, 通过 fd 找到两个, 可能有一个是未唤醒的. 通过 event 证明不靠谱, 假如是上一次的没有清理呢? 
+  - [X] 怎么如果前面的加进去, 后面在唤醒是不是重复加进去
+
+* DONE Event 用户接口
+CLOSED: [2023-02-04 Sat 20:27]
+- State "DONE"       from "STARTED"    [2023-02-04 Sat 20:27]
+- State "STARTED"    from "DONE"       [2023-02-04 Sat 20:13]
+- State "DONE"       from "STARTED"    [2023-02-04 Sat 20:11]
+- State "TODO"       from "DONE"       [2023-02-04 Sat 20:00]
+- State "DONE"       from "STARTED"    [2023-02-04 Sat 19:56]
+:LOGBOOK:
+CLOCK: [2023-02-04 Sat 20:25]--[2023-02-04 Sat 20:27] =>  0:02
+CLOCK: [2023-02-04 Sat 20:13]--[2023-02-04 Sat 20:25] =>  0:12
+CLOCK: [2023-02-04 Sat 20:00]--[2023-02-04 Sat 20:11] =>  0:11
+CLOCK: [2023-02-04 Sat 19:52]--[2023-02-04 Sat 19:56] =>  0:04
+:END:
+* DONE EventLoop Dispatch
+CLOSED: [2023-02-04 Sat 20:45]
+- State "DONE"       from "STARTED"    [2023-02-04 Sat 20:45]
+:LOGBOOK:
+CLOCK: [2023-02-04 Sat 20:27]--[2023-02-04 Sat 20:45] =>  0:18
+:END:
+* TODO 基本的 echo
+            

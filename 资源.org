@@ -1,3 +1,0 @@
-- [[https://github.com/xDashBW?tab=repositories][个人 github 仓库]]
-- [[https://github.com/google/benchmark][Google 的 benchmark 工具, 本人用于进行 c 撸轮子的重要工具 ]]
-- [[https://quick-bench.com/][Quick C++ BenchMark, 远程 ide, 配合 google Benchmark 远程进行测试 ]]

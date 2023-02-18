@@ -1,0 +1,18 @@
+* DONE python asyncio echo from skywind3000 zhihu
+CLOSED: [2023-02-08 Wed 14:34]
+- State "DONE"       from "STARTED"    [2023-02-08 Wed 14:34]
+:LOGBOOK:
+CLOCK: [2023-02-08 Wed 13:49]--[2023-02-08 Wed 14:34] =>  0:45
+:END:
+预计 20 分钟
+
+- [X] 看懂逻辑 
+  - [X] 开启 server, 每个连接到达设置处理函数, 相当于每个协程服务一个 socket, 协程函数
+  - [X] 接收数据,
+  - [X] 利用 redis 解析接收的收据， 传给 pass 处理, 不是我要学习的重点, 知道就好了
+  - [X] write 数据
+  - [X] 客户端由 redis 进行测试 
+
+- [X] 语法特性 async/await/
+  - [X] Async:  将函数声明为协程
+  - [X] Await:  在当前的协程函数 (async def)中挂起执行流程, 等待另一个协程的返回结果.

@@ -1,0 +1,38 @@
+
+先看 libev 中文手册, 再看源码, 中文手册可以粗略了解下调用关系, 接口等
+
+* TODO [#A] libev 中文手册
+:LOGBOOK:
+CLOCK: [2023-02-18 Sat 02:45]--[2023-02-18 Sat 02:51] =>  0:06  5 分钟 | Epoll 怎么应对旧事情和新事件呢 ? 
+CLOCK: [2023-02-18 Sat 02:34]--[2023-02-18 Sat 02:45] =>  0:11  5 分钟  | changefd 在 ev_run() 的 epoll_ctl 之前, 怎么判断是否修改事情
+CLOCK: [2023-02-18 Sat 02:16]--[2023-02-18 Sat 02:30] =>  0:14  10 分钟 | 追踪程序流程
+CLOCK: [2023-02-18 Sat 02:09]--[2023-02-18 Sat 02:13] =>  0:04: 5  分钟 | 写完 demo: 默认的 loop 替换为 new 出来的 loop.
+CLOCK: [2023-02-18 Sat 01:47]--[2023-02-18 Sat 02:07] =>  0:20: 热身
+CLOCK: [2023-02-17 Fri 10:23]--[2023-02-17 Fri 11:32] =>  1:09
+:END:
+
+- [X] buildchains : libtools/autoconf -> automake -> make -> gcc
+  - [X] 步骤
+    - [X] libtools:   (sh ./autogen) : 根据环境生成配置
+    - [X] automake:   (./configure)  : 检查各种信息, 例如头文件, 第三方库等, 生成 config.h 文件，一般是宏开关
+    - [X] make && make install : 编译和安装到系统路径
+
+- [-] 模块
+  - [X] ev_io
+    - [X] ev_io_init() : 设置回调, 一个 ev 仅仅代表一个 fd 的一个 event
+    - [X] ev_io_start() : 仅仅是放入 fdchange, 不会马上注册进 epoll.
+    - [X] ev_run()     : 进行 fd 检测, 如果注册进 epoll 否则, 调度.
+  - [ ] ev_timer
+  - [ ] 
+
+* TODO 理解 libev 的队列调度方式
+:LOGBOOK:
+CLOCK: [2023-02-18 Sat 03:05]--[2023-02-18 Sat 03:16] =>  0:11
+:END:
+
+
+* TODO [#A] Libev 源码 
+:LOGBOOK:
+CLOCK: [2023-02-17 Fri 02:50]--[2023-02-17 Fri 4:00] =>  1:10
+CLOCK: [2023-02-17 Fri 01:28]--[2023-02-17 Fri 02:18] =>  0:50
+:END:

@@ -1,0 +1,57 @@
+* DONE Latex 的基本概念介绍
+CLOSED: [2023-02-09 Thu 10:37]
+- State "DONE"       from "STARTED"    [2023-02-09 Thu 10:37]
+预计 20 分钟
+:LOGBOOK:
+CLOCK: [2023-02-09 Thu 10:02]--[2023-02-09 Thu 10:37] =>  0:35
+:END:
+- [X] Latex 和 texmacs
+  之前学过的，latex 是最常用的语言, 因此需要将模式 / 编译器 集成到编辑器仲, 而墨竹和 gnutexmac 都是专门的数学编辑器, 好处是符号可以直接用鼠标,
+  而 emacs 需要全部手打. 因此很多人表示 emacs/latex 适合写文章, 而 texmacs 适合草稿
+- [X] Latex 的版本
+  既然 latex 是语言, 就有不同版本的编译器和扩展
+  - [X] 在 archlinux 中只需要安装 texlive, 里面就有 N 个编译器 pdftex, Xetex
+
+* DONE 先学会怎么命令行编译 latex 
+CLOSED: [2023-02-13 Mon 10:16]
+- State "DONE"       from "STARTED"    [2023-02-13 Mon 10:16]
+:LOGBOOK:
+CLOCK: [2023-02-13 Mon 09:35]--[2023-02-13 Mon 10:16] =>  0:41
+:END:
+预计 20 分钟
+使用 ide 的 build 按键编译并预览成年, 但是在 emacs 中, 直接调用命令行接口 latex/pdflatex 编译并不能成功, 是什么原因呢? 
+- [X] 编译成功, 不同的编译器输出不同的 preview 文件
+  - [X] 输出 pdf 的编译器
+    - [X] pdflatex
+    - [X] xelatex
+* DONE Emacs 与 tex 的结合
+CLOSED: [2023-02-13 Mon 14:08]
+- State "DONE"       from "STARTED"    [2023-02-13 Mon 14:08]
+:LOGBOOK:
+CLOCK: [2023-02-13 Mon 13:04]--[2023-02-13 Mon 14:08] =>  1:04
+CLOCK: [2023-02-13 Mon 11:13]--[2023-02-13 Mon 12:42] =>  1:29
+:END:
+预计 30 分钟
+- [X] 外部编译器:texlive 包提供: Xelatex,pdflatex 
+- [X] 内置功能:
+  - [X] tex-mode 和 latex-mode
+
+    内置, 后缀为 tex 文件 add-hook, 具有最基本的高亮, 编译, Preview 功能
+
+- [X] 插件, 负责编译预览一条龙
+  - [X] Auctex: 神的包, 历史追溯到 1986 年, 提供高亮, 调试功能
+  - [X] Cdlatex: 更快的 auctex 实现
+
+
+* TODO auctex
+* TODO Cdlatex
+
+
+* TODO 把 tex 集成到 org-mode 中
+DEADLINE: <2023-02-13 Mon>
+:LOGBOOK:
+CLOCK: [2023-02-13 Mon 14:32]--[2023-02-13 Mon 14:54] =>  0:22
+CLOCK: [2023-02-13 Mon 14:10]--[2023-02-13 Mon 14:32] =>  0:22
+:END:
+- [X] 安装扩展包 :texlive-latexextr
+  直接在 org-mode 尽情的写, 然后导出为 pdf 即可
